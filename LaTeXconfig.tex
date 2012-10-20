@@ -1,0 +1,111 @@
+\usepackage{a4}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{framed}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+\usepackage{geometry}
+
+
+\usepackage{fullpage,graphicx}
+\usepackage{rotating}
+
+\usepackage{multirow}
+
+%\setlength{\hoffset}{-18pt}
+\setlength{\oddsidemargin}{0cm}     % Marge gauche sur pages impaires
+\setlength{\evensidemargin}{0cm}    % Marge gauche sur pages paires
+\setlength{\marginparwidth}{54pt}   % Largeur de note dans la marge
+\setlength{\textwidth}{17cm}       % Largeur de la zone de texte (17cm)
+\setlength{\marginparsep}{7pt}      % Séparation de la marge
+\setlength{\topmargin}{-1cm}         % Pas de marge en haut
+\setlength{\headheight}{0cm}       % Haut de page
+\setlength{\headsep}{10pt}          % Entre le haut de page et le texte
+\setlength{\footskip}{27pt}         % Bas de page + séparation
+\setlength{\textheight}{23cm}      % Hauteur de la zone de texte (25cm)
+
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{1cm}
+
+%\setlength{\topsep}{500pt}
+\setlength{\abovecaptionskip}{0.1cm}
+\setlength{\belowcaptionskip}{0.5cm}
+
+
+
+\newlength{\leftbarwidth}
+\setlength{\leftbarwidth}{3pt}
+\newlength{\leftbarsep}
+\setlength{\leftbarsep}{10pt}
+\newlength{\leftbarmargin}
+\setlength{\leftbarmargin}{0pt}
+\newlength{\defaultparindent}
+\setlength{\defaultparindent}{\parindent}
+
+
+\renewenvironment{leftbar}{%
+    \def\FrameCommand{\hspace{\leftbarmargin} \vrule width \leftbarwidth \relax\hspace{\leftbarsep}}%
+    \MakeFramed {\advance \hsize -\width \FrameRestore }%
+}{%
+    \endMakeFramed
+}
+
+
+%\newenvironment{defx}{\noindent \\ \textbf{Definition:} \vspace{-11pt} \begin{leftbar} \vspace{4pt}}{\end{leftbar}}
+%\newenvironment{propx}{\noindent \\ \textbf{Proposition:} \vspace{-11pt} \begin{framed}}{\end{framed}}
+
+\newenvironment{defx}{
+\setlength{\leftbarwidth}{3pt} 
+\setlength{\leftbarmargin}{-2pt} 
+\setlength{\leftbarsep}{10pt} 
+\begin{leftbar}}{\end{leftbar}}
+\newenvironment{propx}{\begin{framed}}{\end{framed}}
+
+\newenvironment{demox}{\footnotesize \noindent \textit{Demo:}  \vspace{-9pt} 
+\setlength{\leftbarwidth}{1pt} 
+\setlength{\leftbarmargin}{5pt}
+\setlength{\leftbarsep}{3pt} 
+\setlength{\parindent}{7pt}
+
+\begin{leftbar}}{\end{leftbar}
+\setlength{\parindent}{\defaultparindent}
+\normalsize}
+
+
+
+\newenvironment{deft}[1]{\noindent \\ \textbf{\textsc{#1}} \vspace{-11pt} \setlength{\leftbarwidth}{3pt} 
+\setlength{\leftbarmargin}{-2pt} 
+\setlength{\leftbarsep}{10pt} 
+\begin{leftbar} \vspace{4pt}}{\end{leftbar}}
+\newenvironment{propt}[1]{\noindent \\ \textbf{\textsc{#1}} \vspace{-11pt} \begin{framed}}{ \end{framed}}
+
+
+\newenvironment{algot}[1]{\noindent \\ \textbf{\textsc{#1}} \par \nobreak \vspace{1pt}\hrule\vspace{0pt} \setlength{\parindent}{0cm} \ttfamily} {\normalfont \setlength{\parindent}{\defaultparindent} \par \nobreak \vspace{4pt}\hrule\vspace{15pt}}
+
+\newenvironment{algox}{\noindent \\  \par \nobreak \vspace{1pt}\hrule\vspace{0pt} \setlength{\parindent}{0cm} \ttfamily} {\normalfont \setlength{\parindent}{\defaultparindent} \par \nobreak \vspace{4pt}\hrule\vspace{15pt}}
+
+%\newenvironment{algot}[1]{\noindent \\ \textbf{\textsc{#1}} \par \nobreak \vspace{1pt}\hrule\vspace{0pt} \setlength{\parindent}{0cm} \ttfamily \begin{tabbing} ~~~~\=~~~~\=~~~~\=~~~~\=~~~~\=~~~~\=~~~~} {\end{tabbing} \normalfont \setlength{\parindent}{\defaultparindent} \par \nobreak \vspace{4pt}\hrule \\}
+
+\newcommand{\comment}[1]{\hfill// #1}
+
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbR}{\mathbb{R}}
+
+\newcommand{\tb}{.~~~~}
+
+%\newcommand{\exsubpart}[1]{\subsection*{#1)}\\ }
+\newcommand{\exsubpart}[1]{\subsection*{#1)} \vspace{-51pt} ~\\}
+
+\newcommand{\info}[1]{\small{\textit{(#1)}}}
+
