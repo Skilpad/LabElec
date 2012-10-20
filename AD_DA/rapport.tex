@@ -76,14 +76,12 @@ Dans le cadre de notre expérience~: $V_{min}=0$ et $V_{max}=V_{ref}=\mathrm{5 V
 
 Les valeurs de $V_i$ correspondantes ont été rajouté au tableau~\ref{tab:ADC0820} des résultats expérimentaux.
 
-%TODO: Comment se comportent les LEDs au changement dans les 4 MSBs ? Les MSBs et LSBs changent-ils en même temps ?
-
 
 \subsection{Mesures}
 
 \exsubpart{1}
 
-%TODO: Appareil utilisé. 4.997V
+La tension d'alimentation utilisée pour le convertisseur, servant aussi de tension de référence $V_{ref}$, est fournie par une alimentation stabilisée. Elle est précisément de~: ${V_{ref}=\mathrm{4.997 V}}$.
 
 
 \exsubpart{2,3}
@@ -191,13 +189,17 @@ V_i^{th} = V_{min}+i\cdot\frac{V_{max}-V_{min}}{2^n}+p_i\delta V \mathrm{~~~~ave
 
 Là encore, on obtient avec Matlab les coefficients optimum~: ${V_{min}=-0,0072\mathrm{V}}$, ${V_{min}=4,9817\mathrm{V}}$, \\${\delta V=0,0015\mathrm{V}}$. Les résultats correspondants sont présentés Fig.~\ref{fig:ADCres3}.
 
-%TODO: Pourquoi cet effet de la parité de i ???
+
+
+Nous avons tenté de comprendre l'origine de cet effet de la parité de $i$ sur la tension de transition $V_i$. Compte tenu du principe de fonctionnement du convertisseur semi-flash, cet effet ne peut être imputé au calcul du bit de poids faible. En effet, ce dernier est donné par l'encodeur numérique encodant les quatre bits de poids faible. Il ne peut pas non plus être imputé au convertisseur numérique/analogique interne du convertisseur analogie/numérique étudié~: en effet, la sortie de ce convertisseur numérique/analogique n'est modifiée que lorsqu'un des quatre bits de poids fort est modifié. 
+
+On en déduit que le problème est lié aux quinze ($2^-1$) comparateurs fournissant les bits en entrées de l'encodeur 4-bits des bits de poids faible. Leurs offsets seraient quasiment identiques pour les tensions de seuil $V_i$ avec $i$ pair, ainsi que pour les tensions de seuil $V_i$ avec $i$ impair.
+
+L'hypothèse réalisée est la suivante~: tous les comparateurs utilisés ont un offset quasiment égal à $\delta V$ --- ce qui ce justifie en pratique~: cet offset est fortement lié au substrat, dont les caractéristiques peuvent être considérées comme constantes au sein du convertisseur étudié. En revanche, un convertisseur sur deux serait placé ``à l'envers''~: on code ${V < V_i}$ pour $i$ pair, et ${V > V_i}$ pour $i$ impair (ou l'inverse). Cela se justifie par une éventuelle simplification de l'encodeur 4-bits obtenue en codant un bit sur deux en entrée avec une logique négative.
 
 
 \section{Le convertisseur numérique/analogique AD7524}
 \label{sec:AD7524}
-
-%TODO: Alim à 4.997 V
 
 \subsection{Prévisions théoriques}
 
@@ -286,6 +288,11 @@ V_{out}(\mathtt{11111111}) &=& -4,9775\mathrm{V}
 
 \subsection{Mesures}
 
+\exsubpart{1}
+
+Cette fois encore, la tension d'alimentation utilisée pour le convertisseur, servant aussi de tension de référence $V_{ref}$, est fournie par une alimentation stabilisée~; et est précisément de~: ${V_{ref}=\mathrm{4.997 V}}$.
+
+
 \exsubpart{2,3}
 
 Expérimentalement, on mesure la contribution $V_i^{out}$ de chaque bit $i$ en mettant en entrée du CNA tous les bits à zéro, excepté le bit $i$. Ainsi, on considère~:
@@ -372,7 +379,9 @@ Afin d'observer les effets de la chaîne AN-NA sur le signal (échantillonnage, 
 %TODO  > Vout = f(Vin) avec un signal très lent (=> escalier)
 %TODO  > Verr zoomé : dans de scie relativement régulière, d'amplitude VLSB
 
-Afin d'observer l'effet de la quantification, sans être perturbé par l'échantillonnage, on utilise en entrée un signal lent~: $f_{in}\ll f_{ech}$ (où $f_{ech}$ désigne la fréquence d'échantillonnage des convertisseurs, que l'on sait de l'ordre de $20\mathrm{kHz}$). Typiquement, on utilisera ici $f_{in} = ?$ %TODO: valeur pour f_in=0,5Hz
+Afin d'observer l'effet de la quantification, sans être perturbé par l'échantillonnage, on utilise en entrée un signal lent~: $f_{in}\ll f_{ech}$ (où $f_{ech}$ désigne la fréquence d'échantillonnage des convertisseurs, que l'on sait de l'ordre de $20\mathrm{kHz}$). Typiquement, on utilisera ici $f_{in} = \mathrm{0.5 Hz}$.
+
+
 
 
 
