@@ -376,20 +376,70 @@ Pour cela, un amplificateur opérationnel permet d'obtenir en plus de la sortie 
 Afin d'observer les effets de la chaîne AN-NA sur le signal (échantillonnage, quantification\dots), on applique en entrée un signal $V_{in}$ triangulaire d'amplitude $4\mathrm{V}$ et de moyenne $2,5\mathrm{V}$. On en fera varier la tension $f_{in}$.
 
 \noindent \textbf{\underline{Quantification}}.
-%TODO  > Vout = f(Vin) avec un signal très lent (=> escalier)
-%TODO  > Verr zoomé : dans de scie relativement régulière, d'amplitude VLSB
 
 Afin d'observer l'effet de la quantification, sans être perturbé par l'échantillonnage, on utilise en entrée un signal lent~: $f_{in}\ll f_{ech}$ (où $f_{ech}$ désigne la fréquence d'échantillonnage des convertisseurs, que l'on sait de l'ordre de $20\mathrm{kHz}$). Typiquement, on utilisera ici $f_{in} = \mathrm{0.5 Hz}$.
 
+Les résultats expérimentaux obtenus sont fournis Fig.~\ref{fig:slow}.
+
+\begin{figure}[h!]
+  \centering
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{data/TEK0018_}
+    \caption{$V_{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
+    \label{fig:slowT}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{data/TEK0017_}
+    \caption{$V_{out}=f(V_{in})$}
+    \label{fig:slowXY}
+  \end{subfigure}
+  \hfill
+  \caption{$V_{in}$ et $V_{out}$ pour un signal d'entrée triangulaire d'amplitude 2V (4V crête à crête)}
+  \label{fig:slow}
+\end{figure}
+
+Le phénomène s'observe bien lorsque l'on trace $V_{out}=f(V_{in})$ (cf. Fig.~\ref{fig:slowXY}). On y observe des ``marches'' de hauteurs et largeurs régulières, de l'ordre de $\frac{V_{ref}}{2^8}\approx\mathrm{19,5 mV}$. Ces marches sont continues sur le plan horizontal, mais pas sur le plan vertical~: à chaque valeur de $V_{out}$ correspond plusieurs valeurs de $V_{in}$. Plus simplement, sans prendre en compte d'éventuels offsets ou erreurs de gain, lors de la conversion $V_{in}\rightarrow V_{out}$, $-V_{in}$ est ``rabattu'' sur la valur possible de $V_{out}$ la plus proche.
+
+On introduit ainsi un erreur de quantification comprise entre $-\frac{1}{2}\frac{V_{ref}}{2^8}$ et $+\frac{1}{2}\frac{V_{ref}}{2^8}$.
+%TODO: sur signal 0,5HZ > Verr zoomé : dans de scie relativement régulière, d'amplitude VLSB
 
 
 
+\noindent \textbf{\underline{Échantillonnage}}.
+
+\begin{figure}[h!]
+  \centering
+  \hfill
+  \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{data/TEK0017_}
+    \caption{$f_{in}=$0,5 Hz)}
+    \label{fig:slowXY_}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{data/TEK0000_}
+    \caption{$f_{in}=$50 Hz)}
+    \label{fig:midXY}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{data/TEK0020_}
+    \caption{$f_{in}=$0,5 Hz)}
+    \label{fig:fastXY}
+  \end{subfigure}
+  \hfill  \caption{$V_{out}=f(V_{in})$ pour différentes fréquences d'entrées}
+  \label{fig:slow}
+\end{figure}
 
 
 % Erreurs :
-%  - Quantification
-%TODO  > Vout = f(Vin) avec un signal très lent (=> escallier)
-%TODO  > Verr zoomé : dans de scie relativement régulière, d'amplitude VLSB
 %  - Echantillonage
 %      > Verr sur fréq rapide : largeur régulière, estimation de la fréq d'échantillonage
 %      > Escalier sur fréq plus rapide : marche de longueur non régulière (dVin ou 2*dVin)
