@@ -40,7 +40,6 @@ On considère l'amplificateur accordé décrit Fig.~\ref{schem6}.
 	\label{schem6}
 \end{figure}
 
-Toutefois, on prendra $R_{31}=R_{34}=\infty$~: en effet, ces résistances on juste pour but de diminuer les facteurs de qualité des filtres situés en amont et en aval du JFET.
 
 \subsection{Questions et calculs}
 
@@ -54,18 +53,41 @@ On couple deux filtres d'ordre 1, formant ainsi un filtre d'ordre 2.
 
 Si le facteur de qualité de chacun des circuits résonants est le même, on obtient donc un facteur de qualité global de~:
 \begin{equation*}
-Q_{tot} = \frac{1}{\sqrt{2^{1/2}-1}}Q = 1.554 Q
+Q_{tot} = \frac{1}{\sqrt{2^{1/2}-1}}Q = 1,554 Q
 \end{equation*}
 
 
+\exsubpart{3}
+
+Les condensateurs $C_{33}$ et $C_{34}$ permettent uniquement de couper de très basses fréquences, hors de notre domaine d'intérêt. On peut donc les ignorer.
+
+Les filtres restants en amont et en aval du JFET sont tout deux constitués d'une inductance et d'une capacité en parallèle, liées à une tension de référence. Ce sont deux passe-bande d'ordre 2~: l'ordre est de 1 de chaque côté de la fréquence de résonance, donnant donc lieu à des pentes de $\pm$20 dB/décade de part et d'autre de cette fréquence.
+
+En couplant ces deux filtres, on obtient donc un filtre passe-bande d'ordre total 4. On trouve de part et d'autre de la fréquence de résonance $f_0$ un ordre 2, soit des pentes de +20 dB/décade et -20 dB/décade respectivement en-dessous et au-dessus de $f_0$.
 
 
+\exsubpart{4}
+
+Afin d'obtenir une bande passante à -3dB s'étendant de $f_1 = $13 MHz à $f_2 = $15 MHz, le facteur de qualité total doit être de~:
+\begin{equation*}
+Q_{tot} = \frac{f_0}{f_2-f_1}
+\end{equation*}
+avec $f_0 = $14 MHz, soit~:
+\begin{equation*}
+Q_{tot} = 7
+\end{equation*}
+
+Cela correspond pour chaque circuit résonant à un facteur de qualité de~:
+\begin{equation*}
+Q = \sqrt{2^{1/2}-1}~Q_{tot} = 4,505
+\end{equation*}
 
 
-6.2.1. %TODO: Couplage actif
+%Toutefois, on prendra $R_{31}=R_{34}=\infty$~: en effet, ces résistances on juste pour but de diminuer les facteurs de qualité des filtres situés en amont et en aval du JFET.
+% L31 = L32 = 2.2 uH
 
-6.2.2. %TODO: HF-VHF, 2-21
 
+% 5) On saute...
 
 
 
