@@ -25,7 +25,7 @@ On s'intéresse ici à l'étude de convertisseurs analogique/numérique (aussi a
 
 \exsubpart{1}
 
-Les convertisseurs analogique/numérique flash sont fréquemment utilisés, parce qu'ils permettent des fréquences de fonctionnement élevées. Toutefois, il se caractérisent en revanche généralement par des coûts énergétique et spatial élevés.
+Les convertisseurs analogique/numérique flash sont fréquemment utilisés, parce qu'ils permettent des fréquences de fonctionnement élevées. Toutefois, il se caractérisent en revanche généralement par des coûts énergétiques et spatiaux élevés.
 
 Le principe d'un CAN flash $n$ bits est le suivant.
 Supposons que les valeurs analogiques à convertir soient comprises entre deux tensions de référence $V_{min}$ et $V_{max}$, fournies au convertisseur. 
@@ -51,11 +51,11 @@ Un encodeur $n$ bits --- entièrement numérique donc --- permet alors de conver
   \caption{Principes de base des CAN flash et semi-flash}
 \end{figure}
 
-L'un des principaux inconvéniants d'une telle structure réside dans le nombre de composants utilisés~: 
+Le principal inconvénient d'une telle structure réside dans le nombre éleveé de composants utilisés. 
 
-Pour limiter le nombre de comparateurs les convertisseurs semi-flashs utilisent plusieurs convertisseurs flashs. Typiquement, un convertisseur semi-flash 8 bits utilisera tout d'abord un convertisseur flash 4 bits afin d'encoder les 4 bits de poids fort (ou ``MSBs''~: ``\textit{Most Significant Bits}''). La tension $V_{MSB}$ correspondante au résultat fourni par ce convertisseur est alors soustraite à la tension d'entrée $V_{in}$, puis $V_{in}-V_{MSB}$ est traitée par un nouveau convertisseur flash 4 bits afin d'obtenir les 4 bits de poids faible (ou ``LSBs''~: ``\textit{Less Significant Bits}'').
+Pour limiter le nombre de comparateurs les convertisseurs semi-flash utilisent plusieurs convertisseurs flash. Typiquement, un convertisseur semi-flash 8 bits utilisera tout d'abord un convertisseur flash 4 bits afin d'encoder les 4 bits de poids fort (ou ``MSBs''~: ``\textit{Most Significant Bits}''). La tension $V_{MSB}$ correspondante au résultat fourni par ce convertisseur est alors soustraite à la tension d'entrée $V_{in}$, puis $V_{in}-V_{MSB}$ est traitée par un nouveau convertisseur flash 4 bits afin d'obtenir les 4 bits de poids faible (ou ``LSBs''~: ``\textit{Less Significant Bits}'').
 
-La réactivité du convertisseur est ainsi diminuée par rapport à un convertisseur flash d(un facteur légèrement supérieur à 2, mais le nombre de composants nécessaires passe de $O(2^n)$ à $O(2^{n/2})$.
+La réactivité du convertisseur est ainsi diminuée par rapport à un convertisseur flash d'un facteur légèrement supérieur à 2, mais le nombre de composants nécessaire passe de $O(2^n)$ à $O(2^{n/2})$.
 %TODO: sample & hold?
 
 Le convertisseur analogique/numérique utilisé dans ce travail est un CAN semi-flash 8 bits~: l'ADC0820.
@@ -86,7 +86,7 @@ La tension d'alimentation utilisée pour le convertisseur, servant aussi de tens
 
 \exsubpart{2,3}
 
-À l'aide d'un potentiomètre 10 tours, on fait varier la tension d'entrée $V_{in}$ du convertisseur analogique / numérique étudier afin de mesurer les tensions de transition $V_i$, pour lesquelles l'entier en sortie du convertisseur --- entier représenté en binaire par des DEL --- passe de $i-1$ à $i$.
+À l'aide d'un potentiomètre 10 tours, on fait varier la tension d'entrée $V_{in}$ du convertisseur analogique / numérique étudier afin de mesurer les tensions de transition $V_i$, pour lesquelles l'entier en sortie du convertisseur --- entier représenté en binaire par des LEDs --- passe de $i-1$ à $i$.
 
 \begin{table}[h]
 \caption{Résultats obtenus lors de l'étude du convertisseur ADC0820}
@@ -193,7 +193,7 @@ Là encore, on obtient avec Matlab les coefficients optimum~: ${V_{min}=-0,0072\
 
 Nous avons tenté de comprendre l'origine de cet effet de la parité de $i$ sur la tension de transition $V_i$. Compte tenu du principe de fonctionnement du convertisseur semi-flash, cet effet ne peut être imputé au calcul du bit de poids faible. En effet, ce dernier est donné par l'encodeur numérique encodant les quatre bits de poids faible. Il ne peut pas non plus être imputé au convertisseur numérique/analogique interne du convertisseur analogie/numérique étudié~: en effet, la sortie de ce convertisseur numérique/analogique n'est modifiée que lorsqu'un des quatre bits de poids fort est modifié. 
 
-On en déduit que le problème est lié aux quinze ($2^-1$) comparateurs fournissant les bits en entrées de l'encodeur 4-bits des bits de poids faible. Leurs offsets seraient quasiment identiques pour les tensions de seuil $V_i$ avec $i$ pair, ainsi que pour les tensions de seuil $V_i$ avec $i$ impair.
+On en déduit que le problème est lié aux quinze ($2^4-1$) comparateurs fournissant les bits en entrée de l'encodeur 4-bits des bits de poids faibles. Leurs offsets seraient quasiment identiques pour les tensions de seuil $V_i$ avec $i$ pair, ainsi que pour les tensions de seuil $V_i$ avec $i$ impair.
 
 L'hypothèse réalisée est la suivante~: tous les comparateurs utilisés ont un offset quasiment égal à $\delta V$ --- ce qui ce justifie en pratique~: cet offset est fortement lié au substrat, dont les caractéristiques peuvent être considérées comme constantes au sein du convertisseur étudié. En revanche, un convertisseur sur deux serait placé ``à l'envers''~: on code ${V < V_i}$ pour $i$ pair, et ${V > V_i}$ pour $i$ impair (ou l'inverse). Cela se justifie par une éventuelle simplification de l'encodeur 4-bits obtenue en codant un bit sur deux en entrée avec une logique négative.
 
@@ -337,7 +337,7 @@ On remarque que l'on a notamment~: $\forall i\in [1..7], \sum_{j<i}V_j^{out,mes}
 
 Ainsi, le convertisseur numérique/analogique étudié est monotone. En effet, cela montre que si ${\forall j>i, B'_j=B_j}$, $B_i=0$, $B'_i=1$, ${\forall j<i, B_j=1}$ et ${\forall j<i, B'_j=0}$, alors~: \begin{equation*}V_i^{out,mes}(B_7B_6B_5B_4B_3B_2B_1B_0) < V_i^{out,mes}(B'_7B'_6B'_5B'_4B'_3B'_2B'_1B'_0)\end{equation*} \\(Par exemple~: $V_i^{out,mes}(B_7B_6B_5B_4\mathtt{0111}) < V_i^{out,mes}(B'_7B'_6B'_5B'_4\mathtt{1000})$.)
 
-Les écarts entre les valeurs théoriques et mesurées pour $V_{out}(\mathtt{00000000})$ et $V_{out}(\mathtt{11111111})$ s'explique notamment par un mismatch entre les résistances liant les sorties OUT1 et R\_FDBK au sein du convertisseur AD7524, ainsi que par les imperfections de l'amplificateur opérationnel (offset et gain fini). De ces imperfections, il résulte un offset en sortie de l'ensemble du convertisseur, amplificateur opérationnel inclus, ainsi qu'une erreur sur le gain.
+Les écarts entre les valeurs théoriques et mesurées pour $V_{out}(\mathtt{00000000})$ et $V_{out}(\mathtt{11111111})$ s'explique notamment par une légère différence entre les résistances liant les sorties OUT1 et R\_FDBK au sein du convertisseur AD7524, ainsi que par les imperfections de l'amplificateur opérationnel (offset et gain fini). De ces imperfections, il résulte un offset en sortie de l'ensemble du convertisseur, amplificateur opérationnel inclus, ainsi qu'une erreur sur le gain.
 
 L'offset est donné par~: 
 \begin{equation*}
@@ -402,7 +402,7 @@ Les résultats expérimentaux obtenus sont fournis Fig.~\ref{fig:slow}.
   \label{fig:slow}
 \end{figure}
 
-Le phénomène s'observe bien lorsque l'on trace $V_{out}=f(V_{in})$ (cf. Fig.~\ref{fig:slowXY}). On y observe des ``marches'' de hauteurs et largeurs régulières, de l'ordre de $\frac{V_{ref}}{2^8}\approx\mathrm{19,5 mV}$. Ces marches sont continues sur le plan horizontal, mais pas sur le plan vertical~: à chaque valeur de $V_{out}$ correspond plusieurs valeurs de $V_{in}$. Plus simplement, sans prendre en compte d'éventuels offsets ou erreurs de gain, lors de la conversion $V_{in}\rightarrow V_{out}$, $-V_{in}$ est ``rabattu'' sur la valur possible de $V_{out}$ la plus proche.
+Le phénomène s'observe bien lorsque l'on trace $V_{out}=f(V_{in})$ (cf. Fig.~\ref{fig:slowXY}). On y observe des ``marches'' de hauteurs et largeurs régulières, de l'ordre de $\frac{V_{ref}}{2^8}\approx\mathrm{19,5 mV}$. Ces marches sont continues sur le plan horizontal, mais pas sur le plan vertical~: à chaque valeur de $V_{out}$ correspond plusieurs valeurs de $V_{in}$. Plus simplement, sans prendre en compte d'éventuels offsets ou erreurs de gain, lors de la conversion $V_{in}\rightarrow V_{out}$, $-V_{in}$ est ``rabattu'' sur la valeur la plus proche possible de $V_{out}$.
 
 On introduit ainsi un erreur de quantification comprise entre $-\frac{1}{2}\frac{V_{ref}}{2^8}$ et $+\frac{1}{2}\frac{V_{ref}}{2^8}$.
 %TODO: sur signal 0,5HZ > Verr zoomé : dans de scie relativement régulière, d'amplitude VLSB
@@ -450,5 +450,69 @@ On introduit ainsi un erreur de quantification comprise entre $-\frac{1}{2}\frac
 %      > Verr dézoomé, fréq haute : au Verr précédemment affiché, on ajoute un signal carré
 
 
+\chapter{Chambre d'echo}
+\section{Analyse théorique}
+
+\subsection{Fonctionnement}
+Le principe de la chambre d'écho est d'échantilloner un signal audio à l'aide du convertisseur AN, de stoquer les échantillons dans un tampon circulaire réalisé à l'aide d'une mémoire 8-bits, puis de restituer les données passées qui sont stoquées dans la mémoire à l'aide du convertisseur NA.
+
+Il y a alors plusieurs modes de fonctionnement :
+\begin{itemize}
+\item \textbf{Retard} : Le signal est désactivé mais l'echo est activé. Il sagit donc d'un simple retard.
+\item \textbf{Echo simple} : Le signal et l'echo sont activés, mais le sommateur est désactivé. Le signal est sommé avec le contenu de la mémoire, mais seul le signal est écrit dans la mémoire. Il n'y a donc qu'un seul écho.
+\item \textbf{Echo infini} : Le signal, l'echo et le sommateur sont activés. Le signal est sommé avec le contenu de la mémoire avant d'être écrit dans la mémoire. Il y a donc un feedback sur l'écho, ce qui simule mieux un écho réel.
+\end{itemize} :
+
+Théoriquement, un écho simple est équivalent à un ''filtre'' à réponse impulsionelle finie (RIF), dont la fonction vaut :
+$y[n] = x[n] + k \cdot x[n-l]$, où $k = facteur d'atténuation$ et où $l = \frac{longeur de l'echo}{fréquence d'échantillonage}$
+Sa fonction de transfert est donc :
+$H(z) = 1 + k \cdot z^l
+
+Il n'y a pas de pôles, le système sera toujours stable.
+
+Un echo infini est équivalent à un ''filtre'' à réponse impultionelle infinie (RII), dont la fonction vaut :
+$y[n] = x[n] + k \cdot y[n-l]$
+
+La fonction de transfert est donc :
+$H(z) = \frac{1}{1 - k \cdot z^-l}
+Ce système sera stable seulement pour les $k<1$. En cas d'instabilité, la chambre d'écho ne fonctionnera pas.
+
+\subsection{Calcul du retard}
+On désire avoir une bande passante de $15 kHz$, il faut donc une fréquence d'échantillonage strictement suppérieure à $30 kHz$.
+
+Le retard maximum possible est de $retard = \frac{taille_de_la_memoire}{fréquence d'échantillonage} = \frac{32768}{32000} = 1.024 s$
+
+% Calcul du gain de l'ampli d'entrée......
+
+% discussion des signaux à l'oscilloscope...
+
+\section{Mesures}
+
+% discussion des signaux à l'oscilloscope...
+
+\subsection{Nombre de bits}
+A chaque bit supprimé, le niveau de bruit augmente.
+Concrètement, lorsqu'il reste très peu de bits, le signal sonne très distordu, car il y a non seulement du bruit mais en plus des harmoniques supplémentaires.
+
+Dans le cas de la voix humaine, il faut au moins 4 bits pour qu'elle soit compréhensible.
+
+\subsection{Retard et gain de l'echo}
+Le retard à une influence sur la durée entre deux répétitions de l'écho.
+Le gain quand à lui a une influence sur l'atténuation entre deux répétitions de l'écho.
+
+Une augmentation du retard ou du gain vont tous deux augmenter le temps que l'écho prend pour être suffisament atténué pour se fondre dans le bruit, ce qui donne une impression de plus de résonnance.
+
+\subsectoin{Avantages et inconvenients des techniques}
+Si la taille de la mémoire est fixe, l'avantage est que le contôle des lignes d'addresses de la mémoire s'en trouvera simplifié : Un simple compteur ou décompteur modulo $2^n$ fera l'affaire.
+En revanche, il sera nécessaire d'avoir un cricuit qui permet de faire varier la fréquence d'horloge pour l'échantillonage.
+
+Si l'on change la longeur de l'écho durant le fonctionnement du circuit, l'ancien contenu de la mémoire sera déformé par le changement de fréquence d'échantillonage, ce qui peut être indésirable.
+
+Dans le cas d'une fréquence d'échantillonage est fixe, cela simplifiera la génération de l'horloge, et celle-ci pourrait être fabriquée de maniètre très précise à partir d'un quartz.
+Mais le controle des lignes d'addresses sera alors plus compliqué, il faut un décompteur qui recharge une variable lorsqu'il atteint la valeur zéro, la variable déterminant la longeur entre deux répetitions de l'écho.
+
+Le changement de la longueur de l'écho pendant l'utilisation n'a pas d'effet nefaste, il faut juste attendre un décomptage complet des lignes d'addresses avant que le changement soit effectif.
+
+En conclusion, le choix de l'une où de l'autre technique dépendra donc si on préfère mettre la complexité du circuit du côté analogique (génération d'une fréquence d'échantillonage variable) ou du côté numérique (gestion des lignes d'addresse de la mémoire).
 
 \end{document}
