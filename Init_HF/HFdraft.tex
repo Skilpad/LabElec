@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\input{../LaTeXconfig.tex}
+
+\graphicspath{{./Images/}}
+
+\begin{document}
+
+\noindent {\fontsize{20}{20}\selectfont \noindent \textbf{Laboratoire d'électronique~:}}
+
+\noindent {\fontsize{30}{30}\selectfont \noindent \textbf{Convertisseurs A/N et N/A}}
+
+\vspace{5pt}\hrule\vspace{2pt}
+
+\noindent {\Large \textbf{\textsc{Masur} Jonathan}\hfill\textbf{\textsc{Graignic} Anthony}\hfill \textbf{\textsc{Gosselin} Paul}}
+
+\vspace{20pt}
+
+
+% Return loss
+
+4.2.2
+Désadaptation d'impédance
+Voir HF-VHF : 2.16, 3.22
+
+
+
+
+
+\section{L'amplificateur accordé}
+
+\subsection{Description}
+
+On considère l'amplificateur accordé décrit Fig.~\ref{schem6}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.7\textwidth]{schem6}
+	\caption{}
+	\label{schem6}
+\end{figure}
+
+Toutefois, on prendra $R_{31}=R_{34}=\infty$~: en effet, ces résistances on juste pour but de diminuer les facteurs de qualité des filtres situés en amont et en aval du JFET.
+
+\subsection{Questions et calculs}
+
+\exsubpart{1}
+
+Les deux circuits résonnants sont couplés via un couplage actif.
+
+\exsubpart{2}
+
+On couple deux filtres d'ordre 1, formant ainsi un filtre d'ordre 2.
+
+Si le facteur de qualité de chacun des circuits résonants est le même, on obtient donc un facteur de qualité global de~:
+\begin{equation*}
+Q_{tot} = \frac{1}{\sqrt{2^{1/2}-1}}Q = 1.554 Q
+\end{equation*}
+
+
+
+
+
+
+6.2.1. %TODO: Couplage actif
+
+6.2.2. %TODO: HF-VHF, 2-21
+
+
+
+
+\end{document}
