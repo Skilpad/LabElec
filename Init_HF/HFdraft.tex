@@ -91,4 +91,64 @@ Q = \sqrt{2^{1/2}-1}~Q_{tot} = 4,505
 
 
 
+
+
+\section{L'oscillateur à quartz}
+
+\subsection{Description}
+
+%TODO
+
+\subsection{Question et calculs}
+
+
+
+%  9
+%
+%  In 9MHz = +7 dBm
+%  In 5MHz = -7 dBm
+%  Pic en sortie à 14MHz = -12.5 dBm
+%  => Gain de conversion = -5.5 dB
+%
+%  In 5Mhz = 1 dBm  =>  Pic sortie 14MHz = -5.5 dBm, soit gain = -6.5 dBm
+%  => Point de compression : In RF à 1dBm, soit 0.250 Veff
+%
+%  In1: 9MHz = 7 dBm
+%  Out: 50.47 Ohm
+%  In2: analyseur de spectre  =>  -58.5 dBm
+%  =>  Gain = -67.5 dB
+%
+
+
+% 10
+%
+% On prend R77 = 560, R76 = 3.3k (on veut R76/R77=6)
+% L72 pour fixer à 0 le potentiel moyen à G1 (sinon, on ne contrôle pas ce potentiel moyen). Comme ça, on peut polariser négativement blablabla G1.
+%
+% LO : 5MHz, 1Veff, 13.01 dBm
+% RF : 9MHz, 10mVeff, -27dBm
+% Sortie : plein d'harmoniques : multiples de 5MHz, de 9MHz, 9-k5 ...
+% 14 MHz : -56.63 dBm
+% Gain : -30.37 dB avec les réductions en entrée (Rin, R72) (-6dB) et en sortie (R73,R74,Rout) (-35.7 dB)
+%    soit, sans ces adaptations : 11.33 dB
+% Compression 1dB : In à -3.4 dBm, soit 0.151 Veff
+%
+% In2 : 5 MHz, 1 Veff
+% IN1 : 9.1 MHz, 8.9 MHz, -5.4 dBm, 0.12 Veff
+% => 14.3 MHz (3e harmo mesurée) : -70.9 dBm
+%   (14.1 MHz : -42dBm)
+%
+% Avec 50.47ohm en sortie, IN2 avec 1Veff (13.01 dBm), l'analyseur sur IN1 :
+% on mesure à 5MHz : -62.8 dBm
+%  => -75.8 dB
+
+
+
+
+
+
+
+
+
+
 \end{document}
