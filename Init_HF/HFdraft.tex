@@ -1,3 +1,7 @@
+% 4,6 : Paul
+% 7,8 : Jo'
+% 9,10,11,13: Anthony
+
 \documentclass{article}
 
 \input{../LaTeXconfig.tex}
@@ -19,9 +23,9 @@
 
 % Return loss
 
-4.2.2
-Désadaptation d'impédance
-Voir HF-VHF : 2.16, 3.22
+% 4.2.2
+% Désadaptation d'impédance
+% Voir HF-VHF : 2.16, 3.22
 
 
 
@@ -142,6 +146,30 @@ Q = \sqrt{2^{1/2}-1}~Q_{tot} = 4,505
 % on mesure à 5MHz : -62.8 dBm
 %  => -75.8 dB
 
+
+% 11
+%
+% In1 : 10 mVeff, 9 MHz, -27 dBm
+% In2 :  2 Veff,  5 Mhz, 19 dBm
+% Sortie 14MHz : -80.1 dBm
+% Gain : -53.1 dBm
+% En prenant en compte les diviseurs de tensions internes : -11.4 dBm
+% On réalise qu'en augmentant légèrement In1 à partir de 10mVeff, le gain augmente légèrement,
+% avant de devenir constant pour une large gamme d'amplitudes pour In1.
+% On fait donc les mesures de gain pour une amplitude de In1 légèrement supérieure à 10 mVeff :
+% 20 mVeff
+%
+% in1 : 20 mVeff, -21 dBm
+% Sortie 14MHz : -75 dbm
+% Gain : -54 dBm
+% En prenant en compte les diviseurs de tensions internes : -11.4 dBm
+%
+% In1 : 18.5 dBm  =>  Sortie 14MHz : -36.6 dBm
+% = Gain de compression à -1dB
+%
+% In1 13.9 MHz, 14.1 MHz : 1.88 Veff, 18.5 dBM
+% Sortie 14.3 MHz : -70.2 dBm
+%
 
 
 
