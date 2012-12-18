@@ -105,7 +105,25 @@ Q = \sqrt{2^{1/2}-1}~Q_{tot} = 4,505
 
 \subsection{Question et calculs}
 
+\section{Mélangeurs}
 
+\subsection{Introduction}
+Les mélangeurs sont des circuits qui permettent de multiplier deux signaux sinusoïdaux.
+D'après la formule d'addition des sinus : \\
+
+$\sin(\omega_{1}\cdot t)\cdot \sin(\omega_{2}\cdot t) = \frac{1}{2}\cdot(\cos((\omega_{1} + \omega_{2})\cdot t) - cos((\omega_{1} - \omega_{2})\cdot t ) )$
+\\
+Pour un montage idéal, nous avons donc une première composante fréquentielle à $\omega_{1} - \omega_{2}$ et une deuxième $\omega_{1} + \omega_{2}$
+
+Il est alors possible par filtrage d'éliminer l'une de ces deux composantes, typiquement $\omega_{1} - \omega_{2}$, afin de ne garder que la composante en $\omega_{1} + \omega_{2}$.\\
+
+Ceci est utile pour réaliser une modulation en fréquence (FM). Si l'une des deux fréquences est fixée par un oscillateur local (LO), nous additionons toutes les fréquences du signal d'entrée par une constante.
+\\
+En pratique, la modulation va présenter des non linéarités, nous aurons donc des harmoniques de $\omega_{1}$ et de $\omega_{2}$ en entrée du système.
+Ainsi, nous avons des composantes à toutes les fréquences : $m \cdot \omega_{1} + n \cdot \omega_{2}$, $\forall m, n \in\bbZ$
+
+
+\subsubsection{Mélangeur à cellule de Gilbert}
 
 %  9
 %
