@@ -450,59 +450,88 @@ On introduit ainsi un erreur de quantification comprise entre $-\frac{1}{2}\frac
 %      > Verr dézoomé, fréq haute : au Verr précédemment affiché, on ajoute un signal carré
 
 
-\chapter{Chambre d'echo}
-\section{Analyse théorique}
+\section{Chambre d'echo}
+\subsection{Analyse théorique}
 
-\subsection{Fonctionnement}
-Le principe de la chambre d'écho est d'échantilloner un signal audio à l'aide du convertisseur AN, de stoquer les échantillons dans un tampon circulaire réalisé à l'aide d'une mémoire 8-bits, puis de restituer les données passées qui sont stoquées dans la mémoire à l'aide du convertisseur NA.
+\subsubsection{Fonctionnement}
+Le principe de la chambre d'écho est d'échantilloner un signal audio à l'aide du convertisseur AN, de stoquer les échantillons dans un tampon circulaire réalisé à l'aide d'une mémoire 8-bits, puis de restituer les données passées qui sont stoquées dans la mémoire à l'aide du convertisseur NA.\\
+\includegraphics{principe_chambre_d'echo.png}
 
 Il y a alors plusieurs modes de fonctionnement :
 \begin{itemize}
-\item \textbf{Retard} : Le signal est désactivé mais l'echo est activé. Il sagit donc d'un simple retard.
+\item \textbf{Retard pur} : Le  est désactivé mais l'echo est activé. Il sagit donc d'un simple retard.
 \item \textbf{Echo simple} : Le signal et l'echo sont activés, mais le sommateur est désactivé. Le signal est sommé avec le contenu de la mémoire, mais seul le signal est écrit dans la mémoire. Il n'y a donc qu'un seul écho.
 \item \textbf{Echo infini} : Le signal, l'echo et le sommateur sont activés. Le signal est sommé avec le contenu de la mémoire avant d'être écrit dans la mémoire. Il y a donc un feedback sur l'écho, ce qui simule mieux un écho réel.
 \end{itemize} :
 
-Théoriquement, un écho simple est équivalent à un ''filtre'' à réponse impulsionelle finie (RIF), dont la fonction vaut :
-$y[n] = x[n] + k \cdot x[n-l]$, où $k = facteur d'atténuation$ et où $l = \frac{longeur de l'echo}{fréquence d'échantillonage}$
+\subsubsection{Conditions à garantir pour la stabilité}
+
+\begin{itemize}
+\item \textbf{En mode écho simple} : Théoriquement, un système d'écho simple est équivalent à un ''filtre'' à réponse impulsionelle finie (RIF), dont la réponse est :
+\begin{center}$y[n] = x[n] + k \cdot x[n-l]$ \end{center}\textbf{}\\
+Avec : $x$ = entrée, $y$ = sortie, $k = $ facteur d'amplification, $l = $taille du tampon en mémoire\\
+
 Sa fonction de transfert est donc :
-$H(z) = 1 + k \cdot z^l
+\begin{center}$H(z) = 1 + k \cdot z^l$\end{center}
 
 Il n'y a pas de pôles, le système sera toujours stable.
 
-Un echo infini est équivalent à un ''filtre'' à réponse impultionelle infinie (RII), dont la fonction vaut :
-$y[n] = x[n] + k \cdot y[n-l]$
+\item \textbf{En mode écho infini} : Un echo infini est équivalent à un ''filtre'' à réponse impultionelle infinie (RII), dont la réponse est :
+\begin{center}$y[n] = x[n] + k \cdot y[n-l]$\end{center}
 
 La fonction de transfert est donc :
-$H(z) = \frac{1}{1 - k \cdot z^-l}
-Ce système sera stable seulement pour les $k<1$. En cas d'instabilité, la chambre d'écho ne fonctionnera pas.
+\begin{center}$H(z) = \frac{1}{1 - k \cdot z^{-l}}$\end{center}
+Ce système sera stable seulement pour les $k<1$. En cas d'instabilité, la chambre d'écho ne fonctionnera pas, un régime d'oscillation apparaîtra et un sifflement fort désagréable s'entendra sur la sortie.
+\end{itemize}
 
-\subsection{Calcul du retard}
+\subsubsection{Calcul du retard maximum}
 On désire avoir une bande passante de $15 kHz$, il faut donc une fréquence d'échantillonage strictement suppérieure à $30 kHz$.
 
-Le retard maximum possible est de $retard = \frac{taille_de_la_memoire}{fréquence d'échantillonage} = \frac{32768}{32000} = 1.024 s$
+Le retard maximum possible est de :
+\begin{center}$retard = \frac{l_{max}}{f_e}$\end{center}
+Avec $l_{max}$ = taille du tampon maximum = 32768 octets et $f_e = $ fréquence d'échantillonnage $= 32000 Hz$, cela donne :
+\begin{center}$retard = \frac{32768}{32000} = 1.024 s$\textbf{}\end{center}
 
 % Calcul du gain de l'ampli d'entrée......
 
 % discussion des signaux à l'oscilloscope...
 
-\section{Mesures}
+\subsection{Mesures}
 
+\subsubsection{Observation des signaux à l'oscilloscope}
 % discussion des signaux à l'oscilloscope...
 
-\subsection{Nombre de bits}
-A chaque bit supprimé, le niveau de bruit augmente.
-Concrètement, lorsqu'il reste très peu de bits, le signal sonne très distordu, car il y a non seulement du bruit mais en plus des harmoniques supplémentaires.
+\subsubsection{Nombre de bits}
+A chaque bit supprimé, le niveau de bruit augmente.\\
+% Il y a t-il des PHOTOS de l'analyseur de spectre pour mettre ici ?? %
 
-Dans le cas de la voix humaine, il faut au moins 4 bits pour qu'elle soit compréhensible.
+Concrètement, lorsqu'il reste très peu de bits, le signal sonne très distordu, car il y a non seulement du bruit mais en plus des harmoniques supplémentaires. En effet l'erreur de quantification peut être approximée comme étant aléatoire lorsqu'il reste suffisamment de bits, ce qui en fait du bruit.\\
+Par contre lorsque qu'il reste très peu de bits, par exemple le cas extrême où on n'a qu'un seul bit, le signal échantilloné devient :
+\begin{center}$y[n] = signe(x[n])$\end{center}
+Et l'erreur de quantification vaut :
+\begin{center}$err[n] = y[n] - x[n] = signe(x[n]) - x[n] =
+\left\{
+  \begin{array}{rcr}
+    -1-x \mbox{ si } x<0 \\
+    1-x \mbox{ si }\geq 0 \\
+  \end{array}
+\right.$\end{center}
 
-\subsection{Retard et gain de l'echo}
+On constate donc que la corrélation entre l'erreur $err[n]$ et $x[n]$ est très forte, et l'erreur ne peut pas être considérée comme du bruit, mais va introduire des harmoniques supplémentaires.\\
+Dans le cas d'un signal sinus, il sera transformé en carré, ce qui signifie une apparition de fortes harmoniques impaires. Le système n'étant pas linéaire (dépendance du signe de x), ceci ne peut pas être généralisé à tous les signaux.\\
+
+Nous avons donc mis en pratique ce qui a été observé pour la chaîne de conversion.\\
+Dans le cas de la voix humaine, on a constaté qu'il faut au moins 4 bits pour qu'elle soit compréhensible.
+
+
+% % A RELIRE
+\subsubsection{Retard et gain de l'echo}
 Le retard à une influence sur la durée entre deux répétitions de l'écho.
 Le gain quand à lui a une influence sur l'atténuation entre deux répétitions de l'écho.
 
 Une augmentation du retard ou du gain vont tous deux augmenter le temps que l'écho prend pour être suffisament atténué pour se fondre dans le bruit, ce qui donne une impression de plus de résonnance.
 
-\subsectoin{Avantages et inconvenients des techniques}
+\subsection{Avantages et inconvenients des techniques}
 Si la taille de la mémoire est fixe, l'avantage est que le contôle des lignes d'addresses de la mémoire s'en trouvera simplifié : Un simple compteur ou décompteur modulo $2^n$ fera l'affaire.
 En revanche, il sera nécessaire d'avoir un cricuit qui permet de faire varier la fréquence d'horloge pour l'échantillonage.
 
