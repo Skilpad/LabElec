@@ -492,9 +492,82 @@ Le retard maximum possible est de :
 Avec $l_{max}$ = taille du tampon maximum = 32768 octets et $f_e = $ fréquence d'échantillonnage $= 32000 Hz$, cela donne :
 \begin{center}$retard = \frac{32768}{32000} = 1.024 s$\textbf{}\end{center}
 
-% Calcul du gain de l'ampli d'entrée......
+\subsubsection{Calcul du gain de l'ampli d'entrée}
+Le shéma est le suivant :\\
+\includegraphics[width = 0.9\linewidth]{shema_echo_entree.png}
 
-% discussion des signaux à l'oscilloscope...
+Dans la bande passante, on néglige les pertes dues aux diviseur $C37$ et $R7$, car la fréquence de coupure vaut :
+$f_c = \frac{1}{2 \pi \cdot R \cdot C} = \frac{1}{2 \pi \cdot 47 \cdot 10^3 \cdot 10^{-6}} = 3.39 Hz \ll 20 Hz$
+\\\\
+De même, les capacités $C2$ et $C3$ peuvent être négligées et considérées comme des circuits ouverts.
+En effet, au maximum de la bande passante (à 15 kHz) leur impédance vaut :
+\begin{center}$X_c = \frac{1}{2 \pi f \cdot C} = \frac{1}{2 \pi 15 \cdot 10^3 \cdot 22 \cdot 10^{-12}} = 482 k\Omega \gg R3, P4 $\end{center}
+Le gain du premier étage est donc de :
+\begin{center}
+$Au \simeq 1+\frac{R3}{R1} = 4.3 $
+\end{center}
+Et le gain du second étage :
+\begin{center}
+$Au \simeq 1+\frac{P4}{R5} =
+\left\{
+  \begin{array}{rcr}
+    1 \mbox{ si } P4 = 0 \mbox{ (minimum)} \\
+    51 \mbox{ si } P4 = 50k\Omega \mbox{ (maximum)} \\
+  \end{array}
+\right.
+$
+\end{center}
+D'où :
+\begin{center}
+$Au_{min} = 4.3 \cdot 1 = 4.3  = 12.7$ dB\\
+$ Au_{max} = 4.3 \cdot 51 = 220 = 46.8$ dB
+\end{center}
+
+\subsubsection{Séquenceur}
+Le rôle du séquenceur est de générer une fréquence d'horloge pour la logique numérique.\\
+\includegraphics[width = 1\linewidth]{shema_sequenceur_1.png}
+L'oscillateur est une simple cellule RC avec une hystrèse.\\
+D'après la notice du composant 74HC134, la fréquence d'oscillation minimum est de :
+\begin{center}
+$f_{min} \simeq \frac{1}{0.8 \cdot R \cdot C} = \frac{1}{0.8 \cdot 10^3 \cdot 6.8 \cdot 10^{-9}} = 184 $ kHz
+\end{center}
+Le maximum est limité par le délai de propagation des transistors internes au circuit (lorsque $P3 = 0$), et est donc plus difficile à déterminer. Une grossière approximation est de prendre le temps de propagation du circuit, en ajoutant le temps de montée et de descente. Les valeurs typiques sont de 20 ns et 7 ns respectivement :
+\begin{center}
+$f_{max} \simeq \frac{1}{tp_{lh} + tp_{hl} + t_{hl} + t_{lh}} = \frac{1}{2 \cdot (20+7) \cdot 10^{-9}} = 18.5 $ MHz
+\end{center}
+P3 permet donc de faire varier librement la fréquence d'oscillation sur 2 ordres de grandeur.
+\\
+Le circuit U3 est un compteur, il permet donc d'avoir une version prédivisée de l'horloge par plusieurs puissances de 2. Dans ce cas, le compteur est sur 4 bits, il permet donc d'avoir un signal prédivisé par 2, 4, 8 et 16.\\
+Nous pouvons choisir lequel de ces prédiviseur est utilisé pour ce circuit ce qui permet de choisir grossièrement une très large bande de fréquences d'échantillonnages, en plus du réglage par P3.
+\\\\
+Les deux bascules D de U19 forment un compteur Johnson de longueur 2, qui a 4 états. D'après la datasheet du composant 74HC74 le changement d'état se fait au flanc montant de CLK :
+\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{Etat} & CK & /CK & R/W & INC \\
+\hline
+0 & 0 & 0 & 1 & 1 & 0 \\
+%\hline
+0 & 1 & 0 & 1 & 1 & 1 \\
+%\hline
+1 & 1 & 1 & 0 & 0 & 1\\
+%\hline
+1 & 0 & 1 & 0 & 1 & 0\\
+\hline
+\end{tabular}
+\end{center}
+
+\includegraphics[width = 1\linewidth]{shema_sequenceur_2.png}
+Il y a donc un "cycle" pour chaque période de CK, soit 4 périodes de CLK. Chaque cycle se décompose donc en 4 phases bien distinctes :
+\begin{itemize}
+\item \textbf{00 -} Lecture de l'ancienne valeur par le convertisseur N/A (flanc descendant de CK)
+\item \textbf{01 -} Pas d'opération
+\item \textbf{11 -} Ecriture de la nouvelle valeur dans la SRAM (état bas de R/W)
+\item \textbf{10 -} Mise à jour du bus d'adresses (flanc descendant de INC)
+\end{itemize}
+\includegraphics{shema_memoire.png}
+\includegraphics{chronogramme_sequenceur.png}
 
 \subsection{Mesures}
 
@@ -506,7 +579,7 @@ A chaque bit supprimé, le niveau de bruit augmente.\\
 % Il y a t-il des PHOTOS de l'analyseur de spectre pour mettre ici ?? %
 
 Concrètement, lorsqu'il reste très peu de bits, le signal sonne très distordu, car il y a non seulement du bruit mais en plus des harmoniques supplémentaires. En effet l'erreur de quantification peut être approximée comme étant aléatoire lorsqu'il reste suffisamment de bits, ce qui en fait du bruit.\\
-Par contre lorsque qu'il reste très peu de bits, par exemple le cas extrême où on n'a qu'un seul bit, le signal échantilloné devient :
+Par contre lorsque qu'il reste très peu de bits, par exemple le cas extrême où on n'a qu'un seul bit, le signal échantillonné devient :
 \begin{center}$y[n] = signe(x[n])$\end{center}
 Et l'erreur de quantification vaut :
 \begin{center}$err[n] = y[n] - x[n] = signe(x[n]) - x[n] =

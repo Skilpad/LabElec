@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  21 DEC 2012 19:20
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  22 DEC 2012 16:41
 entering extended mode
 **rapport.tex
 (D:\EPFL\LabElec\AD_DA\rapport.tex
@@ -728,16 +728,83 @@ Underfull \hbox (badness 10000) in paragraph at lines 471--473
  []
 
 [9 <D:/EPFL/LabElec/AD_DA/principe_chambre_d'echo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 505--507
+<shema_echo_entree.png, id=84, 971.63pt x 360.34625pt>
+File: shema_echo_entree.png Graphic file (type png)
+
+<use shema_echo_entree.png>
+Package pdftex.def Info: shema_echo_entree.png used on input line 497.
+(pdftex.def)             Requested size: 435.32419pt x 161.445pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--504
+
+ []
+
+<shema_sequenceur_1.png, id=85, 548.80031pt x 216.81pt>
+File: shema_sequenceur_1.png Graphic file (type png)
+
+<use shema_sequenceur_1.png>
+Package pdftex.def Info: shema_sequenceur_1.png used on input line 528.
+(pdftex.def)             Requested size: 483.69684pt x 191.09444pt.
+ [10 <D:/EPFL/LabElec/AD_DA/shema_echo_entree.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 538--545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 520--522
+Underfull \hbox (badness 10000) in paragraph at lines 538--545
 
  []
 
-[10] [11] (D:\EPFL\LabElec\AD_DA\rapport.aux)
+<shema_sequenceur_2.png, id=89, 469.00218pt x 292.09125pt>
+File: shema_sequenceur_2.png Graphic file (type png)
+
+<use shema_sequenceur_2.png>
+Package pdftex.def Info: shema_sequenceur_2.png used on input line 561.
+(pdftex.def)             Requested size: 483.69684pt x 301.24062pt.
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 561--563
+[][]
+ []
+
+[11 <D:/EPFL/LabElec/AD_DA/shema_sequenceur_1.png>]
+<shema_memoire.png, id=93, 545.03625pt x 370.38374pt>
+File: shema_memoire.png Graphic file (type png)
+ <use shema_memoire.png>
+Package pdftex.def Info: shema_memoire.png used on input line 569.
+(pdftex.def)             Requested size: 545.03493pt x 370.38283pt.
+
+<chronogramme_sequenceur.png, id=94, 486.31688pt x 341.77687pt>
+File: chronogramme_sequenceur.png Graphic file (type png)
+
+<use chronogramme_sequenceur.png>
+Package pdftex.def Info: chronogramme_sequenceur.png used on input line 570.
+(pdftex.def)             Requested size: 486.31569pt x 341.77603pt.
+
+Overfull \hbox (61.33809pt too wide) in paragraph at lines 569--571
+[]
+ []
+
+
+Overfull \hbox (2.61885pt too wide) in paragraph at lines 569--571
+[] 
+ []
+
+[12 <D:/EPFL/LabElec/AD_DA/shema_sequenceur_2.png>]
+Overfull \vbox (58.74548pt too high) has occurred while \output is active []
+
+
+[13 <D:/EPFL/LabElec/AD_DA/shema_memoire.png> <D:/EPFL/LabElec/AD_DA/chronogram
+me_sequenceur.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 578--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--595
+
+ []
+
+[14] [15] (D:\EPFL\LabElec\AD_DA\rapport.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -747,10 +814,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4509 strings out of 494045
- 62213 string characters out of 3148379
+ 4534 strings out of 494045
+ 62853 string characters out of 3148379
  131567 words of memory out of 3000000
- 7685 multiletter control sequences out of 15000+200000
+ 7705 multiletter control sequences out of 15000+200000
  23296 words of font info for 62 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  38i,10n,38p,639b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -790,9 +857,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on rapport.pdf (11 pages, 960929 bytes).
+Output written on rapport.pdf (15 pages, 1100133 bytes).
 PDF statistics:
- 520 PDF objects out of 1000 (max. 8388607)
+ 548 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
