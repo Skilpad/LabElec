@@ -454,15 +454,15 @@ On introduit ainsi un erreur de quantification comprise entre $-\frac{1}{2}\frac
 \subsection{Analyse théorique}
 
 \subsubsection{Fonctionnement}
-Le principe de la chambre d'écho est d'échantillonner un signal audio à l'aide du convertisseur AN, de stocker les échantillons dans un tampon circulaire réalisé à l'aide d'une mémoire 8-bits, puis de restituer les données passées qui sont stockées dans la mémoire à l'aide du convertisseur NA.\\
+Le principe de la chambre d'écho est d'échantillonner un signal audio à l'aide du convertisseur AN, de stocker les échantillons dans un tampon circulaire réalisé à l'aide d'une mémoire SRAM de 8-bits, puis de restituer les données passées qui sont stockées dans la mémoire à l'aide du convertisseur NA.\\
 \includegraphics{principe_chambre_d'echo.png}
 
 Il y a alors plusieurs modes de fonctionnement :
 \begin{itemize}
-\item \textbf{Retard pur} : Le  est désactivé mais l'écho est activé. Il s'agit donc d'un simple retard.
+\item \textbf{Retard pur} : Le signal est désactivé mais l'écho est activé. Il s'agit donc d'un simple retard.
 \item \textbf{Echo simple} : Le signal et l'écho sont activés, mais le sommateur est désactivé. Le signal est sommé avec le contenu de la mémoire, mais seul le signal est écrit dans la mémoire. Il n'y a donc qu'un seul écho.
 \item \textbf{Echo infini} : Le signal, l'écho et le sommateur sont activés. Le signal est sommé avec le contenu de la mémoire avant d'être écrit dans la mémoire. Il y a donc un feedback sur l'écho, ce qui simule mieux un écho réel.
-\end{itemize} :
+\end{itemize}
 
 \subsubsection{Conditions à garantir pour la stabilité}
 
@@ -483,6 +483,8 @@ La fonction de transfert est donc :
 \begin{center}$H(z) = \frac{1}{1 - k \cdot z^{-l}}$\end{center}
 Ce système sera stable seulement pour les $k<1$. En cas d'instabilité, la chambre d'écho ne fonctionnera pas, un régime d'oscillation apparaîtra et un sifflement fort désagréable s'entendra sur la sortie.
 \end{itemize}
+
+A noter que la réponse en fréquence de la chambre d'écho n'est pas constante : Certaines fréquences vont être amplifiées tandis que d'autres vont être atténuées, et ce pour les deux modes écho simple et infini. Cet effet de bord n'est malheureusement pas évitable. De plus, toute modification des paramètres $k$ et $l$ va affecter la réponse en fréquence.
 
 \subsubsection{Calcul du retard maximum}
 On désire avoir une bande passante de $15 kHz$, il faut donc une fréquence d'échantillonage strictement suppérieure à $30 kHz$.
@@ -542,7 +544,7 @@ Nous pouvons choisir lequel de ces prédiviseur est utilisé pour ce circuit ce 
 \\\\
 Les deux bascules D de U19 forment un compteur Johnson de longueur 2, qui a 4 états. Le changement d'état se fait au flanc montant de CLK. \footnote{Voir datasheet du composant 74HC74}\\
 
-\includegraphics[width = 1\linewidth]{shema_sequenceur_2.png}
+\includegraphics[width = 0.7\linewidth]{shema_sequenceur_2.png}
 
 
 Il y a donc un "cycle" pour chaque période de CK, soit 4 périodes de CLK. Chaque cycle se décompose donc en 4 phases bien distinctes :\footnote{Voir schéma du montage et datasheets des composants respectifs : UVC3130 pour le convertisseur, 74HC4040 pour le contrôleur de bus d'adresses et 62256 pour la SRAM}
@@ -562,17 +564,25 @@ Il y a donc un "cycle" pour chaque période de CK, soit 4 périodes de CLK. Chaq
 \end{tabular}
 \end{center}
 
+%Pas nécessaire...
 %\includegraphics[width = 1\linewidth]{shema_memoire.png}
-\includegraphics{chronogramme_sequenceur.png}
 
+\begin{minipage}{0.67\linewidth}
+\includegraphics[width = 1\linewidth]{chronogramme_sequenceur.png}
+\end{minipage}\hfill
+\begin{minipage}{0.31\linewidth}
 Conclusion : A chaque cycle, une valeur dans la SRAM est d'abord lue et convertie en analogique, avant qu'une nouvelle valeur provenant du convertisseur A/N vienne remplacer cette valeur, puis on continue à l'adresse suivante.
+\end{minipage}
+
 \subsection{Mesures}
 
 \subsubsection{Observation des signaux à l'oscilloscope}
+
+% !!! A AJOUTER !!!
 % discussion des signaux à l'oscilloscope...
 
 \subsubsection{Nombre de bits}
-A chaque bit supprimé, le niveau de bruit augmente.\\
+A chaque bit supprimé, le niveau de bruit augmente de 6 dB, car l'amplitude de la différence entre le signal idéal et quantifié (erreur) double lorsqu'on enlève un bit.\\
 % Il y a t-il des PHOTOS de l'analyseur de spectre pour mettre ici ?? %
 
 Concrètement, lorsqu'il reste très peu de bits, le signal sonne très distordu, car il y a non seulement du bruit mais en plus des harmoniques supplémentaires. En effet l'erreur de quantification peut être approximée comme étant aléatoire lorsqu'il reste suffisamment de bits, ce qui en fait du bruit.
@@ -581,17 +591,17 @@ Par contre lorsque qu'il reste très peu de bits, par exemple le cas extrême o�
 \\
 \begin{tabular}{c c}
 
-\includegraphics[width = 7 cm]{err_quantification_8bit_t.png} & \includegraphics[width = 7 cm]{err_quantification_8bit_f.png}
+\includegraphics[width = 8 cm]{err_quantif_8bit_t.png} & \includegraphics[width = 8 cm]{err_quantif_8bit_f.png}
 \\
-Erreur de quantification 8-bits sur une période de sinus & Spectre de l'erreur de quantification
+Sinus quantifié sur 8 bits et erreur & Spectre de l'erreur de quantification
 \\
-\includegraphics[width = 7 cm]{err_quantification_4bit_t.png} & \includegraphics[width = 7 cm]{err_quantification_4bit_f.png}
+\includegraphics[width = 8 cm]{err_quantif_4bit_t.png} & \includegraphics[width = 8 cm]{err_quantif_4bit_f.png}
 \\
-Erreur de quantification 4-bits sur une période de sinus & Spectre de l'erreur de quantification
+Sinus quantifié sur 4 bits et erreur & Spectre de l'erreur de quantification
 \\
-\includegraphics[width = 7 cm]{err_quantification_1bit_t.png} & \includegraphics[width = 7 cm]{err_quantification_1bit_f.png}
+\includegraphics[width = 8 cm]{err_quantif_1bit_t.png} & \includegraphics[width = 8 cm]{err_quantif_1bit_f.png}
 \\
-Erreur de quantification 1-bit sur une période de sinus & Spectre de l'erreur de quantification
+Sinus quantifié sur 1 bit et erreur & Spectre de l'erreur de quantification
 \end{tabular}
 
 A noter que l'échelle sur l'axe des ordonnées n'est pas la même sur ces trois graphiques - à fin que ceux-ci soient observables.\\
