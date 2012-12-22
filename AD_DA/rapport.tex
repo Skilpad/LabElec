@@ -450,18 +450,18 @@ On introduit ainsi un erreur de quantification comprise entre $-\frac{1}{2}\frac
 %      > Verr dézoomé, fréq haute : au Verr précédemment affiché, on ajoute un signal carré
 
 
-\section{Chambre d'echo}
+\section{Chambre d'écho}
 \subsection{Analyse théorique}
 
 \subsubsection{Fonctionnement}
-Le principe de la chambre d'écho est d'échantilloner un signal audio à l'aide du convertisseur AN, de stoquer les échantillons dans un tampon circulaire réalisé à l'aide d'une mémoire 8-bits, puis de restituer les données passées qui sont stoquées dans la mémoire à l'aide du convertisseur NA.\\
+Le principe de la chambre d'écho est d'échantillonner un signal audio à l'aide du convertisseur AN, de stocker les échantillons dans un tampon circulaire réalisé à l'aide d'une mémoire 8-bits, puis de restituer les données passées qui sont stockées dans la mémoire à l'aide du convertisseur NA.\\
 \includegraphics{principe_chambre_d'echo.png}
 
 Il y a alors plusieurs modes de fonctionnement :
 \begin{itemize}
-\item \textbf{Retard pur} : Le  est désactivé mais l'echo est activé. Il sagit donc d'un simple retard.
-\item \textbf{Echo simple} : Le signal et l'echo sont activés, mais le sommateur est désactivé. Le signal est sommé avec le contenu de la mémoire, mais seul le signal est écrit dans la mémoire. Il n'y a donc qu'un seul écho.
-\item \textbf{Echo infini} : Le signal, l'echo et le sommateur sont activés. Le signal est sommé avec le contenu de la mémoire avant d'être écrit dans la mémoire. Il y a donc un feedback sur l'écho, ce qui simule mieux un écho réel.
+\item \textbf{Retard pur} : Le  est désactivé mais l'écho est activé. Il s'agit donc d'un simple retard.
+\item \textbf{Echo simple} : Le signal et l'écho sont activés, mais le sommateur est désactivé. Le signal est sommé avec le contenu de la mémoire, mais seul le signal est écrit dans la mémoire. Il n'y a donc qu'un seul écho.
+\item \textbf{Echo infini} : Le signal, l'écho et le sommateur sont activés. Le signal est sommé avec le contenu de la mémoire avant d'être écrit dans la mémoire. Il y a donc un feedback sur l'écho, ce qui simule mieux un écho réel.
 \end{itemize} :
 
 \subsubsection{Conditions à garantir pour la stabilité}
@@ -540,35 +540,32 @@ P3 permet donc de faire varier librement la fréquence d'oscillation sur 2 ordre
 Le circuit U3 est un compteur, il permet donc d'avoir une version prédivisée de l'horloge par plusieurs puissances de 2. Dans ce cas, le compteur est sur 4 bits, il permet donc d'avoir un signal prédivisé par 2, 4, 8 et 16.\\
 Nous pouvons choisir lequel de ces prédiviseur est utilisé pour ce circuit ce qui permet de choisir grossièrement une très large bande de fréquences d'échantillonnages, en plus du réglage par P3.
 \\\\
-Les deux bascules D de U19 forment un compteur Johnson de longueur 2, qui a 4 états. D'après la datasheet du composant 74HC74 le changement d'état se fait au flanc montant de CLK :
-\\
+Les deux bascules D de U19 forment un compteur Johnson de longueur 2, qui a 4 états. Le changement d'état se fait au flanc montant de CLK. \footnote{Voir datasheet du composant 74HC74}\\
+
+\includegraphics[width = 1\linewidth]{shema_sequenceur_2.png}
+
+
+Il y a donc un "cycle" pour chaque période de CK, soit 4 périodes de CLK. Chaque cycle se décompose donc en 4 phases bien distinctes :\footnote{Voir schéma du montage et datasheets des composants respectifs : UVC3130 pour le convertisseur, 74HC4040 pour le contrôleur de bus d'adresses et 62256 pour la SRAM}
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|l|}
 \hline
-\multicolumn{2}{|c|}{Etat} & CK & /CK & R/W & INC \\
+\multicolumn{2}{|c|}{Etat} & CK & /CK & R/W & INC & Action\\
 \hline
-0 & 0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & 1 & 1 & 0 & Lecture de l'ancienne valeur par le convertisseur N/A (flanc descendant de CK) \\
 %\hline
-0 & 1 & 0 & 1 & 1 & 1 \\
+0 & 1 & 0 & 1 & 1 & 1 & Pas d'opération\\
 %\hline
-1 & 1 & 1 & 0 & 0 & 1\\
+1 & 1 & 1 & 0 & 0 & 1 & Ecriture de la nouvelle valeur dans la SRAM (état bas de R/W)\\
 %\hline
-1 & 0 & 1 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 1 & 0 & Mise à jour du bus d'adresses (flanc descendant de INC)\\
 \hline
 \end{tabular}
 \end{center}
 
-\includegraphics[width = 1\linewidth]{shema_sequenceur_2.png}
-Il y a donc un "cycle" pour chaque période de CK, soit 4 périodes de CLK. Chaque cycle se décompose donc en 4 phases bien distinctes :
-\begin{itemize}
-\item \textbf{00 -} Lecture de l'ancienne valeur par le convertisseur N/A (flanc descendant de CK)
-\item \textbf{01 -} Pas d'opération
-\item \textbf{11 -} Ecriture de la nouvelle valeur dans la SRAM (état bas de R/W)
-\item \textbf{10 -} Mise à jour du bus d'adresses (flanc descendant de INC)
-\end{itemize}
-\includegraphics{shema_memoire.png}
+%\includegraphics[width = 1\linewidth]{shema_memoire.png}
 \includegraphics{chronogramme_sequenceur.png}
 
+Conclusion : A chaque cycle, une valeur dans la SRAM est d'abord lue et convertie en analogique, avant qu'une nouvelle valeur provenant du convertisseur A/N vienne remplacer cette valeur, puis on continue à l'adresse suivante.
 \subsection{Mesures}
 
 \subsubsection{Observation des signaux à l'oscilloscope}
@@ -578,43 +575,60 @@ Il y a donc un "cycle" pour chaque période de CK, soit 4 périodes de CLK. Chaq
 A chaque bit supprimé, le niveau de bruit augmente.\\
 % Il y a t-il des PHOTOS de l'analyseur de spectre pour mettre ici ?? %
 
-Concrètement, lorsqu'il reste très peu de bits, le signal sonne très distordu, car il y a non seulement du bruit mais en plus des harmoniques supplémentaires. En effet l'erreur de quantification peut être approximée comme étant aléatoire lorsqu'il reste suffisamment de bits, ce qui en fait du bruit.\\
-Par contre lorsque qu'il reste très peu de bits, par exemple le cas extrême où on n'a qu'un seul bit, le signal échantillonné devient :
-\begin{center}$y[n] = signe(x[n])$\end{center}
-Et l'erreur de quantification vaut :
-\begin{center}$err[n] = y[n] - x[n] = signe(x[n]) - x[n] =
-\left\{
-  \begin{array}{rcr}
-    -1-x \mbox{ si } x<0 \\
-    1-x \mbox{ si }\geq 0 \\
-  \end{array}
-\right.$\end{center}
+Concrètement, lorsqu'il reste très peu de bits, le signal sonne très distordu, car il y a non seulement du bruit mais en plus des harmoniques supplémentaires. En effet l'erreur de quantification peut être approximée comme étant aléatoire lorsqu'il reste suffisamment de bits, ce qui en fait du bruit.
+\\
+Par contre lorsque qu'il reste très peu de bits, par exemple le cas extrême où on n'a qu'un seul bit, l'erreur de quantification augmente en amplitude et devient moins aléatoire.
+\\
+\begin{tabular}{c c}
 
-On constate donc que la corrélation entre l'erreur $err[n]$ et $x[n]$ est très forte, et l'erreur ne peut pas être considérée comme du bruit, mais va introduire des harmoniques supplémentaires.\\
-Dans le cas d'un signal sinus, il sera transformé en carré, ce qui signifie une apparition de fortes harmoniques impaires. Le système n'étant pas linéaire (dépendance du signe de x), ceci ne peut pas être généralisé à tous les signaux.\\
+\includegraphics[width = 7 cm]{err_quantification_8bit_t.png} & \includegraphics[width = 7 cm]{err_quantification_8bit_f.png}
+\\
+Erreur de quantification 8-bits sur une période de sinus & Spectre de l'erreur de quantification
+\\
+\includegraphics[width = 7 cm]{err_quantification_4bit_t.png} & \includegraphics[width = 7 cm]{err_quantification_4bit_f.png}
+\\
+Erreur de quantification 4-bits sur une période de sinus & Spectre de l'erreur de quantification
+\\
+\includegraphics[width = 7 cm]{err_quantification_1bit_t.png} & \includegraphics[width = 7 cm]{err_quantification_1bit_f.png}
+\\
+Erreur de quantification 1-bit sur une période de sinus & Spectre de l'erreur de quantification
+\end{tabular}
 
-Nous avons donc mis en pratique ce qui a été observé pour la chaîne de conversion.\\
+A noter que l'échelle sur l'axe des ordonnées n'est pas la même sur ces trois graphiques - à fin que ceux-ci soient observables.\\
+\\
+Dans le premier cas (8-bits) l'erreur de quantification est répartie sur tout le spectre, et peut être assimilée à du bruit blanc.
+\\
+Dans le second cas (4-bits), on constate que l'erreur est plus intense en basse fréquence, et peut plus difficilement être assimilée à du bruit blanc.
+\\
+Dans le dernier cas (1-bit), l'erreur correspond à la différence entre un signal sinus et un signal carré. L'erreur est très intense et très condensée dans les basses fréquences, et en aucun cas assimilable à du bruit blanc.
+\\
+
+A noter que le système n'étant pas linéaire, ceci ne peut pas être généralisé de façon théorique à tous les signaux.\\
+
+Nous avons donc mis en pratique et testé le système avec un micro.\\
 Dans le cas de la voix humaine, on a constaté qu'il faut au moins 4 bits pour qu'elle soit compréhensible.
 
-
-% % A RELIRE
 \subsubsection{Retard et gain de l'echo}
 Le retard à une influence sur la durée entre deux répétitions de l'écho.
 Le gain quand à lui a une influence sur l'atténuation entre deux répétitions de l'écho.
 
-Une augmentation du retard ou du gain vont tous deux augmenter le temps que l'écho prend pour être suffisament atténué pour se fondre dans le bruit, ce qui donne une impression de plus de résonnance.
+Une augmentation du retard ou du gain vont tous deux augmenter le temps que l'écho prend pour être suffisamment atténué pour se fondre dans le bruit, ce qui donne une impression de plus de résonance.\\
+
+Si l'on désire plus de résonance, une augmentation du gain fait tendre la chambre d'écho vers l'instabilité et augmente les variations de la réponse en fréquence, il est donc en général préférable d'augmenter le retard si la mémoire le permet.
 
 \subsection{Avantages et inconvenients des techniques}
-Si la taille de la mémoire est fixe, l'avantage est que le contôle des lignes d'addresses de la mémoire s'en trouvera simplifié : Un simple compteur ou décompteur modulo $2^n$ fera l'affaire.
-En revanche, il sera nécessaire d'avoir un cricuit qui permet de faire varier la fréquence d'horloge pour l'échantillonage.
+Si la taille de la mémoire est fixe, l'avantage est que le contrôle des lignes d'adresses de la mémoire s'en trouvera simplifié : Un simple compteur ou décompteur modulo $2^n$ fera l'affaire (c'est exactement ce qu'on a là avec les circuits U1 et U18).
 
-Si l'on change la longeur de l'écho durant le fonctionnement du circuit, l'ancien contenu de la mémoire sera déformé par le changement de fréquence d'échantillonage, ce qui peut être indésirable.
-
-Dans le cas d'une fréquence d'échantillonage est fixe, cela simplifiera la génération de l'horloge, et celle-ci pourrait être fabriquée de maniètre très précise à partir d'un quartz.
-Mais le controle des lignes d'addresses sera alors plus compliqué, il faut un décompteur qui recharge une variable lorsqu'il atteint la valeur zéro, la variable déterminant la longeur entre deux répetitions de l'écho.
-
-Le changement de la longueur de l'écho pendant l'utilisation n'a pas d'effet nefaste, il faut juste attendre un décomptage complet des lignes d'addresses avant que le changement soit effectif.
-
-En conclusion, le choix de l'une où de l'autre technique dépendra donc si on préfère mettre la complexité du circuit du côté analogique (génération d'une fréquence d'échantillonage variable) ou du côté numérique (gestion des lignes d'addresse de la mémoire).
+En revanche, il sera nécessaire d'avoir un circuit qui permet de faire varier la fréquence d'horloge pour l'échantillonnage. L'implémentation comme il a été fait dans le séquenceur de ce montage convient parfaitement, mais ne permet pas un réglage précis de la fréquence d'échantillonnage. Si de la précision serait requise, un oscillateur à quartz s'imposerait et il serait impossible de faire varier la fréquence de celui-ci, il faudrait alors utiliser une PLL pour faire librement varier la fréquence ce qui est cher et compliqué à mettre en oeuvre.
+\\
+Si l'on change la longueur de l'écho durant le fonctionnement du circuit, l'ancien contenu de la mémoire sera déformé par le changement de fréquence d'échantillonnage, ce qui peut être indésirable.
+\\\\
+Dans le cas d'une fréquence d'échantillonnage est fixe, cela simplifiera la génération de l'horloge, et celle-ci pourrait être fabriquée de manière très précise à partir d'un quartz.
+\\
+Mais le contrôle des lignes d'adresses sera alors plus compliqué, il faut un décompteur qui recharge une variable lorsqu'il atteint la valeur zéro, la variable déterminant la longueur entre deux répétitions de l'écho.
+\\
+Le changement de la longueur de l'écho pendant l'utilisation n'a pas d'effet néfaste, il faut juste attendre que le compteur d'adresses atteigne la valeur '0' pour que le changement soit effectif. Aucun son déformé n'apparait à la sortie.
+\\\\
+En conclusion, le choix de l'une où de l'autre technique dépendra donc si on préfère mettre la complexité du circuit du côté analogique (génération d'une fréquence d'échantillonnage variable) ou du côté numérique (gestion des lignes d'adresses de la mémoire).
 
 \end{document}

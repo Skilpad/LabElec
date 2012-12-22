@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  22 DEC 2012 16:41
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  22 DEC 2012 21:52
 entering extended mode
 **rapport.tex
 (D:\EPFL\LabElec\AD_DA\rapport.tex
@@ -746,12 +746,12 @@ File: shema_sequenceur_1.png Graphic file (type png)
 Package pdftex.def Info: shema_sequenceur_1.png used on input line 528.
 (pdftex.def)             Requested size: 483.69684pt x 191.09444pt.
  [10 <D:/EPFL/LabElec/AD_DA/shema_echo_entree.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 538--545
+Underfull \hbox (badness 10000) in paragraph at lines 538--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 538--545
+Underfull \hbox (badness 10000) in paragraph at lines 538--544
 
  []
 
@@ -759,52 +759,110 @@ Underfull \hbox (badness 10000) in paragraph at lines 538--545
 File: shema_sequenceur_2.png Graphic file (type png)
 
 <use shema_sequenceur_2.png>
-Package pdftex.def Info: shema_sequenceur_2.png used on input line 561.
+Package pdftex.def Info: shema_sequenceur_2.png used on input line 545.
 (pdftex.def)             Requested size: 483.69684pt x 301.24062pt.
 
-Overfull \hbox (28.45274pt too wide) in paragraph at lines 561--563
-[][]
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 545--546
+[][] 
  []
 
 [11 <D:/EPFL/LabElec/AD_DA/shema_sequenceur_1.png>]
-<shema_memoire.png, id=93, 545.03625pt x 370.38374pt>
-File: shema_memoire.png Graphic file (type png)
- <use shema_memoire.png>
-Package pdftex.def Info: shema_memoire.png used on input line 569.
-(pdftex.def)             Requested size: 545.03493pt x 370.38283pt.
+Overfull \hbox (35.22475pt too wide) in paragraph at lines 550--563
+ [] 
+ []
 
-<chronogramme_sequenceur.png, id=94, 486.31688pt x 341.77687pt>
+<chronogramme_sequenceur.png, id=93, 486.31688pt x 341.77687pt>
 File: chronogramme_sequenceur.png Graphic file (type png)
 
 <use chronogramme_sequenceur.png>
-Package pdftex.def Info: chronogramme_sequenceur.png used on input line 570.
+Package pdftex.def Info: chronogramme_sequenceur.png used on input line 566.
 (pdftex.def)             Requested size: 486.31569pt x 341.77603pt.
 
-Overfull \hbox (61.33809pt too wide) in paragraph at lines 569--571
-[]
- []
-
-
-Overfull \hbox (2.61885pt too wide) in paragraph at lines 569--571
-[] 
+Overfull \hbox (31.0716pt too wide) in paragraph at lines 566--567
+[][] 
  []
 
 [12 <D:/EPFL/LabElec/AD_DA/shema_sequenceur_2.png>]
-Overfull \vbox (58.74548pt too high) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 575--577
 
+ []
 
-[13 <D:/EPFL/LabElec/AD_DA/shema_memoire.png> <D:/EPFL/LabElec/AD_DA/chronogram
-me_sequenceur.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 578--580
+<err_quantification_8bit_t.png, id=97, 578.16pt x 433.62pt>
+File: err_quantification_8bit_t.png Graphic file (type png)
+
+<use err_quantification_8bit_t.png>
+Package pdftex.def Info: err_quantification_8bit_t.png used on input line 584.
+(pdftex.def)             Requested size: 199.16928pt x 149.3741pt.
+
+<err_quantification_8bit_f.png, id=98, 578.16pt x 433.62pt>
+File: err_quantification_8bit_f.png Graphic file (type png)
+
+<use err_quantification_8bit_f.png>
+Package pdftex.def Info: err_quantification_8bit_f.png used on input line 584.
+(pdftex.def)             Requested size: 199.16928pt x 149.3741pt.
+
+<err_quantification_4bit_t.png, id=99, 578.16pt x 433.62pt>
+File: err_quantification_4bit_t.png Graphic file (type png)
+
+<use err_quantification_4bit_t.png>
+Package pdftex.def Info: err_quantification_4bit_t.png used on input line 588.
+(pdftex.def)             Requested size: 199.16928pt x 149.3741pt.
+
+<err_quantification_4bit_f.png, id=100, 578.16pt x 433.62pt>
+File: err_quantification_4bit_f.png Graphic file (type png)
+
+<use err_quantification_4bit_f.png>
+Package pdftex.def Info: err_quantification_4bit_f.png used on input line 588.
+(pdftex.def)             Requested size: 199.16928pt x 149.3741pt.
+
+<err_quantification_1bit_t.png, id=101, 578.16pt x 433.62pt>
+File: err_quantification_1bit_t.png Graphic file (type png)
+
+<use err_quantification_1bit_t.png>
+Package pdftex.def Info: err_quantification_1bit_t.png used on input line 592.
+(pdftex.def)             Requested size: 199.16928pt x 149.3741pt.
+
+<err_quantification_1bit_f.png, id=102, 578.16pt x 433.62pt>
+File: err_quantification_1bit_f.png Graphic file (type png)
+
+<use err_quantification_1bit_f.png>
+Package pdftex.def Info: err_quantification_1bit_f.png used on input line 592.
+(pdftex.def)             Requested size: 199.16928pt x 149.3741pt.
+ [13 <D:/EPFL/LabElec/AD_DA/chronogramme_sequenceur.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 597--605
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--595
+Underfull \hbox (badness 10000) in paragraph at lines 597--605
 
  []
 
-[14] [15] (D:\EPFL\LabElec\AD_DA\rapport.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
+
+ []
+
+[14 <D:/EPFL/LabElec/AD_DA/err_quantification_8bit_t.png> <D:/EPFL/LabElec/AD_D
+A/err_quantification_8bit_f.png> <D:/EPFL/LabElec/AD_DA/err_quantification_4bit
+_t.png> <D:/EPFL/LabElec/AD_DA/err_quantification_4bit_f.png> <D:/EPFL/LabElec/
+AD_DA/err_quantification_1bit_t.png> <D:/EPFL/LabElec/AD_DA/err_quantification_
+1bit_f.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--633
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--633
+
+ []
+
+[15] (D:\EPFL\LabElec\AD_DA\rapport.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -814,11 +872,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4534 strings out of 494045
- 62853 string characters out of 3148379
+ 4560 strings out of 494045
+ 63747 string characters out of 3148379
  131567 words of memory out of 3000000
- 7705 multiletter control sequences out of 15000+200000
- 23296 words of font info for 62 fonts, out of 3000000 for 9000
+ 7726 multiletter control sequences out of 15000+200000
+ 23464 words of font info for 63 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  38i,10n,38p,639b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
@@ -857,9 +915,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on rapport.pdf (15 pages, 1100133 bytes).
+Output written on rapport.pdf (15 pages, 1300826 bytes).
 PDF statistics:
- 548 PDF objects out of 1000 (max. 8388607)
+ 572 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
