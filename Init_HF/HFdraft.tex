@@ -109,21 +109,49 @@ Q = \sqrt{2^{1/2}-1}~Q_{tot} = 4,505
 
 \subsection{Introduction}
 Les mélangeurs sont des circuits qui permettent de multiplier deux signaux sinusoïdaux.
-D'après la formule d'addition des sinus : \\
+D'après la formule d'addition des sinus :
+\begin{center}
+$\sin(\omega_{1}\cdot t)\cdot \sin(\omega_{2}\cdot t) = \frac{1}{2}\cdot(\cos((\omega_{1} - \omega_{2})\cdot t) - cos((\omega_{1} + \omega_{2})\cdot t ) )$
+\end{center}
 
-$\sin(\omega_{1}\cdot t)\cdot \sin(\omega_{2}\cdot t) = \frac{1}{2}\cdot(\cos((\omega_{1} + \omega_{2})\cdot t) - cos((\omega_{1} - \omega_{2})\cdot t ) )$
-\\
-Pour un montage idéal, nous avons donc une première composante fréquentielle à $\omega_{1} - \omega_{2}$ et une deuxième $\omega_{1} + \omega_{2}$
+Pour un montage idéal, nous avons donc une première composante fréquentielle en $\omega_{1} - \omega_{2}$ et une deuxième en $\omega_{1} + \omega_{2}$
 
 Il est alors possible par filtrage d'éliminer l'une de ces deux composantes, typiquement $\omega_{1} - \omega_{2}$, afin de ne garder que la composante en $\omega_{1} + \omega_{2}$.\\
 
-Ceci est utile pour réaliser une modulation en fréquence (FM). Si l'une des deux fréquences est fixée par un oscillateur local (LO), nous additionons toutes les fréquences du signal d'entrée par une constante.
+Ceci est utile pour réaliser plusieurs types de modulation et de démodulation.
 \\
-En pratique, la modulation va présenter des non linéarités, nous aurons donc des harmoniques de $\omega_{1}$ et de $\omega_{2}$ en entrée du système.
+En pratique, la multiplication va présenter des non linéarités, nous aurons donc des harmoniques de $\omega_{1}$ et de $\omega_{2}$ en entrée du système.
 Ainsi, nous avons des composantes à toutes les fréquences : $m \cdot \omega_{1} + n \cdot \omega_{2}$, $\forall m, n \in\bbZ$
 
 
-\subsubsection{Mélangeur à cellule de Gilbert}
+\subsubsection{Mélangeur à cellule de Gilbert}q
+
+La multiplication des signaux IN1 et IN2 est faite par le circuit intégré NE602. 
+Il s'agit d'un multiplicateur à 4 quadrants, c'est à dire que la sortie est valable pour toutes les combinaisons possibles des signes des tensions IN1 et IN2 (+, +), (+, -), (-, +) et (-, -).
+Il n'y a donc aucunement besoin de polariser les entrées avec une composante continue, d'où un montage très simple.\\
+
+\includegraphics{shema_melangeur_gilbert.png}
+
+L'impédence d'entrée sur l'amplificateur différentiel (broches 1 et 2) est d'environ $1.5k\Omega$ \footnote{Voir datasheet du composant NE602}. Idem pour les sorties sur les broches 4 et 5.
+Les résistances R51, R52, R53 et R54 servent à adapter l'impédance du câble d'antenne $50\Omega$ vers le circuit intégré.\\
+
+Le circuit à été prévu pour fabriquer un oscillateur avec les broches 6 et 7 cependant on n'utilise pas cette fonctionnalité, car nous avons notre propre oscillateur. L'amplitude doit être au moins de $200mV$ pour simuler un oscillateur local, contrairement à l'entrée des broches 1 et 2 qui simule une antenne.
+En effet par la conception même le circuit n'est pas complètement symétrique, il serait possible d'inverser les deux entrées mais les amplitudes ne correspondraient pas à un fonctionnement optimal du circuit. % A étudier - clarifier
+\\
+Spectre de sortie :
+\includegraphics{8_3_1.jpg}
+Mesures :
+\begin{itemize}
+
+\item Guain de conversion : 13.3 dB
+\item Point de compression de 1dB : -8.2 dBm
+\item Taux de distortion d'intermodulation d'ordre trois :
+\end{itemize}
+
+A noter qu'il y a une perte de puissance considérable à cause du changement d'impédance. On perd la moitié du signal d'entrée utile sur le diviseur formé par $R_{in}$ et R51, soit -6 dB. On perd une grande partie de la puissance de sortie à cause du diviseur formé par R53 et R54, les pertes sont de :
+\begin{center}
+$Pertes = 20\cdot \log (\frac{R54 // R_{out}}{(R54 // R_{out})+R53}) = 20\cdot \log{25}{25+1500}) \simeq -35.7 dB$
+\end{center}
 
 %  9
 %

@@ -25,7 +25,8 @@ On s'intéresse ici à l'étude de convertisseurs analogique/numérique (aussi a
 
 \exsubpart{1}
 
-Les convertisseurs analogique/numérique flash sont fréquemment utilisés, parce qu'ils permettent des fréquences de fonctionnement élevées. Toutefois, il se caractérisent en revanche généralement par des coûts énergétiques et spatiaux élevés.
+Les convertisseurs analogique/numérique flash sont fréquemment utilisés, % où ?
+ parce qu'ils permettent des fréquences de fonctionnement élevées. Toutefois, il se caractérisent en revanche généralement par des coûts énergétiques et spatiaux élevés.
 
 Le principe d'un CAN flash $n$ bits est le suivant.
 Supposons que les valeurs analogiques à convertir soient comprises entre deux tensions de référence $V_{min}$ et $V_{max}$, fournies au convertisseur. 
@@ -53,7 +54,7 @@ Un encodeur $n$ bits --- entièrement numérique donc --- permet alors de conver
 
 Le principal inconvénient d'une telle structure réside dans le nombre éleveé de composants utilisés. 
 
-Pour limiter le nombre de comparateurs les convertisseurs semi-flash utilisent plusieurs convertisseurs flash. Typiquement, un convertisseur semi-flash 8 bits utilisera tout d'abord un convertisseur flash 4 bits afin d'encoder les 4 bits de poids fort (ou ``MSBs''~: ``\textit{Most Significant Bits}''). La tension $V_{MSB}$ correspondante au résultat fourni par ce convertisseur est alors soustraite à la tension d'entrée $V_{in}$, puis $V_{in}-V_{MSB}$ est traitée par un nouveau convertisseur flash 4 bits afin d'obtenir les 4 bits de poids faible (ou ``LSBs''~: ``\textit{Less Significant Bits}'').
+Pour limiter le nombre de comparateurs les convertisseurs semi-flash utilisent plusieurs convertisseurs flash. Typiquement, un convertisseur semi-flash 8 bits utilisera tout d'abord un convertisseur flash 4 bits afin d'encoder les 4 bits de poids fort (ou ``MSBs''~: ``\textit{Most Significant Bits}''). La tension $V_{MSB}$ correspondante au résultat fourni par ce convertisseur est alors soustraite à la tension d'entrée $V_{in}$, puis $V_{in}-V_{MSB}$ est traitée par un second convertisseur flash 4 bits afin d'obtenir les 4 bits de poids faible (ou ``LSBs''~: ``\textit{Less Significant Bits}'').
 
 La réactivité du convertisseur est ainsi diminuée par rapport à un convertisseur flash d'un facteur légèrement supérieur à 2, mais le nombre de composants nécessaire passe de $O(2^n)$ à $O(2^{n/2})$.
 %TODO: sample & hold?
@@ -63,7 +64,7 @@ Le convertisseur analogique/numérique utilisé dans ce travail est un CAN semi-
 
 \exsubpart{2}
 
-Idéalement, l'intervalle $[V_{min},V_{max}]$ est subdivisé en intervalles de même largeur. Les tensions de transitions d'une valeur à l'autre en sortie du CAN sont donc données par la formule~:
+Idéalement, l'intervalle $[V_{min},V_{max}]$ est subdivisé en intervalles identiques. Les tensions de transitions d'une valeur à l'autre en sortie du CAN sont donc données par la formule~:
 \begin{equation*}
 \forall i\in[1..2^n-1], V_i = V_{min}+i\cdot\frac{V_{max}-V_{min}}{2^n}
 \end{equation*}
@@ -86,7 +87,7 @@ La tension d'alimentation utilisée pour le convertisseur, servant aussi de tens
 
 \exsubpart{2,3}
 
-À l'aide d'un potentiomètre 10 tours, on fait varier la tension d'entrée $V_{in}$ du convertisseur analogique / numérique étudier afin de mesurer les tensions de transition $V_i$, pour lesquelles l'entier en sortie du convertisseur --- entier représenté en binaire par des LEDs --- passe de $i-1$ à $i$.
+À l'aide d'un potentiomètre 10 tours, on fait varier la tension d'entrée $V_{in}$ du CAN étudié afin de mesurer les tensions de transition $V_i$, pour lesquelles le nombre en sortie du convertisseur --- représenté en binaire par des LEDs --- passe de $i-1$ à $i$. % Plutôt de i à i+1 ?!? %
 
 \begin{table}[h]
 \caption{Résultats obtenus lors de l'étude du convertisseur ADC0820}
@@ -173,6 +174,8 @@ Ces résultats, comparés aux résultats théoriques donnés par ${V_i = i\cdot\
   \label{fig:ADCres}
 \end{figure}
 
+% % Clarifier un peu STP
+
 La première chose que l'on observe est un décalage permanent entre les valeurs de $V_i$ mesurées (que l'on notera $V_i^{mes}$) et les valeurs de $V_i$ théorique (que l'on notera $V_i^{th}$). On constate en effet un $offset$ moyen de $-0,0111$. On remarque toutefois que $V_i^{mes}-V_i^{th}$ augmente avec $i$ (${\langle V_i^{mes}-V_i^{th}\rangle_{i\in[1..7]}=-0,0072}$, ${\langle V_i^{mes}-V_i^{th}\rangle_{i\in[122..135]}=-0,0115}$, ${\langle V_i^{mes}-V_i^{th}\rangle_{i\in[251..255]}=-0,0150}$). 
 
 Afin d'obtenir une meilleure approximation des résultats pratiques, on peut réutiliser la formule~:
@@ -233,7 +236,8 @@ V_{eq} = \left(\sum_{i=0}^{n-1}\frac{1}{2^{n-i}}B_i\right)V_{ref}
 On utilise alors généralement un amplificateur opérationnel branché en suiveur ou en amplificateur de gain $-1$, afin d'obtenir en sortie la tension $V_eq$ indépendamment du reste du circuit.
 
 
-Le fonctionnement de l'AD7524 est légèrement différent. Le circuit correspondant, tel qu'il est branché (avec notamment la sortie OUT2 branchée à la masse et l'utilisation d'un amplificateur opérationnel), est représenté Fig.~\ref{fig:AD7524} \footnote{Un condensateur, liant $V_{out1}$ et $V_{out}$, a été omis~: proposé par les datasheets, son but est d'empêcher des oscillations en sortie de l'amplificateur opérationnel. Nous nous plaçons dans le cadre d'un état déjà stabilisé, où le condensateur agit comme un interrupteur ouvert.}.
+Le fonctionnement de l'AD7524 est légèrement différent. Le circuit correspondant, tel qu'il est branché (avec notamment la sortie OUT2 branchée à la masse et l'utilisation d'un amplificateur opérationnel), est représenté Fig.~\ref{fig:AD7524} \footnote{Un condensateur, liant $V_{out1}$ et $V_{out}$, a été omis~: proposé par les datasheets, son but est d'empêcher des oscillations en sortie de l'amplificateur opérationnel. Nous nous plaçons dans le cadre d'un état déjà stabilisé, où le condensateur agit comme un interrupteur ouvert.}
+% Je ne comprends pas cette note - les condensateurs sont présent dans le shéma compelet}.
 
 \begin{figure}[h]
   \centering
@@ -277,12 +281,12 @@ Les valeurs correspondantes ont été rajoutées au tableau~\ref{tab:AD7524} des
 
 Toujours selon la formule~\ref{eq:CNAeq}, on a théoriquement~:
 \begin{equation*}
-V_{out}(\mathtt{00000000}) = 0
+V_{out}(\mathtt{00000000_b}) = 0
 \end{equation*}
 et~:
 \begin{eqnarray*}
-V_{out}(\mathtt{11111111}) &=& -\left(\sum_{i=0}^{7}\frac{1}{2^{8-i}}B_i\right)V_{ref} = -(1-\frac{1}{2^8})V_{ref}\\
-V_{out}(\mathtt{11111111}) &=& -4,9775\mathrm{V}
+V_{out}(\mathtt{11111111_b}) &=& -\left(\sum_{i=0}^{7}\frac{1}{2^{8-i}}B_i\right)V_{ref} = -(1-\frac{1}{2^8})V_{ref}\\
+V_{out}(\mathtt{11111111_b}) &=& -4,9775\mathrm{V}
 \end{eqnarray*}
 
 
@@ -309,6 +313,8 @@ Les résultats obtenus sont présentés dans le tableau~\ref{tab:AD7524}. $V_i^{
 \caption{Résultats obtenus lors de l'étude du convertisseur AD7524}
 \label{tab:AD7524}
 \centering
+% Ce tableau n'est pas clair - a quoi correspond chaque ligne ??
+
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
 $i$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
@@ -321,10 +327,14 @@ $\sum_{j\leq i}V_j^{out,mes}$ (V) & -0,019 & -0,058 & -0,136 & -0,293 & -0,607 &
 \hline
 \end{tabular}
 
-\vspace{10pt}
+%\vspace{10pt}
+
+\subsubsection{Tension de sortie pour les codes d'entrée minimum et maxium}
+
+
 \begin{tabular}{|c|c|c|}
 \hline
-Entrée & \texttt{00000000} & \texttt{11111111} \\
+Entrée & \texttt{$00000000_b$} & \texttt{$11111111_b$} \\
 \hline
 $V_{out}$ théorique (V) & 0 & -4,9775 \\
 \hline
@@ -367,17 +377,17 @@ On notera $V_{in}$ la tension imposée en entrée du montage (tension d'entrée 
 
 Dans le cadre de convertisseurs parfaits, d'une fréquence d'échantillonnage infinie et d'un nombre de bits infini, on aurait donc : $V_{out}=-V_{in}$. Dans notre cas, on obtient évidemment une approximation~; et les différences entre $V_{out}$ et $-V{in}$ seront discutées plus bas.
 
-Pour cela, un amplificateur opérationnel permet d'obtenir en plus de la sortie du montage la tension~: ${V_{err}=-(V_{out}+V_{in})}$.
+Pour cela, un amplificateur sommateur permet d'obtenir en plus de la sortie du montage la tension~: ${V_{err}=-(V_{out}+V_{in})}$.
 
 \subsection{Mesures}
 
 \exsubpart{1}
 
-Afin d'observer les effets de la chaîne AN-NA sur le signal (échantillonnage, quantification\dots), on applique en entrée un signal $V_{in}$ triangulaire d'amplitude $4\mathrm{V}$ et de moyenne $2,5\mathrm{V}$. On en fera varier la tension $f_{in}$.
+Afin d'observer les effets de la chaîne AN-NA sur le signal (échantillonnage, quantification\dots), on applique en entrée un signal $V_{in}$ triangulaire d'amplitude $4\mathrm{V}$ et de moyenne $2,5\mathrm{V}$. On en fera varier la fréquence $f_{in}$.
 
 \noindent \textbf{\underline{Quantification}}.
 
-Afin d'observer l'effet de la quantification, sans être perturbé par l'échantillonnage, on utilise en entrée un signal lent~: $f_{in}\ll f_{ech}$ (où $f_{ech}$ désigne la fréquence d'échantillonnage des convertisseurs, que l'on sait de l'ordre de $20\mathrm{kHz}$). Typiquement, on utilisera ici $f_{in} = \mathrm{0,5 Hz}$.
+Afin d'observer l'effet de la quantification, sans être perturbé par l'échantillonnage, on utilise en entrée un signal lent~: $f_{in}\ll f_{ech}$ (où $f_{ech}$ désigne la fréquence d'échantillonnage des convertisseurs, qui est de l'ordre de $20\mathrm{kHz}$). Typiquement, on utilisera ici $f_{in} = \mathrm{0,5 Hz}$.
 
 Les résultats expérimentaux obtenus sont fournis Fig.~\ref{fig:slow}.
 
@@ -402,7 +412,7 @@ Les résultats expérimentaux obtenus sont fournis Fig.~\ref{fig:slow}.
   \label{fig:slow}
 \end{figure}
 
-Le phénomène s'observe bien lorsque l'on trace $V_{out}=f(V_{in})$ (cf. Fig.~\ref{fig:slowXY}). On y observe des ``marches'' de hauteurs et largeurs régulières, de l'ordre de $\frac{V_{ref}}{2^8}\approx\mathrm{19,5 mV}$. Ces marches sont continues sur le plan horizontal, mais pas sur le plan vertical~: à chaque valeur de $V_{out}$ correspond plusieurs valeurs de $V_{in}$. Plus simplement, sans prendre en compte d'éventuels offsets ou erreurs de gain, lors de la conversion $V_{in}\rightarrow V_{out}$, $-V_{in}$ est ``rabattu'' sur la valeur la plus proche possible de $V_{out}$.
+Le phénomène de quantification s'observe bien lorsque l'on trace $V_{out}=f(V_{in})$ (cf. Fig.~\ref{fig:slowXY}). On y observe des ``marches'' de hauteurs et largeurs régulières, de l'ordre de $\frac{V_{ref}}{2^8}\approx\mathrm{19,5 mV}$. Ces marches sont continues sur le plan horizontal, mais pas sur le plan vertical~: à chaque valeur de $V_{out}$ correspondent plusieurs valeurs de $V_{in}$. Plus simplement, sans prendre en compte d'éventuels offsets ou erreurs de gain, lors de la conversion $V_{in}\rightarrow V_{out}$, $-V_{in}$ est ``rabattu'' sur la valeur la plus proche possible de $V_{out}$.
 
 On introduit ainsi un erreur de quantification comprise entre $-\frac{1}{2}\frac{V_{ref}}{2^8}$ et $+\frac{1}{2}\frac{V_{ref}}{2^8}$.
 %TODO: sur signal 0,5HZ > Verr zoomé : dans de scie relativement régulière, d'amplitude VLSB
@@ -484,7 +494,7 @@ La fonction de transfert est donc :
 Ce système sera stable seulement pour les $k<1$. En cas d'instabilité, la chambre d'écho ne fonctionnera pas, un régime d'oscillation apparaîtra et un sifflement fort désagréable s'entendra sur la sortie.
 \end{itemize}
 
-A noter que la réponse en fréquence de la chambre d'écho n'est pas constante : Certaines fréquences vont être amplifiées tandis que d'autres vont être atténuées, et ce pour les deux modes écho simple et infini. Cet effet de bord n'est malheureusement pas évitable. De plus, toute modification des paramètres $k$ et $l$ va affecter la réponse en fréquence.
+A noter que la réponse en fréquence de la chambre d'écho n'est pas constante : Certaines fréquences vont être amplifiées tandis que d'autres vont être atténuées, et ce pour les deux modes écho simple et infini. Cet effet de bord n'est pas évitable. De plus, toute modification des paramètres $k$ et $l$ va affecter la réponse en fréquence.
 
 \subsubsection{Calcul du retard maximum}
 On désire avoir une bande passante de $15 kHz$, il faut donc une fréquence d'échantillonage strictement suppérieure à $30 kHz$.
@@ -492,7 +502,12 @@ On désire avoir une bande passante de $15 kHz$, il faut donc une fréquence d'�
 Le retard maximum possible est de :
 \begin{center}$retard = \frac{l_{max}}{f_e}$\end{center}
 Avec $l_{max}$ = taille du tampon maximum = 32768 octets et $f_e = $ fréquence d'échantillonnage $= 32000 Hz$, cela donne :
-\begin{center}$retard = \frac{32768}{32000} = 1.024 s$\textbf{}\end{center}
+\begin{center}$retard = \frac{32768}{32000} = 1.024 s$\end{center}
+
+En acceptant que le son se propage à la vitesse de $340 \frac{m}{s}$, et que celui-ci doit faire l'aller-retour entre sa source et un mur contre lequel il serait réfléchi, ceci correspond à une distance de :\\
+\begin{center}
+$\frac{340 \cdot 1.024}{2} = 174m$.
+\end{center}
 
 \subsubsection{Calcul du gain de l'ampli d'entrée}
 Le shéma est le suivant :\\
@@ -528,8 +543,8 @@ $ Au_{max} = 4.3 \cdot 51 = 220 = 46.8$ dB
 \subsubsection{Séquenceur}
 Le rôle du séquenceur est de générer une fréquence d'horloge pour la logique numérique.\\
 \includegraphics[width = 1\linewidth]{shema_sequenceur_1.png}
-L'oscillateur est une simple cellule RC avec une hystrèse.\\
-D'après la notice du composant 74HC134, la fréquence d'oscillation minimum est de :
+L'oscillateur est une simple cellule RC avec un inverseur à hystrèse.\\
+D'après la notice du composant 74HC132, la fréquence d'oscillation quand elle est réglée au minimum (P3 réglé au maximum) est de :
 \begin{center}
 $f_{min} \simeq \frac{1}{0.8 \cdot R \cdot C} = \frac{1}{0.8 \cdot 10^3 \cdot 6.8 \cdot 10^{-9}} = 184 $ kHz
 \end{center}
@@ -537,7 +552,7 @@ Le maximum est limité par le délai de propagation des transistors internes au 
 \begin{center}
 $f_{max} \simeq \frac{1}{tp_{lh} + tp_{hl} + t_{hl} + t_{lh}} = \frac{1}{2 \cdot (20+7) \cdot 10^{-9}} = 18.5 $ MHz
 \end{center}
-P3 permet donc de faire varier librement la fréquence d'oscillation sur 2 ordres de grandeur.
+P3 permet donc de faire varier librement la fréquence d'oscillation sur deux ordres de grandeur.
 \\
 Le circuit U3 est un compteur, il permet donc d'avoir une version prédivisée de l'horloge par plusieurs puissances de 2. Dans ce cas, le compteur est sur 4 bits, il permet donc d'avoir un signal prédivisé par 2, 4, 8 et 16.\\
 Nous pouvons choisir lequel de ces prédiviseur est utilisé pour ce circuit ce qui permet de choisir grossièrement une très large bande de fréquences d'échantillonnages, en plus du réglage par P3.
@@ -616,7 +631,7 @@ Dans le dernier cas (1-bit), l'erreur correspond à la différence entre un sign
 A noter que le système n'étant pas linéaire, ceci ne peut pas être généralisé de façon théorique à tous les signaux.\\
 
 Nous avons donc mis en pratique et testé le système avec un micro.\\
-Dans le cas de la voix humaine, on a constaté qu'il faut au moins 4 bits pour qu'elle soit compréhensible.
+Dans le cas de la voix humaine, nous avons constaté qu'il faut au moins 4 bits pour qu'elle soit compréhensible.
 
 \subsubsection{Retard et gain de l'echo}
 Le retard à une influence sur la durée entre deux répétitions de l'écho.
@@ -629,7 +644,7 @@ Si l'on désire plus de résonance, une augmentation du gain fait tendre la cham
 \subsection{Avantages et inconvenients des techniques}
 Si la taille de la mémoire est fixe, l'avantage est que le contrôle des lignes d'adresses de la mémoire s'en trouvera simplifié : Un simple compteur ou décompteur modulo $2^n$ fera l'affaire (c'est exactement ce qu'on a là avec les circuits U1 et U18).
 
-En revanche, il sera nécessaire d'avoir un circuit qui permet de faire varier la fréquence d'horloge pour l'échantillonnage. L'implémentation comme il a été fait dans le séquenceur de ce montage convient parfaitement, mais ne permet pas un réglage précis de la fréquence d'échantillonnage. Si de la précision serait requise, un oscillateur à quartz s'imposerait et il serait impossible de faire varier la fréquence de celui-ci, il faudrait alors utiliser une PLL pour faire librement varier la fréquence ce qui est cher et compliqué à mettre en oeuvre.
+En revanche, il sera nécessaire d'avoir un circuit qui permet de faire varier la fréquence d'horloge pour l'échantillonnage. L'implémentation comme réalisée dans le séquenceur de ce montage convient parfaitement, mais ne permet pas un réglage précis de la fréquence d'échantillonnage. Si de la précision est requise, un oscillateur à quartz s'imposerait et il serait impossible de faire varier la fréquence de celui-ci. Il faudrait alors utiliser une PLL pour faire librement varier la fréquence ce qui est cher et compliqué à mettre en oeuvre.
 \\
 Si l'on change la longueur de l'écho durant le fonctionnement du circuit, l'ancien contenu de la mémoire sera déformé par le changement de fréquence d'échantillonnage, ce qui peut être indésirable.
 \\\\
@@ -639,6 +654,6 @@ Mais le contrôle des lignes d'adresses sera alors plus compliqué, il faut un d
 \\
 Le changement de la longueur de l'écho pendant l'utilisation n'a pas d'effet néfaste, il faut juste attendre que le compteur d'adresses atteigne la valeur '0' pour que le changement soit effectif. Aucun son déformé n'apparait à la sortie.
 \\\\
-En conclusion, le choix de l'une où de l'autre technique dépendra donc si on préfère mettre la complexité du circuit du côté analogique (génération d'une fréquence d'échantillonnage variable) ou du côté numérique (gestion des lignes d'adresses de la mémoire).
+En conclusion, le choix de l'une ou de l'autre technique dépendra donc si on préfère mettre la complexité du circuit du côté analogique (génération d'une fréquence d'échantillonnage variable) ou du côté numérique (gestion des lignes d'adresses de la mémoire).
 
 \end{document}
