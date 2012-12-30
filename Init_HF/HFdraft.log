@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.21)  27 NOV 2012 18:17
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  30 DEC 2012 12:59
 entering extended mode
 **HFdraft.tex
-
-("C:\Documents and Settings\Paul\Mes documents\Boulot - divers\LabElec\Init_HF\
-HFdraft.tex"
+(D:\EPFL\LabElec\Init_HF\HFdraft.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -32,12 +30,11 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Documents and Settings\Paul\Mes documents\Boulot - divers\LabElec\LaTeXcon
-fig.tex"
-("C:\Documents and Settings\Paul\Application Data\MiKTeX\2.9\tex\latex\ntgclass
-\a4.sty"
+(D:\EPFL\LabElec\LaTeXconfig.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\ntgclass\a4.sty"
 Package: a4 2004/04/15 v1.2g A4 based page layout
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
@@ -337,15 +334,15 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("C:\Documents and Settings\Paul\Application Data\MiKTeX\2.9\tex\latex\framed\f
-ramed.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip46
 \fb@frw=\dimen112
 \fb@frh=\dimen113
 \FrameRule=\dimen114
 \FrameSep=\dimen115
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
@@ -377,12 +374,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-("C:\Documents and Settings\Paul\Application Data\MiKTeX\2.9\tex\latex\caption\
-caption.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
-("C:\Documents and Settings\Paul\Application Data\MiKTeX\2.9\tex\latex\caption\
-caption3.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen118
 \captionmargin@=\dimen119
@@ -394,21 +389,20 @@ Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \c@ContinuedFloat=\count101
 Package caption Info: float package is loaded.
 )
-("C:\Documents and Settings\Paul\Application Data\MiKTeX\2.9\tex\latex\caption\
-subcaption.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
 Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count102
 \c@subtable=\count103
 )
-("C:\Documents and Settings\Paul\Application Data\MiKTeX\2.9\tex\latex\wrapfig\
-wrapfig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen124
 \WF@size=\dimen125
 \c@WF@wrappedlines=\count104
 \WF@box=\box30
 \WF@everypar=\toks24
 Package: wrapfig 2003/01/31  v 3.6
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
@@ -436,15 +430,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks25
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Documents and Settings\Paul\Application Data\MiKTeX\2.9\tex\latex\preprint
-\fullpage.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip47
 )
-("C:\Documents and Settings\Paul\Application Data\MiKTeX\2.9\tex\latex\rotating
-\rotating.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count108
@@ -461,23 +454,21 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \leftbarmargin=\skip52
 \defaultparindent=\skip53
 )
-("C:\Documents and Settings\Paul\Mes documents\Boulot - divers\LabElec\Init_HF\
-HFdraft.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+(D:\EPFL\LabElec\Init_HF\HFdraft.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
-("C:\Documents and Settings\Paul\Application Data\MiKTeX\2.9\tex\context\base\s
-upp-pdf.mkii"
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen135
@@ -532,84 +523,143 @@ Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 9.
+(Font)              size <20.74> substituted on input line 13.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 9.
+(Font)              size <20.74> substituted on input line 13.
 
 <./Images/schem6.jpg, id=1, 518.93875pt x 361.35pt>
 File: ./Images/schem6.jpg Graphic file (type jpg)
  <use ./Images/schem6.jpg>
-Package pdftex.def Info: ./Images/schem6.jpg used on input line 38.
+Package pdftex.def Info: ./Images/schem6.jpg used on input line 42.
 (pdftex.def)             Requested size: 338.5863pt x 235.77898pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 43.
 
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 59.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 43.
+LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 [1
 
-{C:/Documents and Settings/Paul/Local Settings/Application Data/MiKTeX/2.9/pdft
-ex/config/pdftex.map} <C:/Documents and Settings/Paul/Mes documents/Boulot - di
-vers/LabElec/Init_HF/Images/schem6.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/EPFL/LabElec/Init_HF/I
+mages/schem6.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[2]
-("C:\Documents and Settings\Paul\Mes documents\Boulot - divers\LabElec\Init_HF\
-HFdraft.aux")
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--132
+
+ []
+
+<./Images/shema_melangeur_gilbert.png, id=17, 394.47375pt x 196.48407pt>
+File: ./Images/shema_melangeur_gilbert.png Graphic file (type png)
+
+<use ./Images/shema_melangeur_gilbert.png>
+Package pdftex.def Info: ./Images/shema_melangeur_gilbert.png used on input lin
+e 133.
+(pdftex.def)             Requested size: 394.47278pt x 196.48358pt.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+
+ []
+
+<./Images/shema_interne_ne602.png, id=24, 366.61969pt x 269.50688pt>
+File: ./Images/shema_interne_ne602.png Graphic file (type png)
+
+<use ./Images/shema_interne_ne602.png>
+Package pdftex.def Info: ./Images/shema_interne_ne602.png used on input line 13
+9.
+(pdftex.def)             Requested size: 411.14526pt x 302.25687pt.
+
+<./Images/8_3_1.jpg, id=25, 3276.24pt x 2457.18pt>
+File: ./Images/8_3_1.jpg Graphic file (type jpg)
+ <use ./Images/8_3_1.jpg>
+Package pdftex.def Info: ./Images/8_3_1.jpg used on input line 146.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+
+[3 <D:/EPFL/LabElec/Init_HF/Images/shema_melangeur_gilbert.png> <D:/EPFL/LabEle
+c/Init_HF/Images/shema_interne_ne602.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 151.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 151.
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+<./Images/8_3_4-8dbm.jpg, id=32, 3276.24pt x 2457.18pt>
+File: ./Images/8_3_4-8dbm.jpg Graphic file (type jpg)
+
+<use ./Images/8_3_4-8dbm.jpg>
+Package pdftex.def Info: ./Images/8_3_4-8dbm.jpg used on input line 165.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+ [4 <D:/EPFL/LabElec/Init_HF/Images/8_3_1.jpg>]
+[5 <D:/EPFL/LabElec/Init_HF/Images/8_3_4-8dbm.jpg>]
+(D:\EPFL\LabElec\Init_HF\HFdraft.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 4314 strings out of 494045
- 60184 string characters out of 3148336
- 117273 words of memory out of 3000000
- 7530 multiletter control sequences out of 15000+200000
- 12974 words of font info for 32 fonts, out of 3000000 for 9000
+ 4379 strings out of 494045
+ 60040 string characters out of 3148379
+ 120273 words of memory out of 3000000
+ 7577 multiletter control sequences out of 15000+200000
+ 19148 words of font info for 48 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 38i,6n,38p,383b,287s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Documents and Settings\Paul\Local Settings\Application Data\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Documents and Settings\Paul\
-Local Settings\Application Data\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-crm1000.pk> <C:\Documents and Settings\Paul\Local Settings\Application Data\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Documents and Setti
-ngs\Paul\Local Settings\Application Data\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecxc1440.pk> <C:\Documents and Settings\Paul\Local Settings\Application
- Data\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2986.pk> <C:\Documents 
-and Settings\Paul\Local Settings\Application Data\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecbx2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on HFdraft.pdf (2 pages, 156182 bytes).
+ 38i,8n,38p,427b,287s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecrm0800.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecrm0600.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Jonathan\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Jonathan\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\J
+onathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecbx1440.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecxc1440.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecbx2986.pk> <C:\Users\Jonathan\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on HFdraft.pdf (5 pages, 7197629 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
+ 304 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
