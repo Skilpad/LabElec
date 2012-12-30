@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  29 DEC 2012 00:05
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  30 DEC 2012 12:59
 entering extended mode
 **HFdraft.tex
 (D:\EPFL\LabElec\Init_HF\HFdraft.tex
@@ -587,28 +587,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 144.
+<./Images/shema_interne_ne602.png, id=24, 366.61969pt x 269.50688pt>
+File: ./Images/shema_interne_ne602.png Graphic file (type png)
+
+<use ./Images/shema_interne_ne602.png>
+Package pdftex.def Info: ./Images/shema_interne_ne602.png used on input line 13
+9.
+(pdftex.def)             Requested size: 411.14526pt x 302.25687pt.
+
+<./Images/8_3_1.jpg, id=25, 3276.24pt x 2457.18pt>
+File: ./Images/8_3_1.jpg Graphic file (type jpg)
+ <use ./Images/8_3_1.jpg>
+Package pdftex.def Info: ./Images/8_3_1.jpg used on input line 146.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+
+[3 <D:/EPFL/LabElec/Init_HF/Images/shema_melangeur_gilbert.png> <D:/EPFL/LabEle
+c/Init_HF/Images/shema_interne_ne602.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 151.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 144.
- [3 <D:/EPFL/LabElec/Init_HF/Images/shema_melangeur_gilbert.png>] (D:\EPFL\LabE
-lec\Init_HF\HFdraft.aux)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 151.
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+<./Images/8_3_4-8dbm.jpg, id=32, 3276.24pt x 2457.18pt>
+File: ./Images/8_3_4-8dbm.jpg Graphic file (type jpg)
+
+<use ./Images/8_3_4-8dbm.jpg>
+Package pdftex.def Info: ./Images/8_3_4-8dbm.jpg used on input line 165.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+ [4 <D:/EPFL/LabElec/Init_HF/Images/8_3_1.jpg>]
+[5 <D:/EPFL/LabElec/Init_HF/Images/8_3_4-8dbm.jpg>]
+(D:\EPFL\LabElec\Init_HF\HFdraft.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 4364 strings out of 494045
- 59645 string characters out of 3148379
+ 4379 strings out of 494045
+ 60040 string characters out of 3148379
  120273 words of memory out of 3000000
- 7565 multiletter control sequences out of 15000+200000
+ 7577 multiletter control sequences out of 15000+200000
  19148 words of font info for 48 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 38i,8n,38p,383b,287s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,38p,427b,287s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
 00\ecrm0800.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
 appen\ec\dpi600\ecrm0600.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\
@@ -628,9 +657,9 @@ fonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HFdraft.pdf (3 pages, 218888 bytes).
+Output written on HFdraft.pdf (5 pages, 7197629 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
+ 304 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
