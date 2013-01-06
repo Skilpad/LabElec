@@ -714,7 +714,16 @@ Pour l'instant, on se place en mode ``écho seul''. Le signal en sortie n'est do
 
 \exsubpart{2}
 
-%TODO
+Afin d'observer plus clairement l'effet du filtre de lissage, on abaisse à 4 bits la résolution du CAN utilisé. Le résultat obtenu est présenté Fig.~\ref{fig:liss}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{data/TEK0016_}
+	\caption{\centering{Effet du filtre de lissage~:\\ CH1~: Entrée, CH2~: Sortie du CNA, \\CH4~: Sortie du filtre (après filtre de lissage)}}
+	\label{fig:liss}
+\end{figure}
+
+On remarque qu'en l'absence de filtre (courbe bleu), les effets de la quantification sont très visible. En revanche, ils le sont moins après que le signal ait été traité par le filtre de lissage. En pratique, cela à pour effet de diminuer les harmoniques et le bruit créés par la quantification. Toutefois, il est impossible de les annuler tout à fait. En effet, le filtre de lissage doit être adapté à la plus forte pente envisageable pour une sortie idéale. Lorsque la pente est moindre, le lissage est alors imparfait.
 
 \exsubpart{3}
 
