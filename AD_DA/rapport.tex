@@ -30,8 +30,8 @@ Les convertisseurs analogique/numérique flash sont fréquemment utilisés, % o�
 
 Le principe d'un CAN flash $n$ bits est le suivant.
 Supposons que les valeurs analogiques à convertir soient comprises entre deux tensions de référence $V_{min}$ et $V_{max}$, fournies au convertisseur. 
-$2^n$ résistances permettent de diviser $[V_{min},V_{max}]$ en $2^n$ sous-ensembles $([V_{i-1},V_i])_{i\in[1..2^n]}$ ($V_0=V_{min}$, $V_{2^n}=V_max$, $\forall i\in[1..2^n], V_i> V_{i-1}$), en fournissant les $2^n-1$ tensions de transition $V_i$.
-$2^n-1$ comparateurs permettent alors de situer la tension d'entrée $V_{in}$ du condensateur par rapport à ces $2^n-1$ tensions de transition $V_i$.
+$2^n$ résistances permettent de diviser $[V_{min},V_{max}]$ en $2^n$ sous-ensembles $([V_{i-1},V_i])_{i\in[1..2^n]}$ ($V_0=V_{min}$, $V_{2^n}=V_{max}$, $\forall i\in[1..2^n], V_i> V_{i-1}$), en fournissant les $2^n-1$ tensions de transition $V_i$.
+$2^n-1$ comparateurs permettent alors de situer la tension d'entrée $V_{in}$ par rapport à ces $2^n-1$ tensions de transition $V_i$.
 Un encodeur $n$ bits --- entièrement numérique donc --- permet alors de convertir les sorties de ces comparateurs ($2^n-1$ bits) en l'entier $i$ correspondant sur $n$ bits~: $V_{in}\in[V_{i-1},V_i]$.
 
 \begin{figure}[h]
@@ -52,12 +52,11 @@ Un encodeur $n$ bits --- entièrement numérique donc --- permet alors de conver
   \caption{Principes de base des CAN flash et semi-flash}
 \end{figure}
 
-Le principal inconvénient d'une telle structure réside dans le nombre éleveé de composants utilisés. 
+Le principal inconvénient d'une telle structure réside dans le nombre élevé de composants utilisés. 
 
 Pour limiter le nombre de comparateurs les convertisseurs semi-flash utilisent plusieurs convertisseurs flash. Typiquement, un convertisseur semi-flash 8 bits utilisera tout d'abord un convertisseur flash 4 bits afin d'encoder les 4 bits de poids fort (ou ``MSBs''~: ``\textit{Most Significant Bits}''). La tension $V_{MSB}$ correspondante au résultat fourni par ce convertisseur est alors soustraite à la tension d'entrée $V_{in}$, puis $V_{in}-V_{MSB}$ est traitée par un second convertisseur flash 4 bits afin d'obtenir les 4 bits de poids faible (ou ``LSBs''~: ``\textit{Less Significant Bits}'').
 
 La réactivité du convertisseur est ainsi diminuée par rapport à un convertisseur flash d'un facteur légèrement supérieur à 2, mais le nombre de composants nécessaire passe de $O(2^n)$ à $O(2^{n/2})$.
-%TODO: sample & hold?
 
 Le convertisseur analogique/numérique utilisé dans ce travail est un CAN semi-flash 8 bits~: l'ADC0820.
 
@@ -68,14 +67,14 @@ Idéalement, l'intervalle $[V_{min},V_{max}]$ est subdivisé en intervalles iden
 \begin{equation*}
 \forall i\in[1..2^n-1], V_i = V_{min}+i\cdot\frac{V_{max}-V_{min}}{2^n}
 \end{equation*}
-(On rappelle que $V_i$ est la tension de transition des eniers $i-1$ à $i$ en sortie du CAN.)
+(On rappelle que $V_i$ est la tension de transition des entiers $i-1$ à $i$ en sortie du CAN.)
 
 Dans le cadre de notre expérience~: $V_{min}=0$ et $V_{max}=V_{ref}=\mathrm{5 V}$. Ainsi~:
 \begin{equation*}
 \forall i\in[1..2^8-1], V_i = i\cdot\frac{V_{ref}}{2^8} = i\cdot \mathrm{19,531 mV}
 \end{equation*}
 
-Les valeurs de $V_i$ correspondantes ont été rajouté au tableau~\ref{tab:ADC0820} des résultats expérimentaux.
+Les valeurs de $V_i$ correspondantes ont été rajoutées au tableau~\ref{tab:ADC0820} des résultats expérimentaux.
 
 
 \subsection{Mesures}
@@ -190,7 +189,7 @@ On remarque par ailleurs que pour $i$ pair $(V_i^{mes}-V_{i-1}^{mes})$ est gén�
 V_i^{th} = V_{min}+i\cdot\frac{V_{max}-V_{min}}{2^n}+p_i\delta V \mathrm{~~~~avec~:~~}p_i = \begin{cases} +1 &\mathrm{si~} i\in 2\bbN \\ -1 & \mbox{sinon}\end{cases}
 \end{equation*}
 
-Là encore, on obtient avec Matlab les coefficients optimum~: ${V_{min}=-0,0072\mathrm{V}}$, ${V_{min}=4,9817\mathrm{V}}$, \\${\delta V=0,0015\mathrm{V}}$. Les résultats correspondants sont présentés Fig.~\ref{fig:ADCres3}.
+Là encore, on obtient avec Matlab les coefficients optimum~: ${V_{min}=-0,0072\mathrm{V}}$, ${V_{max}=4,9817\mathrm{V}}$, \\${\delta V=0,0015\mathrm{V}}$. Les résultats correspondants sont présentés Fig.~\ref{fig:ADCres3}.
 
 
 
@@ -233,7 +232,7 @@ V_{eq} = \left(\sum_{i=0}^{n-1}\frac{1}{2^{n-i}}B_i\right)V_{ref}
   \caption{Principe de base des CNA à réseau R/2R}
 \end{figure}
 
-On utilise alors généralement un amplificateur opérationnel branché en suiveur ou en amplificateur de gain $-1$, afin d'obtenir en sortie la tension $V_eq$ indépendamment du reste du circuit.
+On utilise alors généralement un amplificateur opérationnel branché en suiveur ou en amplificateur de gain $-1$, afin d'obtenir en sortie la tension $V_{eq}$ indépendamment du reste du circuit.
 
 
 Le fonctionnement de l'AD7524 est légèrement différent. Le circuit correspondant, tel qu'il est branché (avec notamment la sortie OUT2 branchée à la masse et l'utilisation d'un amplificateur opérationnel), est représenté Fig.~\ref{fig:AD7524} \footnote{Un condensateur, liant $V_{out1}$ et $V_{out}$, a été omis~: proposé par les datasheets, son but est d'empêcher des oscillations en sortie de l'amplificateur opérationnel. Nous nous plaçons dans le cadre d'un état déjà stabilisé, où le condensateur agit comme un interrupteur ouvert.}
@@ -306,7 +305,6 @@ V_i^{out} = V_{out}(\delta_{0,i}\delta_{1,i}\delta_{2,i}\delta_{3,i}\delta_{4,i}
 
 Les résultats obtenus sont présentés dans le tableau~\ref{tab:AD7524}. $V_i^{out,th}$ désigne la valeur théorique de la contribution du bit $i$ à la tension de sortie $V_{out}$, tandis que $V_i^{out,mes}$ en désigne la valeur mesurée expérimentalement.
 
-%TODO: Constater notamment qu'expérimentalement on a PAS : $ V_{out}(\mathtt{11111111}) = \sum_{i=0}^7 V_i^{out} $ ??   => offset sur chaque bit, une fois sur vout(11111111). Voir en faisant Vout(11111111)-offset.
 
 
 \begin{table}[h]
@@ -375,7 +373,7 @@ On connecte maintenant les 8 bits de sortie du convertisseur analogique/numériq
 
 On notera $V_{in}$ la tension imposée en entrée du montage (tension d'entrée du convertisseur analogique/numérique), et $V_{out}$ la tension obtenue en sortie (tension de sortie du convertisseur numérique/analogique). 
 
-Dans le cadre de convertisseurs parfaits, d'une fréquence d'échantillonnage infinie et d'un nombre de bits infini, on aurait donc : $V_{out}=-V_{in}$. Dans notre cas, on obtient évidemment une approximation~; et les différences entre $V_{out}$ et $-V{in}$ seront discutées plus bas.
+Dans le cadre de convertisseurs parfaits, d'une fréquence d'échantillonnage infinie et d'un nombre de bits infini, on aurait donc : $V_{out}=-V_{in}$. Dans notre cas, on obtient évidemment une approximation~; et les différences entre $V_{out}$ et $-V_{in}$ seront discutées plus bas.
 
 Pour cela, un amplificateur sommateur permet d'obtenir en plus de la sortie du montage la tension~: ${V_{err}=-(V_{out}+V_{in})}$.
 
@@ -389,33 +387,12 @@ Afin d'observer les effets de la chaîne AN-NA sur le signal (échantillonnage, 
 
 Afin d'observer l'effet de la quantification, sans être perturbé par l'échantillonnage, on utilise en entrée un signal lent~: $f_{in}\ll f_{ech}$ (où $f_{ech}$ désigne la fréquence d'échantillonnage des convertisseurs, qui est de l'ordre de $20\mathrm{kHz}$). Typiquement, on utilisera ici $f_{in} = \mathrm{0,5 Hz}$.
 
-Les résultats expérimentaux obtenus sont fournis Fig.~\ref{fig:slow}.
+Les résultats expérimentaux obtenus sont fournis Fig.~\ref{fig:slowT}.
 
-%\begin{figure}[h!]
-%  \centering
-%  \hfill
-%  \begin{subfigure}[b]{0.4\textwidth}
-%    \centering
-%    \includegraphics[width=\textwidth]{data/TEK0018_}
-%    \caption{$V_{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
-%    \label{fig:slowT}
-%  \end{subfigure}
-%  \hfill
-%  \begin{subfigure}[b]{0.4\textwidth}
-%    \centering
-%    \includegraphics[width=\textwidth]{data/TEK0017_}
-%    \caption{$V_{out}=f(V_{in})$}
-%    \label{fig:slowXY}
-%  \end{subfigure}
-%  \hfill
-%  \caption{$V_{in}$ et $V_{out}$ pour un signal d'entrée triangulaire d'amplitude 2V (4V crête à crête)}
-%  \label{fig:slow}
-%\end{figure}
 
 Le phénomène de quantification s'observe bien lorsque l'on trace $V_{out}=f(V_{in})$ (cf. Fig.~\ref{fig:slowXY}). On y observe des ``marches'' de hauteurs et largeurs régulières, de l'ordre de $\frac{V_{ref}}{2^8}\approx\mathrm{19,5 mV}$. Ces marches sont continues sur le plan horizontal, mais pas sur le plan vertical~: à chaque valeur de $V_{out}$ correspondent plusieurs valeurs de $V_{in}$. Plus simplement, sans prendre en compte d'éventuels offsets ou erreurs de gain, lors de la conversion $V_{in}\rightarrow V_{out}$, $-V_{in}$ est ``rabattu'' sur la valeur la plus proche possible de $V_{out}$.
 
-On introduit ainsi un erreur de quantification comprise entre $-\frac{1}{2}\frac{V_{ref}}{2^8}$ et $+\frac{1}{2}\frac{V_{ref}}{2^8}$.
-%TODO: sur signal 0,5HZ > Verr zoomé : dans de scie relativement régulière, d'amplitude VLSB
+On introduit ainsi un erreur de quantification comprise entre $-\epsilon_q$ et $+\epsilon_q$, avec ${\epsilon_q = \frac{1}{2}\frac{V_{ref}}{2^8}}$.
 
 
 
@@ -497,242 +474,342 @@ On introduit ainsi un erreur de quantification comprise entre $-\frac{1}{2}\frac
 	\begin{subfigure}[b]{0.3\textwidth}
 		\begin{subfigure}[b]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{data/TEK0018_}
-			\caption{\centering $f_{in}=\mathrm{0,5 Hz}$\\$V_{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
-			\label{fig:midT}
+			\includegraphics[width=\textwidth]{data/TEK0008_}
+			\caption{\centering $f_{in}=\mathrm{60 Hz}$, $V_{out}=f(t)$ (CH1),\\ $V_{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
+			\label{fig:ech1}
 		\end{subfigure}
 		\\
 		\begin{subfigure}[b]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{data/TEK0000_}
-			\caption{\centering $f_{in}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
-			\label{fig:midXY}
+			\includegraphics[width=\textwidth]{data/TEK0020_}
+			\caption{\centering $f_{in}=\mathrm{500 Hz}$\\$V_{out}=f(V_{in})$}
+			\label{fig:ech2}
 		\end{subfigure}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.3\textwidth}
 		\begin{subfigure}[b]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{data/TEK0018_}
-			\caption{\centering $f_{in}=\mathrm{0,5 Hz}$\\$V_{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
-			\label{fig:fastT}
+			\includegraphics[width=\textwidth]{data/TEK0005_}
+			\caption{\centering $f_{in}=\mathrm{13 Hz}$, $V_{out}=f(t)$ (CH1),\\ $V_{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
+			\label{fig:gain}
 		\end{subfigure}
 		\\
 		\begin{subfigure}[b]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{data/TEK0020_}
-			\caption{\centering $f_{in}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
-			\label{fig:fastXY}
+			\includegraphics[width=\textwidth]{data/TEK0010_}
+			\caption{\centering $f_{in}=\mathrm{200 Hz}$, $V_{out}=f(t)$ (CH1),\\ $V_{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
+			\label{fig:retard}
 		\end{subfigure}
 	\end{subfigure}	
 	\caption{Data-flow graphs for Problem III}
 \end{sidewaysfigure}
 
+Afin de pouvoir être utilisé par un système synchrone, le CAN étudié bénéficie d'un ``\textit{sample-and-hold}''~: tous les $T_{ech}$, l'entrée $V_{in}$ est mémorisée, et c'est la conversion en bits de cette valeur mémorisée qui est fournie en sortie. Ainsi, cette sortie est mise à jour avec une fréquence dite d'échantillonnage $f_{ech} = T_{ech}^{-1}$. Cette mise-à-jour périodique est observable  Fig.~\ref{fig:ech1}~: elle est à l'origine des irrégularités observées pour $V_{err}$\footnote{Lorsque la fréquence d'échantillonnage du CAN n'intervient pas (ie pour un signal d'entrée suffisamment lent), $V_{err}$ présente des dans de scies identiques (même taille, mêmes extrema).}.On peut par ailleurs mesurer sur cette figure~: ${f_{ech} = 22,5\mathrm{kHz}}$.
+
+Pour un signal d'entrée variant à une vitesse $\frac{dV_{in}}{dt}$ constante, le retard sur l'information engendré ajoute à l'erreur de quantification une erreur pouvant atteindre ${\epsilon_{ech} = T_{ech}\frac{dV_{in}}{dt}}$. Dans le cas présenté Fig.~\ref{fig:ech1}, où ${f_{in}=60\mathrm{Hz}}$, on obtient ${\epsilon_{ech} = 22\mathrm{mV}}$ --- ce qui s'accorde avec les résultats expérimentaux, donnant~: \\${\epsilon_q+\epsilon_{ech}\approx 42\mathrm{mV}}$.
+
+Lorsque $\epsilon_{ech}$ dépasse $\frac{V_{ref}}{2^n}$, certaines valeurs possibles pour $V_{out}$ n'ont même pas le temps d'être ``vues''. Cette situation extrêmes est représentée Fig.~\ref{fig:ech2}.
+
+
+\noindent \textbf{\underline{Gain et offset}}.
+
+Le CAN et le CNA présentant tous deux une erreur sur le gain ainsi qu'un certain offset, cela se répercute sur la chaîne étudiée --- les deux gains étant multipliés et les offset sommés. Cet effet s'observe bien à $13Hz$ (cf. Fig.~\ref{fig:gain})~: le signal $V_{err}$ obtenu est constitué d'oscillations en dans de scies (liées aux effets précédemment décrits) autours d'un signal triangulaire traduisant cette erreur de gain. Son amplitude est d'approximativement $50\mathrm{mV}$ (pour une amplitude d'entrée de $4\mathrm{V}$), ce qui traduit une erreur de gain de $1,25\%$.
+
+
+\noindent \textbf{\underline{Retard}}.
+
+Indépendamment des erreurs liées à la fréquence d'échantillonnage, la succession du CAN et du CNA engendrent irrémédiablement un retard $\delta t$ entre la sortie et l'entrée. Lorsque l'on augmente la fréquence du signal traité, la soustraction $V_{err}$ des signaux triangulaires décalés $V_{out}$ et $-V_{in}$ aboutie en un signal carré d'amplitude proportionnelle au retard, auquel s'ajoute les perturbations précédemment décrites. Cet effet est observable Fig.~\ref{fig:retard}.
+
+Plus précisément, l'amplitude du signal carré susmentionné est de ${2 \epsilon_{retard}}$ avec ${\epsilon_{retard} = 2 \delta t \left|\frac{dV_{in}}{dt}\right|}$. Expérimentalement, on obtient pour ${f_{in}=200\mathrm{Hz}}$ (donc ${\left|\frac{dV_{in}}{dt}\right|=1600\mathrm{ V\cdot s^{-1}}}$) ${2 \epsilon_{retard} = 144\mathrm{mV}}$. Ainsi~: ${\epsilon_{retard} = 72\mathrm{mV}}$ et  ${\delta t = 22,5\mathrm{\mu s}}$.
+
+
+
+
+
 % Erreurs :
 %  - Echantillonage
 %      > Verr sur fréq rapide : largeur régulière, estimation de la fréq d'échantillonage
 %      > Escalier sur fréq plus rapide : marche de longueur non régulière (dVin ou 2*dVin)
-%TODO  > Escalier sur fréq beaucoup plus rapide : marche de longueur non régulière et valeurs manquantes
 %  - Gain
 %      > Verr dézoomé, fréq raisonnable
 %  - Retard
 %      > Verr dézoomé, fréq haute : au Verr précédemment affiché, on ajoute un signal carré
 
 
-%\section{Chambre d'écho}
-%\subsection{Analyse théorique}
-%
-%\subsubsection{Fonctionnement}
-%Le principe de la chambre d'écho est d'échantillonner un signal audio à l'aide du convertisseur AN, de stocker les échantillons dans un tampon circulaire réalisé à l'aide d'une mémoire SRAM de 8-bits, puis de restituer les données passées qui sont stockées dans la mémoire à l'aide du convertisseur NA.\\
-%\includegraphics{principe_chambre_d'echo.png}
-%
-%Il y a alors plusieurs modes de fonctionnement :
-%\begin{itemize}
-%\item \textbf{Retard pur} : Le signal est désactivé mais l'écho est activé. Il s'agit donc d'un simple retard.
-%\item \textbf{Echo simple} : Le signal et l'écho sont activés, mais le sommateur est désactivé. Le signal est sommé avec le contenu de la mémoire, mais seul le signal est écrit dans la mémoire. Il n'y a donc qu'un seul écho.
-%\item \textbf{Echo infini} : Le signal, l'écho et le sommateur sont activés. Le signal est sommé avec le contenu de la mémoire avant d'être écrit dans la mémoire. Il y a donc un feedback sur l'écho, ce qui simule mieux un écho réel.
-%\end{itemize}
-%
-%\subsubsection{Conditions à garantir pour la stabilité}
-%
-%\begin{itemize}
-%\item \textbf{En mode écho simple} : Théoriquement, un système d'écho simple est équivalent à un ''filtre'' à réponse impulsionelle finie (RIF), dont la réponse est :
-%\begin{center}$y[n] = x[n] + k \cdot x[n-l]$ \end{center}\textbf{}\\
-%Avec : $x$ = entrée, $y$ = sortie, $k = $ facteur d'amplification, $l = $taille du tampon en mémoire\\
-%
-%Sa fonction de transfert est donc :
-%\begin{center}$H(z) = 1 + k \cdot z^l$\end{center}
-%
-%Il n'y a pas de pôles, le système sera toujours stable.
-%
-%\item \textbf{En mode écho infini} : Un echo infini est équivalent à un ''filtre'' à réponse impultionelle infinie (RII), dont la réponse est :
-%\begin{center}$y[n] = x[n] + k \cdot y[n-l]$\end{center}
-%
-%La fonction de transfert est donc :
-%\begin{center}$H(z) = \frac{1}{1 - k \cdot z^{-l}}$\end{center}
-%Ce système sera stable seulement pour les $k<1$. En cas d'instabilité, la chambre d'écho ne fonctionnera pas, un régime d'oscillation apparaîtra et un sifflement fort désagréable s'entendra sur la sortie.
-%\end{itemize}
-%
-%A noter que la réponse en fréquence de la chambre d'écho n'est pas constante : Certaines fréquences vont être amplifiées tandis que d'autres vont être atténuées, et ce pour les deux modes écho simple et infini. Cet effet de bord n'est pas évitable. De plus, toute modification des paramètres $k$ et $l$ va affecter la réponse en fréquence.
-%
-%\subsubsection{Calcul du retard maximum}
-%On désire avoir une bande passante de $15 kHz$, il faut donc une fréquence d'échantillonage strictement suppérieure à $30 kHz$.
-%
-%Le retard maximum possible est de :
-%\begin{center}$retard = \frac{l_{max}}{f_e}$\end{center}
-%Avec $l_{max}$ = taille du tampon maximum = 32768 octets et $f_e = $ fréquence d'échantillonnage $= 32000 Hz$, cela donne :
-%\begin{center}$retard = \frac{32768}{32000} = 1.024 s$\end{center}
-%
-%En acceptant que le son se propage à la vitesse de $340 \frac{m}{s}$, et que celui-ci doit faire l'aller-retour entre sa source et un mur contre lequel il serait réfléchi, ceci correspond à une distance de :\\
-%\begin{center}
-%$\frac{340 \cdot 1.024}{2} = 174m$.
-%\end{center}
-%
-%\subsubsection{Calcul du gain de l'ampli d'entrée}
-%Le shéma est le suivant :\\
-%\includegraphics[width = 0.9\linewidth]{shema_echo_entree.png}
-%
-%Dans la bande passante, on néglige les pertes dues aux diviseur $C37$ et $R7$, car la fréquence de coupure vaut :
-%$f_c = \frac{1}{2 \pi \cdot R \cdot C} = \frac{1}{2 \pi \cdot 47 \cdot 10^3 \cdot 10^{-6}} = 3.39 Hz \ll 20 Hz$
-%\\\\
-%De même, les capacités $C2$ et $C3$ peuvent être négligées et considérées comme des circuits ouverts.
-%En effet, au maximum de la bande passante (à 15 kHz) leur impédance vaut :
-%\begin{center}$X_c = \frac{1}{2 \pi f \cdot C} = \frac{1}{2 \pi 15 \cdot 10^3 \cdot 22 \cdot 10^{-12}} = 482 k\Omega \gg R3, P4 $\end{center}
-%Le gain du premier étage est donc de :
-%\begin{center}
-%$Au \simeq 1+\frac{R3}{R1} = 4.3 $
-%\end{center}
-%Et le gain du second étage :
-%\begin{center}
-%$Au \simeq 1+\frac{P4}{R5} =
-%\left\{
-%  \begin{array}{rcr}
-%    1 \mbox{ si } P4 = 0 \mbox{ (minimum)} \\
-%    51 \mbox{ si } P4 = 50k\Omega \mbox{ (maximum)} \\
-%  \end{array}
-%\right.
-%$
-%\end{center}
-%D'où :
-%\begin{center}
-%$Au_{min} = 4.3 \cdot 1 = 4.3  = 12.7$ dB\\
-%$ Au_{max} = 4.3 \cdot 51 = 220 = 46.8$ dB
-%\end{center}
-%
-%\subsubsection{Séquenceur}
-%Le rôle du séquenceur est de générer une fréquence d'horloge pour la logique numérique.\\
-%\includegraphics[width = 1\linewidth]{shema_sequenceur_1.png}
-%L'oscillateur est une simple cellule RC avec un inverseur à hystrèse.\\
-%D'après la notice du composant 74HC132, la fréquence d'oscillation quand elle est réglée au minimum (P3 réglé au maximum) est de :
-%\begin{center}
-%$f_{min} \simeq \frac{1}{0.8 \cdot R \cdot C} = \frac{1}{0.8 \cdot 10^3 \cdot 6.8 \cdot 10^{-9}} = 184 $ kHz
-%\end{center}
-%Le maximum est limité par le délai de propagation des transistors internes au circuit (lorsque $P3 = 0$), et est donc plus difficile à déterminer. Une grossière approximation est de prendre le temps de propagation du circuit, en ajoutant le temps de montée et de descente. Les valeurs typiques sont de 20 ns et 7 ns respectivement :
-%\begin{center}
-%$f_{max} \simeq \frac{1}{tp_{lh} + tp_{hl} + t_{hl} + t_{lh}} = \frac{1}{2 \cdot (20+7) \cdot 10^{-9}} = 18.5 $ MHz
-%\end{center}
-%P3 permet donc de faire varier librement la fréquence d'oscillation sur deux ordres de grandeur.
-%\\
-%Le circuit U3 est un compteur, il permet donc d'avoir une version prédivisée de l'horloge par plusieurs puissances de 2. Dans ce cas, le compteur est sur 4 bits, il permet donc d'avoir un signal prédivisé par 2, 4, 8 et 16.\\
-%Nous pouvons choisir lequel de ces prédiviseur est utilisé pour ce circuit ce qui permet de choisir grossièrement une très large bande de fréquences d'échantillonnages, en plus du réglage par P3.
-%\\\\
-%Les deux bascules D de U19 forment un compteur Johnson de longueur 2, qui a 4 états. Le changement d'état se fait au flanc montant de CLK. \footnote{Voir datasheet du composant 74HC74}\\
-%
-%\includegraphics[width = 0.7\linewidth]{shema_sequenceur_2.png}
-%
-%
-%Il y a donc un "cycle" pour chaque période de CK, soit 4 périodes de CLK. Chaque cycle se décompose donc en 4 phases bien distinctes :\footnote{Voir schéma du montage et datasheets des composants respectifs : UVC3130 pour le convertisseur, 74HC4040 pour le contrôleur de bus d'adresses et 62256 pour la SRAM}
-%\begin{center}
-%\begin{tabular}{|c|c|c|c|c|c|l|}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Application~: la chambre d'écho}
+
+\subsection{Prévisions théoriques}
+
+Le principe de la chambre d'écho est d'échantillonner un signal audio à l'aide du convertisseur AN, de stocker les échantillons dans un tampon circulaire réalisé à l'aide d'une mémoire SRAM de 8-bits, puis de restituer les données passées qui sont stockées dans la mémoire à l'aide du convertisseur NA.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{principe_chambre_d'echo.png}
+	\caption{Schéma de principe de la chambre d'écho}
+	\label{fig:chambre_echo}
+\end{figure}
+
+Il y a alors plusieurs modes de fonctionnement~:
+\begin{itemize}
+\item \textbf{Écho seul}~: Le signal est désactivé mais l'écho est activé. Il s'agit donc d'un simple retard.
+\item \textbf{Écho simple}~: Le signal et l'écho sont activés, mais le sommateur est désactivé. Le signal est sommé avec le contenu de la mémoire, mais seul le signal est écrit dans la mémoire. Il n'y a donc qu'un seul écho.
+\item \textbf{Écho infini}~: Le signal, l'écho et le sommateur sont activés. Le signal est sommé avec le contenu de la mémoire avant d'être écrit dans la mémoire. Il y a donc un feedback sur l'écho, ce qui simule mieux un écho réel.
+\end{itemize}
+
+\exsubpart{1}
+
+Les conditions à garantir pour assurer la stabilité du système diffère du mode de fonctionnement utilisé~:
+
+\noindent \textbf{\underline{En mode écho simple~:}}
+
+Théoriquement, un système d'écho simple est équivalent à un filtre à réponse impulsionnelle finie (RIF), dont la réponse est~: $y[n] = x[n] + k \cdot x[n-l]$,
+où $x$ désigne entrée, $y$ la sortie, $k$ le facteur d'amplification et $l$ la taille du tampon en mémoire.
+
+Sa fonction de transfert est donc~: $H(z) = 1 + k \cdot z^l$
+
+Il n'y a pas de pôles, le système sera toujours stable.
+
+\noindent \textbf{\underline{En mode écho infini~:}}
+
+Un écho infini est équivalent à un filtre à réponse impulsionnelle infinie (RII), dont la réponse est~: $y[n] = x[n] + k \cdot y[n-l]$
+
+La fonction de transfert est donc~: $H(z) = \frac{1}{1 - k \cdot z^{-l}}$
+
+Ce système sera stable seulement pour les $k<1$. En cas d'instabilité, la chambre d'écho ne fonctionnera pas, un régime d'oscillation apparaîtra et un sifflement fort s'entendra sur la sortie. En musique, cela correspond à ce que l'on nomme l'``effet Larsen''.
+\\
+
+À noter que la réponse en fréquence de la chambre d'écho n'est pas constante~: certaines fréquences vont être amplifiées tandis que d'autres vont être atténuées, et ce pour les deux modes écho simple et infini. Cet effet de bord est inévitable. De plus, toute modification des paramètres $k$ et $l$ va affecter la réponse en fréquence.
+
+Cette étude de la chambre d'écho comme filtre est valable pour des retards petits devant la durée des signaux en entrées (ie $l$ petit), c'est-à-dire quand l'écho ne sera pas perçu comme tel par l'oreille humaine. Pour un retard plus grand (plus long que les notes en entrée par exemple), l'écho ne sera plus perçu comme un filtre. Toutefois, les conditions de stabilité sont inchangées~: pour un écho infini, si $k>1$, l'écho sera à chaque fois amplifié et son amplitude divergera vers $+\infty$. 
+
+\exsubpart{2}
+
+On désire avoir une bande passante de $15 \mathrm{kHz}$. Pour respecter le théorème d'échantillonnage, il faut donc une fréquence d'échantillonnage strictement supérieure à $f_{ech,min} = 30 \mathrm{kHz}$.
+
+Le retard maximum possible est donc de~: \begin{equation}
+\delta t = \frac{l_{max}}{f_{ech,min}}
+\end{equation}
+avec $l_{max} = 32768$ désigne la taille maximale du tampons en octets.
+
+On obtient donc dans ce cas~: $\delta t = 1,09 \mathrm{s}$.
+
+En acceptant que le son se propage à la vitesse de $v = 340 \mathrm{m/s}$, et que celui-ci doit faire l'aller-retour entre sa source et un mur contre lequel il serait réfléchi, ceci correspond à une distance de~: $\frac{\delta t~v}{2} = 186\mathrm{m}$.
+
+\exsubpart{3}
+
+On considère le schéma présenté Fig.~\ref{fig:ampl}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\textwidth]{shema_echo_entree.png}
+	\caption{Amplificateur d'entrée de la chambre d'écho}
+	\label{fig:ampl}
+\end{figure}
+
+Dans la bande passante, on néglige les pertes dues au passe-bas C37-R7, car la fréquence de coupure vaut~:
+${f_c = \frac{1}{2 \pi \cdot R_7 \cdot C_{37}} = 3,39 \mathrm{Hz}}$
+
+De même, les capacités C2 et C3, et C5 et C8, peuvent être négligées et considérées comme des circuits ouverts.
+En effet, au maximum de la bande passante ($f_{max} = 15 \mathrm{kHz}$) leur réactance vaut~:
+\begin{center}$X_{c1,2} = \frac{1}{2 \pi f_{max} \cdot C_{2,3}} = 482 \mathrm{k\Omega} \gg R_3, P_4 $\end{center}
+\begin{center}$X_{c5,8} = \frac{1}{2 \pi f_{max} \cdot C_{5,8}} = 106 \mathrm{\Omega} \gg R_1, R_5 $\end{center}
+
+Le gain du premier étage est donc de : $A_1 \simeq 1+\frac{R3}{R1} = 4.3 $
+
+Et le gain du second étage de :
+$A_2 \simeq 1+\frac{\alpha P4}{R5}$, avec $\alpha \in [0,1]$~; soit~: $A_2 \in [1,51]$.
+
+Le gain total $A = A_1\cdot A_2$ est donc compris entre $A_{min} = 4,3 = 12,7 \mathrm{dB}$ et $A_{max} = 219 = 46,8 \mathrm{dB}$.
+
+\exsubpart{4}
+
+Le rôle du séquenceur est de générer une fréquence d'horloge pour la logique numérique.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\textwidth]{shema_sequenceur_1.png}
+	\caption{Séquenceur de la chambre d'écho}
+	\label{fig:seq}
+\end{figure}
+
+L'oscillateur est une simple cellule RC avec un inverseur à hystérésis.\\
+
+D'après la notice du composant 74HC132, la fréquence d'oscillation quand elle est réglée au minimum (P3 réglé au maximum) est de :
+\begin{center}
+$f_{min} \simeq \frac{1}{0.8 \cdot R \cdot C} = 184 $ kHz
+\end{center}
+
+Le maximum est limité par le délai de propagation des transistors internes au circuit (lorsque $P3 = 0$), et est donc plus difficile à déterminer. Une grossière approximation est de prendre le temps de propagation du circuit, en ajoutant le temps de montée et de descente. Les valeurs typiques sont de 20 ns et 7 ns respectivement~:
+\begin{center}
+$f_{max} \simeq \frac{1}{tp_{lh} + tp_{hl} + t_{hl} + t_{lh}} = 18.5 $ MHz
+\end{center}
+
+P3 permet donc de faire varier librement la fréquence d'oscillation sur deux ordres de grandeur.
+
+Le circuit U3 est un compteur, il permet donc d'avoir une version divisée de l'horloge par plusieurs puissances de 2. Dans ce cas, le compteur est sur 4 bits, il permet donc d'avoir un signal prédivisé par 2, 4, 8 et 16.
+Nous pouvons choisir lequel de ces diviseurs est utilisé pour ce circuit ce qui permet de choisir grossièrement une très large bande de fréquences d'échantillonnage, en plus du réglage par P3.
+
+Les deux bascules D de U19 forment un compteur Johnson de longueur 2, qui a 4 états. Le changement d'état se fait au flanc montant de CLK. \footnote{Voir datasheet du composant 74HC74}\\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 0.5\linewidth]{shema_sequenceur_2.png}
+	\caption{Séquenceur de la chambre d'écho}
+	\label{fig:seq2}
+\end{figure}
+
+
+
+Il y a donc un ``cycle'' pour chaque période de CK, soit 4 périodes de CLK. Chaque cycle se décompose donc en 4 phases bien distinctes\footnote{Voir schéma du montage et datasheets des composants respectifs : UVC3130 pour le convertisseur, 74HC4040 pour le contrôleur de bus d'adresses et 62256 pour la SRAM}~:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|l|}
+\hline
+\multicolumn{2}{|c|}{État} & CK & /CK & R/W & INC & Action\\
+\hline
+0 & 0 & 0 & 1 & 1 & 0 & Lecture de l'ancienne valeur par le convertisseur N/A (flanc descendant de CK) \\
 %\hline
-%\multicolumn{2}{|c|}{Etat} & CK & /CK & R/W & INC & Action\\
+0 & 1 & 0 & 1 & 1 & 1 & Pas d'opération\\
 %\hline
-%0 & 0 & 0 & 1 & 1 & 0 & Lecture de l'ancienne valeur par le convertisseur N/A (flanc descendant de CK) \\
-%%\hline
-%0 & 1 & 0 & 1 & 1 & 1 & Pas d'opération\\
-%%\hline
-%1 & 1 & 1 & 0 & 0 & 1 & Ecriture de la nouvelle valeur dans la SRAM (état bas de R/W)\\
-%%\hline
-%1 & 0 & 1 & 0 & 1 & 0 & Mise à jour du bus d'adresses (flanc descendant de INC)\\
+1 & 1 & 1 & 0 & 0 & 1 & Écriture de la nouvelle valeur dans la SRAM (état bas de R/W)\\
 %\hline
-%\end{tabular}
-%\end{center}
-%
-%%Pas nécessaire...
-%%\includegraphics[width = 1\linewidth]{shema_memoire.png}
-%
-%\begin{minipage}{0.67\linewidth}
-%\includegraphics[width = 1\linewidth]{chronogramme_sequenceur.png}
-%\end{minipage}\hfill
-%\begin{minipage}{0.31\linewidth}
-%Conclusion : A chaque cycle, une valeur dans la SRAM est d'abord lue et convertie en analogique, avant qu'une nouvelle valeur provenant du convertisseur A/N vienne remplacer cette valeur, puis on continue à l'adresse suivante.
-%\end{minipage}
-%
-%\subsection{Mesures}
-%
-%\subsubsection{Observation des signaux à l'oscilloscope}
-%
-%% !!! A AJOUTER !!!
-%% discussion des signaux à l'oscilloscope...
-%
-%\subsubsection{Nombre de bits}
-%A chaque bit supprimé, le niveau de bruit augmente de 6 dB, car l'amplitude de la différence entre le signal idéal et quantifié (erreur) double lorsqu'on enlève un bit.\\
-%% Il y a t-il des PHOTOS de l'analyseur de spectre pour mettre ici ?? %
-%
-%Concrètement, lorsqu'il reste très peu de bits, le signal sonne très distordu, car il y a non seulement du bruit mais en plus des harmoniques supplémentaires. En effet l'erreur de quantification peut être approximée comme étant aléatoire lorsqu'il reste suffisamment de bits, ce qui en fait du bruit.
-%\\
-%Par contre lorsque qu'il reste très peu de bits, par exemple le cas extrême où on n'a qu'un seul bit, l'erreur de quantification augmente en amplitude et devient moins aléatoire.
-%\\
-%\begin{tabular}{c c}
-%
-%\includegraphics[width = 8 cm]{err_quantif_8bit_t.png} & \includegraphics[width = 8 cm]{err_quantif_8bit_f.png}
-%\\
-%Sinus quantifié sur 8 bits et erreur & Spectre de l'erreur de quantification
-%\\
-%\includegraphics[width = 8 cm]{err_quantif_4bit_t.png} & \includegraphics[width = 8 cm]{err_quantif_4bit_f.png}
-%\\
-%Sinus quantifié sur 4 bits et erreur & Spectre de l'erreur de quantification
-%\\
-%\includegraphics[width = 8 cm]{err_quantif_1bit_t.png} & \includegraphics[width = 8 cm]{err_quantif_1bit_f.png}
-%\\
-%Sinus quantifié sur 1 bit et erreur & Spectre de l'erreur de quantification
-%\end{tabular}
-%
-%A noter que l'échelle sur l'axe des ordonnées n'est pas la même sur ces trois graphiques - à fin que ceux-ci soient observables.\\
-%\\
-%Dans le premier cas (8-bits) l'erreur de quantification est répartie sur tout le spectre, et peut être assimilée à du bruit blanc.
-%\\
-%Dans le second cas (4-bits), on constate que l'erreur est plus intense en basse fréquence, et peut plus difficilement être assimilée à du bruit blanc.
-%\\
-%Dans le dernier cas (1-bit), l'erreur correspond à la différence entre un signal sinus et un signal carré. L'erreur est très intense et très condensée dans les basses fréquences, et en aucun cas assimilable à du bruit blanc.
-%\\
-%
-%A noter que le système n'étant pas linéaire, ceci ne peut pas être généralisé de façon théorique à tous les signaux.\\
-%
-%Nous avons donc mis en pratique et testé le système avec un micro.\\
-%Dans le cas de la voix humaine, nous avons constaté qu'il faut au moins 4 bits pour qu'elle soit compréhensible.
-%
-%\subsubsection{Retard et gain de l'echo}
-%Le retard à une influence sur la durée entre deux répétitions de l'écho.
-%Le gain quand à lui a une influence sur l'atténuation entre deux répétitions de l'écho.
-%
-%Une augmentation du retard ou du gain vont tous deux augmenter le temps que l'écho prend pour être suffisamment atténué pour se fondre dans le bruit, ce qui donne une impression de plus de résonance.\\
-%
-%Si l'on désire plus de résonance, une augmentation du gain fait tendre la chambre d'écho vers l'instabilité et augmente les variations de la réponse en fréquence, il est donc en général préférable d'augmenter le retard si la mémoire le permet.
-%
-%\subsection{Avantages et inconvenients des techniques}
-%Si la taille de la mémoire est fixe, l'avantage est que le contrôle des lignes d'adresses de la mémoire s'en trouvera simplifié : Un simple compteur ou décompteur modulo $2^n$ fera l'affaire (c'est exactement ce qu'on a là avec les circuits U1 et U18).
-%
-%En revanche, il sera nécessaire d'avoir un circuit qui permet de faire varier la fréquence d'horloge pour l'échantillonnage. L'implémentation comme réalisée dans le séquenceur de ce montage convient parfaitement, mais ne permet pas un réglage précis de la fréquence d'échantillonnage. Si de la précision est requise, un oscillateur à quartz s'imposerait et il serait impossible de faire varier la fréquence de celui-ci. Il faudrait alors utiliser une PLL pour faire librement varier la fréquence ce qui est cher et compliqué à mettre en oeuvre.
-%\\
-%Si l'on change la longueur de l'écho durant le fonctionnement du circuit, l'ancien contenu de la mémoire sera déformé par le changement de fréquence d'échantillonnage, ce qui peut être indésirable.
-%\\\\
-%Dans le cas d'une fréquence d'échantillonnage est fixe, cela simplifiera la génération de l'horloge, et celle-ci pourrait être fabriquée de manière très précise à partir d'un quartz.
-%\\
-%Mais le contrôle des lignes d'adresses sera alors plus compliqué, il faut un décompteur qui recharge une variable lorsqu'il atteint la valeur zéro, la variable déterminant la longueur entre deux répétitions de l'écho.
-%\\
-%Le changement de la longueur de l'écho pendant l'utilisation n'a pas d'effet néfaste, il faut juste attendre que le compteur d'adresses atteigne la valeur '0' pour que le changement soit effectif. Aucun son déformé n'apparait à la sortie.
-%\\\\
-%En conclusion, le choix de l'une ou de l'autre technique dépendra donc si on préfère mettre la complexité du circuit du côté analogique (génération d'une fréquence d'échantillonnage variable) ou du côté numérique (gestion des lignes d'adresses de la mémoire).
+1 & 0 & 1 & 0 & 1 & 0 & Mise-à-jour du bus d'adresses (flanc descendant de INC)\\
+\hline
+\end{tabular}
+\end{center}
+
+%Pas nécessaire...
+%\includegraphics[width = 1\linewidth]{shema_memoire.png}
+
+\begin{minipage}{0.5\linewidth}
+\includegraphics[width=\linewidth]{chronogramme_sequenceur.png}
+\end{minipage}\hfill
+\begin{minipage}{0.4\linewidth}
+~~~~~~En conclusion~: À chaque cycle, une valeur dans la SRAM est d'abord lue et convertie en analogique, avant qu'une nouvelle valeur provenant du convertisseur A/N vienne remplacer cette valeur, puis on continue à l'adresse suivante.
+\end{minipage}
+
+\subsection{Mesures}
+
+On applique en entrée de la chambre d'écho un signal sinusoïdal de 2kHz, et règle son amplitude ainsi que le gain du préamplificateur de la chambre d'écho de sorte à éviter toute saturation des convertisseurs A/N et N/A. 
+
+Pour l'instant, on se place en mode ``écho seul''. Le signal en sortie n'est donc qu'une image quantifiée et retardée de l'entrée.
+
+\exsubpart{2}
+
+%TODO
+
+\exsubpart{3}
+
+À chaque bit supprimé pour l'encodage du signal traité, le niveau de bruit augmente de 6 dB. En effet, retirer un bit double l'amplitude de l'erreur de quantification.
+
+% Il y a t-il des PHOTOS de l'analyseur de spectre pour mettre ici ?? %
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{\textwidth}
+		\begin{subfigure}[b]{.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{err_quantif_8bit_t}
+			\caption{Sinus quantifié sur 8 bits et erreur}
+			\label{fig:q_8a}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{err_quantif_8bit_f}
+			\caption{Spectre de l'erreur de quantification avec 8 bits}
+			\label{fig:q_8b}
+		\end{subfigure}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{\textwidth}
+		\begin{subfigure}[b]{.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{err_quantif_4bit_t}
+			\caption{Sinus quantifié sur 4 bits et erreur}
+			\label{fig:q_4a}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{err_quantif_4bit_f}
+			\caption{Spectre de l'erreur de quantification avec 4 bits}
+			\label{fig:q_4b}
+		\end{subfigure}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{\textwidth}
+		\begin{subfigure}[b]{.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{err_quantif_1bit_t}
+			\caption{Sinus quantifié sur 1 bit et erreur}
+			\label{fig:q_1a}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{err_quantif_1bit_f}
+			\caption{Spectre de l'erreur de quantification avec 1 bit}
+			\label{fig:q_1b}
+		\end{subfigure}
+	\end{subfigure}	
+	\caption{Effet du nombre de bits sur l'erreur de quantification\footnote{À noter que l'échelle sur l'axe des ordonnées n'est pas la même sur ces trois graphiques - à fin que ceux-ci soient observables.}}
+\end{figure}
+
+
+Concrètement, lorsque la résolution est suffisante --- c'est-à-dire le nombre de bits suffisant --- l'erreur de quantification peut être approximée comme étant aléatoire et apparait ainsi comme du bruit se superposant au signal traité. En revanche, lorsque le nombre de bits devient faible, la corrélation entre signal d'entré et bruit de quantification fait apparaitre des harmoniques. Le signal apparait alors comme fortement distordu.
+
+Ainsi, avec 8 bits, l'erreur de quantification est répartie sur tout le spectre et peut être assimilée à du bruit blanc (cf Fig.~\ref{fig:q_8a} et~\ref{fig:q_8b}).
+Avec 4 bits, on constate que l'erreur est plus intense en basse fréquence et présente certaines harmoniques (cf Fig.~\ref{fig:q_4a} et~\ref{fig:q_4b}).
+Enfin, avec 1 bit, l'erreur correspond à la différence entre un signal sinusoïdal et un signal carré~: l'erreur est élevée et très condensée dans les basses fréquences --- et en aucun cas assimilable à du bruit blanc.
+
+Nous avons branché un micro en entrée de la chambre d'écho. Dans le cas de la voix humaine, nous avons constaté qu'il faut au moins 4 bits pour qu'elle soit pleinement compréhensible.
+
+
+\exsubpart{4}
+
+On s'intéresse désormais au mode ``écho infini''.
+
+Le retard à une influence sur la durée entre deux répétitions de l'écho. Un long retard pourra donner la sensation d'un écho plus lointain.
+Le gain quant à lui a une influence sur l'atténuation entre deux répétitions de l'écho. Plus il sera élevé, plus l'on entendra l'écho avant que ce dernier ne se fonde dans le bruit.
+
+Un retard long (supérieur à 0,2s) apparaitra comme un écho au sens classique du terme~: les sons apparaitront comme ``répétés''. En musique, on parle d'un effet de ``delay''. En revanche, si le retard est suffisamment court, il ne sera plus interprété comme tel, mais plutôt comme un effet de réverbération. On parle en musique de ``reverb''. Augmenter le gain rendra alors le son comme flou, pouvant ainsi le faire apparaitre comme plus calme, plus ésotérique\dots
+
+Toutefois, le gain de l'écho ne doit jamais trop approcher 1, au risque de provoquer une saturation voire une instabilité du système.
+
+
+\exsubpart{5}
+
+Un taille de mémoire fixe permet de simplifier le contrôle des adresses mémoire~: un simple compteur modulo $2^n$ peut-être utilisé.
+
+En revanche, il sera nécessaire d'avoir un circuit qui permet de faire varier la fréquence d'horloge pour l'échantillonnage. L'implémentation comme réalisée dans le séquenceur de ce montage convient parfaitement, mais ne permet pas un réglage précis de la fréquence d'échantillonnage. Si de la précision est requise, un oscillateur à quartz s'imposerait et il serait impossible de faire varier la fréquence de celui-ci. Il faudrait alors utiliser une PLL pour faire librement varier la fréquence ce qui est cher et compliqué à mettre en œuvre.
+
+Autre effet indésirable~: si l'on change la longueur de l'écho durant le fonctionnement du circuit, la vitesse de lecture des données actuellement en mémoire sera affectée. Les fréquences des signaux correspondants seront ainsi transformées lors de leur lecture.
+\\
+
+Dans le cas d'une fréquence d'échantillonnage fixe, la génération de l'horloge est simplifiée, et pourrait être fabriquée de manière très précise à partir d'un quartz.
+
+En revanche, le contrôle des adresses mémoire sera alors plus compliqué, nécessitant un décompteur qui recharge une variable lorsqu'il atteint la valeur zéro, la variable déterminant la longueur entre deux répétitions de l'écho.
+
+Le changement de la longueur de l'écho pendant l'utilisation a un effet moindre sur la lecture des données en mémoire~: elles sont lues à la même vitesse, et aucun déplacement de fréquence n'est observé (pour peu que le retard soit assez grand devant la période des signaux). En revanche, on crée des trous ou raccourcit la séquence lue. Si le retard est élevé, on fera éventuellement entendre des bruits (``pops'') lorsque l'on arrive au bout du tampon mémoire. Si le retard est court, le son est distordu. 
+Par ailleurs, il faut juste attendre que le compteur d'adresses atteigne la valeur `0' pour que le changement soit effectif.
 
 \end{document}
