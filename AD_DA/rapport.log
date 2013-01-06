@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  24 OCT 2012 22:29
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  6 JAN 2013 12:56
 entering extended mode
 **rapport.tex
 (E:\Boulot\LabElec\AD_DA\rapport.tex
@@ -534,11 +534,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 30.
+LaTeX Font Info:    Try loading font information for U+msa on input line 31.
 (E:\Programmes\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 30.
+LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 
 (E:\Programmes\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -546,68 +546,68 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 <2bitFlash.jpg, id=1, 494.59781pt x 386.19281pt>
 File: 2bitFlash.jpg Graphic file (type jpg)
  <use 2bitFlash.jpg>
-Package pdftex.def Info: 2bitFlash.jpg used on input line 40.
+Package pdftex.def Info: 2bitFlash.jpg used on input line 41.
 (pdftex.def)             Requested size: 193.47577pt x 151.06833pt.
 
 <8bitSemiFlash.jpg, id=2, 489.32813pt x 365.86688pt>
 File: 8bitSemiFlash.jpg Graphic file (type jpg)
  <use 8bitSemiFlash.jpg>
-Package pdftex.def Info: 8bitSemiFlash.jpg used on input line 47.
+Package pdftex.def Info: 8bitSemiFlash.jpg used on input line 48.
 (pdftex.def)             Requested size: 193.47577pt x 144.66377pt.
 
 [1
 
 {C:/Users/Asus/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <E:/Boulot/La
 bElec/AD_DA/2bitFlash.jpg> <E:/Boulot/LabElec/AD_DA/8bitSemiFlash.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 <ADCresults.png, id=22, 1065.22969pt x 220.57407pt>
 File: ADCresults.png Graphic file (type png)
  <use ADCresults.png>
-Package pdftex.def Info: ADCresults.png used on input line 154.
+Package pdftex.def Info: ADCresults.png used on input line 155.
 (pdftex.def)             Requested size: 483.69684pt x 100.15604pt.
 
 <ADCresults_lincorr.png, id=24, 1064.47687pt x 219.82124pt>
 File: ADCresults_lincorr.png Graphic file (type png)
 
 <use ADCresults_lincorr.png>
-Package pdftex.def Info: ADCresults_lincorr.png used on input line 161.
+Package pdftex.def Info: ADCresults_lincorr.png used on input line 162.
 (pdftex.def)             Requested size: 483.69684pt x 99.88464pt.
 
 <ADCresults_corr.png, id=25, 1061.46562pt x 216.05719pt>
 File: ADCresults_corr.png Graphic file (type png)
 
 <use ADCresults_corr.png>
-Package pdftex.def Info: ADCresults_corr.png used on input line 168.
+Package pdftex.def Info: ADCresults_corr.png used on input line 169.
 (pdftex.def)             Requested size: 483.69684pt x 98.45451pt.
  [2] [3 <E:/Boulot/LabElec/AD_DA/ADCresults.png> <E:/Boulot/LabElec/AD_DA/ADCre
 sults_lincorr.png> <E:/Boulot/LabElec/AD_DA/ADCresults_corr.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
 <R2Rbasics.jpg, id=42, 572.89032pt x 217.5628pt>
 File: R2Rbasics.jpg Graphic file (type jpg)
  <use R2Rbasics.jpg>
-Package pdftex.def Info: R2Rbasics.jpg used on input line 219.
+Package pdftex.def Info: R2Rbasics.jpg used on input line 222.
 (pdftex.def)             Requested size: 207.98608pt x 78.9865pt.
 
 <R2Rexpended.jpg, id=43, 739.26187pt x 275.52937pt>
 File: R2Rexpended.jpg Graphic file (type jpg)
  <use R2Rexpended.jpg>
-Package pdftex.def Info: R2Rexpended.jpg used on input line 226.
+Package pdftex.def Info: R2Rexpended.jpg used on input line 229.
 (pdftex.def)             Requested size: 256.35872pt x 95.54541pt.
 
 
@@ -616,65 +616,65 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [4] <AD7524.jpg, id=56, 733.23938pt x 347.79938pt>
 File: AD7524.jpg Graphic file (type jpg)
  <use AD7524.jpg>
-Package pdftex.def Info: AD7524.jpg used on input line 240.
+Package pdftex.def Info: AD7524.jpg used on input line 244.
 (pdftex.def)             Requested size: 290.22105pt x 137.66316pt.
 
 <AD7524eq.jpg, id=57, 237.88875pt x 143.78719pt>
 File: AD7524eq.jpg Graphic file (type jpg)
  <use AD7524eq.jpg>
-Package pdftex.def Info: AD7524eq.jpg used on input line 247.
+Package pdftex.def Info: AD7524eq.jpg used on input line 251.
 (pdftex.def)             Requested size: 96.73788pt x 58.47044pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 
  []
 
 [5 <E:/Boulot/LabElec/AD_DA/R2Rbasics.jpg> <E:/Boulot/LabElec/AD_DA/R2Rexpended
 .jpg> <E:/Boulot/LabElec/AD_DA/AD7524.jpg> <E:/Boulot/LabElec/AD_DA/AD7524eq.jp
 g>]
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 327.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 337.
 
 (E:\Programmes\MiKTeX\tex\latex\base\t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (20.87976pt too wide) in paragraph at lines 338--338
+Overfull \hbox (20.87976pt too wide) in paragraph at lines 348--348
 []\T1/cmr/m/n/10 Ainsi, le con-ver-tis-seur numérique/analogique étudié est mon
 o-tone. En ef-fet, cela mon-tre que si $[]$,
  []
 
 [6]
-Overfull \hbox (30.30228pt too wide) in paragraph at lines 366--367
+Overfull \hbox (30.30228pt too wide) in paragraph at lines 376--377
 []\T1/cmr/m/n/10 On notera $\OML/cmm/m/it/10 V[]$ \T1/cmr/m/n/10 la ten-sion im
 -posée en en-trée du mon-tage (ten-sion d'entrée du con-ver-tis-seur analogique
 /numérique),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
 
-LaTeX Warning: Reference `fig:slow' on page 7 undefined on input line 382.
+LaTeX Warning: Reference `fig:slow' on page 7 undefined on input line 392.
 
-<data/TEK0018_.jpg, id=67, 210.386pt x 172.645pt>
+<data/TEK0018_.jpg, id=68, 210.386pt x 172.645pt>
 File: data/TEK0018_.jpg Graphic file (type jpg)
  <use data/TEK0018_.jpg>
-Package pdftex.def Info: data/TEK0018_.jpg used on input line 474.
+Package pdftex.def Info: data/TEK0018_.jpg used on input line 484.
 (pdftex.def)             Requested size: 196.326pt x 161.11401pt.
 
 
@@ -684,15 +684,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.475 ..._{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
+l.485 ..._{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<data/TEK0017_.jpg, id=68, 203.159pt x 171.842pt>
+<data/TEK0017_.jpg, id=69, 203.159pt x 171.842pt>
 File: data/TEK0017_.jpg Graphic file (type jpg)
  <use data/TEK0017_.jpg>
-Package pdftex.def Info: data/TEK0017_.jpg used on input line 481.
+Package pdftex.def Info: data/TEK0017_.jpg used on input line 491.
 (pdftex.def)             Requested size: 196.326pt x 166.06247pt.
 
 
@@ -702,14 +702,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.482 ...n}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
+l.492 ...n}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 File: data/TEK0018_.jpg Graphic file (type jpg)
 <use data/TEK0018_.jpg>
-Package pdftex.def Info: data/TEK0018_.jpg used on input line 490.
+Package pdftex.def Info: data/TEK0018_.jpg used on input line 500.
 (pdftex.def)             Requested size: 196.326pt x 161.11401pt.
 
 
@@ -719,15 +719,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.491 ..._{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
+l.501 ..._{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<data/TEK0000_.jpg, id=69, 203.962pt x 172.2435pt>
+<data/TEK0000_.jpg, id=70, 203.962pt x 172.2435pt>
 File: data/TEK0000_.jpg Graphic file (type jpg)
  <use data/TEK0000_.jpg>
-Package pdftex.def Info: data/TEK0000_.jpg used on input line 497.
+Package pdftex.def Info: data/TEK0000_.jpg used on input line 507.
 (pdftex.def)             Requested size: 196.326pt x 165.8013pt.
 
 
@@ -737,14 +737,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.498 ...n}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
+l.508 ...n}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 File: data/TEK0018_.jpg Graphic file (type jpg)
 <use data/TEK0018_.jpg>
-Package pdftex.def Info: data/TEK0018_.jpg used on input line 506.
+Package pdftex.def Info: data/TEK0018_.jpg used on input line 516.
 (pdftex.def)             Requested size: 196.326pt x 161.11401pt.
 
 
@@ -754,15 +754,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.507 ..._{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
+l.517 ..._{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<data/TEK0020_.jpg, id=70, 203.159pt x 171.4405pt>
+<data/TEK0020_.jpg, id=71, 203.159pt x 171.4405pt>
 File: data/TEK0020_.jpg Graphic file (type jpg)
  <use data/TEK0020_.jpg>
-Package pdftex.def Info: data/TEK0020_.jpg used on input line 513.
+Package pdftex.def Info: data/TEK0020_.jpg used on input line 523.
 (pdftex.def)             Requested size: 196.326pt x 165.67448pt.
 
 
@@ -772,14 +772,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.514 ...n}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
+l.524 ...n}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [7] [8 <E:/Boulot/LabElec/AD_DA/data/TEK0018_.jpg> <E:/Boulot/LabElec/AD_DA/dat
 a/TEK0017_.jpg> <E:/Boulot/LabElec/AD_DA/data/TEK0000_.jpg> <E:/Boulot/LabElec/
-AD_DA/data/TEK0020_.jpg>] (E:\Boulot\LabElec\AD_DA\rapport.aux)
+AD_DA/data/TEK0020_.jpg>] [9] (E:\Boulot\LabElec\AD_DA\rapport.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -792,49 +792,48 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 4489 strings out of 494045
- 61569 string characters out of 3151211
+ 4490 strings out of 494045
+ 61589 string characters out of 3151211
  131540 words of memory out of 3000000
- 7669 multiletter control sequences out of 15000+200000
+ 7670 multiletter control sequences out of 15000+200000
  23296 words of font info for 62 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  38i,12n,38p,639b,626s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
 cbx1000.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ectt1000.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecrm0800.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Asus\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Asus\AppData
-\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Asu
-s\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\
-Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000
+\dpi600\ecrm0800.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecrm0600.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Asus\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Asus\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Asu
+s\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\
+Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440
 .pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecbx1440.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecxc1440.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ecbx2986.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecbx2074.pk><E:/Programmes/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cmex
-tra/cmex8.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/Programmes/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><E:/Programmes/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><E
-:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/Programmes/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><E:/Programmes/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/Pro
-grammes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><E:/Programmes/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><E:/Programmes/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmsy5.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy6.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Prog
-rammes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/Programmes/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy9.pfb><E:/Programmes/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmtt10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-tt8.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on rapport.pdf (8 pages, 832159 bytes).
+\ecxc1440.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx2986.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecbx2074.pk><E:/Programmes/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmex10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8
+.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/Progra
+mmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/Programmes/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi6.pfb><E:/Programmes/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><E:/Program
+mes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/Programmes/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr5.pfb><E:/Programmes/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr6.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/Programmes/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><E:/Programmes/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmsy5.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Programmes/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/Programmes/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmsy9.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><
+E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on rapport.pdf (9 pages, 836441 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
+ 486 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
