@@ -100,17 +100,22 @@ Q = \sqrt{2^{1/2}-1}~Q_{tot} = 4,505
 \section{L'oscillateur à quartz}
 
 \subsection{Description}
+To do
+
+\subsection{Questions et calculs}
+
+\exsubpart{1}
 
 La réaction positive s'effectue par le condensateur parasite $C_{bc}$ qui se trouve entre le collecteur et la base du transistor.
 \begin{center}
 \includegraphics[width = 0.7\linewidth]{shema_oscillateur.png}
 \end{center}
 L'oscillateur est de type Colpitts, c'est à dire que la réaction positive est réalisée par un diviseur capacitif.\\
-Si on considère le schéma petits signaux (suppression des composantes continues servant à polariser le transistor) on obtient le schéma suivant :
+Si on considère le schéma petits signaux (suppression des composantes continues servant à polariser le transistor), on obtient le schéma suivant :
 \begin{center}
 \includegraphics[width=0.4\linewidth]{shema_petit_signaux_oscillateur.png}
 \end{center}
-On voit alors que le circuit de charge est un filtre passe-bande formé par $L_{41}$ et $C_{42}$. Les fréquences seront toutes atténuées, sauf celles proches de la fréquence de résonance $f_0$, où $f_0 = \frac{1}{2 \pi \cdot \sqrt{L_{41} \cdot C_{42}}}$.\\
+On voit alors que le circuit de charge est un filtre passe-bande formé par $L_{41}$ et $C_{42}$. Les fréquences seront toutes atténuées, sauf celles proches de la fréquence de résonance $f_0$, où $f_0 = \frac{1}{2 \pi \cdot \sqrt{L_{41} \cdot C_{42}}}$.
 En admettant qu'à l'enclenchement du circuit, il y a du bruit blanc sur la base du transistor, ce bruit blanc inclut toutes les fréquences y compris $f_0$. Il ne restera plus que $f_0$ à la sortie, qui sera alors ré-injectée dans la base par le diviseur formé par $C_{BC}$ et $C_{43}$.\\
 La condition pour que l'oscillation démarre est que le gain du transistor doit être plus grand que l'atténuation du diviseur captatif. La branche avec le quartz n'est pas nécessaire pour l'apparition d'une oscillation. Cependant elle sert a sélectionner une fréquence particulière de façons plus précise.
 
@@ -128,14 +133,21 @@ Le quartz est capacitif sur toutes les plages de fréquences sauf dans la bande 
 
 Le quartz a un comportement inductif à la fréquence d'oscillation, qui est donc toujours comprise entre fp et fs.\\
 
-Il est nécessaire que le résonateur $L_{41}$ et $C_{42}$ soit accordé à une fréquence très proche de celle du quartz, sinon les deux filtres vont s'annuler réciproquement et il n'y aura pas d'oscillations.\\
+Il est nécessaire que le résonateur $L_{41}$ et $C_{42}$ soit accordé à une fréquence très proche de celle du quartz, sinon les deux filtres vont s'annuler réciproquement et il n'y aura pas d'oscillations.
+
+\exsubpart{2}
 
 Le condensateur $C_{42}$ a peu d'influence sur la fréquence de sortie. En effet, changer son réglage changera $f_0$, mais le filtre réalisé par le Quartz ayant un facteur de qualité beaucoup plus grand, c'est lui qui sera déterminant pour la fréquence des oscillations. Si $C_{42}$ est mal réglé, nous aurons simplement une atténuation de l'amplitude des oscillations, ou carrément un arrêt de l'oscillateur.\\
-En revanche le réglage de $C_{43}$ vient affecter directement le quartz, et va donc avoir un effet direct sur la fréquence d'oscillation.\\
-Le fait de brancher une charge à la sortie ve diminuer le facteur de qualité du résonateur $L_{41}$ et $C_{42}$. Cela va donc affecter le rapport de force entre ce filtre et le quartz. Plus la résistance de charge est faible, plus le facteur de qualité baisse donc plus la fréquence sera proche de celle du Quartz, ce qui est l'idéal.
+En revanche, le réglage de $C_{43}$ vient affecter directement le quartz et va donc avoir un effet direct sur la fréquence d'oscillation.
 
-\subsection{Dimentionement de la polarisation}
-On fait une analyze en grand signaux, c'est à dire que toutes les inductances sont des court-circuits, et les capacités ainsi que le quartz sont circuits ouverts.\\
+\exsubpart{3}
+
+Le fait de brancher une charge à la sortie va diminuer le facteur de qualité du résonateur $L_{41}$ et $C_{42}$ et donc affecter le rapport de force entre ce filtre et le quartz.Plus la résistance de charge est faible, plus le facteur de qualité baisse donc plus la fréquence sera proche de celle du Quartz, ce qui est l'idéal.
+
+\exsubpart{4}
+
+%\subsection{Dimensionnement de la polarisation}
+On fait une analyse en grand signaux, c'est à dire que toutes les inductances sont des court-circuits, et les capacités ainsi que le quartz sont circuits ouverts.\\
 Le courant de repos Ic de $1mA$ doit circuler dans le collecteur et l'émetteur du transistor. On désire avoir 1V sur l'émetteur, d'où la valeur de $R_{42}$ :
 \begin{center}
 $R_{42} = \frac{U_e}{Ic} = \frac{1V}{1mA} = 1k\Omega$
@@ -149,12 +161,14 @@ La tension entre la base et l'émetteur est identique à celle d'une diode en co
 \begin{center}
 $R_{41} = \frac{U_{R41}}{I_{R41}} = \frac{Vcc - Ub}{Ib} = \frac{Vcc - Uj - Ue}{Ib} = \frac{7V - 0.7V - 1V}{1mA} = 530k\Omega$
 \end{center}
-Nous prenons donc une valeur normalisée de $470k\Omega$, arrondi en dessous car il vaut mieux que Ib et Ic soient un peu plus grand que prévu (transistor conduit mieux) que l'inverse.\\
+Nous prenons donc une valeur normalisée de $470k\Omega$, arrondie en dessous car il vaut mieux que Ib et Ic soient un peu plus grands que prévu (le transistor conduit mieux) que l'inverse.\\
 
-La sortie, qui se trouve sur le collecteur du transistor, peut osciller librement entre la tension d'émetteur, qui est de 1V, et la tension d'alimentation, qui est de $7V$. Il est donc possible d'avoir jusqu'à 6V d'amplitude en sortie.\\
+\exsubpart{5}
 
-\subsection{Calcul de l'inductance}
-La fréqunce de résonance de la charge au collecteur est donnée par :
+La sortie, qui se trouve sur le collecteur du transistor, peut osciller librement entre la tension d'émetteur, qui est de 1V et la tension d'alimentation, qui est de $7V$. Il est donc possible d'avoir jusqu'à 6V d'amplitude en sortie.\\
+
+\exsubpart{6}
+La fréquence de résonance de la charge au collecteur est donnée par :
 \begin{center}
 $f_0 = \frac{1}{2\pi \sqrt{L_{41} \cdot C_{42}}}
 \Rightarrow
@@ -163,12 +177,23 @@ L_{41} = \frac{1}{(2\pi f_0)^2 \cdot C_{42}} = \frac{1}{(2\pi \cdot 9 \cdot 10^6
 On a utilisé la valeur normalisée la plus proche, c'est à dire $5.6 \mu H$
 
 \subsection{Mesures}
+
+\exsubpart{1,2}
+%To do? Pas d'image?
+
+\exsubpart{3}
+
 Spectre de sortie autour de la fondamentale à 9MHz :\\
 \begin{center}
 \includegraphics[width = 0.7\linewidth]{7_3_3_spectre9MHz.jpg}
 \end{center}
 
-Réglage de P41 : On constate que, lorsqu'on monte le curseur, la fréquence augmente. Augmenter le curseur revient à charger plus la sortie donc à diminuer le facteur de qualité du résonateur de sortie. Apparement notre quartz à une fréquence propre un peu plus élevée que 9MHz mais le réglage à été établi de manière à ajuster la fréquence. Le fait de diminuer le facteur de qualité diminue l'influence du réglage sur la fréquence, d'où un raprochement à la fréquence propre du quartz c'est à dire une augmentation.\\
+\exsubpart{4}
+
+Réglage de P41 : On constate que, lorsqu'on monte le curseur, la fréquence augmente. Augmenter le curseur revient à charger plus la sortie donc à diminuer le facteur de qualité du résonateur de sortie. Apparemment notre quartz à une fréquence propre un peu plus élevée que 9MHz mais le réglage à été établi de manière à ajuster la fréquence. Le fait de diminuer le facteur de qualité diminue l'influence du réglage sur la fréquence, d'où un rapprochement à la fréquence propre du quartz c'est à dire une augmentation.
+
+
+\exsubpart{5,6}
 
 Spectre de sortie de 1MHz à 100MHz :\\
 \begin{center}
@@ -197,13 +222,17 @@ En pratique, la multiplication va présenter des non linéarités, nous aurons d
 Ainsi, nous avons des composantes à toutes les fréquences : $m \cdot \omega_{1} + n \cdot \omega_{2}$, $\forall m, n \in\bbZ$
 
 
-\subsubsection{Mélangeur à circuit intégré NE602}
+\subsection{Mélangeur à circuit intégré NE602}
 
 La multiplication des signaux IN1 et IN2 est faite par le circuit intégré NE602. 
 Il s'agit d'un multiplicateur à 4 quadrants, c'est à dire que la sortie est valable pour toutes les combinaisons possibles des signes des tensions IN1 et IN2 (+, +), (+, -), (-, +) et (-, -).
 Il n'y a donc aucunement besoin de polariser les entrées avec une composante continue, d'où un montage très simple.\\
 
 \includegraphics{shema_melangeur_gilbert.png}
+
+\subsubsection{Questions et calculs}
+
+\exsubpart{1}
 
 L'impédance d'entrée sur l'amplificateur différentiel (broches 1 et 2) est d'environ $1.5k\Omega$ \footnote{Voir datasheet du composant NE602}. Idem pour les sorties sur les broches 4 et 5.
 Les résistances $R_{51}$, $R_{52}$, $R_{53}$ et $R_{54}$ servent à adapter l'impédance du câble d'antenne $50\Omega$ vers le circuit intégré.\\
@@ -212,16 +241,26 @@ Les résistances $R_{51}$, $R_{52}$, $R_{53}$ et $R_{54}$ servent à adapter l'i
 \includegraphics[width=0.85\linewidth]{shema_interne_ne602.png}
 \end{center}
 
-Le circuit à été prévu pour fabriquer un oscillateur avec les broches 6 et 7 cependant on n'utilise pas cette fonctionnalité, car nous avons notre propre oscillateur. L'amplitude doit être au moins de $200mV$ pour simuler un oscillateur local, qui n'est pas amplifié à l'intérieur du circuit, contrairement à l'entrée des broches 1 et 2 qui simule une antenne, et qui est amplifiée en interne.
+\exsubpart{2}
+
+Le circuit a été prévu pour fabriquer un oscillateur avec les broches 6 et 7, cependant on n'utilise pas cette fonctionnalité, car nous avons notre propre oscillateur. L'amplitude doit être au moins de $200mV$ pour simuler un oscillateur local, qui n'est pas amplifié à l'intérieur du circuit, contrairement à l'entrée des broches 1 et 2 qui simule une antenne et qui est amplifiée en interne.
+
+\subsubsection{Mesures}
+
+\exsubpart{1}
 
 Spectre de sortie :
 \begin{center}
 \includegraphics[width=0.7\linewidth]{8_3_1.jpg}
 \end{center}
-Mesures :
+
+\exsubpart{2,3,4}
+% Structurer en suivant les parties serait une bonne idée
+% Expliquer le point d'interception du 3ème ordre ou dans les parties suivantes(antho)
+
 \begin{itemize}
 
-\item Guain de conversion : 13.3 dB
+\item Gain de conversion : 13.3 dB
 \item Point de compression de 1dB : -8.2 dBm
 \item Point d'interception du 3ème ordre : 6.55 dBm
 \end{itemize}
@@ -237,11 +276,210 @@ Voici le spectre de sortie d'un signal double ton d'amplitude $-8$ dBm (l'appare
 \begin{center}
 \includegraphics[width=0.7\linewidth]{8_3_4-8dbm.jpg}
 \end{center}
-Le pic de l'hamonique 3 est à $-72.8$ dBm pour l'appareil, c'est à dire en réalité $-72.8 + 35.7 = -37.1$ dBm.\\
-On peut alors calculer le taux de distortion d'intermodulation d'ordre trois, c'est le point qui satisfait l'équation :
+Le pic de l'harmonique 3 est à $-72.8$ dBm pour l'appareil, c'est à dire en réalité $-72.8 + 35.7 = -37.1$ dBm.\\
+On peut alors calculer le taux de distorsion d'inter-modulation d'ordre trois, c'est le point qui satisfait l'équation :
 \begin{center}
 $y = -37.1 + 3 \cdot (y+8) \Rightarrow y = 6.55$ dBm
 \end{center}
+
+%
+% Partie d'Anthony, NON FINIE !
+%
+% To do :	- Mettre schémas circuits
+%			- Expliquer le point d'interception d'ordre 3 et mettre les valeurs
+%			- Identifier harmoniques (Jo?)
+%			- Finir partie mélangeur à 1 diode et recopier
+%			- Finir conclusions
+%
+
+
+\subsection{Le mélangeur doublement équilibré à diodes}
+
+Ce mélangeur Schottky fonctionne comme un commutateur grâce à son pont de diode. Lors des alternances positives du signal d'entrée LO,  les D2 et D4 conduisent  et l'entrée RF se retrouve en phase  par rapport à la sortie IF. Lors des alternances négatives du signal LO, D1 et D3 conduisent et l'entrée RF est en inversion de phase. IF est donc le produit du signal RF par le signe du signal LO.
+
+\subsubsection{Questions et calculs}
+
+\exsubpart{1}
+
+Chaque entrée (RF et LO) dispose d'une isolation galvanique avec la sortie IF. Ce type d'isolation permet de transmettre un signal entre 2 circuits électroniques qui n'ont pas forcément les mêmes niveaux de tensions et masses. On garantit ainsi une excellente isolation et indépendance entre les entrées et sortie dans notre cas.
+
+\subsubsection{Mesures}
+
+\exsubpart{1}
+
+On applique sur IN2 qui est le Local Oscillator une sinusoïde à 5MHz d’amplitude  0.5 Veff  et sur IN1, le signal à transmettre une sinusoïde à 9MHz d'amplitude 100 mVeff.
+On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble.
+
+\begin{center}
+\includegraphics[width=0.7\linewidth]{9_3_1.jpg}
+\end{center}
+
+De nombreuses raies apparaissent, celles-ci sont en effet dues aux termes d'ordre supérieur à 1 de la multiplication.
+%Identifier fréq raies ? fait à la partie de Jonathan ???
+
+\exsubpart{2}
+
+En observant de plus près, la zone fréquentielle résultat du mélange qui nous intéresse (autour de 14MHz), on parvient à calculer le gain de conversion.
+L'amplitude en sortie à 14 MHz mesurée est de -12.5dBm avec un signal d'entrée HF de -7 dBm (0.5 Veff).
+Le gain de conversion est de -5.5dB.
+
+\exsubpart{3}
+
+On cherche à trouver le point de compression de 1dB. Pour cela, on augmente progressivement l'amplitude du signal d'entrée RF afin d'observer une différence de gain de 1dB avec le résultat de la question précédente.
+Pour une amplitude d'entrée de 1dBm (0.250 mVeff), la sortie à 14MHz a une amplitude de -5.5dBm, ce qui correspond à un gain de  conversion de -6.5 dB.
+
+\exsubpart{4}
+
+On injecte un signal double ton à l'aide d'un générateur de signaux supplémentaire et d'un sommateur passif de perte 6 dB.
+On cherche tout d'abord à déterminer le taux de distorsion d'inter-modulation d'ordre trois.
+En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on obtient le spectre suivant :
+\begin{center}
+\includegraphics[width=0.7\linewidth]{9_3_4.jpg}
+\end{center}
+
+Le pic de l'harmonique de troisième ordre est de -32.3 dBm (cheaté). C'est le taux de distorsion d'inter-modulation d'ordre 3 ($P_{IMR0}$). A noter qu'on obtient ici directement l'amplitude du pic car l'isolation est galvanique sans étage d'adaptation qui nous font perdre de la puissance.
+Ce taux nous permet de calculer directement le point d'interception d'ordre 3 (OIP3) correspondant au croisement entre les approximations linéaires de la fondamentale et de l'harmonique d'ordre 3.
+$OIP3=L_{in}+G_{dB}-P_{IMR}/2$
+Lin= signal d'entrée en dBm = 1 ici
+Cours page 5-46
+ 
+\exsubpart{5}
+
+On mesure l'isolation de l'entrée In2 (LO) vers In1 (RF) en chargeant la sortie avec une résistance de 50 ohms (50.47 exactement).
+L'entrée IN2 (LO) est observée à l'analyseur de spectre, l'amplitude à la fréquence de 9MHz est de -62.82 dBm.
+\begin{center}
+\includegraphics[width=0.7\linewidth]{9_3_5.jpg}
+\end{center}
+En enlevant le gain du signal d'entrée IN1 (HF), on obtient un gain et isolation de -67.5 dB, ce qui est correct.
+
+
+\subsection{Le mélangeur à « MOS double-gate »}
+
+On s'intéresse maintenant à un autre mélangeur, celui-ci comporte un transistor MOS à double grille. Ces deux grilles sont très utiles et permettent au courant de drain d'être contrôlé par chacune des grilles. Dans notre cas, la grille G1 est légèrement polarisée négativement par rapport à la source, elle est reliée à l'entrée In1, alors que G2 est polarisée positivement grâce au pont diviseur de tension lié à VDD et réalisé par les résistances R76 et R77. Elle est reliée à In2.
+Le signal In2 (LO) a une amplitude importante et va ainsi faire fortement varier le courant de drain grâce à G2. Le signal In1 (RF) d'une amplitude plus faible, va quand même faire varier le courant de drain du transistor mais le gain d'entrée G1 sera modulé par celui de G2. D'où l'appellation « modulateur d'amplitude » et l'effet de mélange.
+On retrouve les adaptations d'impédance vers du 50 ohms nécessaires aux appareils de mesures.
+
+
+
+\subsubsection{Questions et calculs}
+
+\exsubpart{1}
+
+On veut une tension de repos de 1V sur G2.
+Les résistances $R_{76}$ et $R_{77}$ réalisent un pont diviseur de tension, on a donc :
+\begin{equation*}
+V_{G}=1V={R_{77}}{(R_{77}+R_{76})}V_{dd}
+\end{equation*}
+On choisit donc :
+\begin{itemize}
+\item $R_{76}= 3.3 k \omega_{2}$
+\item $R_{77}= 560 \omega_{2}$
+\end{itemize}
+
+\exsubpart{2}
+
+$L_{72}$ permet de fixer la composante DC à G1 à la masse. On peut ainsi polariser le transistor comme on le souhaite, négativement dans notre cas. L'absence de cette inductance ne permet pas de contrôler la polarisation du transistor et le signal RF ne serait plus intégralement transmis.
+
+\subsubsection{Mesures}
+
+\exsubpart{1}
+
+On applique sur IN2 qui est le Local Oscillator une sinusoïde à 5MHz d'amplitude  1 Veff  et sur IN1, le signal à transmettre une sinusoïde à 9MHz d'amplitude 10 mVeff.
+On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble.
+\begin{center}
+\includegraphics[width=0.7\linewidth]{10_3_1.jpg}
+\end{center}
+On constate qu'il y a nettement moins de raies qu'avec le mélangeur doublement équilibré, les harmoniques sont mieux atténuées.
+
+\exsubpart{2}
+
+On mesure, en zoomant autour des 14 MHz, une amplitude de sortie de -56.63dBm.
+Il ne faut pas oublier de prendre en compte les étages d'adaptation d'impédance. Le gain de conversion de G1 vers le drain est donc de : $-56.63+6+35.7-13.01=-30.37$ faux(-27.94 dB)…
+
+\exsubpart{3}
+
+On utilise la même démarche mise en œuvre pour les autres mélangeurs en augmentant progressivement la tension du signal RF d'entrée.
+On trouve le point de compression à une amplitude d'entrée de -3.4dBm soit 0.151 Veff.
+
+\exsubpart{4}
+
+On applique un signal 9MHz double ton, on cherche le taux de distorsion d'inter-modulation d'ordre trois.
+En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on obtient le spectre suivant :
+\begin{center}
+\includegraphics[width=0.7\linewidth]{10_3_4.jpg}
+\end{center}
+Le pic de l'harmonique de troisième ordre est de -5.4dBm soit 0.12Veff (après désadaptation).
+En appliquant la même formule que précédemment, on trouve OIP3=
+
+\exsubpart{5}
+
+En chargeant la sortie avec une résistance de 50 ohms et observant à l'analyseur de spectre l'entrée IN2, on mesure un pic à 5MHz de -62.8dBm, ce qui correspond à un gain de conversion ou isolation  (insertion loss) ici de -75.8 dB.
+
+
+\subsection{Le mélangeur à 1 diode}
+Le mélangeur à une diode est le montage le plus simple  et moins onéreux à réaliser parmi tous les mélangeurs étudiés. Mais ces avantages se paient par un spectre dense avec des harmoniques d'amplitude importantes.
+Les deux signaux d'entrées IN1(RF) et IN2(LO) sont additionnés, on écrête ensuite le résultat grâce à la diode.
+Ce dispositif est somme toute similaire à un dispositif « hacheur ».
+
+%
+% A recopier/finir
+%
+
+\subsubsection{Questions et calculs}
+
+\exsubpart{1}
+
+$L_{81}$ permet de fixer la valeur moyenne ou valeur DC à 0 ce qui permet de faire conduire la diode correctement.
+
+\exsubpart{2}
+
+Les impédances réelles d'entrée et de sortie sont d'environ 50 ohms. Plus précisément...
+
+\exsubpart{3}
+
+
+
+\subsubsection{Mesures}
+
+\exsubpart{1}
+
+On applique sur IN2 qui est le Local Oscillator une sinusoïde à 5MHz d'amplitude  1 Veff  et sur IN1, le signal à transmettre une sinusoïde à 9MHz d'amplitude 10 mVeff.
+On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble.
+\begin{center}
+\includegraphics[width=0.7\linewidth]{11_3_1.jpg}
+\end{center}
+Les harmoniques sont peu nombreuses mais d'amplitude conséquentes ! Tous les signaux supérieurs à environ 50MHz sont filtrés grâce à on sait pas.
+
+\exsubpart{2}
+
+\exsubpart{3}
+
+\exsubpart{4}
+
+\exsubpart{5}
+
+
+\subsection{Conclusions sur les mélangeurs}
+%Passif, actif ?
+%Atténuation, IL
+%Étalement spectre, harmoniques
+%Simplicité et coût
+%http://www.ta-formation.com/cours-melange/l-melange.pdf
+%Applications :
+%	Mélangeur doublement équilibré
+%Tête de réception pour la télévision satellite analogique
+%	bi-bande 10,8 à 11,8 GHz et 11,8 à 12,8 GHz
+%	oscillateur local stabilisé par résonateur diélectrique
+%	changement de fréquence par mélangeur Schottky
+%ou Récepteur de télécommande (modulation AM)
+
+%Mélangeur MOS
+%récepteur TV VHF
+
+%	Mélangeur à 1 diode
+%Radar Doppler hyperfréquence
+%Le mélangeur est dans ce cas utilisé pour mélanger le signal recu à la fréquence f’ au signal émis f par la diode, le %signal produit possède une fréquence différence liée à la vitesse v de l’objet.
+
 
 % Est-ce vraiment correct ? Normalement on devrait être à -18 dBm (10 dB en dessous du point de compression, PAS à -8 dBm ?
 
@@ -308,13 +546,5 @@ $y = -37.1 + 3 \cdot (y+8) \Rightarrow y = 6.55$ dBm
 % In1 13.9 MHz, 14.1 MHz : 1.88 Veff, 18.5 dBM
 % Sortie 14.3 MHz : -70.2 dBm
 %
-
-
-
-
-
-
-
-
 
 \end{document}
