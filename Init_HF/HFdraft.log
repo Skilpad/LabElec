@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  7 JAN 2013 16:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  7 JAN 2013 17:43
 entering extended mode
 **HFdraft.tex
 (E:\Boulot\LabElec\Init_HF\HFdraft.tex
@@ -580,154 +580,151 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Overfull \hbox (3.22935pt too wide) in paragraph at lines 105--106
+[]\T1/cmr/m/n/10 L'équivalence Fig. 2[] est val-able pour des fréquences $[]$. 
+Dans ce do-maine de fréquences,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
 [2 <E:/Boulot/LabElec/Init_HF/Images/coupling_effect.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
-<./Images/schem6.jpg, id=30, 518.93875pt x 361.35pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+<./Images/1MHz_100MHz.jpg, id=30, 3276.24pt x 2457.18pt>
+File: ./Images/1MHz_100MHz.jpg Graphic file (type jpg)
+
+<use ./Images/1MHz_100MHz.jpg>
+Package pdftex.def Info: ./Images/1MHz_100MHz.jpg used on input line 143.
+(pdftex.def)             Requested size: 241.84842pt x 181.35605pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+<./Images/souscouple.jpg, id=31, 3276.24pt x 2457.18pt>
+File: ./Images/souscouple.jpg Graphic file (type jpg)
+
+<use ./Images/souscouple.jpg>
+Package pdftex.def Info: ./Images/souscouple.jpg used on input line 161.
+(pdftex.def)             Requested size: 207.98608pt x 155.97295pt.
+
+<./Images/surcouple.jpg, id=32, 3276.24pt x 2457.18pt>
+File: ./Images/surcouple.jpg Graphic file (type jpg)
+
+<use ./Images/surcouple.jpg>
+Package pdftex.def Info: ./Images/surcouple.jpg used on input line 167.
+(pdftex.def)             Requested size: 207.98608pt x 155.97295pt.
+ [3 <E:/Boulot/LabElec/Init_HF/Images/1MHz_100MHz.jpg>] <./Images/bande_2MHz_bi
+enregle.jpg, id=36, 3276.24pt x 2457.18pt>
+File: ./Images/bande_2MHz_bienregle.jpg Graphic file (type jpg)
+
+<use ./Images/bande_2MHz_bienregle.jpg>
+Package pdftex.def Info: ./Images/bande_2MHz_bienregle.jpg used on input line 1
+80.
+(pdftex.def)             Requested size: 207.98608pt x 155.97295pt.
+
+<./Images/phase_bienregle.jpg, id=37, 3276.24pt x 2457.18pt>
+File: ./Images/phase_bienregle.jpg Graphic file (type jpg)
+
+<use ./Images/phase_bienregle.jpg>
+Package pdftex.def Info: ./Images/phase_bienregle.jpg used on input line 186.
+(pdftex.def)             Requested size: 207.98608pt x 155.97295pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+<./Images/schem6.jpg, id=38, 518.93875pt x 361.35pt>
 File: ./Images/schem6.jpg Graphic file (type jpg)
  <use ./Images/schem6.jpg>
-Package pdftex.def Info: ./Images/schem6.jpg used on input line 149.
+Package pdftex.def Info: ./Images/schem6.jpg used on input line 209.
 (pdftex.def)             Requested size: 338.5863pt x 235.77898pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
-[3 <E:/Boulot/LabElec/Init_HF/Images/schem6.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+[4 <E:/Boulot/LabElec/Init_HF/Images/souscouple.jpg> <E:/Boulot/LabElec/Init_HF
+/Images/surcouple.jpg> <E:/Boulot/LabElec/Init_HF/Images/bande_2MHz_bienregle.j
+pg> <E:/Boulot/LabElec/Init_HF/Images/phase_bienregle.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
-<./Images/shema_oscillateur.png, id=34, 327.47343pt x 268.75406pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+
+ []
+
+[5 <E:/Boulot/LabElec/Init_HF/Images/schem6.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
+
+ []
+
+<./Images/shema_oscillateur.png, id=46, 327.47343pt x 268.75406pt>
 File: ./Images/shema_oscillateur.png Graphic file (type png)
 
 <use ./Images/shema_oscillateur.png>
-Package pdftex.def Info: ./Images/shema_oscillateur.png used on input line 218.
+Package pdftex.def Info: ./Images/shema_oscillateur.png used on input line 278.
 
 (pdftex.def)             Requested size: 338.5863pt x 277.87369pt.
- [4]
-<./Images/shema_petit_signaux_oscillateur.png, id=38, 301.8778pt x 247.67531pt>
+
+<./Images/shema_petit_signaux_oscillateur.png, id=47, 301.8778pt x 247.67531pt>
 File: ./Images/shema_petit_signaux_oscillateur.png Graphic file (type png)
 <use ./Images/shema_petit_signaux_oscillateur.png>
 Package pdftex.def Info: ./Images/shema_petit_signaux_oscillateur.png used on i
-nput line 223.
+nput line 283.
 (pdftex.def)             Requested size: 193.47577pt x 158.73462pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+ [6 <E:/Boulot/LabElec/Init_HF/Images/shema_oscillateur.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
-[5 <E:/Boulot/LabElec/Init_HF/Images/shema_oscillateur.png> <E:/Boulot/LabElec/
-Init_HF/Images/shema_petit_signaux_oscillateur.png>]
-<./Images/modele_quartz.png, id=43, 250.9375pt x 180.675pt>
+<./Images/modele_quartz.png, id=52, 250.9375pt x 180.675pt>
 File: ./Images/modele_quartz.png Graphic file (type png)
 
 <use ./Images/modele_quartz.png>
-Package pdftex.def Info: ./Images/modele_quartz.png used on input line 233.
+Package pdftex.def Info: ./Images/modele_quartz.png used on input line 293.
 (pdftex.def)             Requested size: 193.47577pt x 139.3104pt.
 
-<./Images/impedence_quartz.png, id=44, 371.3875pt x 220.825pt>
+<./Images/impedence_quartz.png, id=53, 371.3875pt x 220.825pt>
 File: ./Images/impedence_quartz.png Graphic file (type png)
 
 <use ./Images/impedence_quartz.png>
-Package pdftex.def Info: ./Images/impedence_quartz.png used on input line 238.
+Package pdftex.def Info: ./Images/impedence_quartz.png used on input line 298.
 (pdftex.def)             Requested size: 193.47577pt x 115.04193pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
-
- []
-
-[6 <E:/Boulot/LabElec/Init_HF/Images/modele_quartz.png> <E:/Boulot/LabElec/Init
-_HF/Images/impedence_quartz.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--290
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 293--294
-
- []
-
-<./Images/7_3_3_spectre9MHz.jpg, id=56, 3276.24pt x 2457.18pt>
-File: ./Images/7_3_3_spectre9MHz.jpg Graphic file (type jpg)
-
-<use ./Images/7_3_3_spectre9MHz.jpg>
-Package pdftex.def Info: ./Images/7_3_3_spectre9MHz.jpg used on input line 295.
-
-(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+ [7 <E:/Boulot/LabElec/Init_HF/Images/shema_petit_signaux_oscillateur.png> <E:/
+Boulot/LabElec/Init_HF/Images/modele_quartz.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
@@ -736,222 +733,221 @@ Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
-<./Images/7_3_6_1MHz_100MHz.jpg, id=62, 3276.24pt x 2457.18pt>
-File: ./Images/7_3_6_1MHz_100MHz.jpg Graphic file (type jpg)
 
-<use ./Images/7_3_6_1MHz_100MHz.jpg>
-Package pdftex.def Info: ./Images/7_3_6_1MHz_100MHz.jpg used on input line 307.
-
-(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
- [8 <E:/Boulot/LabElec/Init_HF/Images/7_3_3_spectre9MHz.jpg> <E:/Boulot/LabElec
-/Init_HF/Images/7_3_6_1MHz_100MHz.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--337
-
- []
-
-<./Images/shema_melangeur_gilbert.png, id=66, 394.47375pt x 196.48407pt>
-File: ./Images/shema_melangeur_gilbert.png Graphic file (type png)
-
-<use ./Images/shema_melangeur_gilbert.png>
-Package pdftex.def Info: ./Images/shema_melangeur_gilbert.png used on input lin
-e 338.
-(pdftex.def)             Requested size: 394.47278pt x 196.48358pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--346
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
-[9 <E:/Boulot/LabElec/Init_HF/Images/shema_melangeur_gilbert.png>]
-<./Images/shema_interne_ne602.png, id=72, 366.61969pt x 269.50688pt>
-File: ./Images/shema_interne_ne602.png Graphic file (type png)
 
-<use ./Images/shema_interne_ne602.png>
-Package pdftex.def Info: ./Images/shema_interne_ne602.png used on input line 34
-8.
-(pdftex.def)             Requested size: 411.14526pt x 302.25687pt.
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+
+ []
+
+[8 <E:/Boulot/LabElec/Init_HF/Images/impedence_quartz.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
 
  []
 
-<./Images/8_3_1.jpg, id=73, 3276.24pt x 2457.18pt>
-File: ./Images/8_3_1.jpg Graphic file (type jpg)
- <use ./Images/8_3_1.jpg>
-Package pdftex.def Info: ./Images/8_3_1.jpg used on input line 361.
+<./Images/7_3_3_spectre9MHz.jpg, id=69, 3276.24pt x 2457.18pt>
+File: ./Images/7_3_3_spectre9MHz.jpg Graphic file (type jpg)
+
+<use ./Images/7_3_3_spectre9MHz.jpg>
+Package pdftex.def Info: ./Images/7_3_3_spectre9MHz.jpg used on input line 355.
+
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-[10 <E:/Boulot/LabElec/Init_HF/Images/shema_interne_ne602.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 364--367
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 370.
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
+
+ []
+
+<./Images/7_3_6_1MHz_100MHz.jpg, id=70, 3276.24pt x 2457.18pt>
+File: ./Images/7_3_6_1MHz_100MHz.jpg Graphic file (type jpg)
+
+<use ./Images/7_3_6_1MHz_100MHz.jpg>
+Package pdftex.def Info: ./Images/7_3_6_1MHz_100MHz.jpg used on input line 367.
+
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+ [9 <E:/Boulot/LabElec/Init_HF/Images/7_3_3_spectre9MHz.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--397
+
+ []
+
+[10 <E:/Boulot/LabElec/Init_HF/Images/7_3_6_1MHz_100MHz.jpg>]
+<./Images/shema_melangeur_gilbert.png, id=79, 394.47375pt x 196.48407pt>
+File: ./Images/shema_melangeur_gilbert.png Graphic file (type png)
+
+<use ./Images/shema_melangeur_gilbert.png>
+Package pdftex.def Info: ./Images/shema_melangeur_gilbert.png used on input lin
+e 398.
+(pdftex.def)             Requested size: 394.47278pt x 196.48358pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--406
+
+ []
+
+<./Images/shema_interne_ne602.png, id=80, 366.61969pt x 269.50688pt>
+File: ./Images/shema_interne_ne602.png Graphic file (type png)
+
+<use ./Images/shema_interne_ne602.png>
+Package pdftex.def Info: ./Images/shema_interne_ne602.png used on input line 40
+8.
+(pdftex.def)             Requested size: 411.14526pt x 302.25687pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
+
+ []
+
+[11 <E:/Boulot/LabElec/Init_HF/Images/shema_melangeur_gilbert.png> <E:/Boulot/L
+abElec/Init_HF/Images/shema_interne_ne602.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
+
+ []
+
+<./Images/8_3_1.jpg, id=85, 3276.24pt x 2457.18pt>
+File: ./Images/8_3_1.jpg Graphic file (type jpg)
+ <use ./Images/8_3_1.jpg>
+Package pdftex.def Info: ./Images/8_3_1.jpg used on input line 421.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--427
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 430.
 
 (E:\Programmes\MiKTeX\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 370.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 430.
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
-<./Images/8_3_4-8dbm.jpg, id=77, 3276.24pt x 2457.18pt>
+<./Images/8_3_4-8dbm.jpg, id=86, 3276.24pt x 2457.18pt>
 File: ./Images/8_3_4-8dbm.jpg Graphic file (type jpg)
 
 <use ./Images/8_3_4-8dbm.jpg>
-Package pdftex.def Info: ./Images/8_3_4-8dbm.jpg used on input line 384.
+Package pdftex.def Info: ./Images/8_3_4-8dbm.jpg used on input line 444.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
- [11 <E:/Boulot/LabElec/Init_HF/Images/8_3_1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
+ [12 <E:/Boulot/LabElec/Init_HF/Images/8_3_1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
 
  []
 
-<./Images/9_3_1.jpg, id=81, 3276.24pt x 2457.18pt>
+<./Images/9_3_1.jpg, id=90, 3276.24pt x 2457.18pt>
 File: ./Images/9_3_1.jpg Graphic file (type jpg)
  <use ./Images/9_3_1.jpg>
-Package pdftex.def Info: ./Images/9_3_1.jpg used on input line 421.
+Package pdftex.def Info: ./Images/9_3_1.jpg used on input line 481.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-[12 <E:/Boulot/LabElec/Init_HF/Images/8_3_4-8dbm.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
+[13 <E:/Boulot/LabElec/Init_HF/Images/8_3_4-8dbm.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
 
  []
 
-<./Images/9_3_4.jpg, id=85, 3276.24pt x 2457.18pt>
+<./Images/9_3_4.jpg, id=95, 3276.24pt x 2457.18pt>
 File: ./Images/9_3_4.jpg Graphic file (type jpg)
  <use ./Images/9_3_4.jpg>
-Package pdftex.def Info: ./Images/9_3_4.jpg used on input line 444.
+Package pdftex.def Info: ./Images/9_3_4.jpg used on input line 504.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-[13 <E:/Boulot/LabElec/Init_HF/Images/9_3_1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+[14 <E:/Boulot/LabElec/Init_HF/Images/9_3_1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 513--514
 
  []
 
-<./Images/9_3_5.jpg, id=90, 3276.24pt x 2457.18pt>
+<./Images/9_3_5.jpg, id=99, 3276.24pt x 2457.18pt>
 File: ./Images/9_3_5.jpg Graphic file (type jpg)
  <use ./Images/9_3_5.jpg>
-Package pdftex.def Info: ./Images/9_3_5.jpg used on input line 458.
+Package pdftex.def Info: ./Images/9_3_5.jpg used on input line 518.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-[14 <E:/Boulot/LabElec/Init_HF/Images/9_3_4.jpg> <E:/Boulot/LabElec/Init_HF/Ima
+[15 <E:/Boulot/LabElec/Init_HF/Images/9_3_4.jpg> <E:/Boulot/LabElec/Init_HF/Ima
 ges/9_3_5.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
+Underfull \hbox (badness 10000) in paragraph at lines 552--553
 
  []
 
-<./Images/10_3_1.jpg, id=94, 3276.24pt x 2457.18pt>
+<./Images/10_3_1.jpg, id=103, 3276.24pt x 2457.18pt>
 File: ./Images/10_3_1.jpg Graphic file (type jpg)
  <use ./Images/10_3_1.jpg>
-Package pdftex.def Info: ./Images/10_3_1.jpg used on input line 497.
+Package pdftex.def Info: ./Images/10_3_1.jpg used on input line 557.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 501--502
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 506--507
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 511--512
-
- []
-
-<./Images/10_3_4.jpg, id=98, 3276.24pt x 2457.18pt>
-File: ./Images/10_3_4.jpg Graphic file (type jpg)
- <use ./Images/10_3_4.jpg>
-Package pdftex.def Info: ./Images/10_3_4.jpg used on input line 516.
-(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
-
-[16 <E:/Boulot/LabElec/Init_HF/Images/10_3_1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 537--538
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 541--542
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
-
- []
-
-<./Images/11_3_1.jpg, id=102, 3276.24pt x 2457.18pt>
-File: ./Images/11_3_1.jpg Graphic file (type jpg)
- <use ./Images/11_3_1.jpg>
-Package pdftex.def Info: ./Images/11_3_1.jpg used on input line 556.
-(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
-
-[17 <E:/Boulot/LabElec/Init_HF/Images/10_3_4.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--563
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 564--565
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 561--562
 
  []
 
@@ -960,7 +956,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
-[18 <E:/Boulot/LabElec/Init_HF/Images/11_3_1.jpg>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
+
+ []
+
+<./Images/10_3_4.jpg, id=107, 3276.24pt x 2457.18pt>
+File: ./Images/10_3_4.jpg Graphic file (type jpg)
+ <use ./Images/10_3_4.jpg>
+Package pdftex.def Info: ./Images/10_3_4.jpg used on input line 576.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+
+[17 <E:/Boulot/LabElec/Init_HF/Images/10_3_1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--602
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--606
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 611--612
+
+ []
+
+<./Images/11_3_1.jpg, id=111, 3276.24pt x 2457.18pt>
+File: ./Images/11_3_1.jpg Graphic file (type jpg)
+ <use ./Images/11_3_1.jpg>
+Package pdftex.def Info: ./Images/11_3_1.jpg used on input line 616.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+
+[18 <E:/Boulot/LabElec/Init_HF/Images/10_3_4.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
+
+ []
+
+[19 <E:/Boulot/LabElec/Init_HF/Images/11_3_1.jpg>]
 (E:\Boulot\LabElec\Init_HF\HFdraft.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -968,39 +1026,40 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4458 strings out of 494045
- 61938 string characters out of 3151211
- 122297 words of memory out of 3000000
- 7641 multiletter control sequences out of 15000+200000
- 19148 words of font info for 48 fonts, out of 3000000 for 9000
+ 4495 strings out of 494045
+ 62846 string characters out of 3151211
+ 122321 words of memory out of 3000000
+ 7672 multiletter control sequences out of 15000+200000
+ 19913 words of font info for 49 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 38i,8n,38p,692b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,38p,692b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
 cbx1000.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
 \dpi600\ecrm0800.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
 nappen\ec\dpi600\ecrm0600.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\
 ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Asus\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Asus\AppData
-\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Asu
-s\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1440.pk> <C:\
-Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2986
+fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Asus\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Asus\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Asu
+s\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\
+Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1440
 .pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecbx2074.pk><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><E
-:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/Programmes/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/Programmes/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><E
-:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><E:/Programmes/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr6.pfb><E:/Programmes/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr8.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/Pr
-ogrammes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><E:/Programmes/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Programmes/MiKTeX/fonts/type1/publ
-ic/amsfonts/symbols/msbm10.pfb>
-Output written on HFdraft.pdf (18 pages, 34054609 bytes).
+\ecbx2986.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx2074.pk><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmex
+10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/Prog
+rammes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/Programmes/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><E:/Programmes/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><E:/Progra
+mmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><E:/Programmes/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr8.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><E:/Programme
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Programmes/MiKTeX/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb>
+Output written on HFdraft.pdf (19 pages, 49733585 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
+ 474 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

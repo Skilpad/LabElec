@@ -12,7 +12,7 @@
 
 \noindent {\fontsize{20}{20}\selectfont \noindent \textbf{Laboratoire d'électronique~:}}
 
-\noindent {\fontsize{30}{30}\selectfont \noindent \textbf{Convertisseurs A/N et N/A}}
+\noindent {\fontsize{30}{30}\selectfont \noindent \textbf{Initiation à la Haute Fréquence}}
 
 \vspace{5pt}\hrule\vspace{2pt}
 
@@ -22,11 +22,6 @@
 
 
 
-% Return loss
-
-% 4.2.2
-% Désadaptation d'impédance
-% Voir HF-VHF : 2.16, 3.22
 
 
 
@@ -92,29 +87,26 @@ On suppose fixée la résonance désirée $\omega_0$ et les impédances de sourc
 
 Maintenir la résonance ${\omega_0 = \frac{1}{\sqrt{L\cdot C}} = \sqrt{\frac{n}{L\cdot C_2}}}$ impose alors de maintenir~: ${L = \frac{n}{\omega_0^2 C_2} =\frac{C_1+C_2}{\omega_0^2 C_1 C_2}}$.
 
-Le facteur de qualité de chacun des circuits résonants s'écrit~: 
+Le facteur de qualité de chacun des circuits résonants s'écrit~:  valeurs requises pour $L_{11}$ et $L_{12}$ demeurent réalisables avec les inductances variables sélectionnées.
+
+
+\exsubpart{5}
 \begin{equation*}
 Q = \omega_0\cdot n^2\cdot R\cdot C = \omega_0\cdot n\cdot R\cdot C_2 = \omega_0\cdot R\cdot C_2\cdot (1+\frac{C_2}{C_1})
 \end{equation*}
 
-Ainsi, le facteur de qualité maximal du système sera fixé par les valeurs choisies pour les condensateurs C11, C12, C13, C14. On pourra notamment l'augmenter en augmentant $C_{12}$ et $C_{14}$. Toutefois, il convient de choisir $C_{11}$, $C_{12}$, $C_{13}$, $C_{14}$ de sorte que les valeurs requises pour $L_{11}$ et $L_{12}$ demeurent réalisables avec les inductances variables sélectionnées.
+Ainsi, le facteur de qualité maximal du système sera fixé par les valeurs choisies pour les condensateurs C11, C12, C13, C14. On pourra notamment l'augmenter en augmentant $C_{12}$ et $C_{14}$. Toutefois, il convient de choisir $C_{11}$, $C_{12}$, $C_{13}$, $C_{14}$ de sorte que les
 
+L'équivalence Fig.~\ref{fig:capa_divider} est valable pour des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$. Dans ce domaine de fréquences, le filtre peut être considéré comme un filtre d'ordre 4.
 
-\exsubpart{5}
+Si l'on considère une plus large gamme de fréquences (des fréquences plus basses), cette équivalence ne peut plus être prise en compte, et l'on observe un filtre d'ordre 6.
 
-Dans le cadre d'utilisation de ce filtre, les fréquences d'intérêts seront telles que l'équivalence Fig.~\ref{fig:capa_divider} soit valable (${\omega \gg \frac{1}{R_S C_{12}}, \frac{1}{R_L C_{14}}}$).
-
-Ce filtre est donc être considérer d'ordre 4.
-
-Cela n'est toutefois valable qu'en restreignant les fréquences d'intérêt~: si l'on considère l'intégralité du spectre, on a un filtre d'ordre 6.
 
 \exsubpart{6}
 
+Si l'on considère des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, après application de l'équivalence Fig.~\ref{fig:capa_divider}, on observe 3 pôles en DC. Ainsi, on aura avant la résonance une pente de la réponse du filtre en amplitude de +60 dB/dec. À noté que si la fréquence de résonance n'est pas suffisamment grande devant ${\frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, cette pente à +60 dB/dec ne pourra être observée car cachée par la résonance.
 
-
-Toujours en considérant que l'équivalence Fig.~\ref{fig:capa_divider} est valable, on a 3 pôles en DC. Ainsi, on aura avant la résonance une pente de la réponse du filtre en amplitude de +60 dB/dec.
-
-Si l'on s'intéresse à de très basses fréquences (${\omega \gg \frac{1}{R_S C_{12}}, \frac{1}{R_L C_{14}}}$), les diviseurs capacitifs agiront comme passe-bas. On aura aboutira donc pour ces fréquences à une pente +100 dB/dec.
+Si l'on s'intéresse à de plus basses fréquences (${f \ll \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$), les diviseurs capacitifs agiront comme passe-bas. On aura aboutira donc pour ces fréquences à une pente +100 dB/dec.
 
 À l'infini, L11 et L12 agissent comme des interrupteurs ouverts tandis que C11, C15, C13 se comportent comme un fil. Les capacités C12 et C14 sont alors placées en parallèle, résultant en un unique pôle à l'infini. Ainsi, on aura après la résonance une pente de la réponse du filtre en amplitude de -20 dB/dec.
 
@@ -137,13 +129,67 @@ On aurait aussi pû réalisé un couplage par transformateur. L'effet sur la ré
 
 \exsubpart{1}
 
+On prend~: $C_{11}=C_{13}=68\mathrm{pF}$, $C_{12}=C_{14}=390\mathrm{pF}$, $C_{15}^{max}=5\mathrm{pF}$, $L_{11}^{max}=L_{12}^{max}=2,2\mathrm{\mu H}$.
+
+On règle grossièrement les inductances et capacités variables (aboutissant notamment à une légère différence dans les fréquences de résonance). On obtient entre 1MHz et 100MHz les diagrammes de Bode représentés Fig.~\ref{fig:LC2plot}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{1MHz_100MHz}
+	\caption{Diagramme de Bode expérimental pour le filtre LC à deux circuits accordés couplés}
+	\label{fig:LC2plot}
+\end{figure}
+
+Dans notre cas~: ${\frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}\approx 8,2\mathrm{MHz}}$. La pente +60 dB/dec, que l'on trouverai entre cette fréquence et la fréquence de résonance, n'est donc pas observable~: elle est effectivement camouflée par la résonance. On observe en revanche bien en deçà de cette fréquence une pente à +100 dB/dec (typiquement autours de 6-7MHz, avant que tracé ne soit perturbé par des bruits divers).
+
+%TODO: Pourquoi -40dB au-dessus ?!
+
+
+\exsubpart{2,3}
+
+On précise les réglages des inductances et capacités variables. Après avoir réglé L11, L12 de sorte à obtenir des fréquences de résonance identiques, on règle le couplage avec C15. On peut ainsi observé les effets d'un sur-couplage ou d'un sous-couplage comme présenté Fig.~\ref{fig:sur_sous_couple}.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.43\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{souscouple}
+		\caption{Sous-couplage}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.43\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{surcouple}
+		\caption{Sur-couplage}
+	\end{subfigure}
+	\caption{Exemple de sous et sur-couplage}
+	\label{fig:sur_sous_couple}
+\end{figure}
+
+En effectuant un léger sur-couplage, on obtient les caractéristiques requises~: une bande passante de 2MHz autours 14MHz. Les résultats sont montrés Fig.~\ref{fig:LCregle}.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.43\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{bande_2MHz_bienregle}
+		\caption{Module}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.43\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{phase_bienregle}
+		\caption{Phase}
+	\end{subfigure}
+	\caption{Diagramme de Bode du filtre LC à deux circuits accordés couplés réglé}
+	\label{fig:LCregle}
+\end{figure}
 
 
 
+\exsubpart{4}
 
-
-
-
+Les pertes d'insertion de ce filtre se lisent sur le tracé Fig.~\ref{fig:LCregle}. En effet, puisque l'on peut, à 14MHz, négliger les pertes liées aux diviseurs capacitifs, ces pertes d'insertion correspondent aux pertes observer au plus fort de la résonance~: -1,38 dB.
 
 
 
