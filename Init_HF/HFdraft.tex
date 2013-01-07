@@ -21,11 +21,117 @@
 \vspace{20pt}
 
 
+
 % Return loss
 
 % 4.2.2
 % Désadaptation d'impédance
 % Voir HF-VHF : 2.16, 3.22
+
+
+
+
+\section{Le filtre LC à deux circuits accordés couplés}
+
+\subsection{Description}
+
+On considère le filtre LC à deux circuits accordés couplés décrits Fig.~\ref{fig:LC2circuits}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.7\textwidth]{LC2circuits}
+	\caption{Filtre LC à deux circuits accordés couplés}
+	\label{fig:LC2circuits}
+\end{figure}
+
+
+
+\subsection{Questions et calculs}
+
+
+\exsubpart{1}
+
+Ici, on réalise une double adaptation d'impédance, utilisant deux diviseurs capacitifs. Leur concept repose sur l'équivalence décrites Fig.~\ref{fig:capa_divider}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.7\textwidth]{capa_divider}
+	\caption{Filtre LC à deux circuits accordés couplés}
+	\label{fig:capa_divider}
+\end{figure}
+
+Pour juste réaliser l'adaptation d'impédance, il suffirait de mettre uniquement un diviseur capacitif, du côté de l'impédance (de source ou de charge) la plus faible. Toutefois, les condensateurs C11 et C13 ainsi ajoutés permettent d'utiliser en entrée et en sortie du filtre des tensions de valeurs moyennes non nulles. Sans eux, les inductances L11 ou L12 engendreraient un court-circuit vers la masse.
+
+Cela est tout particulièrement intéressant du côté de la source~; et si son impédance est strictement plus faible que l'impédance de charge, l'utilisation d'un unique diviseur capacitif est envisageable. En revanche, si ce n'est pas le cas, deux diviseurs capacitifs seront requis~: le diviseur capacitif placé du côté de la source afin d'en isoler la composante DC augmentera son impédance ressentie, la rendant nécessairement plus élevée que l'impédance de charge, qui devra alors être adaptée.
+
+Évidemment, utiliser en particulier deux diviseurs capacitifs identiques de chaque côté permet de connecter une source et une charge de même impédance, tout en gardant l'avantage susmentionné.
+
+
+\exsubpart{2}
+
+Une impédance de source ou de charge faussera le diviseur capacitif, résultant d'une part en une désadaptation d'impédance affectant le facteur de qualité du circuit résonnant concerné, d'autre part en une modification de sa fréquence de résonance (modifier $C_2$ dans Fig.~\ref{fig:capa_divider} modifiera $C$). Les effets d'une telle modification de la fréquence de résonance seront évoqués plus bas.
+
+
+\exsubpart{3}
+
+En augmentant $C_{15}$, on augmente le coefficient de couplage $k$. Si $C_{15}$ est trop faible, le couplage est insuffisant. On parle de sous-couplage~: l'impédance trop élevée crée des pertes. Si $C_{15}$ est trop élevé, les fréquences de résonance des circuits résonnants s'éloignent. On parle de sur-couplage.
+
+Les effets de ces phénomènes sont représentés Fig.~\ref{fig:coupling_effect}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.4\textwidth]{coupling_effect}
+	\caption{Effets d'un sous ou sur-couplage}
+	\label{fig:coupling_effect}
+\end{figure}
+
+
+\exsubpart{4}
+
+On suppose fixée la résonance désirée $\omega_0$ et les impédances de source et de charge, et on utilise pour chaque circuit résonant les notations de la figure Fig.~\ref{fig:capa_divider}.
+
+Maintenir la résonance ${\omega_0 = \frac{1}{\sqrt{L\cdot C}} = \sqrt{\frac{n}{L\cdot C_2}}}$ impose alors de maintenir~: ${L = \frac{n}{\omega_0^2 C_2} =\frac{C_1+C_2}{\omega_0^2 C_1 C_2}}$.
+
+Le facteur de qualité de chacun des circuits résonants s'écrit~: 
+\begin{equation*}
+Q = \omega_0\cdot n^2\cdot R\cdot C = \omega_0\cdot n\cdot R\cdot C_2 = \omega_0\cdot R\cdot C_2\cdot (1+\frac{C_2}{C_1})
+\end{equation*}
+
+Ainsi, le facteur de qualité maximal du système sera fixé par les valeurs choisies pour les condensateurs C11, C12, C13, C14. On pourra notamment l'augmenter en augmentant $C_{12}$ et $C_{14}$. Toutefois, il convient de choisir $C_{11}$, $C_{12}$, $C_{13}$, $C_{14}$ de sorte que les valeurs requises pour $L_{11}$ et $L_{12}$ demeurent réalisables avec les inductances variables sélectionnées.
+
+
+\exsubpart{5}
+
+Dans le cadre d'utilisation de ce filtre, les fréquences d'intérêts seront telles que l'équivalence Fig.~\ref{fig:capa_divider} soit valable (${\omega \gg \frac{1}{R_S C_{12}}, \frac{1}{R_L C_{14}}}$).
+
+Ce filtre est donc être considérer d'ordre 4.
+
+Cela n'est toutefois valable qu'en restreignant les fréquences d'intérêt~: si l'on considère l'intégralité du spectre, on a un filtre d'ordre 6.
+
+\exsubpart{6}
+
+
+
+Toujours en considérant que l'équivalence Fig.~\ref{fig:capa_divider} est valable, on a 3 pôles en DC. Ainsi, on aura avant la résonance une pente de la réponse du filtre en amplitude de +60 dB/dec.
+
+Si l'on s'intéresse à de très basses fréquences (${\omega \gg \frac{1}{R_S C_{12}}, \frac{1}{R_L C_{14}}}$), les diviseurs capacitifs agiront comme passe-bas. On aura aboutira donc pour ces fréquences à une pente +100 dB/dec.
+
+À l'infini, L11 et L12 agissent comme des interrupteurs ouverts tandis que C11, C15, C13 se comportent comme un fil. Les capacités C12 et C14 sont alors placées en parallèle, résultant en un unique pôle à l'infini. Ainsi, on aura après la résonance une pente de la réponse du filtre en amplitude de -20 dB/dec.
+
+
+\exsubpart{7}
+
+On aurait pu aussi réaliser un couplage capacitif, en remplaçant C15 par une inductance. Cela aurait eu pour avantage de compenser l'effet passe-haut lié aux diviseurs capacitifs, fournissant un filtre plus symétrique sur l'intégralité du spectre~: +60 dB/dec avant la résonance, -60 dB/dec après la résonance si l'on s'intéresse à une très large gamme de fréquence. Dans la gamme de fréquence d'intérêt, on favorise l'atténuation des hautes fréquences~: +20 dB/dec avant la résonance, -60 dB/dec après la résonance. Toutefois, compte tenu de l'utilisation d'une inductance supplémentaire, il s'agit d'une méthode plus coûteuse et moins précise.
+
+On aurait aussi pû réalisé un couplage par transformateur. L'effet sur la réponse en fréquence aurait été le même, mais l'isolation entre la source et la charge s'en serait vue améliorée. Cette méthode plus coûteuse permettrait en revanche de s'affranchir de l'utilisation des inductances L11, L12, remplacées par celles liées au transformateur. Toutefois, le système n'est alors plus réglable. Préserver en parallèle les inductances variables L11, L12 permet de maintenir un réglage manuel, mais ce dernier demeure moins aisé et moins efficace qu'avec un simple couplage capacitif ou inductif.
+
+
+
+\exsubpart{8}
+
+%TODO
+
+
 
 
 
