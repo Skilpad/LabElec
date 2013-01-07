@@ -193,6 +193,11 @@ Les pertes d'insertion de ce filtre se lisent sur le tracé Fig.~\ref{fig:LCregl
 
 
 
+
+
+
+
+
 \section{L'amplificateur accordé}
 
 \subsection{Description}
@@ -202,7 +207,7 @@ On considère l'amplificateur accordé décrit Fig.~\ref{schem6}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\textwidth]{schem6}
-	\caption{}
+	\caption{L'amplificateur accordé}
 	\label{schem6}
 \end{figure}
 
@@ -215,7 +220,7 @@ Les deux circuits résonnants sont couplés via un couplage actif.
 
 \exsubpart{2}
 
-On couple deux filtres d'ordre 1, formant ainsi un filtre d'ordre 2.
+On couple deux filtres d'ordre 2, formant ainsi un filtre d'ordre 4.
 
 Si le facteur de qualité de chacun des circuits résonants est le même, on obtient donc un facteur de qualité global de~:
 \begin{equation*}
@@ -225,11 +230,11 @@ Q_{tot} = \frac{1}{\sqrt{2^{1/2}-1}}Q = 1,554 Q
 
 \exsubpart{3}
 
-Les condensateurs $C_{33}$ et $C_{34}$ permettent uniquement de couper de très basses fréquences, hors de notre domaine d'intérêt. On peut donc les ignorer.
+Les condensateurs C33 et C34, compte tenu de leur taille, permettent uniquement de couper de très basses fréquences, hors de notre domaine d'intérêt. On peut donc les ignorer.
 
-Les filtres restants en amont et en aval du JFET sont tout deux constitués d'une inductance et d'une capacité en parallèle, liées à une tension de référence. Ce sont deux passe-bande d'ordre 2~: l'ordre est de 1 de chaque côté de la fréquence de résonance, donnant donc lieu à des pentes de $\pm$20 dB/décade de part et d'autre de cette fréquence.
+Les filtres restants en amont et en aval du JFET sont tous deux constitués d'une inductance et d'une capacité en parallèle, liées à une tension de référence. Ce sont deux passe-bande d'ordre 2~: l'ordre est de 1 de chaque côté de la fréquence de résonance, donnant donc lieu à des pentes de $\pm$20 dB/décade de part et d'autre de cette fréquence.
 
-En couplant ces deux filtres, on obtient donc un filtre passe-bande d'ordre total 4. On trouve de part et d'autre de la fréquence de résonance $f_0$ un ordre 2, soit des pentes de +20 dB/décade et -20 dB/décade respectivement en-dessous et au-dessus de $f_0$.
+En couplant ces deux filtres, on obtient donc un filtre passe-bande d'ordre total 4. On trouve de part et d'autre de la fréquence de résonance $f_0$ un ordre 2, soit des pentes de +40 dB/ec et -40 dB/dec respectivement en-dessous et au-dessus de $f_0$.
 
 
 \exsubpart{4}
@@ -249,11 +254,109 @@ Q = \sqrt{2^{1/2}-1}~Q_{tot} = 4,505
 \end{equation*}
 
 
-%Toutefois, on prendra $R_{31}=R_{34}=\infty$~: en effet, ces résistances on juste pour but de diminuer les facteurs de qualité des filtres situés en amont et en aval du JFET.
-% L31 = L32 = 2.2 uH
+
+\exsubpart{5}
+
+Pour les petits signaux, à la fréquence de résonance --- où C32||L31 et C35||L32 sont assimilés à des circuits ouverts --- le montage est équivalent au circuit donné Fig.~\ref{fig:eqFET}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\textwidth]{eqFet}
+	\caption{Équivalence pour les petits signaux à la fréquence de résonance}
+	\label{fig:eqFET}
+\end{figure}
+
+Le gain en tension théorique $A_v=\frac{V_d}{V_g}$ est alors donné par~:
+\begin{equation*}
+A_v = \frac{g_m}{\frac{1}{R_{ds}}+\frac{1}{R_{31}}+\frac{1}{R_{35}+\frac{1}{R_{36}^{-1}+R_{L}^{-1}}}}
+\end{equation*}
 
 
-% 5) On saute...
+\subsection{Mesures et réglages}
+
+\exsubpart{1}
+
+Un fois réglé, l'amplificateur accordé donne les résultats présentés Fig.~\ref{fig:6loglog}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{6_3_3_reponse_ampli_loglog_}
+	\caption{Réponse de l'amplificateur accordé de 1MHz à 100MHz}
+	\label{fig:6loglog}
+\end{figure}
+
+On observe bien en basses et hautes fréquences les pentes $\pm$40 dB/dec prédites, relativement noyées dans du bruit et éloignées de la fréquence de résonance --- la résonance étant ici relativement large.
+
+
+%TODO: partie 2) : image manquante !
+
+\exsubpart{3}
+
+On mesure à la fréquence de résonance un gain total $A_{tot}$ de -23,3 dB.
+
+Or le pont diviseur R35-R36-RL engendre un gain~: $A_R = \frac{(R_{36}||R_L)}{R_{35}+(R_{36}||R_L)} = $ -32,3 dB
+
+Le gain $A_v$ est donc de~: $A_v = \frac{A_{tot}}{A_R} = 9~\mathrm{dB} = 2,8$
+
+\exsubpart{4}
+
+On applique en entrée de l'amplificateur accordé un signal sinusoïdal de fréquence 14MHz et puissance 0 dBm. On obtient le spectre donné Fig.~\ref{fig:6_0dbm}. La composante à 14MHz est bien réduite d'approximativement 23,3 dB. En revanche, à cette composante s'ajoute une harmonique à 28MHz, plus faible de 47 dB.
+
+En augmentant à 10 dBm la puissance en entrée, on obtient le spectre donné Fig.~\ref{fig:6_10dbm}. L'harmonique à 28MHz est renforcée, et d'autres harmoniques apparaissent.
+
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.43\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{6_3_2_2MHz_0dbm}
+		\caption{Pour une entrée à 0 dBm}
+		\label{fig:6_0dbm}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.43\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{6_3_2_2MHz_10dbm}
+		\caption{Pour une entrée à 10 dBm}
+		\label{fig:6_10dbm}
+	\end{subfigure}
+	\caption{Spectre de la réponse à un signal sinusoïdal à 14MHz}
+\end{figure}
+
+
+
+\exsubpart{5}
+
+On atteint le compression à 1dB pour une entrée à 11,5 dBm, soit une tension de 2,38V crête à crête.
+
+
+\exsubpart{6}
+
+On injecte désormais en entrée un signal double-ton à 13,9MHz et 14,1MHz. On observe en sortie les spectres présentés Fig.~\ref{fig:6_double}.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.43\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{6_3_6_0dbm}
+		\caption{Pour une entrée à 0 dBm}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.43\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{6_3_6_11x5dbm}
+		\caption{Pour une entrée à 11,5 dBm}
+	\end{subfigure}
+	\caption{Spectre de la réponse à un signal double-ton à 13,9MHz et 14,1MHz}
+	\label{fig:6_double}
+\end{figure}
+
+Pour une entrée simple-ton à 14MHz et de 0 dBm, on a vu mesuré en sortie à 14MHz une fondamentale de -23,3 dBm. Pour une entrée double-ton à 13,9MHz et 14,1MHz et de 0 dBm, on obtient en sortie un produit d'intermodulation d'ordre 3 de -89,9 dBm.
+
+On déduit que le point du troisième ordre se situe à $\frac{89,9-23,3}{2}~=~33,3~\mathrm{dBm}$, soit 29,9V crête à crête.
+
+
+
 
 
 
