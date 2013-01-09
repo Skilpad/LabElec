@@ -382,11 +382,11 @@ Si on considère le schéma petits signaux (suppression des composantes continue
 \end{center}
 On voit alors que le circuit de charge est un filtre passe-bande formé par $L_{41}$ et $C_{42}$. Les fréquences seront toutes atténuées, sauf celles proches de la fréquence de résonance $f_0$, où $f_0 = \frac{1}{2 \pi \cdot \sqrt{L_{41} \cdot C_{42}}}$.
 En admettant qu'à l'enclenchement du circuit, il y a du bruit blanc sur la base du transistor, ce bruit blanc inclut toutes les fréquences y compris $f_0$. Il ne restera plus que $f_0$ à la sortie, qui sera alors ré-injectée dans la base par le diviseur formé par $C_{BC}$ et $C_{43}$.\\
-La condition pour que l'oscillation démarre est que le gain du transistor doit être plus grand que l'atténuation du diviseur captatif. La branche avec le quartz n'est pas nécessaire pour l'apparition d'une oscillation. Cependant elle sert a sélectionner une fréquence particulière de façons plus précise.
+La condition pour que l'oscillation démarre est que le gain du transistor doit être plus grand que l'atténuation du diviseur captatif, et le déphasage de la boucle complète doit être de $360^{ \circ }$. La branche avec le quartz n'est pas nécessaire pour l'apparition d'une oscillation. Cependant elle sert a sélectionner une fréquence particulière de façons plus précise.
 
-En effet, le quartz agit comme un filtre supplémentaire, et son facteur de qualité Q est très largement plus élevé que celui d'un filtre à composant LC (qui présentent des imperfections électromécaniques).\\
+En effet, le quartz agit comme un filtre précis en fréquence, et son facteur de qualité Q est très largement plus élevé que celui d'un filtre à composant LC (qui présentent des imperfections).\\
 
-Le quartz peut être modélisé de la façon suivante :\footnote{Source : $www.acedim.com/Formatronic/Electro_2/oscillateur/lequartz.html$}
+Le quartz peut être modélisé de la façon suivante :\footnote{Source : $http://www.acedim.com/Formatronic/Electro_2/oscillateur/lequartz.html$}
 \begin{center}
 \includegraphics[width=0.4\linewidth]{modele_quartz.png}
 \end{center}
@@ -398,11 +398,11 @@ Le quartz est capacitif sur toutes les plages de fréquences sauf dans la bande 
 
 Le quartz a un comportement inductif à la fréquence d'oscillation, qui est donc toujours comprise entre fp et fs.\\
 
-Il est nécessaire que le résonateur $L_{41}$ et $C_{42}$ soit accordé à une fréquence très proche de celle du quartz, sinon les deux filtres vont s'annuler réciproquement et il n'y aura pas d'oscillations.
+Il est nécessaire que le résonateur $L_{41}$ et $C_{42}$ soit accordé à une fréquence très proche de celle du quartz, sinon le guain de la boucle complète (amplification par le transistor, filtrage LC et filtrage avec le quartz) aura un guain inférieur à 1, et il ne pourra pas y avoir d'oscillations.
 
 \exsubpart{2}
 
-Le condensateur $C_{42}$ a peu d'influence sur la fréquence de sortie. En effet, changer son réglage changera $f_0$, mais le filtre réalisé par le Quartz ayant un facteur de qualité beaucoup plus grand, c'est lui qui sera déterminant pour la fréquence des oscillations. Si $C_{42}$ est mal réglé, nous aurons simplement une atténuation de l'amplitude des oscillations, ou carrément un arrêt de l'oscillateur.\\
+Le condensateur $C_{42}$ a peu d'influence sur la fréquence de sortie. En effet, changer son réglage changera $f_0$, mais le filtre réalisé par le quartz ayant un facteur de qualité beaucoup plus grand, c'est lui qui sera déterminant pour la fréquence des oscillations. Si $C_{42}$ est mal réglé, nous aurons simplement une atténuation de l'amplitude des oscillations, ou carrément un arrêt de l'oscillateur.\\
 En revanche, le réglage de $C_{43}$ vient affecter directement le quartz et va donc avoir un effet direct sur la fréquence d'oscillation.
 
 \exsubpart{3}
@@ -412,13 +412,13 @@ Le fait de brancher une charge à la sortie va diminuer le facteur de qualité d
 \exsubpart{4}
 
 %\subsection{Dimensionnement de la polarisation}
-On fait une analyse en grand signaux, c'est à dire que toutes les inductances sont des court-circuits, et les capacités ainsi que le quartz sont circuits ouverts.\\
-Le courant de repos Ic de $1mA$ doit circuler dans le collecteur et l'émetteur du transistor. On désire avoir 1V sur l'émetteur, d'où la valeur de $R_{42}$ :
+On fait une analyse en courant continu, c'est à dire que toutes les inductances sont des court-circuits, et les capacités ainsi que le quartz sont circuits ouverts.\\
+Le courant de polarisation Ic de $1mA$ doit circuler dans le collecteur et l'émetteur du transistor. On désire avoir 1V sur l'émetteur, d'où la valeur de $R_{42}$ :
 \begin{center}
 $R_{42} = \frac{U_e}{Ic} = \frac{1V}{1mA} = 1k\Omega$
 \end{center}
 Puis, le courant circulant dans la base du transistor, et donc dans $R_{41}$ est $\beta$ fois plus petit que Ic.\\
-Le facteur $\beta$ varie fortement avec la température et d'un transistor à l'autre, cependant on peut pour ce transistor estimer que $\beta \simeq 100$ d'où :
+Le facteur $\beta$ varie fortement d'un transistor à l'autre, cependant on peut pour ce transistor estimer que $\beta \simeq 100$ d'où :
 \begin{center}
 $Ib = \frac{Ic}{\beta} = \frac{1mA}{100} = 10\mu A$
 \end{center}
@@ -430,7 +430,7 @@ Nous prenons donc une valeur normalisée de $470k\Omega$, arrondie en dessous ca
 
 \exsubpart{5}
 
-La sortie, qui se trouve sur le collecteur du transistor, peut osciller librement entre la tension d'émetteur, qui est de 1V et la tension d'alimentation, qui est de $7V$. Il est donc possible d'avoir jusqu'à 6V d'amplitude en sortie.\\
+La sortie, qui se trouve sur le collecteur du transistor, à une composante continue de +7V car elle est reliée à l'alimentation par une inductance. La composante alternative peut descendre au plus jusqu'à $Ub$ = 1.7V sans subir de déformations. Il est donc possible d'avoir jusqu'à 5.3V d'amplitude crête en sortie.\\
 
 \exsubpart{6}
 La fréquence de résonance de la charge au collecteur est donnée par :
@@ -455,7 +455,7 @@ Spectre de sortie autour de la fondamentale à 9MHz :\\
 
 \exsubpart{4}
 
-Réglage de P41 : On constate que, lorsqu'on monte le curseur, la fréquence augmente. Augmenter le curseur revient à charger plus la sortie donc à diminuer le facteur de qualité du résonateur de sortie. Apparemment notre quartz à une fréquence propre un peu plus élevée que 9MHz mais le réglage à été établi de manière à ajuster la fréquence. Le fait de diminuer le facteur de qualité diminue l'influence du réglage sur la fréquence, d'où un rapprochement à la fréquence propre du quartz c'est à dire une augmentation.
+Réglage de P41 : On constate que, lorsqu'on monte le curseur, c'est à dire lorsqu'on augmente le courrant sur la sortie, la fréquence augmente. Cela revient à diminuer le facteur de qualité du résonateur de sortie. Apparemment notre quartz à une fréquence propre un peu plus élevée que 9MHz mais le réglage à été établi de manière à ajuster la fréquence. Le fait de diminuer le facteur de qualité diminue l'influence du réglage sur la fréquence, d'où un rapprochement à la fréquence propre du quartz c'est à dire une augmentation.
 
 
 \exsubpart{5,6}
@@ -465,7 +465,7 @@ Spectre de sortie de 1MHz à 100MHz :\\
 \includegraphics[width = 0.7\linewidth]{7_3_6_1MHz_100MHz.jpg}
 \end{center}
 
-On constate que le quartz à de nombreuses harmoniques, qui s'observent sur la sortie malgré le filtre de sortie $L_{41}$ et $C_{42}$. Sans l'effet de ce filtre, l'intensité de toutes les harmoniques serait probablement presque égal. Il est donc possible de faire osciller ce circuit à une autre fréquence avec le même quartz, en changeant les composants. On peut alors choisir une harmonique sur laquelle on vient s'accorder avec le quartz : Le filtre LC donne une grossière approximation de la région où les oscillations vont démarrer tandis que le quartz règle précisément la fréquence.
+On constate que la sortie présente de nombreuses harmoniques, qui s'observent sur la sortie malgré le filtre de sortie $L_{41}$ et $C_{42}$. Sans l'effet de ce filtre, l'intensité de toutes les harmoniques serait probablement presque égal. Il est donc possible d'obtenir une autre fréquence avec le même quartz, en changeant les composants. On peut alors sélectionner une harmonique sur laquelle on vient s'accorder avec le quartz : Le filtre LC donne une grossière approximation de la région où les oscillations vont démarrer tandis que le quartz règle précisément la fréquence.
 
 
 \section{Mélangeurs}

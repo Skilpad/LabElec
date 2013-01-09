@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.6)  9 JAN 2013 12:32
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  9 JAN 2013 21:49
 entering extended mode
 **HFdraft.tex
-
-("C:\Users\Anthony\Documents\Cours ESISAR\5A EPFL\TP Elec\LabElec\Init_HF\HFdra
-ft.tex"
+(D:\EPFL\LabElec2\LabElec\Init_HF\HFdraft.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,9 +13,9 @@ an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese,
 romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
 sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
 senglishmax, welsh, loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -32,28 +30,28 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\Anthony\Documents\Cours ESISAR\5A EPFL\TP Elec\LabElec\LaTeXconfig.t
-ex" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ntgclass\a4.sty"
+(D:\EPFL\LabElec2\LabElec\LaTeXconfig.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\ntgclass\a4.sty"
 Package: a4 2004/04/15 v1.2g A4 based page layout
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
@@ -94,17 +92,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2009/06/22 v3.00
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count99
 \float@exts=\toks19
@@ -112,19 +110,19 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks20
 \@floatcapt=\box29
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks21
 \inpenc@posthook=\toks22
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -274,7 +272,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -305,7 +303,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -329,14 +327,14 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\framed\framed.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip46
 \fb@frw=\dimen112
@@ -344,31 +342,31 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen114
 \FrameSep=\dimen115
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks23
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count100
@@ -376,10 +374,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen118
 \captionmargin@=\dimen119
@@ -391,12 +389,12 @@ Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \c@ContinuedFloat=\count101
 Package caption Info: float package is loaded.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
 Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count102
 \c@subtable=\count103
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen124
 \WF@size=\dimen125
 \c@WF@wrappedlines=\count104
@@ -404,18 +402,18 @@ Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \WF@everypar=\toks24
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count105
@@ -431,15 +429,15 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen133
 \Gm@dimlist=\toks25
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip47
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count108
@@ -448,7 +446,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box31
 \rot@mess@toks=\toks26
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen134
 )
 \leftbarwidth=\skip50
@@ -456,8 +454,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \leftbarmargin=\skip52
 \defaultparindent=\skip53
 )
-("C:\Users\Anthony\Documents\Cours ESISAR\5A EPFL\TP Elec\LabElec\Init_HF\HFdra
-ft.aux")
+(D:\EPFL\LabElec2\LabElec\Init_HF\HFdraft.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
@@ -470,7 +467,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen135
@@ -550,21 +548,20 @@ Package pdftex.def Info: ./Images/capa_divider.png used on input line 53.
 (pdftex.def)             Requested size: 338.5863pt x 81.73782pt.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Anthony/Document
-s/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Images/LC2circuits.png> <C:/User
-s/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Images/capa_di
-vider.png>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/EPFL/LabElec2/LabElec/
+Init_HF/Images/LC2circuits.png> <D:/EPFL/LabElec2/LabElec/Init_HF/Images/capa_d
+ivider.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 67.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 67.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
@@ -598,8 +595,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[2 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Ima
-ges/coupling_effect.png>]
+[2 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/coupling_effect.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
@@ -638,9 +634,8 @@ File: ./Images/surcouple.jpg Graphic file (type jpg)
 <use ./Images/surcouple.jpg>
 Package pdftex.def Info: ./Images/surcouple.jpg used on input line 162.
 (pdftex.def)             Requested size: 207.98608pt x 155.97295pt.
- [3 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/1MHz_100MHz.jpg>]
-<./Images/bande_2MHz_bienregle.jpg, id=36, 3276.24pt x 2457.18pt>
+ [3 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/1MHz_100MHz.jpg>] <./Images/bande_
+2MHz_bienregle.jpg, id=36, 3276.24pt x 2457.18pt>
 File: ./Images/bande_2MHz_bienregle.jpg Graphic file (type jpg)
 
 <use ./Images/bande_2MHz_bienregle.jpg>
@@ -673,12 +668,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
-[4 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Ima
-ges/souscouple.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/La
-bElec/Init_HF/Images/surcouple.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A
- EPFL/TP Elec/LabElec/Init_HF/Images/bande_2MHz_bienregle.jpg> <C:/Users/Anthon
-y/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Images/phase_bienregle
-.jpg>]
+[4 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/souscouple.jpg> <D:/EPFL/LabElec2/L
+abElec/Init_HF/Images/surcouple.jpg> <D:/EPFL/LabElec2/LabElec/Init_HF/Images/b
+ande_2MHz_bienregle.jpg> <D:/EPFL/LabElec2/LabElec/Init_HF/Images/phase_bienreg
+le.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
@@ -693,8 +686,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
-[5 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Ima
-ges/schem6.jpg>]
+[5 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/schem6.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
@@ -727,9 +719,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
-[6 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Ima
-ges/eqFet.png> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec
-/Init_HF/Images/6_3_3_reponse_ampli_loglog_.png>]
+[6 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/eqFet.png> <D:/EPFL/LabElec2/LabEle
+c/Init_HF/Images/6_3_3_reponse_ampli_loglog_.png>]
 <./Images/6_3_2_2MHz_0dbm.jpg, id=53, 3276.24pt x 2457.18pt>
 File: ./Images/6_3_2_2MHz_0dbm.jpg Graphic file (type jpg)
 
@@ -766,12 +757,10 @@ File: ./Images/6_3_6_11x5dbm.jpg Graphic file (type jpg)
 <use ./Images/6_3_6_11x5dbm.jpg>
 Package pdftex.def Info: ./Images/6_3_6_11x5dbm.jpg used on input line 347.
 (pdftex.def)             Requested size: 207.98608pt x 155.97295pt.
- [7 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/6_3_2_2MHz_0dbm.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP E
-lec/LabElec/Init_HF/Images/6_3_2_2MHz_10dbm.jpg> <C:/Users/Anthony/Documents/Co
-urs ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Images/6_3_6_0dbm.jpg> <C:/Users/Ant
-hony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Images/6_3_6_11x5db
-m.jpg>]
+ [7 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/6_3_2_2MHz_0dbm.jpg> <D:/EPFL/LabE
+lec2/LabElec/Init_HF/Images/6_3_2_2MHz_10dbm.jpg> <D:/EPFL/LabElec2/LabElec/Ini
+t_HF/Images/6_3_6_0dbm.jpg> <D:/EPFL/LabElec2/LabElec/Init_HF/Images/6_3_6_11x5
+dbm.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
@@ -790,9 +779,8 @@ File: ./Images/shema_petit_signaux_oscillateur.png Graphic file (type png)
 Package pdftex.def Info: ./Images/shema_petit_signaux_oscillateur.png used on i
 nput line 381.
 (pdftex.def)             Requested size: 193.47577pt x 158.73462pt.
- [8 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/shema_oscillateur.png> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP
- Elec/LabElec/Init_HF/Images/shema_petit_signaux_oscillateur.png>]
+ [8 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/shema_oscillateur.png> <D:/EPFL/La
+bElec2/LabElec/Init_HF/Images/shema_petit_signaux_oscillateur.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
@@ -820,9 +808,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
-[9 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Ima
-ges/modele_quartz.png> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec
-/LabElec/Init_HF/Images/impedence_quartz.png>]
+[9 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/modele_quartz.png> <D:/EPFL/LabElec
+2/LabElec/Init_HF/Images/impedence_quartz.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 408--409
 
  []
@@ -891,9 +878,8 @@ File: ./Images/7_3_6_1MHz_100MHz.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./Images/7_3_6_1MHz_100MHz.jpg used on input line 465.
 
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
- [11 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/I
-mages/7_3_3_spectre9MHz.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/T
-P Elec/LabElec/Init_HF/Images/7_3_6_1MHz_100MHz.jpg>]
+ [11 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/7_3_3_spectre9MHz.jpg> <D:/EPFL/L
+abElec2/LabElec/Init_HF/Images/7_3_6_1MHz_100MHz.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
@@ -920,8 +906,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 502--504
 
  []
 
-[12 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/shema_melangeur_gilbert.png>]
+[12 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/shema_melangeur_gilbert.png>]
 <./Images/shema_interne_ne602.png, id=94, 366.61969pt x 269.50688pt>
 File: ./Images/shema_interne_ne602.png Graphic file (type png)
 
@@ -945,15 +930,14 @@ File: ./Images/8_3_1.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./Images/8_3_1.jpg used on input line 519.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-[13 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/shema_interne_ne602.png>]
+[13 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/shema_interne_ne602.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 522--525
 
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 528.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -969,8 +953,7 @@ File: ./Images/8_3_4-8dbm.jpg Graphic file (type jpg)
 <use ./Images/8_3_4-8dbm.jpg>
 Package pdftex.def Info: ./Images/8_3_4-8dbm.jpg used on input line 542.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
- [14 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/I
-mages/8_3_1.jpg>]
+ [14 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/8_3_1.jpg>]
 <./Images/schema_melangeur_doublediode.png, id=104, 374.90062pt x 139.27031pt>
 File: ./Images/schema_melangeur_doublediode.png Graphic file (type png)
 
@@ -983,9 +966,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 574--575
 
  []
 
-[15 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/8_3_4-8dbm.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/L
-abElec/Init_HF/Images/schema_melangeur_doublediode.png>]
+[15 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/8_3_4-8dbm.jpg> <D:/EPFL/LabElec2/
+LabElec/Init_HF/Images/schema_melangeur_doublediode.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 580--581
 
  []
@@ -1019,11 +1001,10 @@ Package pdftex.def Info: ./Images/9_3_4.jpg used on input line 617.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/9_3_1.jpg>] <./Images/OIP3.png, id=114, 188.20313pt x 214.55156pt>
+[16 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/9_3_1.jpg>]
+<./Images/OIP3.png, id=114, 188.20313pt x 214.55156pt>
 File: ./Images/OIP3.png Graphic file (type png)
-
-<use ./Images/OIP3.png>
+ <use ./Images/OIP3.png>
 Package pdftex.def Info: ./Images/OIP3.png used on input line 627.
 (pdftex.def)             Requested size: 145.11052pt x 165.43764pt.
 
@@ -1037,9 +1018,8 @@ File: ./Images/9_3_5.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./Images/9_3_5.jpg used on input line 646.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-[17 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/9_3_4.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabEle
-c/Init_HF/Images/OIP3.png>]
+[17 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/9_3_4.jpg> <D:/EPFL/LabElec2/LabEl
+ec/Init_HF/Images/OIP3.png>]
 <./Images/schema_melangeur_mosdoublegate.png, id=120, 367.3725pt x 225.09094pt>
 File: ./Images/schema_melangeur_mosdoublegate.png Graphic file (type png)
 <use ./Images/schema_melangeur_mosdoublegate.png>
@@ -1055,8 +1035,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 671--672
 
  []
 
-[18 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/9_3_5.jpg>]
+[18 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/9_3_5.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 684--685
 
  []
@@ -1104,18 +1083,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 737--738
 
  []
 
-[19 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/schema_melangeur_mosdoublegate.png>]
-<./Images/schema_melangeur_diode.png, id=131, 365.11406pt x 163.3603pt>
+[19 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/schema_melangeur_mosdoublegate.png
+>] <./Images/schema_melangeur_diode.png, id=131, 365.11406pt x 163.3603pt>
 File: ./Images/schema_melangeur_diode.png Graphic file (type png)
 
 <use ./Images/schema_melangeur_diode.png>
 Package pdftex.def Info: ./Images/schema_melangeur_diode.png used on input line
  747.
 (pdftex.def)             Requested size: 338.5863pt x 151.49725pt.
- [20 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/I
-mages/10_3_1.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabE
-lec/Init_HF/Images/10_3_4.jpg>]
+ [20 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/10_3_1.jpg> <D:/EPFL/LabElec2/Lab
+Elec/Init_HF/Images/10_3_4.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 758--759
 
  []
@@ -1144,8 +1121,7 @@ Package pdftex.def Info: ./Images/11_3_1.jpg used on input line 793.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/schema_melangeur_diode.png>]
+[21 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/schema_melangeur_diode.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 809--810
 
  []
@@ -1185,12 +1161,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 859--860
 
  []
 
-[22 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/11_3_1.jpg>] [23 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/
-LabElec/Init_HF/Images/11_3_4(2eme_point).jpg> <C:/Users/Anthony/Documents/Cour
-s ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Images/11_3_5.jpg>] [24]
-("C:\Users\Anthony\Documents\Cours ESISAR\5A EPFL\TP Elec\LabElec\Init_HF\HFdra
-ft.aux")
+[22 <D:/EPFL/LabElec2/LabElec/Init_HF/Images/11_3_1.jpg>] [23 <D:/EPFL/LabElec2
+/LabElec/Init_HF/Images/11_3_4(2eme_point).jpg> <D:/EPFL/LabElec2/LabElec/Init_
+HF/Images/11_3_5.jpg>] [24] (D:\EPFL\LabElec2\LabElec\Init_HF\HFdraft.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -1198,40 +1171,39 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  4573 strings out of 494045
- 66310 string characters out of 3145964
+ 65296 string characters out of 3148379
  122502 words of memory out of 3000000
  7738 multiletter control sequences out of 15000+200000
  19913 words of font info for 49 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  38i,8n,38p,692b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Anthony\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecbx1000.pk> <C:\Users\Anthony\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm0800.pk> <C:\Users\Anthony\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Anthony\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Anthony\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Anthon
-y\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\
-Users\Anthony\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1
-200.pk> <C:\Users\Anthony\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecbx1440.pk> <C:\Users\Anthony\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ecxc1440.pk> <C:\Users\Anthony\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\ecbx2986.pk> <C:\Users\Anthony\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb>
-Output written on HFdraft.pdf (24 pages, 87654768 bytes).
+ <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecbx1000.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecrm0800.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Jonathan\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Jonathan\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\J
+onathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
+> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecbx1200.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecbx1440.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecxc1440.pk> <C:\Users\Jonathan\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2986.pk> <C:\Users\Jonathan\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb>
+Output written on HFdraft.pdf (24 pages, 87655473 bytes).
 PDF statistics:
  518 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
