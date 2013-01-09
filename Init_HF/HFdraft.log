@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.6)  9 JAN 2013 11:50
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.6)  9 JAN 2013 12:32
 entering extended mode
 **HFdraft.tex
 
@@ -976,44 +976,44 @@ File: ./Images/schema_melangeur_doublediode.png Graphic file (type png)
 
 <use ./Images/schema_melangeur_doublediode.png>
 Package pdftex.def Info: ./Images/schema_melangeur_doublediode.png used on inpu
-t line 566.
+t line 565.
 (pdftex.def)             Requested size: 338.5863pt x 125.78625pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 575--576
+Underfull \hbox (badness 10000) in paragraph at lines 574--575
 
  []
 
 [15 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
 ages/8_3_4-8dbm.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/L
 abElec/Init_HF/Images/schema_melangeur_doublediode.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 581--582
+Underfull \hbox (badness 10000) in paragraph at lines 580--581
 
  []
 
 <./Images/9_3_1.jpg, id=109, 3276.24pt x 2457.18pt>
 File: ./Images/9_3_1.jpg Graphic file (type jpg)
  <use ./Images/9_3_1.jpg>
-Package pdftex.def Info: ./Images/9_3_1.jpg used on input line 588.
+Package pdftex.def Info: ./Images/9_3_1.jpg used on input line 587.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--598
+Underfull \hbox (badness 10000) in paragraph at lines 596--597
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--611
+Underfull \hbox (badness 10000) in paragraph at lines 609--610
 
  []
 
 <./Images/9_3_4.jpg, id=110, 3276.24pt x 2457.18pt>
 File: ./Images/9_3_4.jpg Graphic file (type jpg)
  <use ./Images/9_3_4.jpg>
-Package pdftex.def Info: ./Images/9_3_4.jpg used on input line 618.
+Package pdftex.def Info: ./Images/9_3_4.jpg used on input line 617.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 
@@ -1024,136 +1024,129 @@ ages/9_3_1.jpg>] <./Images/OIP3.png, id=114, 188.20313pt x 214.55156pt>
 File: ./Images/OIP3.png Graphic file (type png)
 
 <use ./Images/OIP3.png>
-Package pdftex.def Info: ./Images/OIP3.png used on input line 628.
-(pdftex.def)             Requested size: 338.5863pt x 386.01898pt.
+Package pdftex.def Info: ./Images/OIP3.png used on input line 627.
+(pdftex.def)             Requested size: 145.11052pt x 165.43764pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
 
  []
 
 <./Images/9_3_5.jpg, id=115, 3276.24pt x 2457.18pt>
 File: ./Images/9_3_5.jpg Graphic file (type jpg)
  <use ./Images/9_3_5.jpg>
-Package pdftex.def Info: ./Images/9_3_5.jpg used on input line 647.
+Package pdftex.def Info: ./Images/9_3_5.jpg used on input line 646.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<./Images/schema_melangeur_mosdoublegate.png, id=116, 367.3725pt x 225.09094pt>
+[17 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
+ages/9_3_4.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabEle
+c/Init_HF/Images/OIP3.png>]
+<./Images/schema_melangeur_mosdoublegate.png, id=120, 367.3725pt x 225.09094pt>
 File: ./Images/schema_melangeur_mosdoublegate.png Graphic file (type png)
 <use ./Images/schema_melangeur_mosdoublegate.png>
 Package pdftex.def Info: ./Images/schema_melangeur_mosdoublegate.png used on in
-put line 661.
+put line 659.
 (pdftex.def)             Requested size: 338.5863pt x 207.4674pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--674
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
 
  []
-
-[17 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/9_3_4.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 686--687
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 692--693
-
- []
-
-<./Images/10_3_1.jpg, id=120, 3276.24pt x 2457.18pt>
-File: ./Images/10_3_1.jpg Graphic file (type jpg)
- <use ./Images/10_3_1.jpg>
-Package pdftex.def Info: ./Images/10_3_1.jpg used on input line 698.
-(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 [18 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/OIP3.png>]
+ages/9_3_5.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 684--685
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 690--691
+
+ []
+
+<./Images/10_3_1.jpg, id=124, 3276.24pt x 2457.18pt>
+File: ./Images/10_3_1.jpg Graphic file (type jpg)
+ <use ./Images/10_3_1.jpg>
+Package pdftex.def Info: ./Images/10_3_1.jpg used on input line 696.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--706
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--712
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 716--717
+
+ []
+
+<./Images/10_3_4.jpg, id=125, 3276.24pt x 2457.18pt>
+File: ./Images/10_3_4.jpg Graphic file (type jpg)
+ <use ./Images/10_3_4.jpg>
+Package pdftex.def Info: ./Images/10_3_4.jpg used on input line 723.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
 
  []
 
 [19 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/9_3_5.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabEle
-c/Init_HF/Images/schema_melangeur_mosdoublegate.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 713--714
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 718--719
-
- []
-
-<./Images/10_3_4.jpg, id=130, 3276.24pt x 2457.18pt>
-File: ./Images/10_3_4.jpg Graphic file (type jpg)
- <use ./Images/10_3_4.jpg>
-Package pdftex.def Info: ./Images/10_3_4.jpg used on input line 725.
-(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 736--737
-
- []
-
+ages/schema_melangeur_mosdoublegate.png>]
 <./Images/schema_melangeur_diode.png, id=131, 365.11406pt x 163.3603pt>
 File: ./Images/schema_melangeur_diode.png Graphic file (type png)
 
 <use ./Images/schema_melangeur_diode.png>
 Package pdftex.def Info: ./Images/schema_melangeur_diode.png used on input line
- 746.
+ 747.
 (pdftex.def)             Requested size: 338.5863pt x 151.49725pt.
+ [20 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/I
+mages/10_3_1.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabE
+lec/Init_HF/Images/10_3_4.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 758--759
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 762--763
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--787
+
+ []
+
+<./Images/11_3_1.jpg, id=135, 3276.24pt x 2457.18pt>
+File: ./Images/11_3_1.jpg Graphic file (type jpg)
+ <use ./Images/11_3_1.jpg>
+Package pdftex.def Info: ./Images/11_3_1.jpg used on input line 793.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
-
- []
-
-[20 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/10_3_1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 761--762
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 767--768
-
- []
-
 [21 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/10_3_4.jpg> <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabEl
-ec/Init_HF/Images/schema_melangeur_diode.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 785--786
-
- []
-
-<./Images/11_3_1.jpg, id=139, 3276.24pt x 2457.18pt>
-File: ./Images/11_3_1.jpg Graphic file (type jpg)
- <use ./Images/11_3_1.jpg>
-Package pdftex.def Info: ./Images/11_3_1.jpg used on input line 792.
-(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 808--809
+ages/schema_melangeur_diode.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 809--810
 
  []
 
@@ -1161,42 +1154,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 808--809
 File: ./Images/11_3_4(2eme_point).jpg Graphic file (type jpg)
 
 <use ./Images/11_3_4(2eme_point).jpg>
-Package pdftex.def Info: ./Images/11_3_4(2eme_point).jpg used on input line 822
+Package pdftex.def Info: ./Images/11_3_4(2eme_point).jpg used on input line 823
 .
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/11_3_1.jpg>] <./Images/11_3_5.jpg, id=144, 3276.24pt x 2457.18pt>
+<./Images/11_3_5.jpg, id=141, 3276.24pt x 2457.18pt>
 File: ./Images/11_3_5.jpg Graphic file (type jpg)
-
-<use ./Images/11_3_5.jpg>
-Package pdftex.def Info: ./Images/11_3_5.jpg used on input line 838.
+ <use ./Images/11_3_5.jpg>
+Package pdftex.def Info: ./Images/11_3_5.jpg used on input line 839.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--846
+Underfull \hbox (badness 10000) in paragraph at lines 846--847
 
  []
 
 
-Overfull \hbox (69.67308pt too wide) in paragraph at lines 849--856
+Overfull \hbox (69.67308pt too wide) in paragraph at lines 850--857
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--859
+Underfull \hbox (badness 10000) in paragraph at lines 859--860
 
  []
 
-[23 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
-ages/11_3_4(2eme_point).jpg>] [24 <C:/Users/Anthony/Documents/Cours ESISAR/5A E
-PFL/TP Elec/LabElec/Init_HF/Images/11_3_5.jpg>]
+[22 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Im
+ages/11_3_1.jpg>] [23 <C:/Users/Anthony/Documents/Cours ESISAR/5A EPFL/TP Elec/
+LabElec/Init_HF/Images/11_3_4(2eme_point).jpg> <C:/Users/Anthony/Documents/Cour
+s ESISAR/5A EPFL/TP Elec/LabElec/Init_HF/Images/11_3_5.jpg>] [24]
 ("C:\Users\Anthony\Documents\Cours ESISAR\5A EPFL\TP Elec\LabElec\Init_HF\HFdra
 ft.aux")
 
@@ -1239,7 +1231,7 @@ sfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on HFdraft.pdf (24 pages, 87655200 bytes).
+Output written on HFdraft.pdf (24 pages, 87654768 bytes).
 PDF statistics:
  518 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
