@@ -547,13 +547,6 @@ On peut alors calculer le taux de distorsion d'inter-modulation d'ordre trois, c
 $y = -37.1 + 3 \cdot (y+8) \Rightarrow y = 6.55$ dBm
 \end{center}
 
-%
-% Parties d'Anthony, NON FINIE !
-%
-% To do :
-%			- Expliquer le point d'interception d'ordre 3 et mettre les valeurs
-%			- Identifier harmoniques (Jo?)
-%
 
 
 \subsection{Le mélangeur doublement équilibré à diodes}
@@ -596,13 +589,13 @@ De nombreuses raies apparaissent, celles-ci sont en effet dues aux termes d'ordr
 \exsubpart{2}
 
 En observant de plus près, la zone fréquentielle résultat du mélange qui nous intéresse (autour de 14MHz), on parvient à calculer le gain de conversion.
-L'amplitude en sortie à 14 MHz mesurée est de -12.5dBm avec un signal d'entrée HF de -7 dBm (0.5 Veff).
-Le gain de conversion est de -5.5 dB.
+L'amplitude en sortie à 14 MHz mesurée est de $-12.5dBm$ avec un signal d'entrée HF de $-7 dBm$ (0.5 Veff).
+Le gain de conversion est de $-5.5 dB$.
 
 \exsubpart{3}
 
 On cherche à trouver le point de compression de 1dB. Pour cela, on augmente progressivement l'amplitude du signal d'entrée RF afin d'observer une différence de gain de 1dB avec le résultat de la question précédente.
-Pour une amplitude d'entrée de 1dBm (0.250 Veff), la sortie à 14MHz a une amplitude de -5.5dBm, ce qui correspond à un gain de  conversion de -6.5 dB.
+Pour une amplitude d'entrée de 1dBm (0.250 Veff), la sortie à 14MHz a une amplitude de $-5.5dBm$, ce qui correspond à un gain de  conversion de $-6.5 dB$.
 
 Le point de compression de 1 dB est donc à 1 dBm.
 
@@ -619,22 +612,20 @@ En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on ob
 	\label{fig:9_3_4}
 \end{figure}
 %(cheaté)
-Le pic de l'harmonique de troisième ordre est de -32.3 dBm. C'est le taux de distorsion d'inter-modulation d'ordre 3 ($P_{IMR}$). A noter qu'on obtient ici directement l'amplitude du pic car l'isolation est galvanique sans étage d'adaptation qui nous font perdre de la puissance.
-Ce taux nous permet de calculer directement le point d'interception d'ordre 3 (OIP3) correspondant au croisement entre les approximations linéaires de la fondamentale et de l'harmonique d'ordre 3 comme représenté Fig.~\ref{fig:schema_melangeur_mosdoublegate}.
+Le pic de l'harmonique de troisième ordre est de -32.3 dBm. %C'est le taux de distorsion d'inter-modulation d'ordre 3 ($P_{IMR}$). A noter qu'on obtient ici directement l'amplitude du pic car l'isolation est galvanique sans étage d'adaptation qui nous font perdre de la puissance.Ce taux nous permet de calculer directement le point d'interception d'ordre 3 (OIP3) correspondant au croisement entre les approximations linéaires de la fondamentale et de l'harmonique d'ordre 3 comme représenté Fig.~\ref{fig:schema_melangeur_mosdoublegate}.
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=.3\textwidth]{OIP3}
+%	\caption{Détermination du point d'interception d'ordre 3}
+%	\label{fig:OIP3}
+%\end{figure}
+%On a donc la formule suivante : $OIP3=L_{in}+G_{dB}-\frac{P_{IMR}}{2}$
+%Avec Lin= signal d'entrée en dBm = 1 ici, $G_{dB}$ le gain de conversion calculé à la question 2).
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=.3\textwidth]{OIP3}
-	\caption{Détermination du point d'interception d'ordre 3}
-	\label{fig:OIP3}
-\end{figure}
+On utilise la même démarche qu'auparavant.
+On obtient un point d'interception du troisième ordre est de 17.65 dBm.
+%1dbm entrée, Y1 inconnu...
 
-On a donc la formule suivante : $OIP3=L_{in}+G_{dB}-\frac{P_{IMR}}{2}$
-Avec Lin= signal d'entrée en dBm = 1 ici, $G_{dB}$ le gain de conversion calculé à la question 2).
-%
-%------------------------------------------------------------------------------------------------------------------
-Le point d'interception du troisième ordre est donc de ???
-%------------------------------------------------------------------------------------------------------------------
  
 \exsubpart{5}
 
@@ -703,7 +694,7 @@ On constate qu'il y a nettement moins de raies qu'avec le mélangeur doublement 
 \exsubpart{2}
 
 On mesure, en zoomant autour des 14 MHz, une amplitude de sortie de -56.63dBm.
-Il ne faut pas oublier de prendre en compte les étages d'adaptation d'impédance. L'adaptation en entrée réduit le signal de 6dB. Les résistance de 50$\Omega$ forment un pont diviseur de tension de facteur 0.5 qui se traduit par un gain de -6dB.
+Il ne faut pas oublier de prendre en compte les étages d'adaptation d'impédance. L'adaptation en entrée réduit le signal de 6dB. Les résistance de 50$\Omega$ forment un pont diviseur de tension de facteur 0.5 qui se traduit par un gain de $-6dB$.
 Alors que l'adaptation en sortie réduit le signal de 35.7dB (6dB à cause la résistance de 50$\Omega$ et 29.7dB à cause la résistance de 1.5k$\Omega$).
 
 Le gain de conversion de G1 vers le drain est donc de : $ 12.07 dB$
@@ -711,7 +702,7 @@ Le gain de conversion de G1 vers le drain est donc de : $ 12.07 dB$
 \exsubpart{3}
 
 On utilise la même démarche mise en œuvre pour les autres mélangeurs en augmentant progressivement la tension du signal RF d'entrée.
-On trouve que le point de compression de 1 dB est à -3.4dBm.
+On trouve que le point de compression de 1 dB est à $-3.4dBm$.
 
 \exsubpart{4}
 
@@ -725,18 +716,14 @@ En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on ob
 	\label{fig:10_3_4}
 \end{figure}
 
-Le pic de l'harmonique de troisième ordre est de -5.4dBm soit 0.12Veff (après désadaptation).
-%------------------------------------------------------------------------------------------------------------------
-En appliquant la même formule que précédemment, on trouve OIP3=
-%------------------------------------------------------------------------------------------------------------------
-
-
-
+Le pic de l'harmonique de troisième ordre est de $-29.2dBm$ (après désadaptation).
+En appliquant la même formule que précédemment, on trouve que le point d'intersection d'ordre 3 se situe à 6.5 dBm.
+%X=in=-5.4dBm,Y2=-70.9+6+35.=-29.27
 
 
 \exsubpart{5}
 
-En chargeant la sortie avec une résistance de 50 ohms et observant à l'analyseur de spectre l'entrée IN2, on mesure un pic à 5MHz de -62.8dBm, ce qui correspond à un gain de conversion ou isolation  (insertion loss) ici de -75.8 dB.
+En chargeant la sortie avec une résistance de 50 ohms et observant à l'analyseur de spectre l'entrée IN2, on mesure un pic à 5MHz de $-62.8dBm$, ce qui correspond à un gain de conversion ou isolation  (insertion loss) ici de $-75.8 dB$.
 
 
 \subsection{Le mélangeur à 1 diode}
@@ -795,8 +782,8 @@ On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble
 	\label{fig:11_3_1}
 \end{figure}
 
-Les harmoniques sont peu nombreuses mais d'amplitude conséquentes ! Tous les signaux supérieurs à environ 50MHz sont filtrés grâce à on sait pas.
-%à éclaircir ou pas
+Les harmoniques sont peu nombreuses mais d'amplitude conséquentes ! %Tous les signaux supérieurs à environ 10MHz sont fortement atténués grâce au filtre RLC constitué par $R83/R84 C81/C82 et L81.
+% filtre RLC fréq 8.5MHz?
 
 \exsubpart{2}
 On mesure, en zoomant autour des 14 MHz, une amplitude de sortie de -80.1dBm.
@@ -804,14 +791,11 @@ On mesure, en zoomant autour des 14 MHz, une amplitude de sortie de -80.1dBm.
 Le gain étant très faible, nous avons été obligé d'augmenter légèrement l'amplitude d'entrée de In1 à 20 mVeff soit -21 dBm en constatant qu'à partir d'un certain niveau, le gain restait constant. La mesure réalisée est un peu moins atténuée et sujette au bruit et donc plus précise.
 
 L'amplitude de sortie est alors de -75dBm.
-En prenant en compte les étages d'adaptation d'impédance, le gain de conversion est de 12.3 dB.
+En prenant en compte les étages d'adaptation d'impédance, le gain de conversion est de $-12.3 dB$.
 
 \exsubpart{3}
 
 On utilise la même démarche mise en œuvre pour les autres mélangeurs en augmentant progressivement la tension du signal RF d'entrée.
-%Pour une amplitude d'entrée de 18.5dBm, la sortie à 14MHz a une amplitude de -36.6dBm, ce qui correspond à un gain de  %conversion de +23.6 dB.
-%
-%FAUX?
 On trouve que le point de compression de 1 dB est à 18.5dBm.
 
 \exsubpart{4}
@@ -825,14 +809,13 @@ En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on ob
 	\label{fig:11_3_4}
 \end{figure}
 
-Le pic de l'harmonique de troisième ordre est de -70.2dBm.
-%------------------------------------------------------------------------------------------------------------------
-En appliquant la même formule que précédemment, on trouve OIP3=
-%------------------------------------------------------------------------------------------------------------------
+Le pic de l'harmonique de troisième ordre est de $-28.5dBm$ (après désadaptation).
+En appliquant la même formule que précédemment, on trouve que le point d'intersection d'ordre 3 se situe à 42 dBm.
+%X=in=+18.5dBm,Y2=-70.2+6+35.7
 
 
 \exsubpart{5}
-En chargeant la sortie avec une résistance de 50 ohms et observant à l'analyseur de spectre l'entrée IN2, on mesure un pic à 5MHz de -16.48dBm, ce qui correspond à un gain de conversion ou isolation  (insertion loss) ici de -35.48 dB.
+En chargeant la sortie avec une résistance de 50 ohms et observant à l'analyseur de spectre l'entrée IN2, on mesure un pic à 5MHz de $-16.48dBm$, ce qui correspond à un gain de conversion ou isolation  (insertion loss) ici de $-35.48 dB$.
 
 \begin{figure}[h!]
 	\centering
@@ -847,13 +830,18 @@ En chargeant la sortie avec une résistance de 50 ohms et observant à l'analyse
 
 Tableau récapitulatif des trois types de mélangeurs analysés:
 
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline Gain de conversion& Pertes d'insertion& Spectre& Simplicité et coût& Alimentation& Autres \\
-\hline Mélangeur doublement équilibré à diodes & & & & Passif& a \\ 
-\hline Mélangeur à « MOS double-gate » &  & & & Actif 7V& a  \\ 
-\hline Mélangeur à 1 diode &  & & & Passif& a  \\ 
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline Type & Gain de conversion& Point de compression à 1dB & Pertes d'insertion& Spectre& Simplicité et coût& Alimentation& Autres \\
+\hline Mélangeur doublement équilibré à diodes & $-5.5dB$ & $1dBm$  & $-65.7dB$ & Dense mais d'amplitude modérée & + & Passif& Présence de bobines mauvaise pour la CEM \\ 
+\hline Mélangeur à « MOS double-gate » & $12.07dB$ & $-3.4dBm$ & $-75.8dB$ & Pauvre & + & Actif 7V&   \\ 
+\hline Mélangeur à 1 diode & $-12.3dB$ & $18.5dBm$ & $-35.48dB$ & Pauvre & +++ & Passif& Le plus simple ! \\ 
 \hline 
 \end{tabular} 
+
+On peut voir les disparités entre les différents mélangeurs grâce au tableau. La simplicité et le bas coût se payent par des performances très atténuées et des spectres plus ou moins riches en harmoniques. La présence de transistor permet, malgré un mélangeur qui sera actif, d'avoir un signal de sortie d'amplitude plus élevée que celui d'entrée. Ce qui est loin d'être le cas avec des diodes.
+De plus, un point de compression à 1 dB faible entraine des pertes croissantes avec des niveaux d'entrée le dépassant. Des niveaux d'entrées trop bas seront quant à eux plus sujet aux bruits.
+
+On peut donc conclure que le mélangeur à « MOS double-gate » et les mélangeurs à transistors en général présentent des performances bien plus élevées que les mélangeurs à diode mais nécessitent une alimentation et sont plus complexes et coûteux à mettre en place. Ils peuvent aussi être limités en terme de commutation et donc de fréquence ou encore plus coûteux.
 
 
 \exsubpart{2}
