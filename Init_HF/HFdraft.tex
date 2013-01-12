@@ -276,7 +276,7 @@ A_v = \frac{g_m}{\frac{1}{R_{ds}}+\frac{1}{R_{31}}+\frac{1}{R_{35}+\frac{1}{R_{3
 
 \subsection{Mesures et réglages}
 
-\exsubpart{1}
+\exsubpart{1,2}
 
 Un fois réglé, l'amplificateur accordé donne les résultats présentés Fig.~\ref{fig:6loglog}.
 
@@ -332,9 +332,10 @@ En augmentant à 10 dBm la puissance en entrée, on obtient le spectre donné Fi
 On atteint le point compression de 1dB pour une entrée à 11.5 dBm, soit une tension de 2.38V crête à crête.
 
 
+
 \exsubpart{6}
 
-On injecte désormais en entrée un signal double-ton à 13.9 MHz et 14.1 MHz. Pour cela, on utilise un générateur supplémentaire, ainsi qu'un sommateur passif engendrant de perte 6 dB sur chacun des deux signaux additionnés. Ce montage repose sur l'équivalence présentée Fig.~\ref{fig:eq_double_ton}. Désormais, lorsque l'on parlera d'entrée double-ton à X dBm, on fera référence à la puissance équivalente résultant pour chacune des deux composantes ($donnée du générateur - 6\mathrm{dBm}$ donc).
+On injecte désormais en entrée un signal double-ton à 13.9 MHz et 14.1 MHz. Pour cela, on utilise un générateur supplémentaire, ainsi qu'un sommateur passif engendrant de perte 6 dB sur chacun des deux signaux additionnés. Ce montage repose sur l'équivalence présentée Fig.~\ref{fig:eq_double_ton}. Désormais, lorsque l'on parlera d'entrée double-ton à X dBm, on fera référence à la puissance équivalente résultant pour chacune des deux composantes (\textit{donnée du générateur}$~-~6~\mathrm{dBm}$ donc).
 
 \begin{figure}[h]
 	\centering
@@ -638,6 +639,8 @@ Toutefois, R53, R54 et la résistance de charge forment un diviseur de tension d
 En augmentant l'amplitude d'entrée (In1), on mesure le point de compression de 1 dB à -8.2 dBm, soit 87 mVeff.
 
 
+
+
 \exsubpart{4}
 
 On injecte en entrée un signal double-ton~: 8.9MHz et 9.1MHz. On obtient les résultats fournis Fig.~\ref{fig:gilbert_s}.
@@ -750,7 +753,7 @@ On obtient le spectre Fig.~\ref{fig:9_3_4}. Le produit d'intermodulation d'ordre
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\textwidth]{9_3_4}
-	\caption{Spectre de la réponse à un signal double-ton à 8.9MHz et 9.1MHz,\\à -14.5dBm pour chaque composante}
+	\caption{\centering{Spectre de la réponse à un signal double-ton à 8.9MHz et 9.1MHz,\\à -14.5dBm pour chaque composante}}
 	\label{fig:9_3_4}
 \end{figure}
 
@@ -775,25 +778,25 @@ Ce résultat parait certes faible, mais est cohérent avec le spectre Fig.~\ref{
 %On obtient un point d'interception du troisième ordre est de 17.65 dBm.
 %%1dbm entrée, Y1 inconnu...
 %
- 
+
 \exsubpart{5}
 
-On mesure l'isolation de l'entrée In2 (LO) vers In1 (RF) en chargeant la sortie avec une résistance de 50 $\Omega$ (50.47 exactement).
-L'entrée IN2 (LO) est observée à l'analyseur de spectre, l'amplitude à la fréquence de 9MHz est de -62.82 dBm.
+On mesure l'isolation de l'entrée In2 (LO) vers In1 (RF) en chargeant la sortie avec une résistance de 50$\Omega$ (50.47 exactement).
+L'entrée In2 (LO) est observée à l'analyseur de spectre (cf Fig.~\ref{fig:9_3_5}). 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\textwidth]{9_3_5}
-	\caption{Isolation de l'entrée IN2 vers IN1}
+	\caption{Isolation de l'entrée In2 vers In1}
 	\label{fig:9_3_5}
 \end{figure}
 
-En enlevant le gain du signal d'entrée IN1 (HF), on obtient un gain et isolation de -67.5 dB, ce qui est correct.
+La puissance à la fréquence de 9MHz est de -62.82 dBm. En enlevant celle du signal d'entrée In1 (HF), on obtient un gain et isolation de -67.5 dB, ce qui est correct.
 
 
 \subsection{Le mélangeur à « MOS double-gate »}
 
-On s'intéresse maintenant à un autre mélangeur, celui-ci comporte un transistor MOS à double grille comme décrit Fig.~\ref{fig:schema_melangeur_mosdoublegate}.\\
+On s'intéresse maintenant à un autre mélangeur. Celui-ci comporte un transistor MOS à double grille comme décrit Fig.~\ref{fig:schema_melangeur_mosdoublegate}.\\
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\textwidth]{schema_melangeur_mosdoublegate}
@@ -801,8 +804,8 @@ On s'intéresse maintenant à un autre mélangeur, celui-ci comporte un transist
 	\label{fig:schema_melangeur_mosdoublegate}
 \end{figure}
 
-Ces deux grilles sont très utiles et permettent au courant de drain d'être contrôlé par chacune des grilles. Dans notre cas, la grille G1 est légèrement polarisée négativement par rapport à la source, elle est reliée à l'entrée In1, alors que G2 est polarisée positivement grâce au pont diviseur de tension lié à VDD et réalisé par les résistances R76 et R77. Elle est reliée à In2.
-Le signal In2 (LO) a une amplitude importante et va ainsi faire fortement varier le courant de drain grâce à G2. Le signal In1 (RF) d'une amplitude plus faible, va quand même faire varier le courant de drain du transistor mais le gain d'entrée G1 sera modulé par celui de G2. D'où l'appellation « modulateur d'amplitude » et l'effet de mélange.
+Ces deux grilles sont très utiles et permettent au courant de drain d'être contrôlé par chacune des grilles. Dans notre cas, la grille G1 est polarisée négativement par rapport à la source et est reliée à l'entrée In1, tandis que G2 est reliée à In2 et est polarisée positivement grâce au pont diviseur de tension lié à VDD et réalisé par les résistances R76 et R77.
+Le signal In2 (LO) a une amplitude importante et va ainsi faire fortement varier le courant de drain grâce à G2. Le signal In1 (RF), d'une amplitude plus faible, va tout de même faire varier le courant de drain du transistor mais le gain d'entrée G1 sera modulé par celui de G2. D'où l'appellation « modulateur d'amplitude » et l'effet de mélange.
 On retrouve les adaptations d'impédance vers du 50 ohms nécessaires aux appareils de mesures.
 
 
@@ -811,26 +814,26 @@ On retrouve les adaptations d'impédance vers du 50 ohms nécessaires aux appare
 \exsubpart{1}
 
 On veut une tension de repos de 1V sur G2.
-Les résistances $R_{76}$ et $R_{77}$ réalisent un pont diviseur de tension au potentiel de G2, on a donc :
+Les résistances $R_{76}$ et $R_{77}$ réalisent un pont diviseur de tension au potentiel de G2, on a donc en DC~:
 \begin{equation*}
 V_{G2}=1V={R_{77}}{(R_{77}+R_{76})}V_{dd}
 \end{equation*}
-On choisit donc :
+On choisit donc~:
 \begin{itemize}
-\item $R_{76}= 3.3 k \Omega$
+\item $R_{76}= 3.3 \mathrm{k\Omega}$
 \item $R_{77}= 560 \Omega$
 \end{itemize}
 
 \exsubpart{2}
 
-$L_{72}$ permet de fixer la composante DC à G1 à la masse. On peut ainsi polariser le transistor comme on le souhaite, négativement dans notre cas. L'absence de cette inductance ne permet pas de contrôler la polarisation du transistor et le signal RF ne serait plus intégralement transmis.
+$L_{72}$ permet de fixer la composante DC de G1 à la masse. On peut ainsi polariser le transistor comme on le souhaite, négativement dans notre cas. L'absence de cette inductance ne permet pas de contrôler la polarisation du transistor et le signal RF ne serait plus intégralement transmis.
 
 \subsubsection{Mesures}
 
 \exsubpart{1}
 
-On applique sur IN2 qui est le Local Oscillator une sinusoïde à 5MHz d'amplitude  1 Veff  et sur IN1, le signal à transmettre une sinusoïde à 9MHz d'amplitude 10 mVeff.
-On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble.
+On applique sur In2, qui est le Local Oscillator, une sinusoïde à 5MHz d'amplitude 1 Veff, et sur In1, le signal à transmettre, une sinusoïde à 9MHz d'amplitude 10 mVeff, soit -27 dBm.
+On observe le signal de sortie entre 1MHz et 150MHz afin d'avoir une vue d'ensemble.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\textwidth]{10_3_1}
@@ -838,25 +841,25 @@ On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble
 	\label{fig:10_3_1}
 \end{figure}
 
-On constate qu'il y a nettement moins de raies qu'avec le mélangeur doublement équilibré, les harmoniques sont mieux atténuées.
+On constate qu'il y a nettement moins de raies qu'avec le mélangeur doublement équilibré. Les harmoniques sont mieux atténuées.
+
 
 \exsubpart{2}
 
-On mesure, en zoomant autour des 14 MHz, une amplitude de sortie de -56.63dBm.
-Il ne faut pas oublier de prendre en compte les étages d'adaptation d'impédance. L'adaptation en entrée réduit le signal de 6dB. Les résistance de 50$\Omega$ forment un pont diviseur de tension de facteur 0.5 qui se traduit par un gain de $-6dB$.
-Alors que l'adaptation en sortie réduit le signal de 35.7dB (6dB à cause la résistance de 50$\Omega$ et 29.7dB à cause la résistance de 1.5k$\Omega$).
+On mesure, en zoomant autour des 14 MHz, une amplitude de sortie de -56.6dBm. On a donc sur l'intégralité du circuit un gain de -29.6 dB.
 
-Le gain de conversion de G1 vers le drain est donc de : $ 12.07 dB$
+Le diviseur de tension formé par R36, R37 et la résistance de charge engendre un gain de -35.7 dB. Le gain de conversion de G1 vers le drain est donc de 6.1 dB.
+
 
 \exsubpart{3}
 
 On utilise la même démarche mise en œuvre pour les autres mélangeurs en augmentant progressivement la tension du signal RF d'entrée.
-On trouve que le point de compression de 1 dB est à $-3.4dBm$.
+On trouve que le point de compression de 1 dB est à -3.4 dBm, soit 150 mVeff.
+
 
 \exsubpart{4}
 
-On applique un signal 9MHz double ton, on cherche le taux de distorsion d'inter-modulation d'ordre trois.
-En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on obtient le spectre suivant :
+En injectant en entrée un signal double-ton, on obtient alors le spectre Fig.~\ref{fig:10_3_4}.
 
 \begin{figure}[h!]
 	\centering
@@ -865,14 +868,37 @@ En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on ob
 	\label{fig:10_3_4}
 \end{figure}
 
-Le pic de l'harmonique de troisième ordre est de $-29.2dBm$ (après désadaptation).
-En appliquant la même formule que précédemment, on trouve que le point d'intersection d'ordre 3 se situe à 6.5 dBm.
-%X=in=-5.4dBm,Y2=-70.9+6+35.=-29.27
+Avec -11.4 dBm pour chaque composante en entrée, on mesure en sortie du système le produit d'intermodulation d'ordre 3 à -70.9 dBm.
+
+En appliquant la même formule que précédemment, on trouve que le point d'intersection d'ordre 3 se situe à 3.55 dBm.
 
 
 \exsubpart{5}
 
-En chargeant la sortie avec une résistance de 50 ohms et observant à l'analyseur de spectre l'entrée IN2, on mesure un pic à 5MHz de $-62.8dBm$, ce qui correspond à un gain de conversion ou isolation  (insertion loss) ici de $-75.8 dB$.
+En chargeant la sortie avec une résistance de 50$\Omega$ et observant à l'analyseur de spectre l'entrée In2, on mesure un pic à 5MHz de $-62.8 dBm$, ce qui correspond à un gain ou isolation de -75.8 dB.
+
+
+% 10
+%
+% On prend R77 = 560, R76 = 3.3k (on veut R76/R77=6)
+% L72 pour fixer à 0 le potentiel moyen à G1 (sinon, on ne contrôle pas ce potentiel moyen). Comme ça, on peut polariser négativement blablabla G1.
+%
+% LO : 5MHz, 1Veff, 13.01 dBm
+% RF : 9MHz, 10mVeff, -27dBm
+% Sortie : plein d'harmoniques : multiples de 5MHz, de 9MHz, 9-k5 ...
+% 14 MHz : -56.63 dBm
+% Gain : -30.37 dB avec les réductions en entrée (Rin, R72) (-6dB) et en sortie (R73,R74,Rout) (-35.7 dB)
+%    soit, sans ces adaptations : 11.33 dB
+% Compression 1dB : In à -3.4 dBm, soit 0.151 Veff
+%
+% In2 : 5 MHz, 1 Veff
+% IN1 : 9.1 MHz, 8.9 MHz, -5.4 dBm, 0.12 Veff
+% => 14.3 MHz (3e harmo mesurée) : -70.9 dBm
+%   (14.1 MHz : -42dBm)
+%
+% Avec 50.47ohm en sortie, IN2 avec 1Veff (13.01 dBm), l'analyseur sur IN1 :
+% on mesure à 5MHz : -62.8 dBm
+%  => -75.8 dB
 
 
 \subsection{Le mélangeur à 1 diode}
@@ -885,27 +911,27 @@ On considère le mélangeur décrit Fig.~\ref{fig:schema_melangeur_diode}.
 	\label{fig:schema_melangeur_diode}
 \end{figure}
 
-Ce mélangeur à une diode est le montage le plus simple  et moins onéreux à réaliser parmi tous les mélangeurs étudiés. Mais ces avantages se paient par un spectre dense avec des harmoniques d'amplitude importantes.
-Les deux signaux d'entrées IN1(RF) et IN2(LO) sont additionnés, on écrête ensuite le résultat grâce à la diode.
+Ce mélangeur à une diode est le montage le plus simple et moins onéreux à réaliser parmi tous les mélangeurs étudiés. Toutefois ces avantages se paient par un spectre dense avec des harmoniques d'amplitude importantes.
+Les deux signaux d'entrées In1 (RF) et In2 (LO) sont additionnés. On écrête ensuite le résultat grâce à la diode.
 Ce dispositif est somme toute similaire à un dispositif « hacheur ».
 
 \subsubsection{Questions et calculs}
 
 \exsubpart{1}
 
-$L_{81}$ permet de fixer la valeur moyenne ou valeur DC à 0 ce qui permet de faire conduire la diode correctement.
+$L_{81}$ permet de fixer la valeur moyenne ou valeur DC à 0, ce qui permet de faire conduire la diode correctement.
 
 \exsubpart{2}
 
-Les impédances réelles d'entrée et de sortie sont d'environ 50 $\Omega$, par analyse fréquentielle on trouve quelles sont comprises entre 45.19 et 48.79$\Omega$. Ce qui est environ 50$\Omega$.
+Les impédances réelles d'entrée et de sortie sont d'environ 50 $\Omega$. Par analyse fréquentielle on trouve quelles sont comprises entre 45.19 et 48.79$\Omega$. Ce qui est environ 50$\Omega$.
 
 Dans tous les cas, les 50$\Omega$ exacts sont difficilement atteignables en réalité à cause des tolérances des résistances et aux facteurs environnementaux.
 
 \exsubpart{3}
 
-Pour déterminer le courant maximum qui peut circuler dans In1 et In2, on applique la loi des nœuds en IN1 en considérant uniquement cette entrée.
+Pour déterminer le courant maximum qui peut circuler dans In1 et In2, on applique la loi des nœuds en In1 en considérant uniquement cette entrée.
 On considère 2 cas :
-%a refaire
+%TODO a refaire
 \begin{itemize}
 \item La diode est passante. Dans ce cas, le courant maximum qui revient sur l'une des entrées est égal à la moitié des courants entrants.
 
@@ -921,8 +947,8 @@ $I=\frac{U_{out}}{R86}-j\frac{R86^2}{R86(R85+R86)L\omega}U_{out}+i_{dretour,max}
 
 \exsubpart{1}
 
-On applique sur IN2 (LO) une sinusoïde à 5MHz d'amplitude  2 Veff soit 19 dBm et sur IN1 (RF) une sinusoïde à 9MHz d'amplitude 10 mVeff soit -27 dBm.
-On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble.
+On applique sur In2 (LO) une sinusoïde à 5MHz d'amplitude 2 Veff, soit 19 dBm, et sur In1 (RF) une sinusoïde à 9MHz d'amplitude 10 mVeff, soit -27 dBm.
+On observe le signal de sortie entre 1MHz et 150MHz afin d'avoir une vue d'ensemble (cf Fig.~\ref{fig:11_3_1}).
 
 \begin{figure}[h!]
 	\centering
@@ -931,25 +957,51 @@ On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble
 	\label{fig:11_3_1}
 \end{figure}
 
-Les harmoniques sont peu nombreuses mais d'amplitude conséquentes ! %Tous les signaux supérieurs à environ 10MHz sont fortement atténués grâce au filtre RLC constitué par $R83/R84 C81/C82 et L81.
+Les harmoniques sont peu nombreuses, mais d'amplitude conséquentes. %Tous les signaux supérieurs à environ 10MHz sont fortement atténués grâce au filtre RLC constitué par $R83/R84 C81/C82 et L81.
 % filtre RLC fréq 8.5MHz?
 
 \exsubpart{2}
-On mesure, en zoomant autour des 14 MHz, une amplitude de sortie de -80.1dBm.
 
-Le gain étant très faible, nous avons été obligé d'augmenter légèrement l'amplitude d'entrée de In1 à 20 mVeff soit -21 dBm en constatant qu'à partir d'un certain niveau, le gain restait constant. La mesure réalisée est un peu moins atténuée et sujette au bruit et donc plus précise.
+On mesure, en zoomant autour des 14MHz, une amplitude de sortie de -80.1 dBm.
 
-L'amplitude de sortie est alors de -75dBm.
-En prenant en compte les étages d'adaptation d'impédance, le gain de conversion est de $-12.3 dB$.
+Le gain étant très faible, nous avons été obligé d'augmenter légèrement l'amplitude d'entrée de In1 à 20 mVeff, soit -21 dBm, en constatant qu'à partir d'un certain niveau le gain restait constant. La mesure réalisée est un peu moins atténuée et sujette au bruit et donc plus précise.
+
+La puissance obtenue de sortie est alors de -75dBm, soit un gain de -54 dB pour l'ensemble du circuit.
+
+Le diviseur de tension en sortie engendrant un gain de -35.7 dB, le gain de conversion de In1 vers le point A est donc de -18.3 dB.
+
+% 11
+%
+% In1 : 10 mVeff, 9 MHz, -27 dBm
+% In2 :  2 Veff,  5 Mhz, 19 dBm
+% Sortie 14MHz : -80.1 dBm
+% Gain : -53.1 dBm
+% En prenant en compte les diviseurs de tensions internes : -11.4 dBm
+% On réalise qu'en augmentant légèrement In1 à partir de 10mVeff, le gain augmente légèrement,
+% avant de devenir constant pour une large gamme d'amplitudes pour In1.
+% On fait donc les mesures de gain pour une amplitude de In1 légèrement supérieure à 10 mVeff :
+% 20 mVeff
+%
+% in1 : 20 mVeff, -21 dBm
+% Sortie 14MHz : -75 dbm
+% Gain : -54 dBm
+% En prenant en compte les diviseurs de tensions internes : -11.4 dBm
+%
+% In1 : 18.5 dBm  =>  Sortie 14MHz : -36.6 dBm
+% = Gain de compression à -1dB
+%
+% In1 13.9 MHz, 14.1 MHz : 1.88 Veff, 18.5 dBM
+% Sortie 14.3 MHz : -70.2 dBm
+%
 
 \exsubpart{3}
 
-On utilise la même démarche mise en œuvre pour les autres mélangeurs en augmentant progressivement la tension du signal RF d'entrée.
+On utilise la même démarche mise en œuvre pour les autres mélangeurs en augmentant progressivement la tension du signal d'entrée RF.
 On trouve que le point de compression de 1 dB est à 18.5dBm.
 
 \exsubpart{4}
-On applique un signal 9MHz double ton, on cherche le taux de distorsion d'inter-modulation d'ordre trois.
-En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on obtient le spectre suivant :
+
+On applique un signal 9MHz double-ton, avec 12.5 dBm pour chaque composante. On obtient le spectre fourni Fig.~\ref{fig:11_3_4}.
 
 \begin{figure}[h!]
 	\centering
@@ -958,20 +1010,24 @@ En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on ob
 	\label{fig:11_3_4}
 \end{figure}
 
-Le pic de l'harmonique de troisième ordre est de $-28.5dBm$ (après désadaptation).
-En appliquant la même formule que précédemment, on trouve que le point d'intersection d'ordre 3 se situe à 42 dBm.
-%X=in=+18.5dBm,Y2=-70.2+6+35.7
+On mesure en sortie du système le produit d'intermodulation d'ordre 3 à -69.6 dBm.
+
+En appliquant la même formule que précédemment, on trouve que le point d'intersection d'ordre 3 se situe à -11 dBm. Cette faible la faible qualité du mélangeur étudié.
 
 
 \exsubpart{5}
-En chargeant la sortie avec une résistance de 50 ohms et observant à l'analyseur de spectre l'entrée IN2, on mesure un pic à 5MHz de $-16.48dBm$, ce qui correspond à un gain de conversion ou isolation  (insertion loss) ici de $-35.48 dB$.
+
+En chargeant la sortie avec une résistance de 50$\Omega$ et observant à l'analyseur de spectre l'entrée In2, on mesure un pic à 5MHz de -16.5 dBm, ce qui correspond à un gain ou isolation de -35.5 dB.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\textwidth]{11_3_5}
-	\caption{Isolation de l'entrée IN2 vers IN1}
+	\caption{Isolation de l'entrée In2 vers In1}
 	\label{fig:11_3_5}
 \end{figure}
+
+
+
 
 \subsection{Conclusions sur les mélangeurs}
 
