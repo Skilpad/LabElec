@@ -536,57 +536,83 @@ On constate que cette sortie présente de nombreuses harmoniques.
 \section{Mélangeurs}
 
 \subsection{Introduction}
+
 Les mélangeurs sont des circuits qui permettent de multiplier deux signaux sinusoïdaux.
-D'après la formule d'addition des sinus :
+On a~:
 \begin{center}
 $\sin(\omega_{1}\cdot t)\cdot \sin(\omega_{2}\cdot t) = \frac{1}{2}\cdot(\cos((\omega_{1} - \omega_{2})\cdot t) - cos((\omega_{1} + \omega_{2})\cdot t ) )$
 \end{center}
 
-Pour un montage idéal, nous avons donc une première composante fréquentielle en $\omega_{1} - \omega_{2}$ et une deuxième en $\omega_{1} + \omega_{2}$
+Ainsi, idéalement, on obtient en sortie deux composantes sinusoïdales~: un a ${\omega_{1} - \omega_{2}}$ et un a ${\omega_{1} + \omega_{2}}$.
 
-Il est alors possible par filtrage d'éliminer l'une de ces deux composantes, typiquement $\omega_{1} - \omega_{2}$, afin de ne garder que la composante en $\omega_{1} + \omega_{2}$.\\
+Il est alors possible, par filtrage, d'éliminer l'une de ces deux composantes, typiquement $\omega_{1} - \omega_{2}$, afin de ne garder que la composante en $\omega_{1} + \omega_{2}$.
 
-Ceci est utile pour réaliser plusieurs types de modulation et de démodulation.
-\\
-En pratique, la multiplication va présenter des non linéarités, nous aurons donc des harmoniques de $\omega_{1}$ et de $\omega_{2}$ en entrée du système.
-Ainsi, nous avons des composantes à toutes les fréquences : $m \cdot \omega_{1} + n \cdot \omega_{2}$, $\forall m, n \in\bbZ$
+Ceci est utile pour réaliser plusieurs types de modulations et démodulations.
+
+En pratique, la multiplication ne sera pas tout à fait linéaire. On aura donc des harmoniques de $\omega_{1}$ et de $\omega_{2}$ en entrée du système.
+Ainsi, On obtiendra des composantes à toutes les fréquences $m \cdot \omega_{1} + n \cdot \omega_{2}$, avec $(m, n) \in\bbZ^2$.
 
 
-\subsection{Mélangeur à circuit intégré NE602}
+\subsection{Le multiplicateur à cellule de "Gilbert"}
 
-La multiplication des signaux IN1 et IN2 est faite par le circuit intégré NE602. 
+On considère le curcuit présenté Fig.~\ref{fig:schema_melangeur_gilbert}.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.6\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{shema_melangeur_gilbert}
+		\caption{Schéma du circuit utilisé}
+		\label{fig:schema_melangeur_gilbert}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.35\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{shema_interne_ne602}
+		\caption{Schéma interne du multiplicateur NE602}
+		\label{fig:schema_melangeur_gilbert_interne}
+	\end{subfigure}
+	\caption{Le multiplicateur à cellule de "Gilbert"}
+\end{figure}
+
+La multiplication des signaux IN1 et IN2 est faite par le circuit intégré NE602.
 Il s'agit d'un multiplicateur à 4 quadrants, c'est à dire que la sortie est valable pour toutes les combinaisons possibles des signes des tensions IN1 et IN2 (+, +), (+, -), (-, +) et (-, -).
-Il n'y a donc aucunement besoin de polariser les entrées avec une composante continue, d'où un montage très simple.\\
-
-\includegraphics{shema_melangeur_gilbert.png}
+Il n'y a donc aucunement besoin de polariser les entrées avec une composante continue, d'où un montage très simple.
 
 \subsubsection{Questions et calculs}
 
 \exsubpart{1}
 
-L'impédance d'entrée sur l'amplificateur différentiel (broches 1 et 2) est d'environ $1.5k\Omega$ \footnote{Voir datasheet du composant NE602}. Idem pour les sorties sur les broches 4 et 5.
-Les résistances $R_{51}$, $R_{52}$, $R_{53}$ et $R_{54}$ servent à adapter l'impédance du câble d'antenne $50\Omega$ vers le circuit intégré.\\
+Selon la datasheet du composant, la partie réelle l'impédance d'entrée du multiplicateur NE602 (broches 1-2) est d'environ 1.5k$\Omega$. Il en va de même pour l'impédance de sortie (broches 4-5).
 
-\begin{center}
-\includegraphics[width=0.85\linewidth]{shema_interne_ne602.png}
-\end{center}
+Si l'on considère en revanche l'intégralité du circuit décrit Fig.~\ref{fig:schema_melangeur_gilbert}, les résistances R51, R52, R53, R54, R55 permettent d'adapter les impédances d'entrées (In1, In2) et de sortie (Out) à 50$\Omega$.
 
 \exsubpart{2}
 
-Le circuit a été prévu pour fabriquer un oscillateur avec les broches 6 et 7, cependant on n'utilise pas cette fonctionnalité, car nous avons notre propre oscillateur. L'amplitude doit être au moins de $200mV$ pour simuler un oscillateur local, qui n'est pas amplifié à l'intérieur du circuit, contrairement à l'entrée des broches 1 et 2 qui simule une antenne et qui est amplifiée en interne.
+Le circuit a été prévu pour fabriquer un oscillateur avec les broches 6 et 7, cependant on n'utilise pas cette fonctionnalité, car nous avons notre propre oscillateur. L'amplitude doit être au moins de 200mV pour simuler un oscillateur local, qui n'est pas amplifié à l'intérieur du circuit, contrairement à l'entrée des broches 1 et 2 qui simule une antenne et qui est amplifiée en interne.
 
 \subsubsection{Mesures}
 
 \exsubpart{1}
 
-Spectre de sortie :
-\begin{center}
-\includegraphics[width=0.7\linewidth]{8_3_1.jpg}
-\end{center}
+On applique en entrée In1 un signal sinusoïdal à 9MHz et 10 mVeff, et en entrée In2 un signal sinusoïdal à 5 MHz et 200 mVeff. On observe alors en sortie le spectre Fig.~\ref{fig:gilbert_spectre}.
 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{8_3_1.jpg}
+	\caption{Spectre en sortie du multiplicateur à cellule de Gilbert}
+	\label{fig:gilbert_spectre}
+\end{figure}
+
+
+
+%TODO
 \exsubpart{2,3,4}
 % Structurer en suivant les parties serait une bonne idée
 % Expliquer le point d'interception du 3ème ordre ou dans les parties suivantes(antho)
+
+
 
 \begin{itemize}
 

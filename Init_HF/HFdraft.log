@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  12 JAN 2013 02:12
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  12 JAN 2013 10:54
 entering extended mode
 **HFdraft.tex
 (E:\Boulot\LabElec\Init_HF\HFdraft.tex
@@ -858,7 +858,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 517--518
 File: ./Images/7_3_6_1MHz_100MHz.jpg Graphic file (type jpg)
 
 <use ./Images/7_3_6_1MHz_100MHz.jpg>
-Package pdftex.def Info: ./Images/7_3_6_1MHz_100MHz.jpg used on input line 522.
+Package pdftex.def Info: ./Images/7_3_6_1MHz_100MHz.jpg used on input line 523.
 
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
@@ -866,69 +866,66 @@ Package pdftex.def Info: ./Images/7_3_6_1MHz_100MHz.jpg used on input line 522.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11 <E:/Boulot/LabElec/Init_HF/Images/7_3_3_spectre9MHz.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 552--555
-
- []
-
 <./Images/shema_melangeur_gilbert.png, id=86, 394.47375pt x 196.48407pt>
 File: ./Images/shema_melangeur_gilbert.png Graphic file (type png)
 
 <use ./Images/shema_melangeur_gilbert.png>
 Package pdftex.def Info: ./Images/shema_melangeur_gilbert.png used on input lin
-e 556.
-(pdftex.def)             Requested size: 394.47278pt x 196.48358pt.
- [12 <E:/Boulot/LabElec/Init_HF/Images/7_3_6_1MHz_100MHz.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
+e 573.
+(pdftex.def)             Requested size: 290.22105pt x 144.55646pt.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--564
-
- []
-
-<./Images/shema_interne_ne602.png, id=91, 366.61969pt x 269.50688pt>
+<./Images/shema_interne_ne602.png, id=87, 366.61969pt x 269.50688pt>
 File: ./Images/shema_interne_ne602.png Graphic file (type png)
 
 <use ./Images/shema_interne_ne602.png>
-Package pdftex.def Info: ./Images/shema_interne_ne602.png used on input line 56
-6.
-(pdftex.def)             Requested size: 411.14526pt x 302.25687pt.
+Package pdftex.def Info: ./Images/shema_interne_ne602.png used on input line 58
+0.
+(pdftex.def)             Requested size: 169.29684pt x 124.45169pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
 
  []
+
+File: ./Images/shema_interne_ne602.png Graphic file (type png)
+<use ./Images/shema_interne_ne602.png>
+Package pdftex.def Info: ./Images/shema_interne_ne602.png used on input line 60
+0.
+(pdftex.def)             Requested size: 411.14526pt x 302.25687pt.
+ [12 <E:/Boulot/LabElec/Init_HF/Images/7_3_6_1MHz_100MHz.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--610
+
+ []
+
+<./Images/8_3_1.jpg, id=93, 3276.24pt x 2457.18pt>
+File: ./Images/8_3_1.jpg Graphic file (type jpg)
+ <use ./Images/8_3_1.jpg>
+Package pdftex.def Info: ./Images/8_3_1.jpg used on input line 613.
+(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 [13 <E:/Boulot/LabElec/Init_HF/Images/shema_melangeur_gilbert.png> <E:/Boulot/L
 abElec/Init_HF/Images/shema_interne_ne602.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 575--576
+Underfull \hbox (badness 10000) in paragraph at lines 616--619
 
  []
 
-<./Images/8_3_1.jpg, id=97, 3276.24pt x 2457.18pt>
-File: ./Images/8_3_1.jpg Graphic file (type jpg)
- <use ./Images/8_3_1.jpg>
-Package pdftex.def Info: ./Images/8_3_1.jpg used on input line 579.
-(pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--585
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 588.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 622.
 
 (E:\Programmes\MiKTeX\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 588.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 622.
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
 
  []
 
@@ -936,7 +933,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 600--601
 File: ./Images/8_3_4-8dbm.jpg Graphic file (type jpg)
 
 <use ./Images/8_3_4-8dbm.jpg>
-Package pdftex.def Info: ./Images/8_3_4-8dbm.jpg used on input line 602.
+Package pdftex.def Info: ./Images/8_3_4-8dbm.jpg used on input line 636.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
  [14 <E:/Boulot/LabElec/Init_HF/Images/8_3_1.jpg>]
 <./Images/schema_melangeur_doublediode.png, id=102, 374.90062pt x 139.27031pt>
@@ -944,57 +941,57 @@ File: ./Images/schema_melangeur_doublediode.png Graphic file (type png)
 
 <use ./Images/schema_melangeur_doublediode.png>
 Package pdftex.def Info: ./Images/schema_melangeur_doublediode.png used on inpu
-t line 618.
+t line 652.
 (pdftex.def)             Requested size: 338.5863pt x 125.78625pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--628
+Underfull \hbox (badness 10000) in paragraph at lines 661--662
 
  []
 
 [15 <E:/Boulot/LabElec/Init_HF/Images/8_3_4-8dbm.jpg> <E:/Boulot/LabElec/Init_H
 F/Images/schema_melangeur_doublediode.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 633--634
+Underfull \hbox (badness 10000) in paragraph at lines 667--668
 
  []
 
 <./Images/9_3_1.jpg, id=107, 3276.24pt x 2457.18pt>
 File: ./Images/9_3_1.jpg Graphic file (type jpg)
  <use ./Images/9_3_1.jpg>
-Package pdftex.def Info: ./Images/9_3_1.jpg used on input line 640.
+Package pdftex.def Info: ./Images/9_3_1.jpg used on input line 674.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--650
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--656
+Underfull \hbox (badness 10000) in paragraph at lines 689--690
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 662--663
+Underfull \hbox (badness 10000) in paragraph at lines 696--697
 
  []
 
 <./Images/9_3_4.jpg, id=108, 3276.24pt x 2457.18pt>
 File: ./Images/9_3_4.jpg Graphic file (type jpg)
  <use ./Images/9_3_4.jpg>
-Package pdftex.def Info: ./Images/9_3_4.jpg used on input line 670.
+Package pdftex.def Info: ./Images/9_3_4.jpg used on input line 704.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16 <E:/Boulot/LabElec/Init_HF/Images/9_3_1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 690--691
+Underfull \hbox (badness 10000) in paragraph at lines 724--725
 
  []
 
 <./Images/9_3_5.jpg, id=112, 3276.24pt x 2457.18pt>
 File: ./Images/9_3_5.jpg Graphic file (type jpg)
  <use ./Images/9_3_5.jpg>
-Package pdftex.def Info: ./Images/9_3_5.jpg used on input line 697.
+Package pdftex.def Info: ./Images/9_3_5.jpg used on input line 731.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 
@@ -1005,59 +1002,59 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ./Images/schema_melangeur_mosdoublegate.png Graphic file (type png)
 <use ./Images/schema_melangeur_mosdoublegate.png>
 Package pdftex.def Info: ./Images/schema_melangeur_mosdoublegate.png used on in
-put line 710.
+put line 744.
 (pdftex.def)             Requested size: 338.5863pt x 207.4674pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 722--723
+Underfull \hbox (badness 10000) in paragraph at lines 756--757
 
  []
 
 [17 <E:/Boulot/LabElec/Init_HF/Images/9_3_4.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 735--736
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 
  []
 
 [18 <E:/Boulot/LabElec/Init_HF/Images/9_3_5.jpg> <E:/Boulot/LabElec/Init_HF/Ima
 ges/schema_melangeur_mosdoublegate.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
+Underfull \hbox (badness 10000) in paragraph at lines 775--776
 
  []
 
 <./Images/10_3_1.jpg, id=121, 3276.24pt x 2457.18pt>
 File: ./Images/10_3_1.jpg Graphic file (type jpg)
  <use ./Images/10_3_1.jpg>
-Package pdftex.def Info: ./Images/10_3_1.jpg used on input line 747.
+Package pdftex.def Info: ./Images/10_3_1.jpg used on input line 781.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 754--755
+Underfull \hbox (badness 10000) in paragraph at lines 788--789
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--763
+Underfull \hbox (badness 10000) in paragraph at lines 796--797
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 767--768
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
 
  []
 
 <./Images/10_3_4.jpg, id=122, 3276.24pt x 2457.18pt>
 File: ./Images/10_3_4.jpg Graphic file (type jpg)
  <use ./Images/10_3_4.jpg>
-Package pdftex.def Info: ./Images/10_3_4.jpg used on input line 774.
+Package pdftex.def Info: ./Images/10_3_4.jpg used on input line 808.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [19 <E:/Boulot/LabElec/Init_HF/Images/10_3_1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 784--785
+Underfull \hbox (badness 10000) in paragraph at lines 818--819
 
  []
 
@@ -1066,40 +1063,40 @@ File: ./Images/schema_melangeur_diode.png Graphic file (type png)
 
 <use ./Images/schema_melangeur_diode.png>
 Package pdftex.def Info: ./Images/schema_melangeur_diode.png used on input line
- 794.
+ 828.
 (pdftex.def)             Requested size: 338.5863pt x 151.49725pt.
  [20 <E:/Boulot/LabElec/Init_HF/Images/10_3_4.jpg> <E:/Boulot/LabElec/Init_HF/I
 mages/schema_melangeur_diode.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 805--806
+Underfull \hbox (badness 10000) in paragraph at lines 839--840
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--810
+Underfull \hbox (badness 10000) in paragraph at lines 843--844
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 815--816
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--834
+Underfull \hbox (badness 10000) in paragraph at lines 867--868
 
  []
 
 <./Images/11_3_1.jpg, id=132, 3276.24pt x 2457.18pt>
 File: ./Images/11_3_1.jpg Graphic file (type jpg)
  <use ./Images/11_3_1.jpg>
-Package pdftex.def Info: ./Images/11_3_1.jpg used on input line 840.
+Package pdftex.def Info: ./Images/11_3_1.jpg used on input line 874.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--857
+Underfull \hbox (badness 10000) in paragraph at lines 890--891
 
  []
 
@@ -1107,7 +1104,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 856--857
 File: ./Images/11_3_4(2eme_point).jpg Graphic file (type jpg)
 
 <use ./Images/11_3_4(2eme_point).jpg>
-Package pdftex.def Info: ./Images/11_3_4(2eme_point).jpg used on input line 867
+Package pdftex.def Info: ./Images/11_3_4(2eme_point).jpg used on input line 901
 .
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
@@ -1117,25 +1114,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./Images/11_3_5.jpg, id=134, 3276.24pt x 2457.18pt>
 File: ./Images/11_3_5.jpg Graphic file (type jpg)
  <use ./Images/11_3_5.jpg>
-Package pdftex.def Info: ./Images/11_3_5.jpg used on input line 882.
+Package pdftex.def Info: ./Images/11_3_5.jpg used on input line 916.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 889--890
+Underfull \hbox (badness 10000) in paragraph at lines 923--924
 
  []
 
 [21]
-Overfull \hbox (574.23628pt too wide) in paragraph at lines 893--900
+Overfull \hbox (574.23628pt too wide) in paragraph at lines 927--934
 [][] 
  []
 
 [22 <E:/Boulot/LabElec/Init_HF/Images/11_3_1.jpg> <E:/Boulot/LabElec/Init_HF/Im
 ages/11_3_4(2eme_point).jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 907--908
+Underfull \hbox (badness 10000) in paragraph at lines 941--942
 
  []
 
@@ -1147,10 +1144,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4577 strings out of 494045
- 65093 string characters out of 3151211
- 122566 words of memory out of 3000000
- 7742 multiletter control sequences out of 15000+200000
+ 4581 strings out of 494045
+ 65237 string characters out of 3151211
+ 122606 words of memory out of 3000000
+ 7746 multiletter control sequences out of 15000+200000
  20599 words of font info for 50 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  38i,8n,38p,798b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1177,9 +1174,9 @@ ts/cm/cmr5.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><E
 KTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><E:/Programmes/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb>
-Output written on HFdraft.pdf (23 pages, 87622972 bytes).
+Output written on HFdraft.pdf (23 pages, 87616910 bytes).
 PDF statistics:
- 536 PDF objects out of 1000 (max. 8388607)
+ 518 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
