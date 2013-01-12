@@ -149,7 +149,7 @@ Dans notre cas~: ${\frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}\approx 8
 
 \exsubpart{2,3}
 
-On précise les réglages des inductances et capacités variables. Après avoir réglé L11, L12 de sorte à obtenir des fréquences de résonance identiques, on règle le couplage avec C15. On peut ainsi observé les effets d'un sur-couplage ou d'un sous-couplage comme présenté Fig.~\ref{fig:sur_sous_couple}.
+On précise les réglages des inductances et capacités variables. Après avoir réglé L11, L12 de sorte à obtenir des fréquences de résonance identiques, on règle le couplage avec C15. On peut ainsi observer les effets d'un sur-couplage ou d'un sous-couplage comme présenté Fig.~\ref{fig:sur_sous_couple}.
 
 \begin{figure}[h]
 	\centering
@@ -302,7 +302,7 @@ Le gain $A_v$ est donc de~: $A_v = \frac{A_{tot}}{A_R} = 9~\mathrm{dB} = 2,8$
 
 \exsubpart{4}
 
-On applique en entrée de l'amplificateur accordé un signal sinusoïdal de fréquence 14MHz et puissance 0 dBm. On obtient le spectre donné Fig.~\ref{fig:6_0dbm}. La composante à 14MHz est bien réduite d'approximativement 23,3 dB. En revanche, à cette composante s'ajoute une harmonique à 28MHz, plus faible de 47 dB.
+On applique en entrée de l'amplificateur accordé un signal sinusoïdal de fréquence 14MHz et puissance 0 dBm. On obtient le spectre donné Fig.~\ref{fig:6_0dbm}. La composante à 14MHz est bien réduite d'approximativement 23,3 dB. On retrouve ainsi le gain de conversion est de -23.3 dB. En revanche, à cette composante s'ajoute une harmonique à 28MHz, plus faible de 47 dB.
 
 En augmentant à 10 dBm la puissance en entrée, on obtient le spectre donné Fig.~\ref{fig:6_10dbm}. L'harmonique à 28MHz est renforcée, et d'autres harmoniques apparaissent.
 
@@ -329,34 +329,51 @@ En augmentant à 10 dBm la puissance en entrée, on obtient le spectre donné Fi
 
 \exsubpart{5}
 
-On atteint le compression à 1dB pour une entrée à 11,5 dBm, soit une tension de 2,38V crête à crête.
+On atteint le point compression de 1dB pour une entrée à 11.5 dBm, soit une tension de 2.38V crête à crête.
 
 
 \exsubpart{6}
 
-On injecte désormais en entrée un signal double-ton à 13,9MHz et 14,1MHz. On observe en sortie les spectres présentés Fig.~\ref{fig:6_double}.
+On injecte désormais en entrée un signal double-ton à 13.9 MHz et 14.1 MHz. Pour cela, on utilise un générateur supplémentaire, ainsi qu'un sommateur passif engendrant de perte 6 dB sur chacun des deux signaux additionnés. Ce montage repose sur l'équivalence présentée Fig.~\ref{fig:eq_double_ton}. Désormais, lorsque l'on parlera d'entrée double-ton à X dBm, on fera référence à la puissance équivalente résultant pour chacune des deux composantes ($donnée du générateur - 6\mathrm{dBm}$ donc).
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{eq_double_ton}
+	\caption{Production d'une entrée double-ton}
+	\label{fig:eq_double_ton}
+\end{figure}
+
+
+On observe en sortie les spectres présentés Fig.~\ref{fig:6_double}.
 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[b]{0.43\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{6_3_6_0dbm}
-		\caption{Pour une entrée à 0 dBm}
+		\caption{Pour une entrée à -6 dBm}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.43\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{6_3_6_11x5dbm}
-		\caption{Pour une entrée à 11,5 dBm}
+		\caption{Pour une entrée à 5,5 dBm}
 	\end{subfigure}
 	\caption{Spectre de la réponse à un signal double-ton à 13,9MHz et 14,1MHz}
 	\label{fig:6_double}
 \end{figure}
 
-Pour une entrée simple-ton à 14MHz et de 0 dBm, on a vu mesuré en sortie à 14MHz une fondamentale de -23,3 dBm. Pour une entrée double-ton à 13,9MHz et 14,1MHz et de 0 dBm, on obtient en sortie un produit d'intermodulation d'ordre 3 de -89,9 dBm.
+On sait que, pour $X_1 = $0 dBm en entrée, on obtient $Y_1 = $-23.3 dBm en sortie pour la composante principale. Par ailleurs, pour $X_2 = $5.5 dBm en entrée pour chaque composante d'un signal double-ton, on obtient en sortie un produit d'intermodulation d'ordre 3 (14.3MHz) de $Y_2^{(3)} = $-35.3 dBm. Le point d'interception du troisième ordre IM3 est alors donné par~:
+\begin{equation*}
+Y_1 + 1\cdot(IM3-X_1) = Y_2^{(3)}+3\cdot(IM3-X_2)~~~~~~~~[dBm]
+\end{equation*}
 
-On déduit que le point du troisième ordre se situe à $\frac{89,9-23,3}{2}~=~33,3~\mathrm{dBm}$, soit 29,9V crête à crête.
+Soit~: 
+\begin{equation*}
+IM3=\frac{Y_1 - Y_2^{(3)} + 3 X_2 - X_1}{2}~~~~~~~~[dBm]
+\end{equation*}
 
+Le point d'interception de troisième ordre est donc IM3 = 14.3 dBm.
 
 
 
@@ -536,6 +553,7 @@ On constate que cette sortie présente de nombreuses harmoniques.
 \section{Mélangeurs}
 
 \subsection{Introduction}
+\label{subsec:mel_intro}
 
 Les mélangeurs sont des circuits qui permettent de multiplier deux signaux sinusoïdaux.
 On a~:
@@ -555,7 +573,7 @@ Ainsi, On obtiendra des composantes à toutes les fréquences $m \cdot \omega_{1
 
 \subsection{Le multiplicateur à cellule de "Gilbert"}
 
-On considère le curcuit présenté Fig.~\ref{fig:schema_melangeur_gilbert}.
+On considère le circuit présenté Fig.~\ref{fig:schema_melangeur_gilbert}.
 
 \begin{figure}[h]
 	\centering
@@ -597,7 +615,6 @@ Le circuit a été prévu pour fabriquer un oscillateur avec les broches 6 et 7,
 
 On applique en entrée In1 un signal sinusoïdal à 9MHz et 10 mVeff, et en entrée In2 un signal sinusoïdal à 5 MHz et 200 mVeff. On observe alors en sortie le spectre Fig.~\ref{fig:gilbert_spectre}.
 
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{8_3_1.jpg}
@@ -605,33 +622,14 @@ On applique en entrée In1 un signal sinusoïdal à 9MHz et 10 mVeff, et en entr
 	\label{fig:gilbert_spectre}
 \end{figure}
 
-
-
-
-%TODO
+On y observe notamment le signal construit à 14MHz. Toutefois, on observe aussi des résidus importants des signaux d'entrées, à 5MHz et 9Mhz donc.
 
 
 \exsubpart{2}
 
-Lorsque l'on impose 18 dBm --- soit 28 mVeff --- en entrée (In1), on obtient en sortie -52.3 dBm. (On retrouve ce résultat sur pour un signal double-ton Fig.~\ref{fig:gilbert_s1}.)
+Lorsque l'on impose en entrée -27 dBm, on observe en sortie -55.3 dBm. On a ainsi pour l'intégralité du circuit un gain de conversion de -28.3 dB.
 
-On a ainsi pour l'intégralité du circuit un gain de conversion de -34.3 dB.
-
-Toutefois, R53, R54 et la résistance de charge forment un diviseur de tension de gain -35.7 dB, et R52 et la résistance d'entrée du multiplicateur NE602 forment un diviseur de tension de gain -6 dB. Ainsi, en s'affranchissant de ces diviseurs de tensions, on obtient pour le NE602 un gain de conversion intrinsèque de 7.4 dB.
-
-%TODO : Les notes de Jonathan, reportées sans redémonstration de calcul dans le rapport, donnait 13.3 dB. Il s'avère qu'elle prenait en compte le diviseur en entrée Rs-R51 (cf mail). En revanche, les explications en dessous donnaient les mêmes 41.7 dB de différence entre gain réel et gain affiché sur le spectro. Toutefois, dans ces explications, le diviseur lié à l'impédance d'entrée du NE602 est oubliée, et Rs-R51 est considéré !  o_o
-%\begin{itemize}
-%\item Gain de conversion : 13.3 dB
-%\item Point de compression de 1dB : -8.2 dBm
-%\item Point d'interception du 3ème ordre : 6.55 dBm
-%\end{itemize}
-%
-%A noter qu'il y a une perte de puissance considérable à cause du changement d'impédance. On perd la moitié du signal d'entrée utile sur le diviseur formé par $R_{in}$ et $R_{51}$, soit $-6$ dB. On perd une grande partie de la puissance de sortie à cause du diviseur formé par $R_{53}$ et $R_{54}$, les pertes sont de :
-%\begin{center}
-%$Pertes = 20\cdot \log (\frac{R_{54} // R_{out}}{(R_{54} // R_{out})+R_{53}}) = 20\cdot \log{25}{25+1500}) \simeq -35.7$ dB
-%\end{center}
-%
-%Nous avons donc, en réalité, 41.7 dB de plus que ce que nous indique l'appareil.
+Toutefois, R53, R54 et la résistance de charge forment un diviseur de tension de gain -35.7 dB, et R52 et la résistance d'entrée du multiplicateur NE602 forment un diviseur de tension de gain -6 dB. Ainsi, en s'affranchissant de ces diviseurs de tensions, on obtient pour le NE602 un gain de conversion intrinsèque de 13.4 dB.
 
 
 
@@ -642,30 +640,30 @@ En augmentant l'amplitude d'entrée (In1), on mesure le point de compression de 
 
 \exsubpart{4}
 
-On injecte en entré un signal double-ton~: 8.9MHz et 9.1MHz. On obtient les résultats fournis Fig.~\ref{fig:gilbert_s}.
+On injecte en entrée un signal double-ton~: 8.9MHz et 9.1MHz. On obtient les résultats fournis Fig.~\ref{fig:gilbert_s}.
 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{8_3_4-18dbm}
-		\caption{Pour une entrée à -18 dBm}
+		\caption{Pour une entrée à -24 dBm}
 		\label{fig:gilbert_s1}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{8_3_4-8dbm}
-		\caption{Pour une entrée à -8 dBm}
+		\caption{Pour une entrée à -14 dBm}
 		\label{fig:gilbert_s2}
 	\end{subfigure}
 	\caption{Réponse du multiplicateur à cellule de "Gilbert" à un signal double-ton 8.9MHz et 9.1MHz}
 	\label{fig:gilbert_s}
 \end{figure}
 
-On retrouve le gain total de -34.3 dB.
+On retrouve Fig.~\ref{fig:gilbert_s1} le gain total de -28.3 dB~: -24dBm en entrée mène à -52.3 dBm en sortie.
 
-Pour $X_1 = $-18 dBm en entrée, on obtient $Y_1 = $-52.3 dBm en sortie à 13.9MHz. Par ailleurs, pour $X_2 = $-8 dBm en entrée, on obtient en sortie un produit d'intermodulation d'ordre 3 (14.3MHz) de $Y_2^{(3)} = $-72.8 dBm. Le point d'interception du troisième ordre IM3 est alors donné par~:
+Pour $X_1 = $-24 dBm en entrée, on obtient $Y_1 = $-52.3 dBm en sortie à 13.9MHz. Par ailleurs, pour $X_2 = $-14~dBm en entrée, on obtient en sortie un produit d'intermodulation d'ordre 3 (14.3MHz) de $Y_2^{(3)} = $-72.8 dBm. Le point d'interception du troisième ordre IM3 est alors donné par~:
 \begin{equation*}
 Y_1 + 1\cdot(IM3-X_1) = Y_2^{(3)}+3\cdot(IM3-X_2)~~~~~~~~[dBm]
 \end{equation*}
@@ -675,12 +673,9 @@ Soit~:
 IM3=\frac{Y_1 - Y_2^{(3)} + 3 X_2 - X_1}{2}~~~~~~~~[dBm]
 \end{equation*}
 
-On obtient ainsi~: IM3 = 7.3 dBm
-
-On remarque par ailleurs que pour un signal d'entrée se trouvant à 10 dB en dessous du point de compression de 1 dB, soit une entrée à environ -18 dBm, le taux de distorsion d'intermodulation d'ordre 3 est négligeable. En effet, pour une telle entrée, les produits d'intermodulation d'ordre 3 sont noyés dans le bruit.
+On obtient ainsi~: IM3 = 1.25 dBm
 
 %TODO: Le calcul du point d'interception d'ordre 3 (qui n'est pas le taux de distortion d'ailleurs !!!) a été refait (donnant des résultats différents).
-
 % Structurer en suivant les parties serait une bonne idée
 % Expliquer le point d'interception du 3ème ordre ou dans les parties suivantes(antho)
 %
@@ -708,20 +703,20 @@ On considère le mélangeur doublement équilibré à diodes décrit Fig.~\ref{f
 	\label{fig:schema_melangeur_doublediode}
 \end{figure}
 
-Ce mélangeur Schottky fonctionne comme un commutateur grâce à son pont de diode. Lors des alternances positives du signal d'entrée LO,  les D2 et D4 conduisent  et l'entrée RF se retrouve en phase  par rapport à la sortie IF. Lors des alternances négatives du signal LO, D1 et D3 conduisent et l'entrée RF est en inversion de phase. IF est donc le produit du signal RF par le signe du signal LO.
+Ce mélangeur Schottky fonctionne comme un commutateur grâce à son pont de diodes. Lors des alternances positives du signal d'entrée LO,  les D2 et D4 conduisent  et l'entrée RF se retrouve en phase  par rapport à la sortie IF. Lors des alternances négatives du signal LO, D1 et D3 conduisent et l'entrée RF est en inversion de phase. IF est donc le produit du signal RF par le signe du signal LO.
 
 \subsubsection{Questions et calculs}
 
 \exsubpart{1}
 
-Chaque entrée (RF et LO) dispose d'une isolation galvanique avec la sortie IF. Ce type d'isolation permet de transmettre un signal entre 2 circuits électroniques qui n'ont pas forcément les mêmes niveaux de tensions et masses. On garantit ainsi une excellente isolation et indépendance entre les entrées et sortie dans notre cas.
+Chaque entrée (RF et LO) dispose d'une isolation galvanique avec la sortie IF. Ce type d'isolation permet de transmettre un signal entre deux circuits électroniques qui n'ont pas forcément les mêmes niveaux de tensions et masses. On garantit ainsi une excellente isolation et indépendance entre les entrées et sortie dans notre cas.
 
 \subsubsection{Mesures}
 
 \exsubpart{1}
 
-On applique sur IN2 qui est le Local Oscillator une sinusoïde à 5MHz d’amplitude  0.5 Veff et sur IN1, le signal à transmettre une sinusoïde à 9MHz d'amplitude 100 mVeff.
-On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble.
+On applique sur In2, qui est le Local Oscillator, une sinusoïde à 5MHz d’amplitude  0.5 Veff, et sur In1, le signal à transmettre, une sinusoïde à 9MHz d'amplitude 100 mVeff.
+On observe le signal de sortie entre 1MHz et 150MHz afin d'avoir une vue d'ensemble (cf Fig.~\ref{fig:9_3_1}).
 
 \begin{figure}[h!]
 	\centering
@@ -730,28 +725,30 @@ On observe le signal de sortie entre 1 et 150MHz afin d'avoir une vue d'ensemble
 	\label{fig:9_3_1}
 \end{figure}
 
+De nombreuses raies apparaissent, celles-ci sont en effet dues aux termes d'ordres supérieurs à 1 de la multiplication (cf section~\ref{subsec:mel_intro}).
 
-De nombreuses raies apparaissent, celles-ci sont en effet dues aux termes d'ordre supérieur à 1 de la multiplication.
-%Identifier fréq raies ? fait à la partie de Jonathan ???
 
 \exsubpart{2}
 
-En observant de plus près, la zone fréquentielle résultat du mélange qui nous intéresse (autour de 14MHz), on parvient à calculer le gain de conversion.
-L'amplitude en sortie à 14 MHz mesurée est de $-12.5dBm$ avec un signal d'entrée HF de $-7 dBm$ (0.5 Veff).
-Le gain de conversion est de $-5.5 dB$.
+En observant de plus près la zone fréquentielle résultant du mélange qui nous intéresse (autour de 14MHz), on parvient à calculer le gain de conversion.
+L'amplitude en sortie à 14 MHz mesurée est de -12.5 dBm avec un signal d'entrée HF de -7 dBm (0.5 Veff).
+Le gain de conversion est donc de $-5.5 dB$.
+
 
 \exsubpart{3}
 
 On cherche à trouver le point de compression de 1dB. Pour cela, on augmente progressivement l'amplitude du signal d'entrée RF afin d'observer une différence de gain de 1dB avec le résultat de la question précédente.
-Pour une amplitude d'entrée de 1dBm (0.250 Veff), la sortie à 14MHz a une amplitude de $-5.5dBm$, ce qui correspond à un gain de  conversion de $-6.5 dB$.
+Pour une amplitude d'entrée de 1dBm (0.250 Veff), la sortie à 14MHz a une amplitude de -5.5 dBm, ce qui correspond à un gain de conversion de -6.5 dB.
 
 Le point de compression de 1 dB est donc à 1 dBm.
 
 \exsubpart{4}
 
 On injecte un signal double ton à l'aide d'un générateur de signaux supplémentaire et d'un sommateur passif de perte 6 dB.
+%TODO (Paul) J'ai refais les calculs : il n'y aurait pas de perte lié au sommateur --- en supposant qu'il utilise 3 résistances de 50ohm en triangle (ce qui, de mémoire, est le cas). En effet, on montre que relier 2 générateurs ayant chacun une résistance série 50ohm et un générateur de tension E1/E2 parfait à un triangle de résistances 50ohm mène au générateur équivalent suivant : un générateur de tension parfaite égale à la tension moyenne (E1+E2)/2 en série avec une résistance 50ohm
+
 On cherche tout d'abord à déterminer le taux de distorsion d'inter-modulation d'ordre trois.
-En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on obtient le spectre suivant :
+En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on obtient le spectre Fig.~\ref{fig:9_3_4}.
 
 \begin{figure}[h!]
 	\centering
@@ -760,7 +757,8 @@ En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on ob
 	\label{fig:9_3_4}
 \end{figure}
 %(cheaté)
-Le pic de l'harmonique de troisième ordre est de -32.3 dBm. %C'est le taux de distorsion d'inter-modulation d'ordre 3 ($P_{IMR}$). A noter qu'on obtient ici directement l'amplitude du pic car l'isolation est galvanique sans étage d'adaptation qui nous font perdre de la puissance.Ce taux nous permet de calculer directement le point d'interception d'ordre 3 (OIP3) correspondant au croisement entre les approximations linéaires de la fondamentale et de l'harmonique d'ordre 3 comme représenté Fig.~\ref{fig:schema_melangeur_mosdoublegate}.
+
+Le pic de l'harmonique de troisième ordre est de -32.3 dBm. %C'est le taux de distorsion d'inter-modulation d'ordre 3 ($P_{IMR}$). À noter qu'on obtient ici directement l'amplitude du pic car l'isolation est galvanique sans étage d'adaptation qui nous font perdre de la puissance. Ce taux nous permet de calculer directement le point d'interception d'ordre 3 (OIP3) correspondant au croisement entre les approximations linéaires de la fondamentale et de l'harmonique d'ordre 3 comme représenté Fig.~\ref{fig:schema_melangeur_mosdoublegate}.
 %\begin{figure}[h!]
 %	\centering
 %	\includegraphics[width=.3\textwidth]{OIP3}
