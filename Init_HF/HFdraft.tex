@@ -732,7 +732,7 @@ De nombreuses raies apparaissent, celles-ci sont en effet dues aux termes d'ordr
 
 En observant de plus près la zone fréquentielle résultant du mélange qui nous intéresse (autour de 14MHz), on parvient à calculer le gain de conversion.
 L'amplitude en sortie à 14 MHz mesurée est de -12.5 dBm avec un signal d'entrée HF de -7 dBm (0.5 Veff).
-Le gain de conversion est donc de $-5.5 dB$.
+Le gain de conversion est donc de -5.5 dB.
 
 
 \exsubpart{3}
@@ -744,34 +744,37 @@ Le point de compression de 1 dB est donc à 1 dBm.
 
 \exsubpart{4}
 
-On injecte un signal double ton à l'aide d'un générateur de signaux supplémentaire et d'un sommateur passif de perte 6 dB.
-%TODO (Paul) J'ai refais les calculs : il n'y aurait pas de perte lié au sommateur --- en supposant qu'il utilise 3 résistances de 50ohm en triangle (ce qui, de mémoire, est le cas). En effet, on montre que relier 2 générateurs ayant chacun une résistance série 50ohm et un générateur de tension E1/E2 parfait à un triangle de résistances 50ohm mène au générateur équivalent suivant : un générateur de tension parfaite égale à la tension moyenne (E1+E2)/2 en série avec une résistance 50ohm
-
-On cherche tout d'abord à déterminer le taux de distorsion d'inter-modulation d'ordre trois.
-En se plaçant à 10 dB en dessous du maximum pour notre signal d'entrée, on obtient le spectre Fig.~\ref{fig:9_3_4}.
+On injecte désormais en entrée un signal double-ton à 8.9MHz et 9.1MHz, et à -14.5dBm pour chaque composante.
+On obtient le spectre Fig.~\ref{fig:9_3_4}. Le produit d'intermodulation d'ordre 3 y est mesuré à -32.2 dBm.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\textwidth]{9_3_4}
-	\caption{Spectre de la réponse à un signal double-ton à 8,9MHz et 9,1MHz}
+	\caption{Spectre de la réponse à un signal double-ton à 8.9MHz et 9.1MHz,\\à -14.5dBm pour chaque composante}
 	\label{fig:9_3_4}
 \end{figure}
-%(cheaté)
 
-Le pic de l'harmonique de troisième ordre est de -32.3 dBm. %C'est le taux de distorsion d'inter-modulation d'ordre 3 ($P_{IMR}$). À noter qu'on obtient ici directement l'amplitude du pic car l'isolation est galvanique sans étage d'adaptation qui nous font perdre de la puissance. Ce taux nous permet de calculer directement le point d'interception d'ordre 3 (OIP3) correspondant au croisement entre les approximations linéaires de la fondamentale et de l'harmonique d'ordre 3 comme représenté Fig.~\ref{fig:schema_melangeur_mosdoublegate}.
-%\begin{figure}[h!]
-%	\centering
-%	\includegraphics[width=.3\textwidth]{OIP3}
-%	\caption{Détermination du point d'interception d'ordre 3}
-%	\label{fig:OIP3}
-%\end{figure}
-%On a donc la formule suivante : $OIP3=L_{in}+G_{dB}-\frac{P_{IMR}}{2}$
-%Avec Lin= signal d'entrée en dBm = 1 ici, $G_{dB}$ le gain de conversion calculé à la question 2).
 
-On utilise la même démarche qu'auparavant.
-On obtient un point d'interception du troisième ordre est de 17.65 dBm.
-%1dbm entrée, Y1 inconnu...
+On obtient, de la même manière que précédemment le point d'interception du troisième ordre~: IM3 = -8.4 dBm.
 
+Ce résultat parait certes faible, mais est cohérent avec le spectre Fig.~\ref{fig:9_3_4}~: les produits d'intermodulation s'avère particulièrement présents.
+
+
+
+%Le pic de l'harmonique de troisième ordre est de -32.3 dBm. %C'est le taux de distorsion d'inter-modulation d'ordre 3 ($P_{IMR}$). À noter qu'on obtient ici directement l'amplitude du pic car l'isolation est galvanique sans étage d'adaptation qui nous font perdre de la puissance. Ce taux nous permet de calculer directement le point d'interception d'ordre 3 (OIP3) correspondant au croisement entre les approximations linéaires de la fondamentale et de l'harmonique d'ordre 3 comme représenté Fig.~\ref{fig:schema_melangeur_mosdoublegate}.
+%%\begin{figure}[h!]
+%%	\centering
+%%	\includegraphics[width=.3\textwidth]{OIP3}
+%%	\caption{Détermination du point d'interception d'ordre 3}
+%%	\label{fig:OIP3}
+%%\end{figure}
+%%On a donc la formule suivante : $OIP3=L_{in}+G_{dB}-\frac{P_{IMR}}{2}$
+%%Avec Lin= signal d'entrée en dBm = 1 ici, $G_{dB}$ le gain de conversion calculé à la question 2).
+%
+%On utilise la même démarche qu'auparavant.
+%On obtient un point d'interception du troisième ordre est de 17.65 dBm.
+%%1dbm entrée, Y1 inconnu...
+%
  
 \exsubpart{5}
 
