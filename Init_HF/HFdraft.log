@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  12 JAN 2013 18:50
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  12 JAN 2013 18:59
 entering extended mode
 **HFdraft.tex
 (E:\Boulot\LabElec\Init_HF\HFdraft.tex
@@ -1012,41 +1012,6 @@ File: ./Images/9_3_4.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./Images/9_3_4.jpg used on input line 755.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
-! Argument of \@caption has an extra }.
-<inserted text> 
-                \par 
-l.756 ...Hz,\\à -14.5dBm pour chaque composante}}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-\@captype {\def \reserved@a *{\nobreak \@xcentercr }\reserved@a }\def \ETC.
-! Paragraph ended before \@caption was complete.
-<to be read again> 
-                   \par 
-l.756 ...Hz,\\à -14.5dBm pour chaque composante}}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.756 ...Hz,\\à -14.5dBm pour chaque composante}}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1265,7 +1230,7 @@ r7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/Prog
 rammes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><E:/Programmes/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Programmes/MiKTeX/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on HFdraft.pdf (23 pages, 91176528 bytes).
+Output written on HFdraft.pdf (23 pages, 91176430 bytes).
 PDF statistics:
  542 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
