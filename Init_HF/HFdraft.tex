@@ -607,36 +607,93 @@ On applique en entrée In1 un signal sinusoïdal à 9MHz et 10 mVeff, et en entr
 
 
 
+
 %TODO
-\exsubpart{2,3,4}
+
+
+\exsubpart{2}
+
+Lorsque l'on impose 18 dBm --- soit 28 mVeff --- en entrée (In1), on obtient en sortie -52.3 dBm. (On retrouve ce résultat sur pour un signal double-ton Fig.~\ref{fig:gilbert_s1}.)
+
+On a ainsi pour l'intégralité du circuit un gain de conversion de -34.3 dB.
+
+Toutefois, R53, R54 et la résistance de charge forment un diviseur de tension de gain -35.7 dB, et R52 et la résistance d'entrée du multiplicateur NE602 forment un diviseur de tension de gain -6 dB. Ainsi, en s'affranchissant de ces diviseurs de tensions, on obtient pour le NE602 un gain de conversion intrinsèque de 7.4 dB.
+
+%TODO : Les notes de Jonathan, reportées sans redémonstration de calcul dans le rapport, donnait 13.3 dB. Il s'avère qu'elle prenait en compte le diviseur en entrée Rs-R51 (cf mail). En revanche, les explications en dessous donnaient les mêmes 41.7 dB de différence entre gain réel et gain affiché sur le spectro. Toutefois, dans ces explications, le diviseur lié à l'impédance d'entrée du NE602 est oubliée, et Rs-R51 est considéré !  o_o
+%\begin{itemize}
+%\item Gain de conversion : 13.3 dB
+%\item Point de compression de 1dB : -8.2 dBm
+%\item Point d'interception du 3ème ordre : 6.55 dBm
+%\end{itemize}
+%
+%A noter qu'il y a une perte de puissance considérable à cause du changement d'impédance. On perd la moitié du signal d'entrée utile sur le diviseur formé par $R_{in}$ et $R_{51}$, soit $-6$ dB. On perd une grande partie de la puissance de sortie à cause du diviseur formé par $R_{53}$ et $R_{54}$, les pertes sont de :
+%\begin{center}
+%$Pertes = 20\cdot \log (\frac{R_{54} // R_{out}}{(R_{54} // R_{out})+R_{53}}) = 20\cdot \log{25}{25+1500}) \simeq -35.7$ dB
+%\end{center}
+%
+%Nous avons donc, en réalité, 41.7 dB de plus que ce que nous indique l'appareil.
+
+
+
+\exsubpart{3}
+
+En augmentant l'amplitude d'entrée (In1), on mesure le point de compression de 1 dB à -8.2 dBm, soit 87 mVeff.
+
+
+\exsubpart{4}
+
+On injecte en entré un signal double-ton~: 8.9MHz et 9.1MHz. On obtient les résultats fournis Fig.~\ref{fig:gilbert_s}.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{8_3_4-18dbm}
+		\caption{Pour une entrée à -18 dBm}
+		\label{fig:gilbert_s1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{8_3_4-8dbm}
+		\caption{Pour une entrée à -8 dBm}
+		\label{fig:gilbert_s2}
+	\end{subfigure}
+	\caption{Réponse du multiplicateur à cellule de "Gilbert" à un signal double-ton 8.9MHz et 9.1MHz}
+	\label{fig:gilbert_s}
+\end{figure}
+
+On retrouve le gain total de -34.3 dB.
+
+Pour $X_1 = $-18 dBm en entrée, on obtient $Y_1 = $-52.3 dBm en sortie à 13.9MHz. Par ailleurs, pour $X_2 = $-8 dBm en entrée, on obtient en sortie un produit d'intermodulation d'ordre 3 (14.3MHz) de $Y_2^{(3)} = $-72.8 dBm. Le point d'interception du troisième ordre IM3 est alors donné par~:
+\begin{equation*}
+Y_1 + 1\cdot(IM3-X_1) = Y_2^{(3)}+3\cdot(IM3-X_2)~~~~~~~~[dBm]
+\end{equation*}
+
+Soit~: 
+\begin{equation*}
+IM3=\frac{Y_1 - Y_2^{(3)} + 3 X_2 - X_1}{2}~~~~~~~~[dBm]
+\end{equation*}
+
+On obtient ainsi~: IM3 = 7.3 dBm
+
+On remarque par ailleurs que pour un signal d'entrée se trouvant à 10 dB en dessous du point de compression de 1 dB, soit une entrée à environ -18 dBm, le taux de distorsion d'intermodulation d'ordre 3 est négligeable. En effet, pour une telle entrée, les produits d'intermodulation d'ordre 3 sont noyés dans le bruit.
+
+%TODO: Le calcul du point d'interception d'ordre 3 (qui n'est pas le taux de distortion d'ailleurs !!!) a été refait (donnant des résultats différents).
+
 % Structurer en suivant les parties serait une bonne idée
 % Expliquer le point d'interception du 3ème ordre ou dans les parties suivantes(antho)
-
-
-
-\begin{itemize}
-
-\item Gain de conversion : 13.3 dB
-\item Point de compression de 1dB : -8.2 dBm
-\item Point d'interception du 3ème ordre : 6.55 dBm
-\end{itemize}
-
-A noter qu'il y a une perte de puissance considérable à cause du changement d'impédance. On perd la moitié du signal d'entrée utile sur le diviseur formé par $R_{in}$ et $R_{51}$, soit $-6$ dB. On perd une grande partie de la puissance de sortie à cause du diviseur formé par $R_{53}$ et $R_{54}$, les pertes sont de :
-\begin{center}
-$Pertes = 20\cdot \log (\frac{R_{54} // R_{out}}{(R_{54} // R_{out})+R_{53}}) = 20\cdot \log{25}{25+1500}) \simeq -35.7$ dB
-\end{center}
-
-Nous avons donc, en réalité, 41.7 dB de plus que ce que nous indique l'appareil.
-
-Voici le spectre de sortie d'un signal double ton d'amplitude $-8$ dBm (l'appareil voit $-35.7$ dB de moins, soit $-43.7$ dBm):\\
-\begin{center}
-\includegraphics[width=0.7\linewidth]{8_3_4-8dbm.jpg}
-\end{center}
-Le pic de l'harmonique 3 est à $-72.8$ dBm pour l'appareil, c'est à dire en réalité $-72.8 + 35.7 = -37.1$ dBm.\\
-On peut alors calculer le taux de distorsion d'inter-modulation d'ordre trois, c'est le point qui satisfait l'équation :
-\begin{center}
-$y = -37.1 + 3 \cdot (y+8) \Rightarrow y = 6.55$ dBm
-\end{center}
+%
+%Voici le spectre de sortie d'un signal double ton d'amplitude $-8$ dBm (l'appareil voit $-35.7$ dB de moins, soit $-43.7$ dBm):\\
+%\begin{center}
+%\includegraphics[width=0.7\linewidth]{8_3_4-8dbm.jpg}
+%\end{center}
+%Le pic de l'harmonique 3 est à $-72.8$ dBm pour l'appareil, c'est à dire en réalité $-72.8 + 35.7 = -37.1$ dBm.\\
+%On peut alors calculer le taux de distorsion d'inter-modulation d'ordre trois, c'est le point qui satisfait l'équation :
+%\begin{center}
+%$y = -37.1 + 3 \cdot (y+8) \Rightarrow y = 6.55$ dBm
+% FAUX ! (Paul)
+%\end{center}
 
 
 
