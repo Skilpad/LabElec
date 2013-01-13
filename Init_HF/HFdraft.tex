@@ -5,7 +5,7 @@
 \documentclass{article}
 
 \input{../LaTeXconfig.tex}
-
+\usepackage{array}
 \graphicspath{{./Images/}}
 
 \begin{document}
@@ -1038,24 +1038,38 @@ En chargeant la sortie avec une résistance de 50$\Omega$ et observant à l'anal
 
 Tableau récapitulatif des trois types de mélangeurs analysés:
 
-\begin{tabular}{|c|c|c|c|}
-\hline Type & Gain de conversion& Point de compression à 1dB & Pertes d'insertion  \\
-\hline Mélangeur à NE602 & $13.4dB$ & $-8.2dBm$ & Non calculé  \\
-\hline Mélangeur doublement équilibré à diodes & $-5.5dB$ & $1dBm$ & $-65.7dB$  \\ 
-\hline Mélangeur à « MOS double-gate » & $12.07dB$ & $-3.4dBm$ & $-75.8dB$    \\ 
-\hline Mélangeur à 1 diode & $-12.3dB$ & $18.5dBm$ & $-35.48dB$  \\ 
+\newcolumntype{M}[1]{>{\raggedright}m{#1}}
+\begin{tabular}{|l||M{2.5cm}|M{2.5cm}|M{2.5cm}|M{2.5cm}|}
+\hline Type & Mélangeur à NE602 & Mélangeur doublement équilibré à diodes & « MOS double-gate » & Mélangeur à 1 diode \tabularnewline
+\hline Gain de conversion & 13.4dB & -5.5dB & 12.07dB & 1-12.3dB \tabularnewline
+\hline Point de compression à 1dB & -8.2dBm & 1dBm & -3.4dBm & 18.5dBm \tabularnewline
+\hline Pertes d'insertion & non calculé & -65.7dB & -75.8dB & -35.48dB \tabularnewline
+\hline Point d'interception d'ordre 3 & 1.25dBm & -8.4dBm & 3.55dBm & -11dBm \tabularnewline
+\hline Spectre & Très séléctif & Pauvre & Dense mais d'amplitude modérée & Pauvre \tabularnewline
+\hline Simplicité et coût & ++ & + & + & +++ \tabularnewline
+\hline Alimentation & Actif & Passif & Actif & Passif \tabularnewline
+\hline Autres & & Présence de bobines mauvaise pour  la CEM & & Le plus simple ! \tabularnewline
 \hline
-\hline  & Point d'interception d'ordre 3& Spectre& Simplicité et coût\\
-\hline  &  $1.25dBm$ & Très sélectif & ++  \\
-\hline  & $-8.4dBm$ & Dense mais d'amplitude modérée & + \\
-\hline  & $3.55dBm$ & Pauvre & +  \\
-\hline  & $-11dBm$ & Pauvre & +++ \\
-\hline
-\hline  & Alimentation& Autres & \\
-\hline  & Passif& Présence de bobines mauvaise pour la CEM & \\
-\hline  & Actif 7V& &  \\
-\hline  & Passif& Le plus simple ! &  \\
-\end{tabular} 
+\end{tabular}
+
+%\begin{tabular}{|c|c|c|c|}
+%\hline Type & Gain de conversion& Point de compression à 1dB & Pertes d'insertion  \\
+%\hline Mélangeur à NE602 & $13.4dB$ & $-8.2dBm$ & Non calculé  \\
+%\hline Mélangeur doublement équilibré à diodes & $-5.5dB$ & $1dBm$ & $-65.7dB$  \\ 
+%\hline Mélangeur à « MOS double-gate » & $12.07dB$ & $-3.4dBm$ & $-75.8dB$    \\ 
+%\hline Mélangeur à 1 diode & $-12.3dB$ & $18.5dBm$ & $-35.48dB$  \\ 
+%\hline
+%\hline  & Point d'interception d'ordre 3& Spectre& Simplicité et coût\\
+%\hline  &  $1.25dBm$ & Très sélectif & ++  \\
+%\hline  & $-8.4dBm$ & Dense mais d'amplitude modérée & + \\
+%\hline  & $3.55dBm$ & Pauvre & +  \\
+%\hline  & $-11dBm$ & Pauvre & +++ \\
+%\hline
+%\hline  & Alimentation& Autres & \\
+%\hline  & Passif& Présence de bobines mauvaise pour la CEM & \\
+%\hline  & Actif 7V& &  \\
+%\hline  & Passif& Le plus simple ! &  \\
+%\end{tabular} 
 
 On peut voir les disparités entre les différents mélangeurs grâce au tableau. La simplicité et le bas coût se payent par des performances très atténuées et des spectres plus riches en harmoniques. La présence de transistor permet, malgré un mélangeur qui sera actif, d'avoir un signal de sortie d'amplitude plus élevée que celui d'entrée. Il est donc possible de brancher une antenne directement au mélangeur sans devoir pré-amplifier le signal (et donc le bruit) en provenance de celle-ci. Cela est loin d'être le cas avec des diodes.\\
 %Brancher une antenne au mélangeur sans filter ni rien...???

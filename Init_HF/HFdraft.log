@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  13 JAN 2013 20:10
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  13 JAN 2013 23:09
 entering extended mode
 **HFdraft.tex
 (D:\EPFL\LabElec\Init_HF\HFdraft.tex
@@ -454,6 +454,14 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \leftbarmargin=\skip52
 \defaultparindent=\skip53
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen135
+\extrarowheight=\dimen136
+\NC@list=\toks27
+\extratabsurround=\skip54
+\backup@length=\skip55
+)
 (D:\EPFL\LabElec\Init_HF\HFdraft.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
@@ -471,16 +479,16 @@ LaTeX Font Info:    ... okay on input line 11.
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
-\scratchdimen=\dimen135
+\scratchdimen=\dimen137
 \scratchbox=\box32
 \nofMPsegments=\count110
 \nofMParguments=\count111
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks28
 \MPscratchCnt=\count112
-\MPscratchDim=\dimen136
+\MPscratchDim=\dimen138
 \MPnumerator=\count113
 \makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks29
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: rotating package is loaded.
@@ -1194,12 +1202,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
  []
 
 
-Overfull \hbox (172.05888pt too wide) in paragraph at lines 1041--1059
+Overfull \hbox (23.99612pt too wide) in paragraph at lines 1042--1054
 [][] 
  []
 
 [22 <D:/EPFL/LabElec/Init_HF/Images/11_3_4(2eme_point).jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1068
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
 
  []
 
@@ -1211,13 +1219,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4601 strings out of 494045
- 65882 string characters out of 3148379
- 122691 words of memory out of 3000000
- 7763 multiletter control sequences out of 15000+200000
+ 4647 strings out of 494045
+ 66445 string characters out of 3148379
+ 124380 words of memory out of 3000000
+ 7806 multiletter control sequences out of 15000+200000
  21285 words of font info for 51 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 38i,8n,38p,798b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,38p,798b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
 00\ecbx1000.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
 appen\ec\dpi600\ecti0800.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\
@@ -1244,7 +1252,7 @@ sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on HFdraft.pdf (23 pages, 91177671 bytes).
+Output written on HFdraft.pdf (23 pages, 91177269 bytes).
 PDF statistics:
  540 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
