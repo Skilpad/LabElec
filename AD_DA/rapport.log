@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  13 JAN 2013 15:19
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  13 JAN 2013 23:39
 entering extended mode
 **rapport.tex
 (D:\EPFL\LabElec\AD_DA\rapport.tex
@@ -616,61 +616,61 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [4] <AD7524.jpg, id=56, 733.23938pt x 347.79938pt>
 File: AD7524.jpg Graphic file (type jpg)
  <use AD7524.jpg>
-Package pdftex.def Info: AD7524.jpg used on input line 243.
+Package pdftex.def Info: AD7524.jpg used on input line 242.
 (pdftex.def)             Requested size: 290.22105pt x 137.66316pt.
 
 <AD7524eq.jpg, id=57, 237.88875pt x 143.78719pt>
 File: AD7524eq.jpg Graphic file (type jpg)
  <use AD7524eq.jpg>
-Package pdftex.def Info: AD7524eq.jpg used on input line 250.
+Package pdftex.def Info: AD7524eq.jpg used on input line 249.
 (pdftex.def)             Requested size: 96.73788pt x 58.47044pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 [5 <D:/EPFL/LabElec/AD_DA/R2Rbasics.jpg> <D:/EPFL/LabElec/AD_DA/R2Rexpended.jpg
 > <D:/EPFL/LabElec/AD_DA/AD7524.jpg> <D:/EPFL/LabElec/AD_DA/AD7524eq.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 335.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 333.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (20.87976pt too wide) in paragraph at lines 346--346
+Overfull \hbox (20.87976pt too wide) in paragraph at lines 344--344
 []\T1/cmr/m/n/10 Ainsi, le con-ver-tis-seur numÈrique/analogique ÈtudiÈ est mon
 o-tone. En ef-fet, cela mon-tre que si $[]$,
  []
 
 [6]
-Overfull \hbox (30.30228pt too wide) in paragraph at lines 374--375
+Overfull \hbox (30.30228pt too wide) in paragraph at lines 372--373
 []\T1/cmr/m/n/10 On notera $\OML/cmm/m/it/10 V[]$ \T1/cmr/m/n/10 la ten-sion im
 -posÈe en en-trÈe du mon-tage (ten-sion d'entrÈe du con-ver-tis-seur analogique
 /numÈrique),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
 <data/TEK0018_.jpg, id=68, 210.386pt x 172.645pt>
 File: data/TEK0018_.jpg Graphic file (type jpg)
  <use data/TEK0018_.jpg>
-Package pdftex.def Info: data/TEK0018_.jpg used on input line 461.
+Package pdftex.def Info: data/TEK0018_.jpg used on input line 459.
 (pdftex.def)             Requested size: 196.326pt x 161.11401pt.
 
 
@@ -680,7 +680,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.462 ..._{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
+l.460 ..._{out}=f(t)$ (CH1), $V_{out}=f(t)$ (CH2)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -688,7 +688,7 @@ If that doesn't work, type  X <return>  to quit.
 <data/TEK0017_.jpg, id=69, 203.159pt x 171.842pt>
 File: data/TEK0017_.jpg Graphic file (type jpg)
  <use data/TEK0017_.jpg>
-Package pdftex.def Info: data/TEK0017_.jpg used on input line 468.
+Package pdftex.def Info: data/TEK0017_.jpg used on input line 466.
 (pdftex.def)             Requested size: 196.326pt x 166.06247pt.
 
 
@@ -698,7 +698,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.469 ...n}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
+l.467 ...n}=\mathrm{0,5 Hz}$\\$V_{out}=f(V_{in})$}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -706,7 +706,7 @@ If that doesn't work, type  X <return>  to quit.
 <data/TEK0008_.png, id=70, 210.386pt x 170.6375pt>
 File: data/TEK0008_.png Graphic file (type png)
  <use data/TEK0008_.png>
-Package pdftex.def Info: data/TEK0008_.png used on input line 477.
+Package pdftex.def Info: data/TEK0008_.png used on input line 475.
 (pdftex.def)             Requested size: 196.326pt x 159.2406pt.
 
 
@@ -716,7 +716,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.478 ..._{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
+l.476 ..._{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -724,7 +724,7 @@ If that doesn't work, type  X <return>  to quit.
 <data/TEK0020_.jpg, id=71, 203.159pt x 171.4405pt>
 File: data/TEK0020_.jpg Graphic file (type jpg)
  <use data/TEK0020_.jpg>
-Package pdftex.def Info: data/TEK0020_.jpg used on input line 484.
+Package pdftex.def Info: data/TEK0020_.jpg used on input line 482.
 (pdftex.def)             Requested size: 196.326pt x 165.67448pt.
 
 
@@ -734,7 +734,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.485 ...n}=\mathrm{500 Hz}$\\$V_{out}=f(V_{in})$}
+l.483 ...n}=\mathrm{500 Hz}$\\$V_{out}=f(V_{in})$}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -742,7 +742,7 @@ If that doesn't work, type  X <return>  to quit.
 <data/TEK0005_.png, id=72, 394.47375pt x 319.1925pt>
 File: data/TEK0005_.png Graphic file (type png)
  <use data/TEK0005_.png>
-Package pdftex.def Info: data/TEK0005_.png used on input line 493.
+Package pdftex.def Info: data/TEK0005_.png used on input line 491.
 (pdftex.def)             Requested size: 196.326pt x 158.86041pt.
 
 
@@ -752,7 +752,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.494 ..._{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
+l.492 ..._{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -760,7 +760,7 @@ If that doesn't work, type  X <return>  to quit.
 <data/TEK0010_.png, id=73, 209.9845pt x 170.236pt>
 File: data/TEK0010_.png Graphic file (type png)
  <use data/TEK0010_.png>
-Package pdftex.def Info: data/TEK0010_.png used on input line 500.
+Package pdftex.def Info: data/TEK0010_.png used on input line 498.
 (pdftex.def)             Requested size: 196.326pt x 159.17242pt.
 
 
@@ -770,7 +770,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.501 ..._{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
+l.499 ..._{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -779,7 +779,7 @@ If that doesn't work, type  X <return>  to quit.
 K0017_.jpg> <D:/EPFL/LabElec/AD_DA/data/TEK0008_.png> <D:/EPFL/LabElec/AD_DA/da
 ta/TEK0020_.jpg> <D:/EPFL/LabElec/AD_DA/data/TEK0005_.png> <D:/EPFL/LabElec/AD_
 DA/data/TEK0010_.png>]
-Overfull \hbox (22.13017pt too wide) in paragraph at lines 524--525
+Overfull \hbox (22.13017pt too wide) in paragraph at lines 522--523
 \T1/cmr/m/n/10 pÈri-men-tale-ment, on ob-tient pour $[]$ (donc $[]$) $[]$. Ains
 i : $[]$
  []
@@ -788,33 +788,33 @@ i : $[]$
 File: principe_chambre_d'echo.png Graphic file (type png)
 
 <use principe_chambre_d'echo.png>
-Package pdftex.def Info: principe_chambre_d'echo.png used on input line 566.
+Package pdftex.def Info: principe_chambre_d'echo.png used on input line 564.
 (pdftex.def)             Requested size: 193.47577pt x 81.80475pt.
  [9 <D:/EPFL/LabElec/AD_DA/principe_chambre_d'echo.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 573.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 571.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 573.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 571.
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 597--599
+Underfull \hbox (badness 10000) in paragraph at lines 576--577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--605
+Underfull \hbox (badness 10000) in paragraph at lines 595--597
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--618
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
 
  []
 
@@ -822,14 +822,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 617--618
 File: shema_echo_entree.png Graphic file (type png)
 
 <use shema_echo_entree.png>
-Package pdftex.def Info: shema_echo_entree.png used on input line 623.
+Package pdftex.def Info: shema_echo_entree.png used on input line 621.
 (pdftex.def)             Requested size: 386.95894pt x 143.50912pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
 
  []
 
@@ -837,16 +837,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 643--644
 File: shema_sequenceur_1.png Graphic file (type png)
 
 <use shema_sequenceur_1.png>
-Package pdftex.def Info: shema_sequenceur_1.png used on input line 649.
+Package pdftex.def Info: shema_sequenceur_1.png used on input line 647.
 (pdftex.def)             Requested size: 386.95894pt x 152.87753pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 654--655
+Underfull \hbox (badness 10000) in paragraph at lines 652--653
 
  []
 
 [11 <D:/EPFL/LabElec/AD_DA/shema_echo_entree.png (PNG copy)> <D:/EPFL/LabElec/A
 D_DA/shema_sequenceur_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 671--672
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
 
@@ -854,10 +854,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 671--672
 File: shema_sequenceur_2.png Graphic file (type png)
 
 <use shema_sequenceur_2.png>
-Package pdftex.def Info: shema_sequenceur_2.png used on input line 675.
+Package pdftex.def Info: shema_sequenceur_2.png used on input line 673.
 (pdftex.def)             Requested size: 241.84842pt x 150.61807pt.
 
-Overfull \hbox (35.22475pt too wide) in paragraph at lines 684--697
+Overfull \hbox (35.22475pt too wide) in paragraph at lines 682--695
  [] 
  []
 
@@ -865,23 +865,23 @@ Overfull \hbox (35.22475pt too wide) in paragraph at lines 684--697
 File: chronogramme_sequenceur.png Graphic file (type png)
 
 <use chronogramme_sequenceur.png>
-Package pdftex.def Info: chronogramme_sequenceur.png used on input line 703.
+Package pdftex.def Info: chronogramme_sequenceur.png used on input line 701.
 (pdftex.def)             Requested size: 241.84842pt x 169.96494pt.
  [12 <D:/EPFL/LabElec/AD_DA/shema_sequenceur_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+Underfull \hbox (badness 10000) in paragraph at lines 713--714
 
  []
 
 <data/TEK0016_.png, id=98, 203.5605pt x 179.872pt>
 File: data/TEK0016_.png Graphic file (type png)
  <use data/TEK0016_.png>
-Package pdftex.def Info: data/TEK0016_.png used on input line 721.
+Package pdftex.def Info: data/TEK0016_.png used on input line 719.
 (pdftex.def)             Requested size: 193.47577pt x 170.97073pt.
 
 ! Argument of \@caption has an extra }.
 <inserted text> 
                 \par 
-l.722 ...ie du filtre (apr√®s filtre de lissage)}}
+l.720 ...ie du filtre (apr√®s filtre de lissage)}}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -895,7 +895,7 @@ Runaway argument?
 ! Paragraph ended before \@caption was complete.
 <to be read again> 
                    \par 
-l.722 ...ie du filtre (apr√®s filtre de lissage)}}
+l.720 ...ie du filtre (apr√®s filtre de lissage)}}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -908,7 +908,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.722 ...ie du filtre (apr√®s filtre de lissage)}}
+l.720 ...ie du filtre (apr√®s filtre de lissage)}}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -920,13 +920,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.722 ...ie du filtre (apr√®s filtre de lissage)}}
+l.720 ...ie du filtre (apr√®s filtre de lissage)}}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--729
+Underfull \hbox (badness 10000) in paragraph at lines 726--727
 
  []
 
@@ -934,48 +934,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 728--729
 File: err_quantif_8bit_t.png Graphic file (type png)
 
 <use err_quantif_8bit_t.png>
-Package pdftex.def Info: err_quantif_8bit_t.png used on input line 739.
+Package pdftex.def Info: err_quantif_8bit_t.png used on input line 735.
 (pdftex.def)             Requested size: 217.6621pt x 163.24228pt.
 
 <err_quantif_8bit_f.png, id=100, 578.16pt x 433.62pt>
 File: err_quantif_8bit_f.png Graphic file (type png)
 
 <use err_quantif_8bit_f.png>
-Package pdftex.def Info: err_quantif_8bit_f.png used on input line 746.
+Package pdftex.def Info: err_quantif_8bit_f.png used on input line 742.
 (pdftex.def)             Requested size: 217.6621pt x 163.24228pt.
 
 <err_quantif_4bit_t.png, id=101, 578.16pt x 433.62pt>
 File: err_quantif_4bit_t.png Graphic file (type png)
 
 <use err_quantif_4bit_t.png>
-Package pdftex.def Info: err_quantif_4bit_t.png used on input line 755.
+Package pdftex.def Info: err_quantif_4bit_t.png used on input line 751.
 (pdftex.def)             Requested size: 217.6621pt x 163.24228pt.
 
 <err_quantif_4bit_f.png, id=102, 578.16pt x 433.62pt>
 File: err_quantif_4bit_f.png Graphic file (type png)
 
 <use err_quantif_4bit_f.png>
-Package pdftex.def Info: err_quantif_4bit_f.png used on input line 762.
+Package pdftex.def Info: err_quantif_4bit_f.png used on input line 758.
 (pdftex.def)             Requested size: 217.6621pt x 163.24228pt.
 
 <err_quantif_1bit_t.png, id=103, 578.16pt x 433.62pt>
 File: err_quantif_1bit_t.png Graphic file (type png)
 
 <use err_quantif_1bit_t.png>
-Package pdftex.def Info: err_quantif_1bit_t.png used on input line 771.
+Package pdftex.def Info: err_quantif_1bit_t.png used on input line 767.
 (pdftex.def)             Requested size: 217.6621pt x 163.24228pt.
 
 <err_quantif_1bit_f.png, id=104, 578.16pt x 433.62pt>
 File: err_quantif_1bit_f.png Graphic file (type png)
 
 <use err_quantif_1bit_f.png>
-Package pdftex.def Info: err_quantif_1bit_f.png used on input line 778.
+Package pdftex.def Info: err_quantif_1bit_f.png used on input line 774.
 (pdftex.def)             Requested size: 217.6621pt x 163.24228pt.
 
 ! Argument of \@caption has an extra }.
 <inserted text> 
                 \par 
-l.783 ... √† fin que ceux-ci soient observables.}}
+l.779 ... √† fin que ceux-ci soient observables.}}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -990,7 +990,7 @@ ETC.
 ! Paragraph ended before \@caption was complete.
 <to be read again> 
                    \par 
-l.783 ... √† fin que ceux-ci soient observables.}}
+l.779 ... √† fin que ceux-ci soient observables.}}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1004,21 +1004,21 @@ data/TEK0016_.png>] [14 <D:/EPFL/LabElec/AD_DA/err_quantif_8bit_t.png> <D:/EPFL
 /LabElec/AD_DA/err_quantif_8bit_f.png> <D:/EPFL/LabElec/AD_DA/err_quantif_4bit_
 t.png> <D:/EPFL/LabElec/AD_DA/err_quantif_4bit_f.png> <D:/EPFL/LabElec/AD_DA/er
 r_quantif_1bit_t.png> <D:/EPFL/LabElec/AD_DA/err_quantif_1bit_f.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 796--797
+Underfull \hbox (badness 10000) in paragraph at lines 792--793
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 808--809
+Underfull \hbox (badness 10000) in paragraph at lines 804--805
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--816
+Underfull \hbox (badness 10000) in paragraph at lines 810--812
 
  []
 
-[15] (D:\EPFL\LabElec\AD_DA\rapport.aux)
+[15] [16] (D:\EPFL\LabElec\AD_DA\rapport.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -1067,9 +1067,9 @@ m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on rapport.pdf (15 pages, 1540397 bytes).
+Output written on rapport.pdf (16 pages, 1541198 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
+ 582 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
