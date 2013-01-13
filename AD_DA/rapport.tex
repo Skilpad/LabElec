@@ -173,7 +173,7 @@ Ces résultats, comparés aux résultats théoriques donnés par ${V_i = i\cdot\
   \label{fig:ADCres}
 \end{figure}
 
-% % Clarifier un peu STP
+%TODO Clarifier un peu STP, c'est un peu obscur (jonathan)
 
 La première chose que l'on observe est un décalage permanent entre les valeurs de $V_i$ mesurées (que l'on notera $V_i^{mes}$) et les valeurs de $V_i$ théorique (que l'on notera $V_i^{th}$). On constate en effet un $offset$ moyen de $-0,0111$. On remarque toutefois que $V_i^{mes}-V_i^{th}$ augmente avec $i$ (${\langle V_i^{mes}-V_i^{th}\rangle_{i\in[1..7]}=-0,0072}$, ${\langle V_i^{mes}-V_i^{th}\rangle_{i\in[122..135]}=-0,0115}$, ${\langle V_i^{mes}-V_i^{th}\rangle_{i\in[251..255]}=-0,0150}$). 
 
@@ -236,7 +236,7 @@ On utilise alors généralement un amplificateur opérationnel branché en suive
 
 
 Le fonctionnement de l'AD7524 est légèrement différent. Le circuit correspondant, tel qu'il est branché (avec notamment la sortie OUT2 branchée à la masse et l'utilisation d'un amplificateur opérationnel), est représenté Fig.~\ref{fig:AD7524} \footnote{Un condensateur, liant $V_{out1}$ et $V_{out}$, a été omis~: proposé par les datasheets, son but est d'empêcher des oscillations en sortie de l'amplificateur opérationnel. Nous nous plaçons dans le cadre d'un état déjà stabilisé, où le condensateur agit comme un interrupteur ouvert.}
-% Je ne comprends pas cette note - les condensateurs sont présent dans le shéma compelet}.
+%TODO Je ne comprends pas cette note - les condensateurs sont présent dans le shéma compelet.
 
 \begin{figure}[h]
   \centering
@@ -311,7 +311,7 @@ Les résultats obtenus sont présentés dans le tableau~\ref{tab:AD7524}. $V_i^{
 \caption{Résultats obtenus lors de l'étude du convertisseur AD7524}
 \label{tab:AD7524}
 \centering
-% Ce tableau n'est pas clair - a quoi correspond chaque ligne ??
+%TODO Ce tableau n'est pas clair du tout - a quoi correspond chaque ligne ??
 
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -729,7 +729,7 @@ On remarque qu'en l'absence de filtre (courbe bleu), les effets de la quantifica
 
 À chaque bit supprimé pour l'encodage du signal traité, le niveau de bruit augmente de 6 dB. En effet, retirer un bit double l'amplitude de l'erreur de quantification.
 
-% Il y a t-il des PHOTOS de l'analyseur de spectre pour mettre ici ?? %
+%TODO Il y a t-il des PHOTOS de l'analyseur de spectre pour mettre ici ?? %
 
 \begin{figure}[h!]
 	\centering

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  6 JAN 2013 22:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.6.4)  13 JAN 2013 15:19
 entering extended mode
 **rapport.tex
-(E:\Boulot\LabElec\AD_DA\rapport.tex
+(D:\EPFL\LabElec\AD_DA\rapport.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,9 +13,9 @@ an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese,
 romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
 sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
 senglishmax, welsh, loaded.
-(E:\Programmes\MiKTeX\tex\latex\base\article.cls
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(E:\Programmes\MiKTeX\tex\latex\base\size10.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -30,28 +30,28 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(E:\Boulot\LabElec\LaTeXconfig.tex
-(C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\latex\ntgclass\a4.sty
+(D:\EPFL\LabElec\LaTeXconfig.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\ntgclass\a4.sty"
 Package: a4 2004/04/15 v1.2g A4 based page layout
 )
-(E:\Programmes\MiKTeX\tex\latex\ams\math\amsmath.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(E:\Programmes\MiKTeX\tex\latex\ams\math\amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(E:\Programmes\MiKTeX\tex\latex\ams\math\amsgen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-(E:\Programmes\MiKTeX\tex\latex\ams\math\amsbsy.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-(E:\Programmes\MiKTeX\tex\latex\ams\math\amsopn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
@@ -92,17 +92,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(E:\Programmes\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 )
-(E:\Programmes\MiKTeX\tex\latex\amsfonts\amssymb.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2009/06/22 v3.00
 )
-(E:\Programmes\MiKTeX\tex\latex\float\float.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count99
 \float@exts=\toks19
@@ -110,19 +110,19 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks20
 \@floatcapt=\box29
 )
-(E:\Programmes\MiKTeX\tex\latex\base\inputenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks21
 \inpenc@posthook=\toks22
 
-(E:\Programmes\MiKTeX\tex\latex\base\utf8.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(E:\Programmes\MiKTeX\tex\latex\base\t1enc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -272,7 +272,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(E:\Programmes\MiKTeX\tex\latex\base\ot1enc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -303,7 +303,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(E:\Programmes\MiKTeX\tex\latex\base\omsenc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -327,14 +327,14 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(E:\Programmes\MiKTeX\tex\latex\base\fontenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(E:\Programmes\MiKTeX\tex\latex\base\t1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip46
 \fb@frw=\dimen112
@@ -342,31 +342,31 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen114
 \FrameSep=\dimen115
 )
-(E:\Programmes\MiKTeX\tex\latex\graphics\graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(E:\Programmes\MiKTeX\tex\latex\graphics\keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks23
 )
-(E:\Programmes\MiKTeX\tex\latex\graphics\graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(E:\Programmes\MiKTeX\tex\latex\graphics\trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(E:\Programmes\MiKTeX\tex\latex\00miktex\graphics.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(E:\Programmes\MiKTeX\tex\latex\pdftex-def\pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(E:\Programmes\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(E:\Programmes\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count100
@@ -374,10 +374,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-(C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
-(C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen118
 \captionmargin@=\dimen119
@@ -389,12 +389,12 @@ Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \c@ContinuedFloat=\count101
 Package caption Info: float package is loaded.
 )
-(C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaption.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
 Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count102
 \c@subtable=\count103
 )
-(C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen124
 \WF@size=\dimen125
 \c@WF@wrappedlines=\count104
@@ -402,18 +402,18 @@ Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \WF@everypar=\toks24
 Package: wrapfig 2003/01/31  v 3.6
 )
-(E:\Programmes\MiKTeX\tex\latex\geometry\geometry.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(E:\Programmes\MiKTeX\tex\generic\oberdiek\ifpdf.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(E:\Programmes\MiKTeX\tex\generic\oberdiek\ifvtex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(E:\Programmes\MiKTeX\tex\generic\ifxetex\ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count105
@@ -429,15 +429,15 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen133
 \Gm@dimlist=\toks25
 
-(E:\Programmes\MiKTeX\tex\latex\geometry\geometry.cfg))
-(C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\fullpage.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip47
 )
-(C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\latex\rotating\rotating.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
-(E:\Programmes\MiKTeX\tex\latex\base\ifthen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count108
@@ -446,7 +446,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box31
 \rot@mess@toks=\toks26
 )
-(E:\Programmes\MiKTeX\tex\latex\multirow\multirow.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen134
 )
 \leftbarwidth=\skip50
@@ -454,7 +454,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \leftbarmargin=\skip52
 \defaultparindent=\skip53
 )
-(E:\Boulot\LabElec\AD_DA\rapport.aux)
+(D:\EPFL\LabElec\AD_DA\rapport.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
@@ -468,7 +468,7 @@ LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 
-(C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen135
@@ -535,12 +535,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
  []
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 31.
-(E:\Programmes\MiKTeX\tex\latex\amsfonts\umsa.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 
-(E:\Programmes\MiKTeX\tex\latex\amsfonts\umsb.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 <2bitFlash.jpg, id=1, 494.59781pt x 386.19281pt>
@@ -557,8 +557,8 @@ Package pdftex.def Info: 8bitSemiFlash.jpg used on input line 48.
 
 [1
 
-{C:/Users/Asus/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <E:/Boulot/La
-bElec/AD_DA/2bitFlash.jpg> <E:/Boulot/LabElec/AD_DA/8bitSemiFlash.jpg>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/EPFL/LabElec/AD_DA/2bi
+tFlash.jpg> <D:/EPFL/LabElec/AD_DA/8bitSemiFlash.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
@@ -592,8 +592,8 @@ File: ADCresults_corr.png Graphic file (type png)
 <use ADCresults_corr.png>
 Package pdftex.def Info: ADCresults_corr.png used on input line 168.
 (pdftex.def)             Requested size: 483.69684pt x 98.45451pt.
- [2] [3 <E:/Boulot/LabElec/AD_DA/ADCresults.png> <E:/Boulot/LabElec/AD_DA/ADCre
-sults_lincorr.png> <E:/Boulot/LabElec/AD_DA/ADCresults_corr.png>]
+ [2] [3 <D:/EPFL/LabElec/AD_DA/ADCresults.png> <D:/EPFL/LabElec/AD_DA/ADCresult
+s_lincorr.png> <D:/EPFL/LabElec/AD_DA/ADCresults_corr.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
@@ -629,9 +629,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
-[5 <E:/Boulot/LabElec/AD_DA/R2Rbasics.jpg> <E:/Boulot/LabElec/AD_DA/R2Rexpended
-.jpg> <E:/Boulot/LabElec/AD_DA/AD7524.jpg> <E:/Boulot/LabElec/AD_DA/AD7524eq.jp
-g>]
+[5 <D:/EPFL/LabElec/AD_DA/R2Rbasics.jpg> <D:/EPFL/LabElec/AD_DA/R2Rexpended.jpg
+> <D:/EPFL/LabElec/AD_DA/AD7524.jpg> <D:/EPFL/LabElec/AD_DA/AD7524eq.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
@@ -648,7 +647,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 335.
 
-(E:\Programmes\MiKTeX\tex\latex\base\t1cmtt.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Overfull \hbox (20.87976pt too wide) in paragraph at lines 346--346
@@ -776,10 +775,10 @@ l.501 ..._{out}=f(t)$ (CH2), $V_{err}=f(t)$ (CH3)}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[7] [8 <E:/Boulot/LabElec/AD_DA/data/TEK0018_.jpg> <E:/Boulot/LabElec/AD_DA/dat
-a/TEK0017_.jpg> <E:/Boulot/LabElec/AD_DA/data/TEK0008_.png> <E:/Boulot/LabElec/
-AD_DA/data/TEK0020_.jpg> <E:/Boulot/LabElec/AD_DA/data/TEK0005_.png> <E:/Boulot
-/LabElec/AD_DA/data/TEK0010_.png>]
+[7] [8 <D:/EPFL/LabElec/AD_DA/data/TEK0018_.jpg> <D:/EPFL/LabElec/AD_DA/data/TE
+K0017_.jpg> <D:/EPFL/LabElec/AD_DA/data/TEK0008_.png> <D:/EPFL/LabElec/AD_DA/da
+ta/TEK0020_.jpg> <D:/EPFL/LabElec/AD_DA/data/TEK0005_.png> <D:/EPFL/LabElec/AD_
+DA/data/TEK0010_.png>]
 Overfull \hbox (22.13017pt too wide) in paragraph at lines 524--525
 \T1/cmr/m/n/10 péri-men-tale-ment, on ob-tient pour $[]$ (donc $[]$) $[]$. Ains
 i : $[]$
@@ -791,10 +790,10 @@ File: principe_chambre_d'echo.png Graphic file (type png)
 <use principe_chambre_d'echo.png>
 Package pdftex.def Info: principe_chambre_d'echo.png used on input line 566.
 (pdftex.def)             Requested size: 193.47577pt x 81.80475pt.
- [9 <E:/Boulot/LabElec/AD_DA/principe_chambre_d'echo.png>]
+ [9 <D:/EPFL/LabElec/AD_DA/principe_chambre_d'echo.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 573.
 
- (E:\Programmes\MiKTeX\tex\latex\base\omscmr.fd
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -845,8 +844,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 654--655
 
  []
 
-[11 <E:/Boulot/LabElec/AD_DA/shema_echo_entree.png (PNG copy)> <E:/Boulot/LabEl
-ec/AD_DA/shema_sequenceur_1.png>]
+[11 <D:/EPFL/LabElec/AD_DA/shema_echo_entree.png (PNG copy)> <D:/EPFL/LabElec/A
+D_DA/shema_sequenceur_1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 671--672
 
  []
@@ -868,7 +867,7 @@ File: chronogramme_sequenceur.png Graphic file (type png)
 <use chronogramme_sequenceur.png>
 Package pdftex.def Info: chronogramme_sequenceur.png used on input line 703.
 (pdftex.def)             Requested size: 241.84842pt x 169.96494pt.
- [12 <E:/Boulot/LabElec/AD_DA/shema_sequenceur_2.png>]
+ [12 <D:/EPFL/LabElec/AD_DA/shema_sequenceur_2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 715--716
 
  []
@@ -1000,12 +999,11 @@ My plan is to forget the whole thing and hope for the best.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <E:/Boulot/LabElec/AD_DA/chronogramme_sequenceur.png> <E:/Boulot/LabElec/AD
-_DA/data/TEK0016_.png>] [14 <E:/Boulot/LabElec/AD_DA/err_quantif_8bit_t.png> <E
-:/Boulot/LabElec/AD_DA/err_quantif_8bit_f.png> <E:/Boulot/LabElec/AD_DA/err_qua
-ntif_4bit_t.png> <E:/Boulot/LabElec/AD_DA/err_quantif_4bit_f.png> <E:/Boulot/La
-bElec/AD_DA/err_quantif_1bit_t.png> <E:/Boulot/LabElec/AD_DA/err_quantif_1bit_f
-.png>]
+[13 <D:/EPFL/LabElec/AD_DA/chronogramme_sequenceur.png> <D:/EPFL/LabElec/AD_DA/
+data/TEK0016_.png>] [14 <D:/EPFL/LabElec/AD_DA/err_quantif_8bit_t.png> <D:/EPFL
+/LabElec/AD_DA/err_quantif_8bit_f.png> <D:/EPFL/LabElec/AD_DA/err_quantif_4bit_
+t.png> <D:/EPFL/LabElec/AD_DA/err_quantif_4bit_f.png> <D:/EPFL/LabElec/AD_DA/er
+r_quantif_1bit_t.png> <D:/EPFL/LabElec/AD_DA/err_quantif_1bit_f.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 796--797
 
  []
@@ -1020,56 +1018,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 814--816
 
  []
 
-[15] (E:\Boulot\LabElec\AD_DA\rapport.aux)
+[15] (D:\EPFL\LabElec\AD_DA\rapport.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  4594 strings out of 494045
- 63824 string characters out of 3151211
+ 64046 string characters out of 3148379
  131706 words of memory out of 3000000
  7757 multiletter control sequences out of 15000+200000
  23464 words of font info for 63 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  38i,12n,38p,822b,626s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-cbx1000.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecrm0800.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecrm0600.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Asus\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Asus\AppData
-\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Asu
-s\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\
-Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440
-.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecxc1440.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx2986.pk> <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ecbx2074.pk><E:/Programmes/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmex10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8
-.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/Progra
-mmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/Programmes/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi6.pfb><E:/Programmes/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmmi7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><E:/Program
-mes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/Programmes/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr5.pfb><E:/Programmes/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr6.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/Programmes/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><E:/Programmes/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy5.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
-E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Programmes/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/Programmes/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy9.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmtt10.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><
-E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on rapport.pdf (15 pages, 1540398 bytes).
+ <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecbx1000.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecrm0800.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Jonathan\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Jonathan\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\J
+onathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecti1000.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecrm1000.pk> <C:\Users\Jonathan\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Jonathan\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1440.pk> <C:\Users\Jonathan\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2986.pk> <C:\Users\Jo
+nathan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb>
+Output written on rapport.pdf (15 pages, 1540397 bytes).
 PDF statistics:
  579 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
