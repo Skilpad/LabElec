@@ -55,7 +55,7 @@ Ici, on réalise une double adaptation d'impédance, utilisant deux diviseurs ca
 	\label{fig:capa_divider}
 \end{figure}
 
-Pour juste réaliser l'adaptation d'impédance, il suffirait de mettre uniquement un diviseur capacitif, du côté de l'impédance (de source ou de charge) la plus faible. Toutefois, les condensateurs C11 et C13 ainsi ajoutés permettent d'utiliser en entrée et en sortie du filtre des tensions de valeurs moyennes non nulles. Sans eux, les inductances L11 ou L12 engendreraient un court-circuit vers la masse.
+Pour juste réaliser l'adaptation d'impédance, il suffirait de mettre uniquement un diviseur capacitif, du côté de l'impédance (de source ou de charge) la plus faible. Toutefois, les condensateurs $C_{11}$ et $C_{13}$ ainsi ajoutés permettent d'utiliser en entrée et en sortie du filtre des tensions de valeurs moyennes non nulles. Sans eux, les inductances $L_{11}$ ou $L_{12}$ engendreraient un court-circuit vers la masse.
 
 Cela est tout particulièrement intéressant du côté de la source~; et si son impédance est strictement plus faible que l'impédance de charge, l'utilisation d'un unique diviseur capacitif est envisageable. En revanche, si ce n'est pas le cas, deux diviseurs capacitifs seront requis~: le diviseur capacitif placé du côté de la source afin d'en isoler la composante DC augmentera son impédance ressentie, la rendant nécessairement plus élevée que l'impédance de charge, qui devra alors être adaptée.
 
@@ -93,31 +93,38 @@ Le facteur de qualité de chacun des circuits résonants s'écrit~:
 Q = \omega_0\cdot n^2\cdot R\cdot C = \omega_0\cdot n\cdot R\cdot C_2 = \omega_0\cdot R\cdot C_2\cdot (1+\frac{C_2}{C_1})
 \end{equation*}
 
-Ainsi, le facteur de qualité maximal du système sera fixé par les valeurs choisies pour les condensateurs C11, C12, C13, C14. On pourra notamment l'augmenter en augmentant $C_{12}$ et $C_{14}$. Toutefois, il convient de choisir $C_{11}$, $C_{12}$, $C_{13}$, $C_{14}$ de sorte que les valeurs requises pour $L_{11}$ et $L_{12}$ demeurent réalisables avec les inductances variables sélectionnées.
+Ainsi, le facteur de qualité maximal du système sera fixé par les valeurs choisies pour les condensateurs $C_{11}$, $C_{12}$, $C_{13}$, $C_{14}$. On pourra notamment l'augmenter en augmentant $C_{12}$ et $C_{14}$. Toutefois, il convient de choisir $C_{11}$, $C_{12}$, $C_{13}$, $C_{14}$ de sorte que les valeurs requises pour $L_{11}$ et $L_{12}$ demeurent réalisables avec les inductances variables sélectionnées.
 
 
 
 \exsubpart{5}
 
-L'équivalence Fig.~\ref{fig:capa_divider} est valable pour des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$. Dans ce domaine de fréquences, le filtre peut être considéré comme un filtre d'ordre 4.
+%L'équivalence Fig.~\ref{fig:capa_divider} est valable pour des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$. Dans ce domaine de fréquences, le filtre peut être considéré comme un filtre d'ordre 4.
 
-Si l'on considère une plus large gamme de fréquences (des fréquences plus basses), cette équivalence ne peut plus être prise en compte, et l'on observe un filtre d'ordre 6.
+%Si l'on considère une plus large gamme de fréquences (des fréquences plus basses), cette équivalence ne peut plus être prise en compte, et l'on observe un filtre d'ordre 6.
+
+Il y a cinq pôles en zéro (effet passe-haut) crées par les composants $C_{11}$, $L_{11}$, $C_{15}$, $L_{12}$ et $C_{13}$. Il y a un pôle à l'infini (effet passe-bas) crée par la mise en parallèle des capacités $C_{12}$ et $C_{14}$.\\
+
+Nous avons donc un filtre d'ordre 6.
 
 
 \exsubpart{6}
 
-Si l'on considère des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, après application de l'équivalence Fig.~\ref{fig:capa_divider}, on observe 3 pôles en DC. Ainsi, on aura avant la résonance une pente de la réponse du filtre en amplitude de +60 dB/dec. À noter que si la fréquence de résonance n'est pas suffisamment grande devant ${\frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, cette pente à +60 dB/dec ne pourra être observée car cachée par la résonance.
-
-Si l'on s'intéresse à de plus basses fréquences (${f \ll \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$), les diviseurs capacitifs agiront comme passe-bas. On aboutira alors pour ces fréquences à une pente +100 dB/dec.
+Si l'on considère des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, après application de l'équivalence Fig.~\ref{fig:capa_divider}, on observe 5 pôles en DC. Ainsi, on aura avant la résonance une pente de la réponse du filtre en amplitude de +100 dB/dec. À noter que si la fréquence de résonance n'est pas suffisamment grande devant ${\frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, cette pente à +100 dB/dec ne pourra être observée car cachée par la résonance.
 
 À l'infini, L11 et L12 agissent comme des interrupteurs ouverts tandis que C11, C15, C13 se comportent comme un fil. Les capacités C12 et C14 sont alors placées en parallèle, résultant en un unique pôle à l'infini. Ainsi, on aura après la résonance une pente de la réponse du filtre en amplitude de -20 dB/dec.
 
 
 \exsubpart{7}
 
-On aurait pu aussi réaliser un couplage capacitif, en remplaçant C15 par une inductance. Cela aurait eu pour avantage de compenser l'effet passe-haut lié aux diviseurs capacitifs, fournissant un filtre plus symétrique sur l'intégralité du spectre~: +60 dB/dec avant la résonance, -60 dB/dec après la résonance si l'on s'intéresse à une très large gamme de fréquence. Dans la gamme de fréquence d'intérêt, on favorise l'atténuation des hautes fréquences~: +20 dB/dec avant la résonance, -60 dB/dec après la résonance. Toutefois, compte tenu de l'utilisation d'une inductance supplémentaire, il s'agit d'une méthode plus coûteuse et moins précise.
+On aurait pu aussi réaliser un couplage inductif, en remplaçant C15 par une inductance. Cela aurait eu pour avantage de compenser l'effet passe-haut lié aux diviseurs capacitifs, fournissant un filtre plus symétrique sur l'intégralité du spectre~: +60 dB/dec avant la résonance, -60 dB/dec après la résonance si l'on s'intéresse à une très large gamme de fréquence.
 
-On aurait aussi pu réalisé un couplage par transformateur. L'effet sur la réponse en fréquence aurait été le même, mais l'isolation entre la source et la charge s'en serait vue améliorée. Cette méthode plus coûteuse permettrait en revanche de s'affranchir de l'utilisation des inductances L11, L12, remplacées par celles liées au transformateur. Toutefois, le système n'est alors plus réglable. Préserver en parallèle les inductances variables L11, L12 permet de maintenir un réglage manuel, mais ce dernier demeure moins aisé et moins efficace qu'avec un simple couplage capacitif ou inductif.
+%TODO : Je ne comprends pas d'où sort cette phrase mais ça m'a l'air faux (Jonarhan)
+%Dans la gamme de fréquence d'intérêt, on favorise l'atténuation des hautes fréquences~: +20 dB/dec avant la résonance, -60 dB/dec après la résonance.
+
+Toutefois, compte tenu de l'utilisation d'une inductance supplémentaire, il s'agit d'une méthode plus coûteuse et moins précise.
+
+On aurait aussi pu réaliser un couplage par transformateur. L'effet sur la réponse en fréquence aurait été le même qu'avec le couplage inductif, mais l'isolation entre la source et la charge s'en serait vue améliorée. Cette méthode plus coûteuse permettrait de s'affranchir de l'utilisation des inductances L11, L12, remplacées par celles liées au transformateur. Toutefois, le système n'est alors plus réglable. Préserver en parallèle les inductances variables L11, L12 permettrait de maintenir un réglage manuel, mais ce dernier demeure moins aisé et moins efficace qu'avec un simple couplage capacitif ou inductif.
 
 
 
@@ -140,14 +147,11 @@ On règle grossièrement les inductances et capacités variables (aboutissant no
 	\label{fig:LC2plot}
 \end{figure}
 
-Dans notre cas~: ${\frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}\approx 8,2\mathrm{MHz}}$. La pente +60 dB/dec, que l'on trouverai entre cette fréquence et la fréquence de résonance, n'est donc pas observable~: elle est effectivement camouflée par la résonance. On observe en revanche bien en deçà de cette fréquence une pente à +100 dB/dec (typiquement autours de 6-7MHz, avant que tracé ne soit perturbé par des bruits divers).
-
-%TODO: Pourquoi -40dB au-dessus ?!
-
+Dans notre cas~: ${\frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}\approx 8,2\mathrm{MHz}}$. La pente +100 dB/dec, que l'on trouverait entre cette fréquence et la fréquence de résonance, n'est donc pas observable~: elle est effectivement camouflée par la résonance. On observe en revanche bien en deçà de cette fréquence une pente à +100 dB/dec (typiquement autours de 6-7MHz, avant que tracé ne soit perturbé par des bruits divers).
 
 \exsubpart{2,3}
 
-On précise les réglages des inductances et capacités variables. Après avoir réglé L11, L12 de sorte à obtenir des fréquences de résonance identiques, on règle le couplage avec C15. On peut ainsi observer les effets d'un sur-couplage ou d'un sous-couplage comme présenté Fig.~\ref{fig:sur_sous_couple}.
+On précise les réglages des inductances et capacités variables. Après avoir réglé $L_{11}$, $L_{12}$ de sorte à obtenir des fréquences de résonance identiques, on règle le couplage avec $C_{15}$. On peut ainsi observer les effets d'un sur-couplage ou d'un sous-couplage comme présenté Fig.~\ref{fig:sur_sous_couple}.
 
 \begin{figure}[h]
 	\centering
@@ -162,7 +166,7 @@ On précise les réglages des inductances et capacités variables. Après avoir 
 		\includegraphics[width=\textwidth]{surcouple}
 		\caption{Sur-couplage}
 	\end{subfigure}
-	\caption{Exemple de sous et sur-couplage}
+	\caption{Exemple de sous- et sur-couplage}
 	\label{fig:sur_sous_couple}
 \end{figure}
 
@@ -230,7 +234,7 @@ Q_{tot} = \frac{1}{\sqrt{2^{1/2}-1}}Q = 1,554 Q
 
 \exsubpart{3}
 
-Les condensateurs C33 et C34, compte tenu de leur taille, permettent uniquement de couper de très basses fréquences, hors de notre domaine d'intérêt. On peut donc les ignorer.
+Les condensateurs $C_{33}$ et $C_{34}$, compte tenu de leur taille, permettent uniquement de couper de très basses fréquences, hors de notre domaine d'intérêt. On peut donc les ignorer.
 
 Les filtres restants en amont et en aval du JFET sont tous deux constitués d'une inductance et d'une capacité en parallèle, liées à une tension de référence. Ce sont deux passe-bande d'ordre 2~: l'ordre est de 1 de chaque côté de la fréquence de résonance, donnant donc lieu à des pentes de $\pm$20 dB/décade de part et d'autre de cette fréquence.
 
@@ -393,7 +397,7 @@ On considère l'oscillateur à quartz représenté Fig.~\ref{fig:osc_quartz}.
 	\label{fig:osc_quartz}
 \end{figure}
 
-L41 et C42 permettent de sélectionner l'harmonique désirée du quartz XT41. Les résistances R11 et R42 fixent le point de fonctionnement du transistor. L42 et C43 permettent un réglage fin de la fréquence d'oscillation du quartz, en en modifiant légèrement les fréquences de résonance.
+$L_{41}$ et $C_{42}$ permettent de sélectionner l'harmonique désirée du quartz XT41. Les résistances $R_{11}$ et $R_{42}$ fixent le point de fonctionnement du transistor. $L_{42}$ et $C_{43}$ permettent un réglage fin de la fréquence d'oscillation du quartz, en modifiant légèrement les fréquences de résonance.
 
 
 
@@ -416,7 +420,7 @@ Si on considère le schéma petits signaux (suppression des composantes continue
 On voit alors que le circuit de charge est un filtre passe-bande formé par $L_{41}$ et $C_{42}$. Les fréquences seront toutes atténuées, sauf celles proches de la fréquence de résonance $f_0$, où $f_0 = \frac{1}{2 \pi \cdot \sqrt{L_{41} \cdot C_{42}}}$.
 En admettant qu'à l'enclenchement du circuit, il y a du bruit blanc sur la base du transistor, ce bruit blanc inclut toutes les fréquences y compris $f_0$. Il ne restera plus que $f_0$ à la sortie, qui sera alors ré-injectée dans la base par le diviseur formé par $C_{BC}$ et $C_{43}$.
 
-La condition pour que l'oscillation démarre est que le gain du transistor doit être plus grand que l'atténuation du diviseur captatif, et le déphasage de la boucle complète doit être de $360^{ \circ }$. La branche avec le quartz n'est pas nécessaire pour l'apparition d'une oscillation. Cependant elle sert a sélectionner une fréquence particulière de façon plus précise. En effet, le quartz agit comme un filtre précis en fréquence, et son facteur de qualité Q est très largement plus élevé que celui d'un filtre à composant LC (qui présentent des imperfections). Il quartz peut être modélisé comme représenté Fig.~\ref{fig:modele_quartz}\footnote{Source~: \textit{http://www.acedim.com/Formatronic/Electro\_2/oscillateur/lequartz.html}}.
+La condition pour que l'oscillation démarre est que le gain du transistor doit être plus grand que l'atténuation du diviseur captatif, et le déphasage de la boucle complète doit être de $360^{ \circ }$. La branche avec le quartz n'est pas nécessaire pour l'apparition d'une oscillation. Cependant elle sert a sélectionner une fréquence particulière de façon plus précise. En effet, le quartz agit comme un filtre précis en fréquence, et son facteur de qualité Q est très largement plus élevé que celui d'un filtre à composant LC (qui présentent des imperfections). Le quartz peut être modélisé comme représenté Fig.~\ref{fig:modele_quartz}\footnote{Source~: \textit{http://www.acedim.com/Formatronic/Electro\_2/oscillateur/lequartz.html}}.
 
 \begin{figure}[h]
 	\centering
@@ -483,7 +487,7 @@ Nous prenons donc une valeur normalisée de $470\mathrm{k\Omega}$, arrondie en d
 
 Le potentiel au collecteur du transistor, étant relié à l'alimentation par une inductance, a une composante continue de +7V.
 La composante alternative peut descendre au plus jusqu'à ${U_b = 1.7\mathrm{V}}$ sans subir de déformations. Il est donc possible d'avoir jusqu'à ${2\cdot(7-1.7)=10.6\mathrm{V}}$ d'amplitude crête à crête au niveau du collecteur.
-Suivant le réglage de P41, cette amplitude sera divisée aux bornes de la résistance de charge.
+Suivant le réglage de $P_{41}$, cette amplitude sera divisée aux bornes de la résistance de charge.
 
 \exsubpart{6}
 
@@ -497,14 +501,14 @@ On utilisera la valeur normalisée la plus proche, à savoir $L_{41} = 5.6 \math
 
 \exsubpart{1,2}
 
-Afin de favoriser la mise en place d'oscillations malgré un réglage imparfait de l'oscillateur L41-C42, on place le curseur de P41 proche de la masse. Ainsi la résistance de charge perçue $R'_L$ est plus élevée. (Voir partie 3 de la section précédente.)
+Afin de favoriser la mise en place d'oscillations malgré un réglage imparfait de l'oscillateur $L_{41}$-$C_{42}$, on place le curseur de $P_{41}$ proche de la masse. Ainsi la résistance de charge perçue $R'_L$ est plus élevée. (Voir partie 3 de la section précédente.)
 
-Après avoir placer C43 au milieu de sa course, on règle alors C42 de sorte à provoquer le démarrage des oscillations.
+Après avoir placé $C_{43}$ au milieu de sa course, on règle alors $C_{42}$ de sorte à provoquer le démarrage des oscillations.
 
 
 \exsubpart{3}
 
-Maintenant que l'on observe des oscillations en sortie du circuit, on observe se dernier au spectromètre. On peut alors affiner le réglage de C42 de sorte a préciser la fréquence d'oscillation.
+Maintenant que l'on observe des oscillations en sortie du circuit, on observe se dernier au spectromètre. On peut alors affiner le réglage de $C_{42}$ de sorte a préciser la fréquence d'oscillation.
 
 On obtient ainsi le spectre présenté Fig.~\ref{fig:osc_quartz_spectre}.
 
@@ -518,14 +522,14 @@ On obtient ainsi le spectre présenté Fig.~\ref{fig:osc_quartz_spectre}.
 
 \exsubpart{4}
 
-On constate que, lorsque l'on éloigne le curseur de P42 de la masse, la fréquence d'oscillation du circuit augmente. Modifier ainsi le réglage de P41 revient à diminuer le facteur de qualité du résonateur L41-C42, et donc accroitre la dominance du quartz dans son fonctionnement. 
+On constate que, lorsque l'on éloigne le curseur de $P_{42}$ de la masse, la fréquence d'oscillation du circuit augmente. Modifier ainsi le réglage de $P_{41}$ revient à diminuer le facteur de qualité du résonateur $L_{41}$-$C_{42}$, et donc accroitre la dominance du quartz dans son fonctionnement. 
 
-Ainsi, apparemment le quartz utilisé à une fréquence propre légèrement plus élevée que 9MHz. Toutefois, régler P41 et C42 a bien permis d'ajuster la fréquence d'oscillation du système.
+Ainsi, apparemment le quartz utilisé à une fréquence propre légèrement plus élevée que 9MHz. Toutefois, régler $P_{41}$ et $C_{42}$ a bien permis d'ajuster la fréquence d'oscillation du système.
 
 
 \exsubpart{5}
 
-On couple l'alimentation du système durant quelque seconde, avant de la rallumer. On observe que l'oscillateur fonctionne toujours~: des oscillations s'établissent, et ce à la fréquence de résonance précédemment fixée par nos réglages.
+On couple l'alimentation du système durant quelques secondes, avant de la rallumer. On observe que l'oscillateur fonctionne toujours~: des oscillations s'établissent, et ce à la fréquence de résonance précédemment fixée par nos réglages.
 
 Ainsi, on vérifie que l'établissement de ces oscillations ne dépend pas de la succession de réglages précédemment opérés mais juste des réglages finaux~; et que le circuit est donc utilisable en pratique.
 
@@ -548,6 +552,7 @@ On constate que cette sortie présente de nombreuses harmoniques.
 %TODO:   Heu... J'ai un doute sur les commentaires  (Paul)
 % On constate que la sortie présente de nombreuses harmoniques, qui s'observent sur la sortie malgré le filtre de sortie $L_{41}$ et $C_{42}$. Sans l'effet de ce filtre, l'intensité de toutes les harmoniques serait probablement presque égal. Il est donc possible d'obtenir une autre fréquence avec le même quartz, en changeant les composants. On peut alors sélectionner une harmonique sur laquelle on vient s'accorder avec le quartz : Le filtre LC donne une grossière approximation de la région où les oscillations vont démarrer tandis que le quartz règle précisément la fréquence.
 
+Le filtre réalisé par $L_{41}$ et $C_{42}$ détermine laquelle est dominante, dans ce cas ci 9MHz.
 
 \section{Mélangeurs}
 
@@ -602,7 +607,7 @@ Il n'y a donc aucunement besoin de polariser les entrées avec une composante co
 
 Selon la datasheet du composant, la partie réelle l'impédance d'entrée du multiplicateur NE602 (broches 1-2) est d'environ 1.5k$\Omega$. Il en va de même pour l'impédance de sortie (broches 4-5).
 
-Si l'on considère en revanche l'intégralité du circuit décrit Fig.~\ref{fig:schema_melangeur_gilbert}, les résistances R51, R52, R53, R54, R55 permettent d'adapter les impédances d'entrées (In1, In2) et de sortie (Out) à 50$\Omega$.
+Si l'on considère l'intégralité du circuit décrit Fig.~\ref{fig:schema_melangeur_gilbert}, les résistances R51, R52, R53, R54, R55 permettent d'adapter les impédances d'entrées (In1, In2) et de sortie (Out) à 50$\Omega$.
 
 \exsubpart{2}
 
@@ -688,6 +693,9 @@ On obtient ainsi~: IM3 = 1.25 dBm
 %On peut alors calculer le taux de distorsion d'inter-modulation d'ordre trois, c'est le point qui satisfait l'équation :
 %\begin{center}
 %$y = -37.1 + 3 \cdot (y+8) \Rightarrow y = 6.55$ dBm
+
+% Est-ce vraiment correct ? Normalement on devrait être à -18 dBm (10 dB en dessous du point de compression, PAS à -8 dBm ?
+
 % FAUX ! (Paul)
 %\end{center}
 
@@ -814,7 +822,7 @@ On retrouve les adaptations d'impédance vers du 50 ohms nécessaires aux appare
 On veut une tension de repos de 1V sur G2.
 Les résistances $R_{76}$ et $R_{77}$ réalisent un pont diviseur de tension au potentiel de G2, on a donc en DC~:
 \begin{equation*}
-V_{G2}=1V={R_{77}}{(R_{77}+R_{76})}V_{dd}
+V_{G2}=\frac{R_{77}}{(R_{77}+R_{76})}V_{dd}=1V
 \end{equation*}
 On choisit donc~:
 \begin{itemize}
@@ -824,7 +832,7 @@ On choisit donc~:
 
 \exsubpart{2}
 
-$L_{72}$ permet de fixer la composante DC de G1 à la masse. On peut ainsi polariser le transistor comme on le souhaite, négativement dans notre cas. L'absence de cette inductance ne permet pas de contrôler la polarisation du transistor et le signal RF ne serait plus intégralement transmis.
+$L_{72}$ permet de fixer la composante DC de G1 à la masse. On peut ainsi polariser le transistor comme on le souhaite, centré autour de 0V dans notre cas. L'absence de cette inductance ne permet pas de contrôler la polarisation du transistor et le signal RF ne serait plus intégralement transmis.
 
 \subsubsection{Mesures}
 
@@ -1035,13 +1043,14 @@ Tableau récapitulatif des trois types de mélangeurs analysés:
 
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline Type & Gain de conversion& Point de compression à 1dB & Pertes d'insertion& Spectre& Simplicité et coût& Alimentation& Autres \\
+\hline Mélangeur à NE602 & 13.4dB & 1.25dBm & 0 dB & Bon & Utilisation d'un circuit intégré & Actif \\
 \hline Mélangeur doublement équilibré à diodes & $-5.5dB$ & $1dBm$  & $-65.7dB$ & Dense mais d'amplitude modérée & + & Passif& Présence de bobines mauvaise pour la CEM \\ 
 \hline Mélangeur à « MOS double-gate » & $12.07dB$ & $-3.4dBm$ & $-75.8dB$ & Pauvre & + & Actif 7V&   \\ 
 \hline Mélangeur à 1 diode & $-12.3dB$ & $18.5dBm$ & $-35.48dB$ & Pauvre & +++ & Passif& Le plus simple ! \\ 
 \hline 
 \end{tabular} 
 
-On peut voir les disparités entre les différents mélangeurs grâce au tableau. La simplicité et le bas coût se payent par des performances très atténuées et des spectres plus ou moins riches en harmoniques. La présence de transistor permet, malgré un mélangeur qui sera actif, d'avoir un signal de sortie d'amplitude plus élevée que celui d'entrée. Cela est loin d'être le cas avec des diodes.
+On peut voir les disparités entre les différents mélangeurs grâce au tableau. La simplicité et le bas coût se payent par des performances très atténuées et des spectres plus riches en harmoniques. La présence de transistor permet, malgré un mélangeur qui sera actif, d'avoir un signal de sortie d'amplitude plus élevée que celui d'entrée. Il est donc possible de brancher une antenne directement au mélangeur sans devoir pré-amplifier le signal (et donc le bruit) en provenance de celle-ci. Cela est loin d'être le cas avec des diodes.\\
 De plus, un point de compression à 1 dB faible entraine des pertes croissantes avec des niveaux d'entrée le dépassant. Des niveaux d'entrées trop bas seront quant à eux plus sujet aux bruits.
 
 On peut donc conclure que le mélangeur à « MOS double-gate » et les mélangeurs à transistors en général présentent des performances bien plus élevées que les mélangeurs à diode mais nécessitent une alimentation et sont plus complexes et coûteux à mettre en place. Ils peuvent aussi être limités en terme de commutation et donc de fréquence.
@@ -1072,8 +1081,6 @@ Il est aussi utilisé dans les récepteur de télécommande (Modulation AM).
 
 
 
-
-% Est-ce vraiment correct ? Normalement on devrait être à -18 dBm (10 dB en dessous du point de compression, PAS à -8 dBm ?
 
 %  9
 %
