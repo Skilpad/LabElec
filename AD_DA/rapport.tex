@@ -235,8 +235,12 @@ V_{eq} = \left(\sum_{i=0}^{n-1}\frac{1}{2^{n-i}}B_i\right)V_{ref}
 On utilise alors généralement un amplificateur opérationnel branché en suiveur ou en amplificateur de gain $-1$, afin d'obtenir en sortie la tension $V_{eq}$ indépendamment du reste du circuit.
 
 
+<<<<<<< HEAD
 Le fonctionnement de l'AD7524 est légèrement différent. Le circuit correspondant, tel qu'il est branché (avec notamment la sortie OUT2 branchée à la masse et l'utilisation d'un amplificateur opérationnel), est représenté Fig.~\ref{fig:AD7524} \footnote{Un condensateur, liant $V_{out1}$ et $V_{out}$, a été omis sur ce schéma et dans la présente étude~: proposé par les datasheets, son but est d'empêcher des oscillations en sortie de l'amplificateur opérationnel. Nous nous plaçons dans le cadre d'un état déjà stabilisé, où le condensateur agit comme un interrupteur ouvert.}
 %TODO Je ne comprends pas cette note - les condensateurs sont présent dans le shéma compelet.
+=======
+Le fonctionnement de l'AD7524 est légèrement différent. Le circuit correspondant, tel qu'il est branché (avec notamment la sortie OUT2 branchée à la masse et l'utilisation d'un amplificateur opérationnel), est représenté Fig.~\ref{fig:AD7524} \footnote{Un condensateur, liant $V_{out1}$ et $V_{out}$, a été omis~: proposé par les datasheets, son but est d'empêcher des oscillations en sortie de l'amplificateur opérationnel. Nous nous plaçons dans le cadre d'un état déjà stabilisé, où le condensateur agit comme un interrupteur ouvert.}
+>>>>>>> 47bec4c52df301f8139cf6561eddd6f093438b01
 
 \begin{figure}[h]
   \centering
@@ -311,7 +315,6 @@ Les résultats obtenus sont présentés dans le tableau~\ref{tab:AD7524}. $V_i^{
 \caption{Résultats obtenus lors de l'étude du convertisseur AD7524}
 \label{tab:AD7524}
 \centering
-%TODO Ce tableau n'est pas clair du tout - a quoi correspond chaque ligne ??
 
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -728,8 +731,6 @@ On remarque qu'en l'absence de filtre (courbe bleu), les effets de la quantifica
 
 À chaque bit supprimé pour l'encodage du signal traité, le niveau de bruit augmente de 6 dB. En effet, retirer un bit double l'amplitude de l'erreur de quantification.
 
-%TODO Il y a t-il des PHOTOS de l'analyseur de spectre pour mettre ici ?? %
-
 \begin{figure}[h!]
 	\centering
 	\begin{subfigure}[b]{\textwidth}
@@ -817,7 +818,11 @@ Dans le cas d'une fréquence d'échantillonnage fixe, la génération de l'horlo
 
 En revanche, le contrôle des adresses mémoire sera alors plus compliqué, nécessitant un décompteur qui recharge une variable lorsqu'il atteint la valeur zéro, la variable déterminant la longueur entre deux répétitions de l'écho.
 
-Le changement de la longueur de l'écho pendant l'utilisation a un effet moindre sur la lecture des données en mémoire~: elles sont lues à la même vitesse, et aucun déplacement de fréquence n'est observé (pour peu que le retard soit assez grand devant la période des signaux). En revanche, on crée des trous ou raccourcit la séquence lue. Si le retard est élevé, on fera éventuellement entendre des bruits (``pops'') lorsque l'on arrive au bout du tampon mémoire. Si le retard est court, le son est distordu. 
-Par ailleurs, il faut juste attendre que le compteur d'adresses atteigne la valeur `0' pour que le changement soit effectif.
+Le changement de la longueur de l'écho pendant l'utilisation a un effet moindre sur la lecture des données en mémoire~: elles sont lues à la même vitesse, et aucun déplacement de fréquence n'est observé (pour peu que le retard soit assez grand devant la période des signaux). Il faut juste attendre que le compteur d'adresses atteigne la valeur `0' pour que le changement soit effectif. Si la taille du tampon est diminuée il n'y aura aucun problème. Par contre si la taille est augmentée, il y aura des données inconnues dans la mémoire qui vont s'entendre dans l'écho ce qui peut poser un problème.
+%TODO : Qu'est-ce que tu entends par là ? (jonathan)
+%Si le retard est élevé, on fera éventuellement entendre des bruits (``pops'') lorsque l'on arrive au bout du tampon mémoire.
+%Si le retard est court, le son est distordu. 
+
+En conclusion, nous pouvons dire que la chambre d'écho est un exemple intéressant de mise en pratique d'une chaîne de conversion AN/NA. En effet ce système ne pourrait pas être réalisé de façon exclusivement numérique car un micro et un haut-parleur sont analogiques par nature. Mais la création d'un retard purement analogique serait très complexe et onéreuse. Un mélange d'analogique est de numérique s'impose, et la qualité des convertisseurs est déterminante sur la qualité du système complet.
 
 \end{document}

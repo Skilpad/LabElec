@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  13 JAN 2013 23:55
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.7.28)  14 JAN 2013 00:39
 entering extended mode
 **HFdraft.tex
 (E:\Boulot\LabElec\Init_HF\HFdraft.tex
@@ -454,6 +454,14 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \leftbarmargin=\skip52
 \defaultparindent=\skip53
 )
+(E:\Programmes\MiKTeX\tex\latex\tools\array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen135
+\extrarowheight=\dimen136
+\NC@list=\toks27
+\extratabsurround=\skip54
+\backup@length=\skip55
+)
 (E:\Boulot\LabElec\Init_HF\HFdraft.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
@@ -471,16 +479,16 @@ LaTeX Font Info:    ... okay on input line 16.
 (C:\Users\Asus\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
-\scratchdimen=\dimen135
+\scratchdimen=\dimen137
 \scratchbox=\box32
 \nofMPsegments=\count110
 \nofMParguments=\count111
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks28
 \MPscratchCnt=\count112
-\MPscratchDim=\dimen136
+\MPscratchDim=\dimen138
 \MPnumerator=\count113
 \makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks29
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: rotating package is loaded.
@@ -546,16 +554,7 @@ File: ./Images/capa_divider.png Graphic file (type png)
 <use ./Images/capa_divider.png>
 Package pdftex.def Info: ./Images/capa_divider.png used on input line 58.
 (pdftex.def)             Requested size: 338.5863pt x 81.73782pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 63.
-
-(E:\Programmes\MiKTeX\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 63.
-
-(E:\Programmes\MiKTeX\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1
+ [1
 
 {C:/Users/Asus/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <E:/Boulot/La
 bElec/Init_HF/Images/LC2circuits.png> <E:/Boulot/LabElec/Init_HF/Images/capa_di
@@ -564,12 +563,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
+LaTeX Font Info:    Try loading font information for U+msa on input line 72.
+(E:\Programmes\MiKTeX\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 72.
 
+(E:\Programmes\MiKTeX\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-<./Images/coupling_effect.png, id=18, 767.11594pt x 411.78844pt>
+<./Images/coupling_effect.png, id=16, 767.11594pt x 411.78844pt>
 File: ./Images/coupling_effect.png Graphic file (type png)
 
 <use ./Images/coupling_effect.png>
@@ -995,6 +1002,11 @@ Package pdftex.def Info: ./Images/9_3_4.jpg used on input line 765.
 (pdftex.def)             Requested size: 338.5863pt x 253.90598pt.
 
 [15 <E:/Boulot/LabElec/Init_HF/Images/schema_melangeur_doublediode.png>]
+Overfull \hbox (31.4889pt too wide) in paragraph at lines 771--772
+[]\T1/cmr/m/n/10 On ob-tient, de la même manière que précédem-ment le point d'i
+nterception du troisième or-dre : $[]$. 
+ []
+
 [16 <E:/Boulot/LabElec/Init_HF/Images/9_3_1.jpg> <E:/Boulot/LabElec/Init_HF/Ima
 ges/9_3_4.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 792--793
@@ -1074,12 +1086,6 @@ Package pdftex.def Info: ./Images/10_3_4.jpg used on input line 876.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (22.11156pt too wide) in paragraph at lines 881--882
-[]\T1/cmr/m/n/10 Avec -11.4 dBm pour chaque com-posante en en-trée, on mesure e
-n sor-tie du sys-tème le pro-duit d'intermodulation
- []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 886--887
@@ -1176,6 +1182,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1044--1045
  []
 
 
+Overfull \hbox (2.55711pt too wide) in paragraph at lines 1070--1088
+[][] 
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1098--1099
 
  []
@@ -1193,10 +1204,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4601 strings out of 494045
- 65674 string characters out of 3151211
- 124686 words of memory out of 3000000
- 7763 multiletter control sequences out of 15000+200000
+ 4645 strings out of 494045
+ 66195 string characters out of 3151211
+ 124375 words of memory out of 3000000
+ 7804 multiletter control sequences out of 15000+200000
  21285 words of font info for 51 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  38i,8n,38p,798b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1224,7 +1235,7 @@ r7.pfb><E:/Programmes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/Prog
 rammes/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><E:/Programmes/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Programmes/MiKTeX/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on HFdraft.pdf (23 pages, 91253518 bytes).
+Output written on HFdraft.pdf (23 pages, 91252099 bytes).
 PDF statistics:
  541 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
