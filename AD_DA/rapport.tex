@@ -235,7 +235,7 @@ V_{eq} = \left(\sum_{i=0}^{n-1}\frac{1}{2^{n-i}}B_i\right)V_{ref}
 On utilise alors généralement un amplificateur opérationnel branché en suiveur ou en amplificateur de gain $-1$, afin d'obtenir en sortie la tension $V_{eq}$ indépendamment du reste du circuit.
 
 
-Le fonctionnement de l'AD7524 est légèrement différent. Le circuit correspondant, tel qu'il est branché (avec notamment la sortie OUT2 branchée à la masse et l'utilisation d'un amplificateur opérationnel), est représenté Fig.~\ref{fig:AD7524} \footnote{Un condensateur, liant $V_{out1}$ et $V_{out}$, a été omis~: proposé par les datasheets, son but est d'empêcher des oscillations en sortie de l'amplificateur opérationnel. Nous nous plaçons dans le cadre d'un état déjà stabilisé, où le condensateur agit comme un interrupteur ouvert.}
+Le fonctionnement de l'AD7524 est légèrement différent. Le circuit correspondant, tel qu'il est branché (avec notamment la sortie OUT2 branchée à la masse et l'utilisation d'un amplificateur opérationnel), est représenté Fig.~\ref{fig:AD7524} \footnote{Un condensateur, liant $V_{out1}$ et $V_{out}$, a été omis sur ce schéma et dans la présente étude~: proposé par les datasheets, son but est d'empêcher des oscillations en sortie de l'amplificateur opérationnel. Nous nous plaçons dans le cadre d'un état déjà stabilisé, où le condensateur agit comme un interrupteur ouvert.}
 %TODO Je ne comprends pas cette note - les condensateurs sont présent dans le shéma compelet.
 
 \begin{figure}[h]
@@ -780,7 +780,7 @@ On remarque qu'en l'absence de filtre (courbe bleu), les effets de la quantifica
 			\label{fig:q_1b}
 		\end{subfigure}
 	\end{subfigure}	
-	\caption{Effet du nombre de bits sur l'erreur de quantification\footnote{À noter que l'échelle sur l'axe des ordonnées n'est pas la même sur ces trois graphiques - à fin que ceux-ci soient observables.}}
+	\caption{Effet du nombre de bits sur l'erreur de quantification}
 \end{figure}
 
 
