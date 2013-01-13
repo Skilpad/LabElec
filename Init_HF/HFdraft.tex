@@ -926,7 +926,7 @@ Ce dispositif est somme toute similaire à un dispositif « hacheur ».
 \exsubpart{1}
 
 $L_{81}$ permet de fixer la valeur moyenne ou valeur DC à 0, ce qui permet de faire conduire la diode correctement.
-
+%Diode de roue libre???
 \exsubpart{2}
 
 Les impédances réelles d'entrée et de sortie sont d'environ 50 $\Omega$. Par analyse fréquentielle on trouve quelles sont comprises entre 45.19 et 48.79$\Omega$. Ce qui est environ 50$\Omega$.
@@ -935,19 +935,16 @@ Dans tous les cas, les 50$\Omega$ exacts sont difficilement atteignables en réa
 
 \exsubpart{3}
 
-Pour déterminer le courant maximum qui peut circuler dans In1 et In2, on applique la loi des nœuds en In1 en considérant uniquement cette entrée.
-On considère 2 cas :
-%TODO a refaire
-\begin{itemize}
-\item La diode est passante. Dans ce cas, le courant maximum qui revient sur l'une des entrées est égal à la moitié des courants entrants.
+Le courant maximum qui peut circuler dans In1 et In2 est limité par la bobine L81, en effet elle va accumuler de l'énergie jusqu'à ce que la diode soit passante et le courant relâché. C'est le principe de fonctionnement de la diode de roue libre dans le hacheur.
 
-\item La diode est bloquante. Dans ce cas on a :
-$I=i_{L}+i_{Out}+i_{dretour,max}$
+On cherche donc le courant maximum que peut relâcher la bobine juste après que la diode soit devenue passante.
+En considérant uniquement l'une des deux entrées et i le courant la parcourant on a :
+$i=\frac{U_{in}}{R+Z_{C}+Z_{L}}$
 
-On obtient après calcul :
-$I=\frac{U_{out}}{R86}-j\frac{R86^2}{R86(R85+R86)L\omega}U_{out}+i_{dretour,max}$
+En développant les calculs, on trouve : $i=\frac{-LC\omega^{2}-jRC\omega}{(RC\omega)^{2}+(LC\omega^{2})^{2}}*U_{in}$
 
-\end{itemize}
+Le courant est donc maximal lorsque $U_{in}$ est minimum. Comme les signaux d'entrée sont des sinusoïdes, $i_{max}$ sera bien positif.
+Le calcul est valable pour les deux entrées avec un $\omega$ et une tension minimale différents.
 
 \subsubsection{Mesures}
 
@@ -1016,7 +1013,7 @@ On applique un signal 9MHz double-ton, avec 12.5 dBm pour chaque composante. On 
 	\label{fig:11_3_4}
 \end{figure}
 
-On mesure en sortie du système le produit d'intermodulation d'ordre 3 à -69.6 dBm.
+On mesure en sortie du système le produit d'inter-modulation d'ordre 3 à -69.6 dBm.
 
 En appliquant la même formule que précédemment, on trouve que le point d'intersection d'ordre 3 se situe à -11 dBm. Cette faible la faible qualité du mélangeur étudié.
 
@@ -1041,17 +1038,28 @@ En chargeant la sortie avec une résistance de 50$\Omega$ et observant à l'anal
 
 Tableau récapitulatif des trois types de mélangeurs analysés:
 
-\begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline Type & Gain de conversion& Point de compression à 1dB & Pertes d'insertion& Spectre& Simplicité et coût& Alimentation& Autres \\
-\hline Mélangeur à NE602 & 13.4dB & 1.25dBm & 0 dB & Bon & Utilisation d'un circuit intégré & Actif \\
-\hline Mélangeur doublement équilibré à diodes & $-5.5dB$ & $1dBm$  & $-65.7dB$ & Dense mais d'amplitude modérée & + & Passif& Présence de bobines mauvaise pour la CEM \\ 
-\hline Mélangeur à « MOS double-gate » & $12.07dB$ & $-3.4dBm$ & $-75.8dB$ & Pauvre & + & Actif 7V&   \\ 
-\hline Mélangeur à 1 diode & $-12.3dB$ & $18.5dBm$ & $-35.48dB$ & Pauvre & +++ & Passif& Le plus simple ! \\ 
-\hline 
+\begin{tabular}{|c|c|c|c|}
+\hline Type & Gain de conversion& Point de compression à 1dB & Pertes d'insertion  \\
+\hline Mélangeur à NE602 & $13.4dB$ & $-8.2dBm$ & Non calculé  \\
+\hline Mélangeur doublement équilibré à diodes & $-5.5dB$ & $1dBm$ & $-65.7dB$  \\ 
+\hline Mélangeur à « MOS double-gate » & $12.07dB$ & $-3.4dBm$ & $-75.8dB$    \\ 
+\hline Mélangeur à 1 diode & $-12.3dB$ & $18.5dBm$ & $-35.48dB$  \\ 
+\hline
+\hline  & Point d'interception d'ordre 3& Spectre& Simplicité et coût\\
+\hline  &  $1.25dBm$ & Très sélectif & ++  \\
+\hline  & $-8.4dBm$ & Dense mais d'amplitude modérée & + \\
+\hline  & $3.55dBm$ & Pauvre & +  \\
+\hline  & $-11dBm$ & Pauvre & +++ \\
+\hline
+\hline  & Alimentation& Autres & \\
+\hline  & Passif& Présence de bobines mauvaise pour la CEM & \\
+\hline  & Actif 7V& &  \\
+\hline  & Passif& Le plus simple ! &  \\
 \end{tabular} 
 
 On peut voir les disparités entre les différents mélangeurs grâce au tableau. La simplicité et le bas coût se payent par des performances très atténuées et des spectres plus riches en harmoniques. La présence de transistor permet, malgré un mélangeur qui sera actif, d'avoir un signal de sortie d'amplitude plus élevée que celui d'entrée. Il est donc possible de brancher une antenne directement au mélangeur sans devoir pré-amplifier le signal (et donc le bruit) en provenance de celle-ci. Cela est loin d'être le cas avec des diodes.\\
-De plus, un point de compression à 1 dB faible entraine des pertes croissantes avec des niveaux d'entrée le dépassant. Des niveaux d'entrées trop bas seront quant à eux plus sujet aux bruits.
+%Brancher une antenne au mélangeur sans filter ni rien...???
+De plus, un point de compression à 1 dB faible entraine des pertes croissantes avec des niveaux d'entrée le dépassant. Des niveaux d'entrées trop bas seront quant à eux plus sujet aux bruits. Il faudra donc faire attention à l'amplitude de notre signal d'entrée.
 
 On peut donc conclure que le mélangeur à « MOS double-gate » et les mélangeurs à transistors en général présentent des performances bien plus élevées que les mélangeurs à diode mais nécessitent une alimentation et sont plus complexes et coûteux à mettre en place. Ils peuvent aussi être limités en terme de commutation et donc de fréquence.
 
