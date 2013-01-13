@@ -8,6 +8,11 @@
 
 \graphicspath{{./Images/}}
 
+\setlength{\intextsep}{15pt}
+\setlength{\textfloatsep}{5pt}
+\setlength{\abovecaptionskip}{5pt}
+\setlength{\belowcaptionskip}{3pt}
+
 \begin{document}
 
 \noindent {\fontsize{20}{20}\selectfont \noindent \textbf{Laboratoire d'électronique~:}}
@@ -99,19 +104,16 @@ Ainsi, le facteur de qualité maximal du système sera fixé par les valeurs cho
 
 \exsubpart{5}
 
-%L'équivalence Fig.~\ref{fig:capa_divider} est valable pour des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$. Dans ce domaine de fréquences, le filtre peut être considéré comme un filtre d'ordre 4.
+L'équivalence Fig.~\ref{fig:capa_divider} est valable pour des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$. Dans ce domaine de fréquences, le filtre peut être considéré comme un filtre d'ordre 4.
 
-%Si l'on considère une plus large gamme de fréquences (des fréquences plus basses), cette équivalence ne peut plus être prise en compte, et l'on observe un filtre d'ordre 6.
-
-Il y a cinq pôles en zéro (effet passe-haut) crées par les composants $C_{11}$, $L_{11}$, $C_{15}$, $L_{12}$ et $C_{13}$. Il y a un pôle à l'infini (effet passe-bas) crée par la mise en parallèle des capacités $C_{12}$ et $C_{14}$.\\
-
-Nous avons donc un filtre d'ordre 6.
-
+Si l'on considère une plus large gamme de fréquences (des fréquences plus basses), cette équivalence ne peut plus être prise en compte, et l'on observe un filtre d'ordre 6.
 
 \exsubpart{6}
 
 %TODO : 3 et -60 et "puissance"
-Si l'on considère des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, après application de l'équivalence Fig.~\ref{fig:capa_divider}, on observe 5 pôles en DC. Ainsi, on aura avant la résonance une pente de la réponse du filtre en amplitude de +100 dB/dec. À noter que si la fréquence de résonance n'est pas suffisamment grande devant ${\frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, cette pente à +100 dB/dec ne pourra être observée car cachée par la résonance.
+Si l'on considère des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, après application de l'équivalence Fig.~\ref{fig:capa_divider}, on observe 3 pôles en DC. Ainsi, on aura avant la résonance une pente de la réponse du filtre en amplitude de +60 dB/dec.
+Pour des fréquences ${f < \frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, l'équivalence n'est plus valable et C11 et C13 ajoutent 2 pôles en DC, donnant une pente de +100dB/dec.
+À noter que si la fréquence de résonance n'est pas suffisamment grande devant ${\frac{1}{2\pi R_S C_{12}}, \frac{1}{2\pi R_L C_{14}}}$, la pente à +60 dB/dec ne pourra être observée, car cachée par la résonance.
 
 À l'infini, $L_{11}$ et $L_{12}$ agissent comme des interrupteurs ouverts tandis que $C_{11}$, $C_{15}$, $C_{13}$ se comportent comme un fil. Les capacités $C_{12}$ et $C_{14}$ sont alors placées en parallèle, résultant en un unique pôle à l'infini. Ainsi, on aura après la résonance une pente de la réponse du filtre en amplitude de -20 dB/dec.
 
@@ -121,7 +123,7 @@ Si l'on considère des fréquences ${f \gg \frac{1}{2\pi R_S C_{12}}, \frac{1}{2
 On aurait pu aussi réaliser un couplage inductif, en remplaçant $C_{15}$ par une inductance. Cela aurait eu pour avantage de compenser l'effet passe-haut lié aux diviseurs capacitifs, fournissant un filtre plus symétrique sur l'intégralité du spectre~: +60 dB/dec avant la résonance, -60 dB/dec après la résonance si l'on s'intéresse à une très large gamme de fréquence.
 
 %TODO : Je ne comprends pas d'où sort cette phrase mais ça m'a l'air faux (Jonarhan)
-%Dans la gamme de fréquence d'intérêt, on favorise l'atténuation des hautes fréquences~: +20 dB/dec avant la résonance, -60 dB/dec après la résonance.
+Dans la gamme de fréquence plus proche de la résonance, où l'équivalence Fig.~\ref{fig:capa_divider} est applicable, on favorise l'atténuation des hautes fréquences~: +20 dB/dec avant la résonance, -60 dB/dec après la résonance.
 
 Toutefois, compte tenu de l'utilisation d'une inductance supplémentaire, il s'agit d'une méthode plus coûteuse et moins précise.
 
@@ -131,6 +133,7 @@ On aurait aussi pu réaliser un couplage par transformateur. L'effet sur la rép
 
 %\exsubpart{8}
 %TODO
+
 
 
 \subsection{Mesures et réglages}
@@ -190,7 +193,6 @@ En effectuant un léger sur-couplage, on obtient les caractéristiques requises~
 	\caption{Diagramme de Bode du filtre LC à deux circuits accordés couplés réglé}
 	\label{fig:LCregle}
 \end{figure}
-
 
 
 \exsubpart{4}
@@ -804,7 +806,7 @@ La puissance à la fréquence de 9MHz est de -62.82 dBm. En enlevant celle du si
 
 \subsection{Le mélangeur à « MOS double-gate »}
 
-On s'intéresse maintenant à un autre mélangeur. Celui-ci comporte un transistor MOS à double grille comme décrit Fig.~\ref{fig:schema_melangeur_mosdoublegate}.\\
+On s'intéresse maintenant à un autre mélangeur. Celui-ci comporte un transistor MOS à double grille comme décrit Fig.~\ref{fig:schema_melangeur_mosdoublegate}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\textwidth]{schema_melangeur_mosdoublegate}
@@ -929,6 +931,7 @@ Ce dispositif est somme toute similaire à un dispositif « hacheur ».
 
 $L_{81}$ permet de fixer la valeur moyenne ou valeur DC à 0, ce qui permet de faire conduire la diode correctement.
 %Diode de roue libre???
+
 \exsubpart{2}
 
 Les impédances réelles d'entrée et de sortie sont d'environ 50 $\Omega$. Par analyse fréquentielle on trouve quelles sont comprises entre 45.19 et 48.79$\Omega$. Ce qui est environ 50$\Omega$.
@@ -1033,34 +1036,60 @@ En chargeant la sortie avec une résistance de 50$\Omega$ et observant à l'anal
 
 
 
+\clearpage
+
 
 \subsection{Conclusions sur les mélangeurs}
 
 \exsubpart{1}
 
-Tableau récapitulatif des trois types de mélangeurs analysés:
+Tableau récapitulatif des trois types de mélangeurs analysés~:
 
-\begin{tabular}{|c|c|c|c|}
-\hline Type & Gain de conversion& Point de compression à 1dB & Pertes d'insertion  \\
-\hline Mélangeur à NE602 & $13.4dB$ & $-8.2dBm$ & Non calculé  \\
-\hline Mélangeur doublement équilibré à diodes & $-5.5dB$ & $1dBm$ & $-65.7dB$  \\ 
-\hline Mélangeur à « MOS double-gate » & $12.07dB$ & $-3.4dBm$ & $-75.8dB$    \\ 
-\hline Mélangeur à 1 diode & $-12.3dB$ & $18.5dBm$ & $-35.48dB$  \\ 
-\hline
-\hline  & Point d'interception d'ordre 3& Spectre& Simplicité et coût\\
-\hline  &  $1.25dBm$ & Très sélectif & ++  \\
-\hline  & $-8.4dBm$ & Dense mais d'amplitude modérée & + \\
-\hline  & $3.55dBm$ & Pauvre & +  \\
-\hline  & $-11dBm$ & Pauvre & +++ \\
-\hline
-\hline  & Alimentation& Autres & \\
-\hline  & Passif& Présence de bobines mauvaise pour la CEM & \\
-\hline  & Actif 7V& &  \\
-\hline  & Passif& Le plus simple ! &  \\
-\end{tabular} 
+%\begin{tabular}{|c|c|c|c|}
+%\hline Type & Gain de conversion& Point de compression à 1dB & Pertes d'insertion  \\
+%\hline Mélangeur à NE602 & $13.4dB$ & $-8.2dBm$ & Non calculé  \\
+%\hline Mélangeur doublement équilibré à diodes & $-5.5dB$ & $1dBm$ & $-65.7dB$  \\ 
+%\hline Mélangeur à « MOS double-gate » & $12.07dB$ & $-3.4dBm$ & $-75.8dB$    \\ 
+%\hline Mélangeur à 1 diode & $-12.3dB$ & $18.5dBm$ & $-35.48dB$  \\ 
+%\hline
+%\hline  & Point d'interception d'ordre 3& Spectre& Simplicité et coût\\
+%\hline  &  $1.25dBm$ & Très sélectif & ++  \\
+%\hline  & $-8.4dBm$ & Dense mais d'amplitude modérée & + \\
+%\hline  & $3.55dBm$ & Pauvre & +  \\
+%\hline  & $-11dBm$ & Pauvre & +++ \\
+%\hline
+%\hline  & Alimentation& Autres & \\
+%\hline  & Passif& Présence de bobines mauvaise pour la CEM & \\
+%\hline  & Actif 7V& &  \\
+%\hline  & Passif& Le plus simple ! &  \\
+%\end{tabular}
 
-On peut voir les disparités entre les différents mélangeurs grâce au tableau. La simplicité et le bas coût se payent par des performances très atténuées et des spectres plus riches en harmoniques. La présence de transistor permet, malgré un mélangeur qui sera actif, d'avoir un signal de sortie d'amplitude plus élevée que celui d'entrée. Il est donc possible de brancher une antenne directement au mélangeur sans devoir pré-amplifier le signal (et donc le bruit) en provenance de celle-ci. Cela est loin d'être le cas avec des diodes.\\
+
+
+
+\begin{tabular}{|c||c|c|c|c|}
+\hline  \multirow{2}{*}{Type} & Mélangeur à & Mélangeur doublement & Mélangeur à &  Mélangeur à \\
+							  & cellule de Gilbert & équilibré à diodes & MOS double-gate & 1 diode \\
+\hline
+\hline  Gain de conversion & 13.4dB &  -5.5dB & 12.07dB &  -12.3dB \\
+\hline  Point de          & \multirow{2}{*}{-8.2dBm} & \multirow{2}{*}{1dBm} & \multirow{2}{*}{-3.4dBm} & \multirow{2}{*}{18.5dBm} \\
+		compression à 1dB & &&&\\
+\hline  Pertes d'insertion & Non calculé & -65.7dB & -75.8dB & -35.48dB \\
+\hline  Point d'interception & \multirow{2}{*}{1.25dBm} & \multirow{2}{*}{-8.4dBm} & \multirow{2}{*}{3.55dBm} & \multirow{2}{*}{-11dBm} \\
+		d'ordre 3            & &&&\\
+\hline  Isolation des & --- & -67.5dB & -78.5dB & -35.5dB \\
+\hline  entrées LO vers RF & &&&\\
+\hline  \multirow{2}{*}{Spectre} & Très & Dense mais & \multirow{2}{*}{Pauvre} & \multirow{2}{*}{Pauvre} \\
+								 & sélectif & d'amplitude modérée &&\\
+\hline  Simplicité et coût & - & + & + & +++ \\
+\hline  Alimentation & 4.5V à 9V & Passif & 7V & Passif \\
+\hline
+\end{tabular}
+
+
+On peut voir les disparités entre les différents mélangeurs grâce au tableau. La simplicité et le bas coût se payent par des performances très atténuées et des spectres plus riches en harmoniques. La présence de transistor permet, malgré un mélangeur qui sera actif, d'avoir un signal de sortie d'amplitude plus élevée que celui d'entrée. Il est donc possible de brancher une antenne directement au mélangeur sans devoir pré-amplifier le signal (et donc le bruit) en provenance de celle-ci. Cela est loin d'être le cas avec des diodes.
 %Brancher une antenne au mélangeur sans filter ni rien...???
+
 De plus, un point de compression à 1 dB faible entraine des pertes croissantes avec des niveaux d'entrée le dépassant. Des niveaux d'entrées trop bas seront quant à eux plus sujet aux bruits. Il faudra donc faire attention à l'amplitude de notre signal d'entrée.
 
 On peut donc conclure que le mélangeur à « MOS double-gate » et les mélangeurs à transistors en général présentent des performances bien plus élevées que les mélangeurs à diode mais nécessitent une alimentation et sont plus complexes et coûteux à mettre en place. Ils peuvent aussi être limités en terme de commutation et donc de fréquence.
@@ -1074,7 +1103,7 @@ Chaque type de mélangeurs est exploité pour ses qualités respectives. On retr
 \item Le mélangeur doublement équilibré est par exemple utilisé comme tête de réception pour la télévision satellite analogique avec une bi-bande allant de 10,8 à 11,8 GHz et de 11,8 à 12,8 GHz.
 Il est aussi utilisé dans les récepteur de télécommande (Modulation AM).
 \item Le mélangeur à « MOS double-gate » est utilisé comme récepteur TV VHF.
-\item Le mélangeur à 1 diode est quant à lui utilisé dans les radars Doppler Hyperfréquence. On mélange le signal reçu à la fréquence f’(renvoyée par l'objet) au signal émis f par la diode, le signal produit possède une fréquence différence liée à la vitesse v de l'objet. 
+\item Le mélangeur à 1 diode est quant à lui utilisé dans les radars Doppler Hyperfréquence. On mélange le signal reçu à la fréquence $f’$ (renvoyée par l'objet) au signal émis par la diode. Le signal produit possède une fréquence différence liée à la vitesse $v$ de l'objet. 
 \end{itemize}
 
 
