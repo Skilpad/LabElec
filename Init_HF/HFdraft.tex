@@ -424,7 +424,7 @@ Si on considère le schéma petits signaux (suppression des composantes continue
 On voit alors que le circuit de charge est un filtre passe-bande formé par L41 et C42. Les fréquences seront toutes atténuées, sauf celles proches de la fréquence de résonance $f_0$, où $f_0 = \frac{1}{2 \pi \cdot \sqrt{L_{41} \cdot C_{42}}}$.
 En admettant qu'à l'enclenchement du circuit, il y a du bruit blanc sur la base du transistor, ce bruit blanc inclut toutes les fréquences y compris $f_0$. Il ne restera plus que $f_0$ à la sortie, qui sera alors ré-injectée dans la base par le diviseur formé par $C_{bc}$ et C43.
 
-La condition pour que l'oscillation démarre est que le gain du transistor doit être plus grand que l'atténuation du diviseur captatif, et le déphasage de la boucle complète doit être de $360^{ \circ }$. La branche avec le quartz n'est pas nécessaire pour l'apparition d'une oscillation. Cependant elle sert a sélectionner une fréquence particulière de façon plus précise. En effet, le quartz agit comme un filtre précis en fréquence, et son facteur de qualité Q est très largement plus élevé que celui d'un filtre à composant LC (qui présentent des imperfections). Le quartz peut être modélisé comme représenté Fig.~\ref{fig:modele_quartz}\footnote{Source~: \textit{http://www.acedim.com/Formatronic/Electro\_2/oscillateur/lequartz.html}}.
+La condition pour que l'oscillation démarre est que le gain du transistor doit être plus grand que l'atténuation du diviseur captatif, et le déphasage de la boucle complète doit être de $\mathrm{360^{\circ}}$. La branche avec le quartz n'est pas nécessaire pour l'apparition d'une oscillation. Cependant elle sert a sélectionner une fréquence particulière de façon plus précise. En effet, le quartz agit comme un filtre précis en fréquence, et son facteur de qualité Q est très largement plus élevé que celui d'un filtre à composant LC (qui présentent des imperfections). Le quartz peut être modélisé comme représenté Fig.~\ref{fig:modele_quartz}\footnote{Source~: \textit{http://www.acedim.com/Formatronic/Electro\_2/oscillateur/lequartz.html}}.
 
 \begin{figure}[h]
 	\centering
@@ -601,8 +601,8 @@ On considère le circuit présenté Fig.~\ref{fig:schema_melangeur_gilbert}.
 	\caption{Le multiplicateur à cellule de "Gilbert"}
 \end{figure}
 
-La multiplication des signaux IN1 et IN2 est faite par le circuit intégré NE602.
-Il s'agit d'un multiplicateur à 4 quadrants, c'est à dire que la sortie est valable pour toutes les combinaisons possibles des signes des tensions IN1 et IN2 (+, +), (+, -), (-, +) et (-, -).
+La multiplication des signaux In1 et In2 est faite par le circuit intégré NE602.
+Il s'agit d'un multiplicateur à 4 quadrants, c'est à dire que la sortie est valable pour toutes les combinaisons possibles des signes des tensions In1 et In2 (+, +), (+, -), (-, +) et (-, -).
 Il n'y a donc aucunement besoin de polariser les entrées avec une composante continue, d'où un montage très simple.
 
 \subsubsection{Questions et calculs}
@@ -637,7 +637,7 @@ On y observe notamment le signal construit à 14MHz. Toutefois, on observe aussi
 
 Lorsque l'on impose en entrée -27 dBm, on observe en sortie -55.3 dBm. On a ainsi pour l'intégralité du circuit un gain de conversion de -28.3 dB.
 
-Toutefois, R53, R54 et la résistance de charge forment un diviseur de tension de gain -35.7 dB, et R52 et la résistance d'entrée du multiplicateur NE602 forment un diviseur de tension de gain -6 dB. Ainsi, en s'affranchissant de ces diviseurs de tensions, on obtient pour le NE602 un gain de conversion intrinsèque de 13.4 dB.
+Toutefois, R53, R54 et la résistance de charge forment un diviseur de tension de gain -35.7 dB, et R52 et la résistance d'entrée du multiplicateur NE602 forment un diviseur de tension de gain -6 dB. Ainsi, en s'affranchissant de ces diviseurs de tensions, on obtient pour le NE602 un gain de conversion intrinsèque de 13.4~dB.
 
 
 
@@ -768,7 +768,7 @@ On obtient le spectre Fig.~\ref{fig:9_3_4}. Le produit d'intermodulation d'ordre
 \end{figure}
 
 
-On obtient, de la même manière que précédemment le point d'interception du troisième ordre~: ${IM3 = \mathrm{-8.4~dBm}}$.
+On obtient, de la même manière que précédemment le point d'interception du troisième ordre~:\\${IM3 = \mathrm{-8.4~dBm}}$.
 
 Ce résultat parait certes faible, mais est cohérent avec le spectre Fig.~\ref{fig:9_3_4}~: les produits d'intermodulation s'avère particulièrement présents.
 
@@ -824,19 +824,16 @@ On retrouve les adaptations d'impédance vers du 50 ohms nécessaires aux appare
 \exsubpart{1}
 
 On veut une tension de repos de 1V sur G2.
-Les résistances $R_{76}$ et $R_{77}$ réalisent un pont diviseur de tension au potentiel de G2, on a donc en DC~:
+Les résistances R76 et R77 réalisent un pont diviseur de tension au potentiel de G2, on a donc en DC~:
 \begin{equation*}
 V_{G2}=\frac{R_{77}}{(R_{77}+R_{76})}V_{dd}=1V
 \end{equation*}
-On choisit donc~:
-\begin{itemize}
-\item $R_{76}= 3.3 \mathrm{k\Omega}$
-\item $R_{77}= 560 \Omega$
+On choisit donc~: $R_{76}= 3.3 \mathrm{k\Omega}$ et $R_{77}= 560 \Omega$.
 \end{itemize}
 
 \exsubpart{2}
 
-$L_{72}$ permet de fixer la composante DC de G1 à la masse. On peut ainsi polariser le transistor comme on le souhaite, centré autour de 0V dans notre cas. L'absence de cette inductance ne permet pas de contrôler la polarisation du transistor et le signal RF ne serait plus intégralement transmis.
+L72 permet de fixer la composante DC de G1 à la masse. On peut ainsi polariser le transistor comme on le souhaite, négativement dans notre cas. L'absence de cette inductance ne permet pas de contrôler la polarisation du transistor et le signal RF ne serait plus intégralement transmis.
 
 \subsubsection{Mesures}
 
@@ -929,7 +926,7 @@ Ce dispositif est somme toute similaire à un dispositif « hacheur ».
 
 \exsubpart{1}
 
-$L_{81}$ permet de fixer la valeur moyenne ou valeur DC à 0, ce qui permet de faire conduire la diode correctement.
+L81 permet de fixer à 0 le potentiel moyen au point A, ce qui permet de pouvoir exploiter la diode comme désiré.
 %Diode de roue libre???
 
 \exsubpart{2}
@@ -1020,7 +1017,7 @@ On applique un signal 9MHz double-ton, avec 12.5 dBm pour chaque composante. On 
 
 On mesure en sortie du système le produit d'inter-modulation d'ordre 3 à -69.6 dBm.
 
-En appliquant la même formule que précédemment, on trouve que le point d'intersection d'ordre 3 se situe à -11 dBm. Cette faible la faible qualité du mélangeur étudié.
+En appliquant la même formule que précédemment, on trouve que le point d'intersection du troisième se situe à -11 dBm. Cette valeur est particulièrement faible. Elle traduit la faible qualité du mélangeur étudié.
 
 
 \exsubpart{5}
@@ -1071,24 +1068,24 @@ Tableau récapitulatif des quatre types de mélangeurs analysés~:
 \hline  \multirow{2}{*}{Type} & Mélangeur à & Mélangeur doublement & Mélangeur à &  Mélangeur à \\
 							  & cellule de Gilbert & équilibré à diodes & MOS double-gate & 1 diode \\
 \hline
-\hline  Gain de conversion & 13.4dB &  -5.5dB & 12.07dB &  -12.3dB \\
+\hline  Gain de conversion & 13.4dB &  -5.5dB & 6.1dB &  -18.3dB \\
 \hline  Point de          & \multirow{2}{*}{-8.2dBm} & \multirow{2}{*}{1dBm} & \multirow{2}{*}{-3.4dBm} & \multirow{2}{*}{18.5dBm} \\
 		compression à 1dB & &&&\\
-\hline  Pertes d'insertion & Non calculé & -65.7dB & -75.8dB & -35.48dB \\
+\hline  Pertes d'insertion & --- & -65.7dB & -75.8dB & -35.48dB \\
 \hline  Point d'interception & \multirow{2}{*}{1.25dBm} & \multirow{2}{*}{-8.4dBm} & \multirow{2}{*}{3.55dBm} & \multirow{2}{*}{-11dBm} \\
 		d'ordre 3            & &&&\\
-\hline  Isolation des & --- & -67.5dB & -78.5dB & -35.5dB \\
-\hline  entrées LO vers RF & &&&\\
+\hline  Isolation des & \multirow{2}{*}{---} & \multirow{2}{*}{-67.5dB} & \multirow{2}{*}{-78.5dB} & \multirow{2}{*}{-35.5dB} \\
+		entrées LO vers RF & &&&\\
 \hline  \multirow{2}{*}{Spectre} & Très & Dense mais & \multirow{2}{*}{Pauvre} & \multirow{2}{*}{Pauvre} \\
 								 & sélectif & d'amplitude modérée &&\\
 \hline  Simplicité et coût & - & + & + & +++ \\
-\hline  Alimentation & 4.5V à 9V & Passif & 7V & Passif \\
+\hline  Alimentation & 4.5V à 8V & Passif & 7V & Passif \\
 \hline
 \end{tabular}
 
 
-On peut voir les disparités entre les différents mélangeurs grâce au tableau. La simplicité et le bas coût se payent par des performances très atténuées et des spectres plus riches en harmoniques. La présence de transistor permet, malgré un mélangeur qui sera actif, d'avoir un signal de sortie d'amplitude plus élevée que celui d'entrée. Il est donc possible de brancher une antenne directement au mélangeur sans devoir pré-amplifier le signal (et donc le bruit) en provenance de celle-ci. Cela est loin d'être le cas avec des diodes.
-%Brancher une antenne au mélangeur sans filter ni rien...???
+On peut voir les disparités entre les différents mélangeurs grâce au tableau. La simplicité et le bas coût se payent par des performances très atténuées et des spectres ou moins riches en harmoniques. La présence de transistor permet, malgré un mélangeur qui sera actif, d'avoir un signal de sortie d'amplitude plus élevée que celui d'entrée. Il est donc possible de brancher une antenne directement au mélangeur sans devoir pré-amplifier le signal (et donc le bruit) en provenance de celle-ci. Cela est loin d'être le cas avec des diodes.
+
 
 De plus, un point de compression à 1 dB faible entraine des pertes croissantes avec des niveaux d'entrée le dépassant. Des niveaux d'entrées trop bas seront quant à eux plus sujet aux bruits. Il faudra donc faire attention à l'amplitude de notre signal d'entrée.
 
@@ -1103,7 +1100,7 @@ Chaque type de mélangeurs est exploité pour ses qualités respectives. On retr
 \item Le mélangeur doublement équilibré est par exemple utilisé comme tête de réception pour la télévision satellite analogique avec une bi-bande allant de 10,8 à 11,8 GHz et de 11,8 à 12,8 GHz.
 Il est aussi utilisé dans les récepteur de télécommande (Modulation AM).
 \item Le mélangeur à « MOS double-gate » est utilisé comme récepteur TV VHF.
-\item Le mélangeur à 1 diode est quant à lui utilisé dans les radars Doppler Hyperfréquence. On mélange le signal reçu à la fréquence $f’$ (renvoyée par l'objet) au signal émis par la diode. Le signal produit possède une fréquence différence liée à la vitesse $v$ de l'objet. 
+\item Le mélangeur à 1 diode est quant à lui utilisé dans les radars Doppler Hyperfréquence. On mélange le signal reçu à la fréquence $f'$ (renvoyée par l'objet) au signal émis par la diode. Le signal produit possède une fréquence différence liée à la vitesse $v$ de l'objet. 
 \end{itemize}
 
 
